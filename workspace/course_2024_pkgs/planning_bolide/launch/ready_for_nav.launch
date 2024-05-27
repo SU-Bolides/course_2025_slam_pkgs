@@ -1,0 +1,25 @@
+<launch>
+    <!-- Include main_publisher.launch -->
+    <include file="$(find perception_bolide)/launch/perception.launch"/>
+
+    <!-- Launch the speed_direction_control node -->
+    <!-- <node pkg="control_bolide" type="speed_direction_controller.py" name="speed_direction_controller" output="screen" /> -->
+    <node pkg="control_bolide" type="ackermann_controller.py" name="ackermann_controller" output="screen"  respawn="true"/>
+
+
+
+    <node pkg="robot_localization" type="ekf_localization_node" name="ekf_odom" clear_params="true"  respawn="true">
+        <rosparam command="load" file="$(find planning_bolide)/config/ekf_params.yaml" />
+
+        <remap from="odometry/filtered" to="odom_filtered"/>
+    </node>    
+
+    <include file="$(find particle_filter)/launch/localize.launch"/>
+
+    <arg name="map" default="$(find perception_bolide)/maps/esclangon_31.yaml"/>
+    <node pkg="map_server" name="map_server" type="map_server" args="$(arg map)" />
+
+    <node pkg="perception_bolide" type="launch_ekf_map.py" name="launch_ekf_map" output="screen"/>
+
+    <node pkg="tf" type="static_transform_publisher" name="lidar_frame_broadcaster" args="0.165 0 0 0 0 0 base_link lidar_frame 100"  respawn="true"/>
+</launch>
