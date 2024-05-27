@@ -1,0 +1,6 @@
+[submodule "workspace/slam_karto"]
+	path = workspace/slam_karto
+	url = https://github.com/SorbonneUniversityBolideContributors/slam_karto
+[submodule "workspace/particle_filter"]
+	path = workspace/particle_filter
+	url = https://github.com/SorbonneUniversityBolideContributors/particle_filter
