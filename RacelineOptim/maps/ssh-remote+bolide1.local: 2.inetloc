@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>URL</key>
+	<string>vscode-remote://ssh-remote%2Bbolide1.local/home/bolide1/bolide_ws/src/course_2024_pkgs/perception_bolide/maps/ens_2.pgm</string>
+</dict>
+</plist>
