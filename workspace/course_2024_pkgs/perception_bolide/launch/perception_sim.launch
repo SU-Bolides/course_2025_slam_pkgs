@@ -1,0 +1,7 @@
+<launch>
+    <!-- Include main_publisher.launch -->
+
+    <!-- Include process.launch -->
+    <include file="$(find perception_bolide)/launch/process_sim.launch"/>
+
+</launch>
