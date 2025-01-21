@@ -14,7 +14,7 @@ import rospy
 from sensor_msgs.msg import LaserScan
 from scipy import signal
 from std_msgs.msg import Bool
-# from nav_msgs.msg import OccupancyGrid
+from nav_msgs.msg import OccupancyGrid
 
 #%% LidarProcess class
 class LidarProcess:
@@ -37,6 +37,7 @@ class LidarProcess:
         rospy.Subscriber("/param_change_alert", Bool, self.callback_parameters)
         # PUBLISHER =========================================
         self.pub = rospy.Publisher('lidar_data', LaserScan, queue_size=10)
+        self.occupancy_grid_pub = rospy.Publisher('occupancy_grid', OccupancyGrid, queue_size=10)
 
         rospy.spin() # wait for the callback to be called
 
@@ -68,46 +69,46 @@ class LidarProcess:
 
 
 
-    # def populate_occupancy_grid(self, ranges, angle_increment):
-    #     # reset empty occupacny grid (-1 = unknown)
+    def populate_occupancy_grid(self, ranges, angle_increment):
+        # reset empty occupacny grid (-1 = unknown)
 
-    #     self.occupancy_grid = np.full(shape=(self.grid_height, self.grid_width), fill_value=self.IS_FREE, dtype=int)
+        self.occupancy_grid = np.full(shape=(self.grid_height, self.grid_width), fill_value=self.IS_FREE, dtype=int)
 
-    #     ranges = np.array(ranges)
-    #     indices = np.arange(len(ranges))
-    #     thetas = (indices * angle_increment) + self.min_angle_rad
-    #     xs = ranges * np.cos(thetas)
-    #     ys = ranges * np.sin(thetas)
+        ranges = np.array(ranges)
+        indices = np.arange(len(ranges))
+        thetas = (indices * angle_increment) + self.min_angle_rad
+        xs = ranges * np.cos(thetas)
+        ys = ranges * np.sin(thetas)
 
-    #     i = np.round(xs * -self.CELLS_PER_METER + (self.grid_height - 1)).astype(int)
-    #     j = np.round(ys * -self.CELLS_PER_METER + ((self.grid_width // 2) - 1)).astype(int)
+        i = np.round(xs * -self.CELLS_PER_METER + (self.grid_height - 1)).astype(int)
+        j = np.round(ys * -self.CELLS_PER_METER + ((self.grid_width // 2) - 1)).astype(int)
 
-    #     occupied_indices = np.where((i >= 0) & (i < self.grid_height) & (j >= 0) & (j < self.grid_width))
-    #     self.occupancy_grid[i[occupied_indices], j[occupied_indices]] = self.IS_OCCUPIED
-
-
-    #     kernel = np.ones(shape=[2, 2])
-    #     self.occupancy_grid = signal.convolve2d(
-    #         self.occupancy_grid.astype("int"), kernel.astype("int"), boundary="symm", mode="same"
-    #     )
-    #     self.occupancy_grid = np.clip(self.occupancy_grid, -1, 100)
+        occupied_indices = np.where((i >= 0) & (i < self.grid_height) & (j >= 0) & (j < self.grid_width))
+        self.occupancy_grid[i[occupied_indices], j[occupied_indices]] = self.IS_OCCUPIED
 
 
-    # def publish_occupancy_grid(self):
-        # """
-        # Publish populated occupancy grid to ros2 topic
-        # Args:
-        #     scan_msg (LaserScan): message from lidar scan topic
-        # """
-        # oc = OccupancyGrid()
-        # oc.header.frame_id = self.frame_id
-        # oc.header.stamp = self.stamp
-        # oc.info.origin.position.y -= ((self.grid_width / 2) + 1) / self.CELLS_PER_METER
-        # oc.info.width = self.grid_height
-        # oc.info.height = self.grid_width
-        # oc.info.resolution = 1 / self.CELLS_PER_METER
-        # oc.data = np.fliplr(np.rot90(self.occupancy_grid, k=1)).flatten().tolist()
-        # self.occupancy_grid_pub.publish(oc)
+        kernel = np.ones(shape=[2, 2])
+        self.occupancy_grid = signal.convolve2d(
+            self.occupancy_grid.astype("int"), kernel.astype("int"), boundary="symm", mode="same"
+        )
+        self.occupancy_grid = np.clip(self.occupancy_grid, -1, 100)
+
+
+    def publish_occupancy_grid(self):
+        """
+        Publish populated occupancy grid to ros2 topic
+        Args:
+            scan_msg (LaserScan): message from lidar scan topic
+        """
+        oc = OccupancyGrid()
+        oc.header.frame_id = self.frame_id
+        oc.header.stamp = self.stamp
+        oc.info.origin.position.y -= ((self.grid_width / 2) + 1) / self.CELLS_PER_METER
+        oc.info.width = self.grid_height
+        oc.info.height = self.grid_width
+        oc.info.resolution = 1 / self.CELLS_PER_METER
+        oc.data = np.fliplr(np.rot90(self.occupancy_grid, k=1)).flatten().tolist()
+        self.occupancy_grid_pub.publish(oc)
 
     def callback_parameters(self, data:Bool) :
 
@@ -125,7 +126,7 @@ class LidarProcess:
 
     def callback(self, data:LaserScan) :
         """ Callback function called when a message is received on the subscribed topic"""
-
+        print(len(data.ranges))
         # Check that the data array has a length of 360
         if not (len(data.ranges) == 1153):
             rospy.logdebug("the lidar array is not composed of 1153 values")
@@ -158,16 +159,16 @@ class LidarProcess:
         lidar_data.header.frame_id = self.frame_id
         lidar_data.angle_min = self.min_angle_rad # in radians
         lidar_data.angle_max = self.max_angle_rad # in radians
-        lidar_data.angle_increment = data.angle_increment # in radians (should be 1 degree)
-        lidar_data.time_increment = data.time_increment # in seconds
-        lidar_data.scan_time = data.scan_time # in seconds
+        lidar_data.angle_increment = 0.00545 # in radians (should be 1 degree)
+        lidar_data.time_increment = 0.0002 #data.time_increment # in seconds
+        lidar_data.scan_time = 0.072 # in seconds
         lidar_data.range_min = data.range_min # in meters
         lidar_data.range_max = data.range_max # in meters
 
         lidar_data.ranges = data_filtered
 
-        # self.populate_occupancy_grid(data_filtered, data.angle_increment)
-        # self.publish_occupancy_grid()
+        self.populate_occupancy_grid(data_filtered, data.angle_increment)
+        self.publish_occupancy_grid()
 
         self.pub.publish(lidar_data)
 
