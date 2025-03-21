@@ -1,0 +1,302 @@
+[0.736s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.736s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0xffff97ab7c20>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffff98d9b7d0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffff98d9b7d0>>, mixin_verb=('build',))
+[0.912s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.912s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.912s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.912s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.912s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.912s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.912s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/voiture/course_2025_slam_pkgs/workspace'
+[0.912s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.912s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.913s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.913s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.913s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.913s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.913s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.913s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.913s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.997s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.997s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.997s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.997s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.997s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.997s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.997s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.998s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.998s] Level 1:colcon.colcon_core.package_identification:_identify(course_2024_pkgs) by extensions ['ignore', 'ignore_ament_install']
+[0.998s] Level 1:colcon.colcon_core.package_identification:_identify(course_2024_pkgs) by extension 'ignore'
+[0.998s] Level 1:colcon.colcon_core.package_identification:_identify(course_2024_pkgs) ignored
+[0.999s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.999s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.999s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.999s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.999s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.999s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[1.000s] Level 1:colcon.colcon_core.package_identification:_identify(open_karto-melodic-devel) by extensions ['ignore', 'ignore_ament_install']
+[1.000s] Level 1:colcon.colcon_core.package_identification:_identify(open_karto-melodic-devel) by extension 'ignore'
+[1.000s] Level 1:colcon.colcon_core.package_identification:_identify(open_karto-melodic-devel) by extension 'ignore_ament_install'
+[1.000s] Level 1:colcon.colcon_core.package_identification:_identify(open_karto-melodic-devel) by extensions ['colcon_pkg']
+[1.000s] Level 1:colcon.colcon_core.package_identification:_identify(open_karto-melodic-devel) by extension 'colcon_pkg'
+[1.000s] Level 1:colcon.colcon_core.package_identification:_identify(open_karto-melodic-devel) by extensions ['colcon_meta']
+[1.000s] Level 1:colcon.colcon_core.package_identification:_identify(open_karto-melodic-devel) by extension 'colcon_meta'
+[1.000s] Level 1:colcon.colcon_core.package_identification:_identify(open_karto-melodic-devel) by extensions ['ros']
+[1.000s] Level 1:colcon.colcon_core.package_identification:_identify(open_karto-melodic-devel) by extension 'ros'
+[1.008s] DEBUG:colcon.colcon_core.package_identification:Package 'open_karto-melodic-devel' with type 'ros.catkin' and name 'open_karto'
+[1.008s] Level 1:colcon.colcon_core.package_identification:_identify(particle_filter) by extensions ['ignore', 'ignore_ament_install']
+[1.008s] Level 1:colcon.colcon_core.package_identification:_identify(particle_filter) by extension 'ignore'
+[1.008s] Level 1:colcon.colcon_core.package_identification:_identify(particle_filter) by extension 'ignore_ament_install'
+[1.008s] Level 1:colcon.colcon_core.package_identification:_identify(particle_filter) by extensions ['colcon_pkg']
+[1.009s] Level 1:colcon.colcon_core.package_identification:_identify(particle_filter) by extension 'colcon_pkg'
+[1.009s] Level 1:colcon.colcon_core.package_identification:_identify(particle_filter) by extensions ['colcon_meta']
+[1.009s] Level 1:colcon.colcon_core.package_identification:_identify(particle_filter) by extension 'colcon_meta'
+[1.009s] Level 1:colcon.colcon_core.package_identification:_identify(particle_filter) by extensions ['ros']
+[1.009s] Level 1:colcon.colcon_core.package_identification:_identify(particle_filter) by extension 'ros'
+[1.009s] Level 1:colcon.colcon_core.package_identification:_identify(particle_filter) by extensions ['cmake', 'python']
+[1.009s] Level 1:colcon.colcon_core.package_identification:_identify(particle_filter) by extension 'cmake'
+[1.009s] Level 1:colcon.colcon_core.package_identification:_identify(particle_filter) by extension 'python'
+[1.009s] Level 1:colcon.colcon_core.package_identification:_identify(particle_filter) by extensions ['python_setup_py']
+[1.009s] Level 1:colcon.colcon_core.package_identification:_identify(particle_filter) by extension 'python_setup_py'
+[1.010s] Level 1:colcon.colcon_core.package_identification:_identify(rplidar_ros-master) by extensions ['ignore', 'ignore_ament_install']
+[1.010s] Level 1:colcon.colcon_core.package_identification:_identify(rplidar_ros-master) by extension 'ignore'
+[1.010s] Level 1:colcon.colcon_core.package_identification:_identify(rplidar_ros-master) by extension 'ignore_ament_install'
+[1.010s] Level 1:colcon.colcon_core.package_identification:_identify(rplidar_ros-master) by extensions ['colcon_pkg']
+[1.010s] Level 1:colcon.colcon_core.package_identification:_identify(rplidar_ros-master) by extension 'colcon_pkg'
+[1.010s] Level 1:colcon.colcon_core.package_identification:_identify(rplidar_ros-master) by extensions ['colcon_meta']
+[1.010s] Level 1:colcon.colcon_core.package_identification:_identify(rplidar_ros-master) by extension 'colcon_meta'
+[1.010s] Level 1:colcon.colcon_core.package_identification:_identify(rplidar_ros-master) by extensions ['ros']
+[1.010s] Level 1:colcon.colcon_core.package_identification:_identify(rplidar_ros-master) by extension 'ros'
+[1.011s] DEBUG:colcon.colcon_core.package_identification:Package 'rplidar_ros-master' with type 'ros.catkin' and name 'rplidar_ros'
+[1.012s] Level 1:colcon.colcon_core.package_identification:_identify(slam_karto) by extensions ['ignore', 'ignore_ament_install']
+[1.012s] Level 1:colcon.colcon_core.package_identification:_identify(slam_karto) by extension 'ignore'
+[1.012s] Level 1:colcon.colcon_core.package_identification:_identify(slam_karto) by extension 'ignore_ament_install'
+[1.012s] Level 1:colcon.colcon_core.package_identification:_identify(slam_karto) by extensions ['colcon_pkg']
+[1.012s] Level 1:colcon.colcon_core.package_identification:_identify(slam_karto) by extension 'colcon_pkg'
+[1.012s] Level 1:colcon.colcon_core.package_identification:_identify(slam_karto) by extensions ['colcon_meta']
+[1.012s] Level 1:colcon.colcon_core.package_identification:_identify(slam_karto) by extension 'colcon_meta'
+[1.012s] Level 1:colcon.colcon_core.package_identification:_identify(slam_karto) by extensions ['ros']
+[1.012s] Level 1:colcon.colcon_core.package_identification:_identify(slam_karto) by extension 'ros'
+[1.012s] Level 1:colcon.colcon_core.package_identification:_identify(slam_karto) by extensions ['cmake', 'python']
+[1.013s] Level 1:colcon.colcon_core.package_identification:_identify(slam_karto) by extension 'cmake'
+[1.013s] Level 1:colcon.colcon_core.package_identification:_identify(slam_karto) by extension 'python'
+[1.013s] Level 1:colcon.colcon_core.package_identification:_identify(slam_karto) by extensions ['python_setup_py']
+[1.013s] Level 1:colcon.colcon_core.package_identification:_identify(slam_karto) by extension 'python_setup_py'
+[1.013s] Level 1:colcon.colcon_core.package_identification:_identify(sparse_bundle_adjustment-melodic-devel) by extensions ['ignore', 'ignore_ament_install']
+[1.013s] Level 1:colcon.colcon_core.package_identification:_identify(sparse_bundle_adjustment-melodic-devel) by extension 'ignore'
+[1.013s] Level 1:colcon.colcon_core.package_identification:_identify(sparse_bundle_adjustment-melodic-devel) by extension 'ignore_ament_install'
+[1.013s] Level 1:colcon.colcon_core.package_identification:_identify(sparse_bundle_adjustment-melodic-devel) by extensions ['colcon_pkg']
+[1.013s] Level 1:colcon.colcon_core.package_identification:_identify(sparse_bundle_adjustment-melodic-devel) by extension 'colcon_pkg'
+[1.014s] Level 1:colcon.colcon_core.package_identification:_identify(sparse_bundle_adjustment-melodic-devel) by extensions ['colcon_meta']
+[1.014s] Level 1:colcon.colcon_core.package_identification:_identify(sparse_bundle_adjustment-melodic-devel) by extension 'colcon_meta'
+[1.014s] Level 1:colcon.colcon_core.package_identification:_identify(sparse_bundle_adjustment-melodic-devel) by extensions ['ros']
+[1.014s] Level 1:colcon.colcon_core.package_identification:_identify(sparse_bundle_adjustment-melodic-devel) by extension 'ros'
+[1.015s] DEBUG:colcon.colcon_core.package_identification:Package 'sparse_bundle_adjustment-melodic-devel' with type 'ros.catkin' and name 'sparse_bundle_adjustment'
+[1.016s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[1.016s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[1.016s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[1.016s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[1.016s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[1.016s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[1.016s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[1.016s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[1.016s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[1.016s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[1.016s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[1.017s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[1.017s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[1.017s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[1.017s] Level 1:colcon.colcon_core.package_identification:_identify(src/bolide_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[1.017s] Level 1:colcon.colcon_core.package_identification:_identify(src/bolide_interfaces) by extension 'ignore'
+[1.017s] Level 1:colcon.colcon_core.package_identification:_identify(src/bolide_interfaces) by extension 'ignore_ament_install'
+[1.018s] Level 1:colcon.colcon_core.package_identification:_identify(src/bolide_interfaces) by extensions ['colcon_pkg']
+[1.018s] Level 1:colcon.colcon_core.package_identification:_identify(src/bolide_interfaces) by extension 'colcon_pkg'
+[1.018s] Level 1:colcon.colcon_core.package_identification:_identify(src/bolide_interfaces) by extensions ['colcon_meta']
+[1.018s] Level 1:colcon.colcon_core.package_identification:_identify(src/bolide_interfaces) by extension 'colcon_meta'
+[1.018s] Level 1:colcon.colcon_core.package_identification:_identify(src/bolide_interfaces) by extensions ['ros']
+[1.018s] Level 1:colcon.colcon_core.package_identification:_identify(src/bolide_interfaces) by extension 'ros'
+[1.019s] DEBUG:colcon.colcon_core.package_identification:Package 'src/bolide_interfaces' with type 'ros.ament_cmake' and name 'bolide_interfaces'
+[1.020s] Level 1:colcon.colcon_core.package_identification:_identify(src/perception_bolide) by extensions ['ignore', 'ignore_ament_install']
+[1.020s] Level 1:colcon.colcon_core.package_identification:_identify(src/perception_bolide) by extension 'ignore'
+[1.020s] Level 1:colcon.colcon_core.package_identification:_identify(src/perception_bolide) by extension 'ignore_ament_install'
+[1.020s] Level 1:colcon.colcon_core.package_identification:_identify(src/perception_bolide) by extensions ['colcon_pkg']
+[1.020s] Level 1:colcon.colcon_core.package_identification:_identify(src/perception_bolide) by extension 'colcon_pkg'
+[1.020s] Level 1:colcon.colcon_core.package_identification:_identify(src/perception_bolide) by extensions ['colcon_meta']
+[1.020s] Level 1:colcon.colcon_core.package_identification:_identify(src/perception_bolide) by extension 'colcon_meta'
+[1.020s] Level 1:colcon.colcon_core.package_identification:_identify(src/perception_bolide) by extensions ['ros']
+[1.020s] Level 1:colcon.colcon_core.package_identification:_identify(src/perception_bolide) by extension 'ros'
+[1.022s] DEBUG:colcon.colcon_core.package_identification:Package 'src/perception_bolide' with type 'ros.ament_python' and name 'perception_bolide'
+[1.022s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[1.022s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[1.022s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[1.022s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[1.022s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[1.082s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[1.083s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[1.096s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 285 installed packages in /opt/ros/jazzy
+[1.100s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[1.166s] Level 5:colcon.colcon_core.verb:set package 'bolide_interfaces' build argument 'cmake_args' from command line to 'None'
+[1.166s] Level 5:colcon.colcon_core.verb:set package 'bolide_interfaces' build argument 'cmake_target' from command line to 'None'
+[1.166s] Level 5:colcon.colcon_core.verb:set package 'bolide_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.166s] Level 5:colcon.colcon_core.verb:set package 'bolide_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[1.166s] Level 5:colcon.colcon_core.verb:set package 'bolide_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[1.166s] Level 5:colcon.colcon_core.verb:set package 'bolide_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[1.166s] Level 5:colcon.colcon_core.verb:set package 'bolide_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[1.166s] Level 5:colcon.colcon_core.verb:set package 'bolide_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[1.166s] Level 5:colcon.colcon_core.verb:set package 'bolide_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.166s] DEBUG:colcon.colcon_core.verb:Building package 'bolide_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces', 'merge_install': False, 'path': '/home/voiture/course_2025_slam_pkgs/workspace/src/bolide_interfaces', 'symlink_install': False, 'test_result_base': None}
+[1.167s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'cmake_args' from command line to 'None'
+[1.167s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'cmake_target' from command line to 'None'
+[1.167s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.167s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'cmake_clean_cache' from command line to 'False'
+[1.167s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'cmake_clean_first' from command line to 'False'
+[1.167s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'cmake_force_configure' from command line to 'False'
+[1.167s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'ament_cmake_args' from command line to 'None'
+[1.167s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'catkin_cmake_args' from command line to 'None'
+[1.167s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.167s] DEBUG:colcon.colcon_core.verb:Building package 'rplidar_ros' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/voiture/course_2025_slam_pkgs/workspace/build/rplidar_ros', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/voiture/course_2025_slam_pkgs/workspace/install/rplidar_ros', 'merge_install': False, 'path': '/home/voiture/course_2025_slam_pkgs/workspace/rplidar_ros-master', 'symlink_install': False, 'test_result_base': None}
+[1.167s] Level 5:colcon.colcon_core.verb:set package 'sparse_bundle_adjustment' build argument 'cmake_args' from command line to 'None'
+[1.167s] Level 5:colcon.colcon_core.verb:set package 'sparse_bundle_adjustment' build argument 'cmake_target' from command line to 'None'
+[1.167s] Level 5:colcon.colcon_core.verb:set package 'sparse_bundle_adjustment' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.167s] Level 5:colcon.colcon_core.verb:set package 'sparse_bundle_adjustment' build argument 'cmake_clean_cache' from command line to 'False'
+[1.167s] Level 5:colcon.colcon_core.verb:set package 'sparse_bundle_adjustment' build argument 'cmake_clean_first' from command line to 'False'
+[1.167s] Level 5:colcon.colcon_core.verb:set package 'sparse_bundle_adjustment' build argument 'cmake_force_configure' from command line to 'False'
+[1.167s] Level 5:colcon.colcon_core.verb:set package 'sparse_bundle_adjustment' build argument 'ament_cmake_args' from command line to 'None'
+[1.167s] Level 5:colcon.colcon_core.verb:set package 'sparse_bundle_adjustment' build argument 'catkin_cmake_args' from command line to 'None'
+[1.167s] Level 5:colcon.colcon_core.verb:set package 'sparse_bundle_adjustment' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.167s] DEBUG:colcon.colcon_core.verb:Building package 'sparse_bundle_adjustment' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/voiture/course_2025_slam_pkgs/workspace/build/sparse_bundle_adjustment', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/voiture/course_2025_slam_pkgs/workspace/install/sparse_bundle_adjustment', 'merge_install': False, 'path': '/home/voiture/course_2025_slam_pkgs/workspace/sparse_bundle_adjustment-melodic-devel', 'symlink_install': False, 'test_result_base': None}
+[1.168s] Level 5:colcon.colcon_core.verb:set package 'open_karto' build argument 'cmake_args' from command line to 'None'
+[1.168s] Level 5:colcon.colcon_core.verb:set package 'open_karto' build argument 'cmake_target' from command line to 'None'
+[1.168s] Level 5:colcon.colcon_core.verb:set package 'open_karto' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.168s] Level 5:colcon.colcon_core.verb:set package 'open_karto' build argument 'cmake_clean_cache' from command line to 'False'
+[1.168s] Level 5:colcon.colcon_core.verb:set package 'open_karto' build argument 'cmake_clean_first' from command line to 'False'
+[1.168s] Level 5:colcon.colcon_core.verb:set package 'open_karto' build argument 'cmake_force_configure' from command line to 'False'
+[1.168s] Level 5:colcon.colcon_core.verb:set package 'open_karto' build argument 'ament_cmake_args' from command line to 'None'
+[1.168s] Level 5:colcon.colcon_core.verb:set package 'open_karto' build argument 'catkin_cmake_args' from command line to 'None'
+[1.168s] Level 5:colcon.colcon_core.verb:set package 'open_karto' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.168s] DEBUG:colcon.colcon_core.verb:Building package 'open_karto' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/voiture/course_2025_slam_pkgs/workspace/build/open_karto', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/voiture/course_2025_slam_pkgs/workspace/install/open_karto', 'merge_install': False, 'path': '/home/voiture/course_2025_slam_pkgs/workspace/open_karto-melodic-devel', 'symlink_install': False, 'test_result_base': None}
+[1.168s] Level 5:colcon.colcon_core.verb:set package 'perception_bolide' build argument 'cmake_args' from command line to 'None'
+[1.168s] Level 5:colcon.colcon_core.verb:set package 'perception_bolide' build argument 'cmake_target' from command line to 'None'
+[1.168s] Level 5:colcon.colcon_core.verb:set package 'perception_bolide' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.168s] Level 5:colcon.colcon_core.verb:set package 'perception_bolide' build argument 'cmake_clean_cache' from command line to 'False'
+[1.168s] Level 5:colcon.colcon_core.verb:set package 'perception_bolide' build argument 'cmake_clean_first' from command line to 'False'
+[1.168s] Level 5:colcon.colcon_core.verb:set package 'perception_bolide' build argument 'cmake_force_configure' from command line to 'False'
+[1.169s] Level 5:colcon.colcon_core.verb:set package 'perception_bolide' build argument 'ament_cmake_args' from command line to 'None'
+[1.169s] Level 5:colcon.colcon_core.verb:set package 'perception_bolide' build argument 'catkin_cmake_args' from command line to 'None'
+[1.169s] Level 5:colcon.colcon_core.verb:set package 'perception_bolide' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.169s] DEBUG:colcon.colcon_core.verb:Building package 'perception_bolide' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide', 'merge_install': False, 'path': '/home/voiture/course_2025_slam_pkgs/workspace/src/perception_bolide', 'symlink_install': False, 'test_result_base': None}
+[1.169s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[1.170s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[1.171s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/voiture/course_2025_slam_pkgs/workspace/src/bolide_interfaces' with build type 'ament_cmake'
+[1.172s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/voiture/course_2025_slam_pkgs/workspace/src/bolide_interfaces'
+[1.191s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[1.191s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.191s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.197s] INFO:colcon.colcon_ros.task.catkin.build:Building ROS package in '/home/voiture/course_2025_slam_pkgs/workspace/sparse_bundle_adjustment-melodic-devel' with build type 'catkin'
+[1.197s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/voiture/course_2025_slam_pkgs/workspace/sparse_bundle_adjustment-melodic-devel'
+[1.198s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.198s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.205s] INFO:colcon.colcon_ros.task.catkin.build:Building ROS package in '/home/voiture/course_2025_slam_pkgs/workspace/rplidar_ros-master' with build type 'catkin'
+[1.205s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/voiture/course_2025_slam_pkgs/workspace/rplidar_ros-master'
+[1.206s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.207s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.238s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces -- -j4 -l4
+[1.249s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/voiture/course_2025_slam_pkgs/workspace/build/sparse_bundle_adjustment': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/voiture/course_2025_slam_pkgs/workspace/sparse_bundle_adjustment-melodic-devel -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/voiture/course_2025_slam_pkgs/workspace/install/sparse_bundle_adjustment
+[1.256s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/voiture/course_2025_slam_pkgs/workspace/build/rplidar_ros': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/voiture/course_2025_slam_pkgs/workspace/rplidar_ros-master -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/voiture/course_2025_slam_pkgs/workspace/install/rplidar_ros
+[3.707s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces -- -j4 -l4
+[3.759s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces
+[4.262s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(bolide_interfaces)
+[4.264s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces
+[4.300s] Level 1:colcon.colcon_core.environment:checking '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces' for CMake module files
+[4.302s] Level 1:colcon.colcon_core.environment:checking '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces' for CMake config files
+[4.306s] Level 1:colcon.colcon_core.shell:create_environment_hook('bolide_interfaces', 'cmake_prefix_path')
+[4.307s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/hook/cmake_prefix_path.ps1'
+[4.310s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/hook/cmake_prefix_path.dsv'
+[4.313s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/hook/cmake_prefix_path.sh'
+[4.317s] Level 1:colcon.colcon_core.environment:checking '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib'
+[4.317s] Level 1:colcon.colcon_core.shell:create_environment_hook('bolide_interfaces', 'ld_library_path_lib')
+[4.317s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/hook/ld_library_path_lib.ps1'
+[4.318s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/hook/ld_library_path_lib.dsv'
+[4.319s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/hook/ld_library_path_lib.sh'
+[4.321s] Level 1:colcon.colcon_core.environment:checking '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/bin'
+[4.321s] Level 1:colcon.colcon_core.environment:checking '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/pkgconfig/bolide_interfaces.pc'
+[4.321s] Level 1:colcon.colcon_core.environment:checking '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages'
+[4.322s] Level 1:colcon.colcon_core.shell:create_environment_hook('bolide_interfaces', 'pythonpath')
+[4.322s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/hook/pythonpath.ps1'
+[4.323s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/hook/pythonpath.dsv'
+[4.326s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/hook/pythonpath.sh'
+[4.328s] Level 1:colcon.colcon_core.environment:checking '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/bin'
+[4.328s] INFO:colcon.colcon_core.shell:Creating package script '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/package.ps1'
+[4.331s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/package.dsv'
+[4.334s] INFO:colcon.colcon_core.shell:Creating package script '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/package.sh'
+[4.338s] INFO:colcon.colcon_core.shell:Creating package script '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/package.bash'
+[4.343s] INFO:colcon.colcon_core.shell:Creating package script '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/package.zsh'
+[4.348s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/colcon-core/packages/bolide_interfaces)
+[4.351s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(bolide_interfaces)
+[4.352s] Level 1:colcon.colcon_core.environment:checking '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces' for CMake module files
+[4.353s] Level 1:colcon.colcon_core.environment:checking '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces' for CMake config files
+[4.354s] Level 1:colcon.colcon_core.shell:create_environment_hook('bolide_interfaces', 'cmake_prefix_path')
+[4.355s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/hook/cmake_prefix_path.ps1'
+[4.356s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/hook/cmake_prefix_path.dsv'
+[4.357s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/hook/cmake_prefix_path.sh'
+[4.358s] Level 1:colcon.colcon_core.environment:checking '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib'
+[4.358s] Level 1:colcon.colcon_core.shell:create_environment_hook('bolide_interfaces', 'ld_library_path_lib')
+[4.359s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/hook/ld_library_path_lib.ps1'
+[4.360s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/hook/ld_library_path_lib.dsv'
+[4.361s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/hook/ld_library_path_lib.sh'
+[4.362s] Level 1:colcon.colcon_core.environment:checking '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/bin'
+[4.362s] Level 1:colcon.colcon_core.environment:checking '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/pkgconfig/bolide_interfaces.pc'
+[4.362s] Level 1:colcon.colcon_core.environment:checking '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages'
+[4.362s] Level 1:colcon.colcon_core.shell:create_environment_hook('bolide_interfaces', 'pythonpath')
+[4.363s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/hook/pythonpath.ps1'
+[4.363s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/hook/pythonpath.dsv'
+[4.364s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/hook/pythonpath.sh'
+[4.365s] Level 1:colcon.colcon_core.environment:checking '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/bin'
+[4.365s] INFO:colcon.colcon_core.shell:Creating package script '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/package.ps1'
+[4.366s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/package.dsv'
+[4.366s] INFO:colcon.colcon_core.shell:Creating package script '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/package.sh'
+[4.367s] INFO:colcon.colcon_core.shell:Creating package script '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/package.bash'
+[4.367s] INFO:colcon.colcon_core.shell:Creating package script '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/package.zsh'
+[4.368s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/colcon-core/packages/bolide_interfaces)
+[4.369s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/voiture/course_2025_slam_pkgs/workspace/src/perception_bolide' with build type 'ament_python'
+[4.369s] Level 1:colcon.colcon_core.shell:create_environment_hook('perception_bolide', 'ament_prefix_path')
+[4.370s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/share/perception_bolide/hook/ament_prefix_path.ps1'
+[4.381s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/share/perception_bolide/hook/ament_prefix_path.dsv'
+[4.383s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/share/perception_bolide/hook/ament_prefix_path.sh'
+[4.384s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.384s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.984s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/voiture/course_2025_slam_pkgs/workspace/src/perception_bolide'
+[4.985s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.985s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[5.044s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/voiture/course_2025_slam_pkgs/workspace/build/rplidar_ros' returned '1': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/voiture/course_2025_slam_pkgs/workspace/rplidar_ros-master -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/voiture/course_2025_slam_pkgs/workspace/install/rplidar_ros
+[5.047s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/voiture/course_2025_slam_pkgs/workspace/build/sparse_bundle_adjustment' returned '1': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/voiture/course_2025_slam_pkgs/workspace/sparse_bundle_adjustment-melodic-devel -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/voiture/course_2025_slam_pkgs/workspace/install/sparse_bundle_adjustment
+[5.069s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rplidar_ros)
+[5.070s] Level 1:colcon.colcon_core.environment:checking '/home/voiture/course_2025_slam_pkgs/workspace/install/rplidar_ros' for CMake module files
+[5.071s] Level 1:colcon.colcon_core.environment:checking '/home/voiture/course_2025_slam_pkgs/workspace/install/rplidar_ros' for CMake config files
+[5.071s] Level 1:colcon.colcon_core.environment:checking '/home/voiture/course_2025_slam_pkgs/workspace/install/rplidar_ros/bin'
+[5.071s] Level 1:colcon.colcon_core.environment:checking '/home/voiture/course_2025_slam_pkgs/workspace/install/rplidar_ros/lib/pkgconfig/rplidar_ros.pc'
+[5.072s] Level 1:colcon.colcon_core.environment:checking '/home/voiture/course_2025_slam_pkgs/workspace/install/rplidar_ros/lib/python3.12/site-packages'
+[5.072s] Level 1:colcon.colcon_core.environment:checking '/home/voiture/course_2025_slam_pkgs/workspace/install/rplidar_ros/bin'
+[5.072s] INFO:colcon.colcon_core.shell:Creating package script '/home/voiture/course_2025_slam_pkgs/workspace/install/rplidar_ros/share/rplidar_ros/package.ps1'
+[5.073s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/voiture/course_2025_slam_pkgs/workspace/install/rplidar_ros/share/rplidar_ros/package.dsv'
+[5.073s] INFO:colcon.colcon_core.shell:Creating package script '/home/voiture/course_2025_slam_pkgs/workspace/install/rplidar_ros/share/rplidar_ros/package.sh'
+[5.074s] INFO:colcon.colcon_core.shell:Creating package script '/home/voiture/course_2025_slam_pkgs/workspace/install/rplidar_ros/share/rplidar_ros/package.bash'
+[5.074s] INFO:colcon.colcon_core.shell:Creating package script '/home/voiture/course_2025_slam_pkgs/workspace/install/rplidar_ros/share/rplidar_ros/package.zsh'
+[5.075s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/voiture/course_2025_slam_pkgs/workspace/install/rplidar_ros/share/colcon-core/packages/rplidar_ros)
+[7.056s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[7.057s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[7.057s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '1'
+[7.057s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[7.070s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[7.070s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[7.070s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[7.109s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[7.110s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/voiture/course_2025_slam_pkgs/workspace/install/local_setup.ps1'
+[7.112s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/voiture/course_2025_slam_pkgs/workspace/install/_local_setup_util_ps1.py'
+[7.116s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/voiture/course_2025_slam_pkgs/workspace/install/setup.ps1'
+[7.120s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/voiture/course_2025_slam_pkgs/workspace/install/local_setup.sh'
+[7.124s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/voiture/course_2025_slam_pkgs/workspace/install/_local_setup_util_sh.py'
+[7.127s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/voiture/course_2025_slam_pkgs/workspace/install/setup.sh'
+[7.130s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/voiture/course_2025_slam_pkgs/workspace/install/local_setup.bash'
+[7.133s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/voiture/course_2025_slam_pkgs/workspace/install/setup.bash'
+[7.136s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/voiture/course_2025_slam_pkgs/workspace/install/local_setup.zsh'
+[7.140s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/voiture/course_2025_slam_pkgs/workspace/install/setup.zsh'

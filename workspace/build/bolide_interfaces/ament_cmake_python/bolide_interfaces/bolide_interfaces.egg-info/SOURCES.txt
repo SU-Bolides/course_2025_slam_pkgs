@@ -4,3 +4,7 @@ bolide_interfaces.egg-info/PKG-INFO
 bolide_interfaces.egg-info/SOURCES.txt
 bolide_interfaces.egg-info/dependency_links.txt
 bolide_interfaces.egg-info/top_level.txt
+bolide_interfaces/msg/__init__.py
+bolide_interfaces/msg/_camera_info.py
+bolide_interfaces/msg/_fork_speed.py
+bolide_interfaces/msg/_multiple_range.py

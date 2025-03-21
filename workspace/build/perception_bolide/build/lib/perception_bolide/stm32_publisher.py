@@ -2,6 +2,7 @@ import threading
 
 
 import rclpy
+from rclpy.node import Node
 from rclpy.executors import ExternalShutdownException
 import spidev
 from std_msgs.msg import Float32MultiArray
@@ -19,6 +20,8 @@ def spin_in_background():
 class STM32_Parser(Node):
     def __init__(self):
         super().__init__('stm32_publisher')
+
+        self.BAUDRATE = 112500
 
         bus=0 
         device=1

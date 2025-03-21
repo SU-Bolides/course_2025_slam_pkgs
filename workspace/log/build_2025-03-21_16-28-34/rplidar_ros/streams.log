@@ -1,0 +1,40 @@
+[0.051s] Invoking command in '/home/voiture/course_2025_slam_pkgs/workspace/build/rplidar_ros': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/voiture/course_2025_slam_pkgs/workspace/rplidar_ros-master -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/voiture/course_2025_slam_pkgs/workspace/install/rplidar_ros
+[0.476s] [0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+[0.476s]   Compatibility with CMake < 3.5 will be removed from a future version of
+[0.477s]   CMake.
+[0.477s] 
+[0.477s]   Update the VERSION argument <min> value or use a ...<max> suffix to tell
+[0.477s]   CMake that the project does not need compatibility with older versions.
+[0.477s] 
+[0.477s] [0m
+[1.970s] -- The C compiler identification is GNU 13.3.0
+[3.116s] -- The CXX compiler identification is GNU 13.3.0
+[3.183s] -- Detecting C compiler ABI info
+[3.467s] -- Detecting C compiler ABI info - done
+[3.483s] -- Check for working C compiler: /usr/bin/cc - skipped
+[3.489s] -- Detecting C compile features
+[3.489s] -- Detecting C compile features - done
+[3.514s] -- Detecting CXX compiler ABI info
+[3.768s] -- Detecting CXX compiler ABI info - done
+[3.800s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[3.800s] -- Detecting CXX compile features
+[3.801s] -- Detecting CXX compile features - done
+[3.833s] [31mCMake Error at CMakeLists.txt:16 (find_package):
+[3.833s]   By not providing "Findcatkin.cmake" in CMAKE_MODULE_PATH this project has
+[3.833s]   asked CMake to find a package configuration file provided by "catkin", but
+[3.833s]   CMake did not find one.
+[3.833s] 
+[3.834s]   Could not find a package configuration file provided by "catkin" with any
+[3.834s]   of the following names:
+[3.834s] 
+[3.834s]     catkinConfig.cmake
+[3.834s]     catkin-config.cmake
+[3.834s] 
+[3.834s]   Add the installation prefix of "catkin" to CMAKE_PREFIX_PATH or set
+[3.834s]   "catkin_DIR" to a directory containing one of the above files.  If "catkin"
+[3.834s]   provides a separate development package or SDK, be sure it has been
+[3.835s]   installed.
+[3.835s] 
+[3.835s] [0m
+[3.835s] -- Configuring incomplete, errors occurred!
+[3.839s] Invoked command in '/home/voiture/course_2025_slam_pkgs/workspace/build/rplidar_ros' returned '1': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/voiture/course_2025_slam_pkgs/workspace/rplidar_ros-master -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/voiture/course_2025_slam_pkgs/workspace/install/rplidar_ros
