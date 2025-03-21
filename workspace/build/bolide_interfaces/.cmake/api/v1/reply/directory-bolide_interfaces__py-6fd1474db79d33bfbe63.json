@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "bolide_interfaces__py",
+		"source" : "/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/bolide_interfaces__py"
+	}
+}

@@ -1,0 +1,6 @@
+msg/CameraInfo.idl
+msg/CameraInfo.msg
+msg/ForkSpeed.idl
+msg/ForkSpeed.msg
+msg/MultipleRange.idl
+msg/MultipleRange.msg

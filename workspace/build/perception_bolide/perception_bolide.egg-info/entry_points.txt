@@ -1,0 +1,2 @@
+[console_scripts]
+stm32_publisher = perception_bolide.stm32_publisher:main

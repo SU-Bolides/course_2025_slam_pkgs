@@ -1,0 +1,56 @@
+[0.017s] Invoking command in '/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/voiture/course_2025_slam_pkgs/workspace/src/bolide_interfaces -DCMAKE_INSTALL_PREFIX=/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces
+[0.046s] -- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.580s] -- Found std_msgs: 5.3.5 (/opt/ros/jazzy/share/std_msgs/cmake)
+[0.617s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.632s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.652s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.679s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.721s] -- Found sensor_msgs: 5.3.5 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+[0.795s] -- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+[0.807s] -- Found rosidl_adapter: 4.6.5 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+[1.401s] [31mCMake Error at /opt/ros/jazzy/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:57 (message):
+[1.401s]   execute_process(/usr/bin/python3 -m rosidl_adapter --package-name
+[1.401s]   bolide_interfaces --arguments-file
+[1.401s]   /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_adapter__arguments__bolide_interfaces.json
+[1.401s]   --output-dir
+[1.401s]   /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_adapter/bolide_interfaces
+[1.401s]   --output-file
+[1.401s]   /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_adapter/bolide_interfaces.idls)
+[1.402s]   returned error code 1:
+[1.402s] 
+[1.402s]   Error processing 'sensor_msgs/Range IR_rear_left' of
+[1.402s]   'bolide_interfaces/MultipleRange': ''IR_rear_left' is an invalid field
+[1.402s]   name.  It should have the pattern '^(?!.*__)(?!.*_$)[a-z][a-z0-9_]*$''
+[1.402s] 
+[1.402s]   Traceback (most recent call last):
+[1.402s] 
+[1.402s]     File "<frozen runpy>", line 198, in _run_module_as_main
+[1.402s]     File "<frozen runpy>", line 88, in _run_code
+[1.402s]     File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/__main__.py", line 19, in <module>
+[1.402s]       sys.exit(main())
+[1.403s]                ^^^^^^
+[1.403s]     File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/main.py", line 53, in main
+[1.403s]       abs_idl_file = convert_to_idl(
+[1.403s]                      ^^^^^^^^^^^^^^^
+[1.403s]     File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/__init__.py", line 19, in convert_to_idl
+[1.403s]       return convert_msg_to_idl(
+[1.403s]              ^^^^^^^^^^^^^^^^^^^
+[1.403s]     File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/msg/__init__.py", line 28, in convert_msg_to_idl
+[1.403s]       msg = parse_message_string(package_name, input_file.stem, content)
+[1.403s]             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1.403s]     File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/parser.py", line 520, in parse_message_string
+[1.403s]       fields.append(Field(
+[1.404s]                     ^^^^^^
+[1.404s]     File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/parser.py", line 355, in __init__
+[1.404s]       raise NameError(
+[1.404s] 
+[1.404s]   NameError: 'IR_rear_left' is an invalid field name.  It should have the
+[1.405s]   pattern '^(?!.*__)(?!.*_$)[a-z][a-z0-9_]*$'
+[1.405s] 
+[1.405s] Call Stack (most recent call first):
+[1.405s]   /opt/ros/jazzy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:132 (rosidl_adapt_interfaces)
+[1.405s]   CMakeLists.txt:17 (rosidl_generate_interfaces)
+[1.405s] 
+[1.405s] [0m
+[1.405s] -- Configuring incomplete, errors occurred!
+[1.416s] Invoked command in '/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/voiture/course_2025_slam_pkgs/workspace/src/bolide_interfaces -DCMAKE_INSTALL_PREFIX=/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces

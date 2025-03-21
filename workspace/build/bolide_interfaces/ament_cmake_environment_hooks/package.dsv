@@ -1,0 +1,4 @@
+source;share/bolide_interfaces/local_setup.bash
+source;share/bolide_interfaces/local_setup.dsv
+source;share/bolide_interfaces/local_setup.sh
+source;share/bolide_interfaces/local_setup.zsh

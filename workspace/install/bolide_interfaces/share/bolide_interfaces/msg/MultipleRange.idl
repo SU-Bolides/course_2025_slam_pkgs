@@ -1,0 +1,17 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from bolide_interfaces/msg/MultipleRange.msg
+// generated code does not contain a copyright notice
+
+#include "sensor_msgs/msg/Range.idl"
+
+module bolide_interfaces {
+  module msg {
+    struct MultipleRange {
+      sensor_msgs::msg::Range ir_rear_left;
+
+      sensor_msgs::msg::Range ir_rear_right;
+
+      sensor_msgs::msg::Range sonar_rear;
+    };
+  };
+};

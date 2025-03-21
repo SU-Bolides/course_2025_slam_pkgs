@@ -1,0 +1,69 @@
+[0.021s] Invoking command in '/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/voiture/course_2025_slam_pkgs/workspace/src/bolide_interfaces -DCMAKE_INSTALL_PREFIX=/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces
+[1.368s] -- The C compiler identification is GNU 13.3.0
+[2.396s] -- The CXX compiler identification is GNU 13.3.0
+[2.456s] -- Detecting C compiler ABI info
+[2.760s] -- Detecting C compiler ABI info - done
+[2.778s] -- Check for working C compiler: /usr/bin/cc - skipped
+[2.779s] -- Detecting C compile features
+[2.781s] -- Detecting C compile features - done
+[2.803s] -- Detecting CXX compiler ABI info
+[3.062s] -- Detecting CXX compiler ABI info - done
+[3.078s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[3.079s] -- Detecting CXX compile features
+[3.079s] -- Detecting CXX compile features - done
+[3.089s] -- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[3.394s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[3.678s] -- Found std_msgs: 5.3.5 (/opt/ros/jazzy/share/std_msgs/cmake)
+[3.790s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[3.825s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[3.872s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[3.929s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[4.019s] -- Found sensor_msgs: 5.3.5 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+[4.163s] -- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+[4.199s] -- Found rosidl_adapter: 4.6.5 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+[4.797s] [31mCMake Error at /opt/ros/jazzy/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:57 (message):
+[4.797s]   execute_process(/usr/bin/python3 -m rosidl_adapter --package-name
+[4.797s]   bolide_interfaces --arguments-file
+[4.797s]   /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_adapter__arguments__bolide_interfaces.json
+[4.798s]   --output-dir
+[4.798s]   /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_adapter/bolide_interfaces
+[4.798s]   --output-file
+[4.798s]   /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_adapter/bolide_interfaces.idls)
+[4.798s]   returned error code 1:
+[4.798s] 
+[4.798s]   Error processing 'sensor_msgs/Range IR_rear_left' of
+[4.798s]   'bolide_interfaces/MultipleRange': ''IR_rear_left' is an invalid field
+[4.798s]   name.  It should have the pattern '^(?!.*__)(?!.*_$)[a-z][a-z0-9_]*$''
+[4.798s] 
+[4.798s]   Traceback (most recent call last):
+[4.798s] 
+[4.798s]     File "<frozen runpy>", line 198, in _run_module_as_main
+[4.799s]     File "<frozen runpy>", line 88, in _run_code
+[4.799s]     File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/__main__.py", line 19, in <module>
+[4.799s]       sys.exit(main())
+[4.799s]                ^^^^^^
+[4.799s]     File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/main.py", line 53, in main
+[4.799s]       abs_idl_file = convert_to_idl(
+[4.799s]                      ^^^^^^^^^^^^^^^
+[4.799s]     File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/__init__.py", line 19, in convert_to_idl
+[4.799s]       return convert_msg_to_idl(
+[4.799s]              ^^^^^^^^^^^^^^^^^^^
+[4.799s]     File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/msg/__init__.py", line 28, in convert_msg_to_idl
+[4.799s]       msg = parse_message_string(package_name, input_file.stem, content)
+[4.799s]             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[4.800s]     File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/parser.py", line 520, in parse_message_string
+[4.800s]       fields.append(Field(
+[4.800s]                     ^^^^^^
+[4.800s]     File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/parser.py", line 355, in __init__
+[4.800s]       raise NameError(
+[4.800s] 
+[4.800s]   NameError: 'IR_rear_left' is an invalid field name.  It should have the
+[4.800s]   pattern '^(?!.*__)(?!.*_$)[a-z][a-z0-9_]*$'
+[4.800s] 
+[4.800s] Call Stack (most recent call first):
+[4.800s]   /opt/ros/jazzy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:132 (rosidl_adapt_interfaces)
+[4.800s]   CMakeLists.txt:17 (rosidl_generate_interfaces)
+[4.800s] 
+[4.801s] [0m
+[4.801s] -- Configuring incomplete, errors occurred!
+[4.821s] Invoked command in '/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/voiture/course_2025_slam_pkgs/workspace/src/bolide_interfaces -DCMAKE_INSTALL_PREFIX=/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces

@@ -1,0 +1,83 @@
+[0.000000] (-) TimerEvent: {}
+[0.000322] (-) JobUnselected: {'identifier': 'control_bolide'}
+[0.000548] (-) JobUnselected: {'identifier': 'open_karto'}
+[0.000872] (-) JobUnselected: {'identifier': 'perception_bolide'}
+[0.001042] (-) JobUnselected: {'identifier': 'perception_bolide'}
+[0.001066] (-) JobUnselected: {'identifier': 'planning_bolide'}
+[0.001086] (-) JobUnselected: {'identifier': 'rplidar_ros'}
+[0.001105] (-) JobUnselected: {'identifier': 'sparse_bundle_adjustment'}
+[0.001127] (bolide_interfaces) JobQueued: {'identifier': 'bolide_interfaces', 'dependencies': OrderedDict()}
+[0.001152] (bolide_interfaces) JobStarted: {'identifier': 'bolide_interfaces'}
+[0.012532] (bolide_interfaces) JobProgress: {'identifier': 'bolide_interfaces', 'progress': 'cmake'}
+[0.014264] (bolide_interfaces) Command: {'cmd': ['/usr/bin/cmake', '/home/voiture/course_2025_slam_pkgs/workspace/src/bolide_interfaces', '-DCMAKE_INSTALL_PREFIX=/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces'], 'cwd': '/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces', 'env': OrderedDict({'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'voiture', 'XDG_SESSION_TYPE': 'wayland', 'GIT_ASKPASS': '/usr/share/code/resources/app/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/voiture', 'CHROME_DESKTOP': 'code.desktop', 'OLDPWD': '/home/voiture/course_2025_slam_pkgs/workspace/src/bolide_interfaces', 'TERM_PROGRAM_VERSION': '1.98.2', 'DESKTOP_SESSION': 'ubuntu', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/code.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'VSCODE_GIT_ASKPASS_MAIN': '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/usr/share/code/code', 'MANAGERPID': '1430', 'SYSTEMD_EXEC_PID': '1645', 'IM_CONFIG_CHECK_ENV': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1002/bus', 'COLORTERM': 'truecolor', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '2433', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'voiture', 'JOURNAL_STREAM': '8:16489', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1002.slice/user@1002.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'voiture', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/voiture1:@/tmp/.ICE-unix/1599,unix/voiture1:/tmp/.ICE-unix/1599', 'INVOCATION_ID': '7817419f6bf949de8b0563f949d78c6f', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1002', 'GDK_BACKEND': 'x11', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'XDG_CURRENT_DESKTOP': 'Unity', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1002/.mutter-Xwaylandauth.UOLA32', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1002/vscode-git-6dd70431f9.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/run/user/1002/keyring/ssh', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'ORIGINAL_XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GJS_DEBUG_OUTPUT': 'stderr', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.046078] (bolide_interfaces) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[0.099759] (-) TimerEvent: {}
+[0.200462] (-) TimerEvent: {}
+[0.301056] (-) TimerEvent: {}
+[0.401611] (-) TimerEvent: {}
+[0.502304] (-) TimerEvent: {}
+[0.583449] (bolide_interfaces) StdoutLine: {'line': b'-- Found std_msgs: 5.3.5 (/opt/ros/jazzy/share/std_msgs/cmake)\n'}
+[0.602514] (-) TimerEvent: {}
+[0.621458] (bolide_interfaces) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[0.635741] (bolide_interfaces) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[0.654587] (bolide_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.677425] (bolide_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.702668] (-) TimerEvent: {}
+[0.723182] (bolide_interfaces) StdoutLine: {'line': b'-- Found sensor_msgs: 5.3.5 (/opt/ros/jazzy/share/sensor_msgs/cmake)\n'}
+[0.795448] (bolide_interfaces) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)\n'}
+[0.803032] (-) TimerEvent: {}
+[0.808841] (bolide_interfaces) StdoutLine: {'line': b'-- Found rosidl_adapter: 4.6.5 (/opt/ros/jazzy/share/rosidl_adapter/cmake)\n'}
+[0.903238] (-) TimerEvent: {}
+[1.003870] (-) TimerEvent: {}
+[1.104446] (-) TimerEvent: {}
+[1.205033] (-) TimerEvent: {}
+[1.305775] (-) TimerEvent: {}
+[1.406418] (-) TimerEvent: {}
+[1.408507] (bolide_interfaces) StderrLine: {'line': b'\x1b[31mCMake Error at /opt/ros/jazzy/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:57 (message):\n'}
+[1.410067] (bolide_interfaces) StderrLine: {'line': b'  execute_process(/usr/bin/python3 -m rosidl_adapter --package-name\n'}
+[1.410245] (bolide_interfaces) StderrLine: {'line': b'  bolide_interfaces --arguments-file\n'}
+[1.410354] (bolide_interfaces) StderrLine: {'line': b'  /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_adapter__arguments__bolide_interfaces.json\n'}
+[1.410449] (bolide_interfaces) StderrLine: {'line': b'  --output-dir\n'}
+[1.410541] (bolide_interfaces) StderrLine: {'line': b'  /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_adapter/bolide_interfaces\n'}
+[1.410642] (bolide_interfaces) StderrLine: {'line': b'  --output-file\n'}
+[1.410750] (bolide_interfaces) StderrLine: {'line': b'  /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_adapter/bolide_interfaces.idls)\n'}
+[1.411056] (bolide_interfaces) StderrLine: {'line': b'  returned error code 1:\n'}
+[1.411183] (bolide_interfaces) StderrLine: {'line': b'\n'}
+[1.411281] (bolide_interfaces) StderrLine: {'line': b"  Error processing 'sensor_msgs/Range IR_rear_left' of\n"}
+[1.411378] (bolide_interfaces) StderrLine: {'line': b"  'bolide_interfaces/MultipleRange': ''IR_rear_left' is an invalid field\n"}
+[1.411474] (bolide_interfaces) StderrLine: {'line': b"  name.  It should have the pattern '^(?!.*__)(?!.*_$)[a-z][a-z0-9_]*$''\n"}
+[1.411591] (bolide_interfaces) StderrLine: {'line': b'\n'}
+[1.411687] (bolide_interfaces) StderrLine: {'line': b'  Traceback (most recent call last):\n'}
+[1.411795] (bolide_interfaces) StderrLine: {'line': b'\n'}
+[1.412047] (bolide_interfaces) StderrLine: {'line': b'    File "<frozen runpy>", line 198, in _run_module_as_main\n'}
+[1.412185] (bolide_interfaces) StderrLine: {'line': b'    File "<frozen runpy>", line 88, in _run_code\n'}
+[1.412361] (bolide_interfaces) StderrLine: {'line': b'    File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/__main__.py", line 19, in <module>\n'}
+[1.412494] (bolide_interfaces) StderrLine: {'line': b'      sys.exit(main())\n'}
+[1.412630] (bolide_interfaces) StderrLine: {'line': b'               ^^^^^^\n'}
+[1.412785] (bolide_interfaces) StderrLine: {'line': b'    File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/main.py", line 53, in main\n'}
+[1.412983] (bolide_interfaces) StderrLine: {'line': b'      abs_idl_file = convert_to_idl(\n'}
+[1.413207] (bolide_interfaces) StderrLine: {'line': b'                     ^^^^^^^^^^^^^^^\n'}
+[1.413422] (bolide_interfaces) StderrLine: {'line': b'    File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/__init__.py", line 19, in convert_to_idl\n'}
+[1.413610] (bolide_interfaces) StderrLine: {'line': b'      return convert_msg_to_idl(\n'}
+[1.413789] (bolide_interfaces) StderrLine: {'line': b'             ^^^^^^^^^^^^^^^^^^^\n'}
+[1.414081] (bolide_interfaces) StderrLine: {'line': b'    File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/msg/__init__.py", line 28, in convert_msg_to_idl\n'}
+[1.414278] (bolide_interfaces) StderrLine: {'line': b'      msg = parse_message_string(package_name, input_file.stem, content)\n'}
+[1.414453] (bolide_interfaces) StderrLine: {'line': b'            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n'}
+[1.414640] (bolide_interfaces) StderrLine: {'line': b'    File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/parser.py", line 520, in parse_message_string\n'}
+[1.414839] (bolide_interfaces) StderrLine: {'line': b'      fields.append(Field(\n'}
+[1.415076] (bolide_interfaces) StderrLine: {'line': b'                    ^^^^^^\n'}
+[1.415240] (bolide_interfaces) StderrLine: {'line': b'    File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/parser.py", line 355, in __init__\n'}
+[1.415373] (bolide_interfaces) StderrLine: {'line': b'      raise NameError(\n'}
+[1.415481] (bolide_interfaces) StderrLine: {'line': b'\n'}
+[1.415578] (bolide_interfaces) StderrLine: {'line': b"  NameError: 'IR_rear_left' is an invalid field name.  It should have the\n"}
+[1.415672] (bolide_interfaces) StderrLine: {'line': b"  pattern '^(?!.*__)(?!.*_$)[a-z][a-z0-9_]*$'\n"}
+[1.415815] (bolide_interfaces) StderrLine: {'line': b'\n'}
+[1.416162] (bolide_interfaces) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[1.416327] (bolide_interfaces) StderrLine: {'line': b'  /opt/ros/jazzy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:132 (rosidl_adapt_interfaces)\n'}
+[1.416510] (bolide_interfaces) StderrLine: {'line': b'  CMakeLists.txt:17 (rosidl_generate_interfaces)\n'}
+[1.416651] (bolide_interfaces) StderrLine: {'line': b'\n'}
+[1.416762] (bolide_interfaces) StderrLine: {'line': b'\x1b[0m\n'}
+[1.416978] (bolide_interfaces) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[1.427713] (bolide_interfaces) CommandEnded: {'returncode': 1}
+[1.472045] (bolide_interfaces) JobEnded: {'identifier': 'bolide_interfaces', 'rc': 1}
+[1.483613] (-) EventReactorShutdown: {}

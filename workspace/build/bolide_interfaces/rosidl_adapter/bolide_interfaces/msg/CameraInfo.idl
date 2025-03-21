@@ -1,0 +1,18 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from bolide_interfaces/msg/CameraInfo.msg
+// generated code does not contain a copyright notice
+
+
+module bolide_interfaces {
+  module msg {
+    struct CameraInfo {
+      boolean wrong_way;
+
+      string front_color;
+
+      string left_color;
+
+      string right_color;
+    };
+  };
+};

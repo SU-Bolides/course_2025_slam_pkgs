@@ -1,0 +1,242 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-51bb73011e69d4d71c26.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18
+					]
+				},
+				{
+					"build" : "bolide_interfaces__py",
+					"jsonFile" : "directory-bolide_interfaces__py-6fd1474db79d33bfbe63.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/bolide_interfaces__py",
+					"targetIndexes" : 
+					[
+						4
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "bolide_interfaces",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_bolide_interfaces_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_bolide_interfaces_egg-53fc2b442f24e75d1e06.json",
+					"name" : "ament_cmake_python_build_bolide_interfaces_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_copy_bolide_interfaces::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_copy_bolide_interfaces-4406a774178c3d441c84.json",
+					"name" : "ament_cmake_python_copy_bolide_interfaces",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "bolide_interfaces::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-bolide_interfaces-4b72dbb4c22fbdfccfe2.json",
+					"name" : "bolide_interfaces",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "bolide_interfaces__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-bolide_interfaces__cpp-f59f981a0c68dc980b0b.json",
+					"name" : "bolide_interfaces__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "bolide_interfaces__py::@926db9df2639b691a635",
+					"jsonFile" : "target-bolide_interfaces__py-7c58023ef06267a7c518.json",
+					"name" : "bolide_interfaces__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "bolide_interfaces__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-bolide_interfaces__rosidl_generator_c-6af1ec1cfec6219c7fdb.json",
+					"name" : "bolide_interfaces__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "bolide_interfaces__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-bolide_interfaces__rosidl_generator_py-ba07fff8e19cebc32be7.json",
+					"name" : "bolide_interfaces__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "bolide_interfaces__rosidl_generator_type_description::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-bolide_interfaces__rosidl_generator_type_description-ff8763e13b78da85b526.json",
+					"name" : "bolide_interfaces__rosidl_generator_type_description",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "bolide_interfaces__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-bolide_interfaces__rosidl_typesupport_c-69a61b2375c9eaf90236.json",
+					"name" : "bolide_interfaces__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "bolide_interfaces__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-bolide_interfaces__rosidl_typesupport_cpp-4cc885edffc85dc85d6a.json",
+					"name" : "bolide_interfaces__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "bolide_interfaces__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-bolide_interfaces__rosidl_typesupport_fastrtps_c-f172f17914e2e0c5972b.json",
+					"name" : "bolide_interfaces__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "bolide_interfaces__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-bolide_interfaces__rosidl_typesupport_fastrtps_cpp-a7a74097f4b6802d73fa.json",
+					"name" : "bolide_interfaces__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "bolide_interfaces__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-bolide_interfaces__rosidl_typesupport_introspection_c-d2f8a3db094df8466d51.json",
+					"name" : "bolide_interfaces__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "bolide_interfaces__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-bolide_interfaces__rosidl_typesupport_introspection_cpp-353e5c427be620508754.json",
+					"name" : "bolide_interfaces__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "bolide_interfaces_s__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-bolide_interfaces_s__rosidl_typesupport_c-db7134bddba468c8ed9b.json",
+					"name" : "bolide_interfaces_s__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "bolide_interfaces_s__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-bolide_interfaces_s__rosidl_typesupport_fastrtps_c-4bcd411b7a4902b02258.json",
+					"name" : "bolide_interfaces_s__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "bolide_interfaces_s__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-bolide_interfaces_s__rosidl_typesupport_introspection_c-a2db65257ab942b8304b.json",
+					"name" : "bolide_interfaces_s__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "bolide_interfaces_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-bolide_interfaces_uninstall-8798b9c374fb2ba7053a.json",
+					"name" : "bolide_interfaces_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-adcfaa9dfa38825b07a5.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces",
+		"source" : "/home/voiture/course_2025_slam_pkgs/workspace/src/bolide_interfaces"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}
