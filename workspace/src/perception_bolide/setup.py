@@ -20,6 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            'stm32_publisher = perception_bolide.stm32_publisher:main',
         ],
     },
 )
