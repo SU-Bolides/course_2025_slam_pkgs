@@ -30,6 +30,7 @@ setup(
             'odom_fork_imu = perception_bolide.odom_fork_imu:main',
             'odom_fork_imu_sim = perception_bolide.odom_fork_imu:main',
             'lidar_process = perception_bolide.lidar_process:main',
+            'launch_ekf_map = perception_bolide.launch_ekf_map:main',
         ],
     },
 )
