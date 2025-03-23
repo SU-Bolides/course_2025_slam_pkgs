@@ -21,6 +21,7 @@ setup(
     entry_points={
         'console_scripts': [
             'stm32_publisher = perception_bolide.stm32_publisher:main',
+            'rear_ranges_publisher = perception_bolide.rear_ranges_publisher:main',
         ],
     },
 )
