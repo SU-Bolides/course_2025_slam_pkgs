@@ -22,6 +22,8 @@ setup(
         'console_scripts': [
             'stm32_publisher = perception_bolide.stm32_publisher:main',
             'rear_ranges_publisher = perception_bolide.rear_ranges_publisher:main',
+            'lidar_publisher = perception_bolide.lidar_publisher:main',
+            'imu_publisher = perception_bolide.imu_publisher:main',
         ],
     },
 )

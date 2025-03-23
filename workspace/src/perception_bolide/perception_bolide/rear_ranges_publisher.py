@@ -12,7 +12,7 @@ class RearSensorPublisher(Node):
         super().__init__('rear_ranges_publisher')
 
         # SUBSCRIBER 
-        self.subscription = self.create_subscription(Float32MultiArray, '/stm32_sensors', self.pose_callback, 10)
+        self.subscription = self.create_subscription(Float32MultiArray, '/stm32_sensors', self.callback, 10)
         # PUBLISHER
         self.pub = self.create_publisher(MultipleRange, '/raw_rear_range_data', 10)
 
