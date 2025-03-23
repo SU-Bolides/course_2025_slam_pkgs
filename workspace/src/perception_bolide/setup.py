@@ -29,6 +29,7 @@ setup(
             'lidar_vizu = perception_bolide.lidar_vizu:main',
             'odom_fork_imu = perception_bolide.odom_fork_imu:main',
             'odom_fork_imu_sim = perception_bolide.odom_fork_imu:main',
+            'lidar_process = perception_bolide.lidar_process:main',
         ],
     },
 )

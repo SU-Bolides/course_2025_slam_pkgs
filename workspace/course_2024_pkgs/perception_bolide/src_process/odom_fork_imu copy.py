@@ -32,7 +32,7 @@ class OdomForkImu:
 
         self.current_time = rospy.Time.now() # current_time and last_time are used to compute dt
         self.last_time = rospy.Time.now()
-curr_odom.header.stamp
+        curr_odom.header.stamp
         self.x_pos = 0
         self.y_pos = 0
         self.theta_pos = 0
