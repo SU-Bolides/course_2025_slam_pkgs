@@ -17,9 +17,9 @@ class LidarVizu(Node):
     def __init__(self, rmax:int=7):
         super().__init__("lidar_vizu")
 
-        self.sub_raw_lidar_data = self.create_subscription(LaserScan, "/raw_lidar_data", callback_raw_data)
-        self.sub_lidar_data = self.create_subscription(LaserScan, "/lidar_data", callback_processed_data)
-        self.sub_param_change_alert = self.create_subscription(Bool, "/param_change_alert", get_rmax)
+        self.sub_raw_lidar_data = self.create_subscription(LaserScan, "/raw_lidar_data", self.callback_raw_data)
+        self.sub_lidar_data = self.create_subscription(LaserScan, "/lidar_data", self.callback_processed_data)
+        self.sub_param_change_alert = self.create_subscription(Bool, "/param_change_alert", self.get_rmax)
 
         # Initialize the figure
         self.fig, self.ax = plt.subplots(subplot_kw={'projection': 'polar'})
