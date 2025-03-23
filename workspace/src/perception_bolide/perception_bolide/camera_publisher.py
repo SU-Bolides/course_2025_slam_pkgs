@@ -45,7 +45,7 @@ class CameraPublisher(Node):
     def publish_scan(self):
         """ Publishing image array in ROS topic at rate : self.fr """
 		# Log start of image publishing
-        rospy.loginfo("[INFO] -- Images are published in topic : /raw_image_data")
+        self.get_logger().info("[INFO] -- Images are published in topic : /raw_image_data")
 
         # Continuously capture and publish images until ROS is shutdown
         while rclpy.ok():
