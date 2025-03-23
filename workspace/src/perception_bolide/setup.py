@@ -27,6 +27,7 @@ setup(
             'fork_publisher = perception_bolide.fork_publisher:main',
             'camera_publisher = perception_bolide.camera_publisher:main',
             'lidar_vizu = perception_bolide.lidar_vizu:main',
+            'odom_fork_imu = perception_bolide.odom_fork_imu:main',
         ],
     },
 )
