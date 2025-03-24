@@ -1,0 +1,5 @@
+  File "/home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/python3.12/site-packages/control_bolide/stanley_controller.py", line 16
+    from "python3-inputimeout-pip" import inputimeout, TimeoutOccurred
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax
+

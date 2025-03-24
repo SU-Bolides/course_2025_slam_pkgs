@@ -13,7 +13,7 @@ from time import perf_counter_ns
 import numpy as np
 from scipy.spatial.transform import Rotation as R
 from scipy.interpolate import interp1d
-from inputimeout import inputimeout, TimeoutOccurred
+#from "python3-inputimeout-pip" import inputimeout, TimeoutOccurred
 
 class StanleyController(Node):
     '''This class implements a Stanley controller'''
@@ -21,7 +21,7 @@ class StanleyController(Node):
         super().__init__('stanley_controller')
         
     # Declare parameters
-        self.declare_parameter('waypoints_path', '~/workspace/course_2024_pkgs/control_bolide/racelines/esclangon_couloir_reverse.csv')
+        self.declare_parameter('waypoints_path', '/home/voiture/course_2025_slam_pkgs/workspace/course_2024_pkgs/control_bolide/racelines/esclangon_couloir_reverse.csv')
         self.declare_parameter('odom_topic', '/pf/pos/odom')
         self.declare_parameter('cmd_topic', 'cmd_vel')
         self.declare_parameter('K_E', 2.0)
@@ -131,7 +131,7 @@ class StanleyController(Node):
         self.laser_scan = np.array(msg.ranges)
         self.laser_scan[self.laser_scan == np.inf] = 16
 
-    def check_stuck(self,_):
+    def check_stuck(self):
         if self.started:
             if abs(self.speed_ackermann) < 0.5 and abs(self.commanded_velocity) > 0.2:
                 self.counter += 1 
@@ -160,12 +160,13 @@ class StanleyController(Node):
     def ackerCB(self, msg):
         self.speed_ackermann = msg.twist.twist.linear.x
     
-    def starting_check_timer(self, _):
+    def starting_check_timer(self):
         #Check to start:
         try:
             print("Car is ready to go. Please ensure all checks are completed.")
-            c = inputimeout(prompt='Have you checked ESC is on, init pose is set in RViz, correct map is loaded, launched rosbag record? y/n\n', timeout=15)
-        except TimeoutOccurred:
+            c = str(input('Have you checked ESC is on, init pose is set in RViz, correct map is loaded, launched rosbag record? y/n\n'))
+            #c = inputimeout(prompt='Have you checked ESC is on, init pose is set in RViz, correct map is loaded, launched rosbag record? y/n\n', timeout=15)
+        except KeyboardInterrupt:
             c = 'n'
         if c == 'y':
             print("GODSPEED <3")
@@ -670,7 +671,7 @@ class WaypointUtils:
 
 
         # Add first point as last point to complete loop
-        self.get_logger().info("Velocities: " + str(velocities))
+        self.node.get_logger().info("Velocities: " + str(velocities))
         # rospy.loginfo("Headings: " + str(headings))
 
         # interpolate, not generally needed because interpolation can be done with the solver, where you feed in target distance between points
