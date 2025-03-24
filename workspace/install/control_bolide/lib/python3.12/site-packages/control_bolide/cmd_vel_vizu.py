@@ -2,7 +2,7 @@ import numpy as np
 import cv2
 import rclpy
 from bolide_interfaces.msg import SpeedDirection
-from rclpy.node import Node
+from rclpy.node import Node 
 
 class CmdVelVisualisation(Node) :
     def __init__(self, mode = 2) :
@@ -10,13 +10,13 @@ class CmdVelVisualisation(Node) :
         self.mode = mode
 
         if mode == 1 : 
-            self.sub = self.create_subscription(SpeedDirection, 'cmd_vel', self.callback)
+            self.sub = self.create_subscription(SpeedDirection, '/cmd_vel', self.callback, 10)
         elif mode == 2 :
             self.init_compteur()
-            self.sub = self.create_subscription(SpeedDirection, 'cmd_vel', self.callback_compteur)
+            self.sub = self.create_subscription(SpeedDirection, '/cmd_vel', self.callback_compteur, 10)
         elif mode == 3 :    
             self.init_written()
-            self.sub = self.create_subscription(SpeedDirection, 'cmd_vel', self.callback_written)
+            self.sub = self.create_subscription(SpeedDirection, '/cmd_vel', self.callback_written, 10)
         rclpy.spin(self)
 
     def init_written(self) :

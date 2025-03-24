@@ -1,0 +1,35 @@
+[1.722s] Invoking command in '/home/voiture/course_2025_slam_pkgs/workspace/src/control_bolide': AMENT_PREFIX_PATH=/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/voiture/course_2025_slam_pkgs/workspace/build/control_bolide/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/python3.12/site-packages:/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/control_bolide build --build-base /home/voiture/course_2025_slam_pkgs/workspace/build/control_bolide/build install --record /home/voiture/course_2025_slam_pkgs/workspace/build/control_bolide/install.log --single-version-externally-managed install_data
+[2.109s] running egg_info
+[2.136s] writing ../../build/control_bolide/control_bolide.egg-info/PKG-INFO
+[2.137s] writing dependency_links to ../../build/control_bolide/control_bolide.egg-info/dependency_links.txt
+[2.139s] writing entry points to ../../build/control_bolide/control_bolide.egg-info/entry_points.txt
+[2.140s] writing requirements to ../../build/control_bolide/control_bolide.egg-info/requires.txt
+[2.141s] writing top-level names to ../../build/control_bolide/control_bolide.egg-info/top_level.txt
+[2.195s] reading manifest file '../../build/control_bolide/control_bolide.egg-info/SOURCES.txt'
+[2.195s] adding license file 'LICENSE'
+[2.196s] writing manifest file '../../build/control_bolide/control_bolide.egg-info/SOURCES.txt'
+[2.196s] running build
+[2.196s] running build_py
+[2.197s] copying control_bolide/stanley_controller.py -> /home/voiture/course_2025_slam_pkgs/workspace/build/control_bolide/build/lib/control_bolide
+[2.197s] copying control_bolide/cmd_vel_vizu.py -> /home/voiture/course_2025_slam_pkgs/workspace/build/control_bolide/build/lib/control_bolide
+[2.198s] running install
+[2.210s] running install_lib
+[2.238s] copying /home/voiture/course_2025_slam_pkgs/workspace/build/control_bolide/build/lib/control_bolide/stanley_controller.py -> /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/python3.12/site-packages/control_bolide
+[2.238s] copying /home/voiture/course_2025_slam_pkgs/workspace/build/control_bolide/build/lib/control_bolide/cmd_vel_vizu.py -> /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/python3.12/site-packages/control_bolide
+[2.239s] byte-compiling /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/python3.12/site-packages/control_bolide/stanley_controller.py to stanley_controller.cpython-312.pyc
+[2.248s] byte-compiling /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/python3.12/site-packages/control_bolide/cmd_vel_vizu.py to cmd_vel_vizu.cpython-312.pyc
+[2.251s] running install_data
+[2.251s] copying launch/stanley_launch.launch.py -> /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/share/control_bolide/launch
+[2.251s] running install_egg_info
+[2.280s] removing '/home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/python3.12/site-packages/control_bolide-0.0.0-py3.12.egg-info' (and everything under it)
+[2.280s] Copying ../../build/control_bolide/control_bolide.egg-info to /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/python3.12/site-packages/control_bolide-0.0.0-py3.12.egg-info
+[2.282s] running install_scripts
+[2.473s] Installing ackermann_controller script to /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/control_bolide
+[2.473s] Installing calibration_direction script to /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/control_bolide
+[2.474s] Installing calibration_direction_copy script to /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/control_bolide
+[2.475s] Installing cmd_vel_vizu script to /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/control_bolide
+[2.476s] Installing obstacle_detection script to /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/control_bolide
+[2.477s] Installing speed_direction_controller script to /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/control_bolide
+[2.478s] Installing stanley_controller script to /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/control_bolide
+[2.480s] writing list of installed files to '/home/voiture/course_2025_slam_pkgs/workspace/build/control_bolide/install.log'
+[2.573s] Invoked command in '/home/voiture/course_2025_slam_pkgs/workspace/src/control_bolide' returned '0': AMENT_PREFIX_PATH=/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/voiture/course_2025_slam_pkgs/workspace/build/control_bolide/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/python3.12/site-packages:/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/control_bolide build --build-base /home/voiture/course_2025_slam_pkgs/workspace/build/control_bolide/build install --record /home/voiture/course_2025_slam_pkgs/workspace/build/control_bolide/install.log --single-version-externally-managed install_data
