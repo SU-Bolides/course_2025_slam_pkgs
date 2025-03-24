@@ -7,6 +7,13 @@
   <maintainer email="baptiste.braun.delvoye@gmail.com">voiture</maintainer>
   <license>Apache-2.0</license>
 
+  <depend>std_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>visualization_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>bolide_interfaces</depend>
+  <depend>rclpy</depend>
+  
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
   <test_depend>ament_pep257</test_depend>
