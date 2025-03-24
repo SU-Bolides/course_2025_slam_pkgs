@@ -1,0 +1,36 @@
+running egg_info
+creating ../../build/planning_bolide/planning_bolide.egg-info
+writing ../../build/planning_bolide/planning_bolide.egg-info/PKG-INFO
+writing dependency_links to ../../build/planning_bolide/planning_bolide.egg-info/dependency_links.txt
+writing entry points to ../../build/planning_bolide/planning_bolide.egg-info/entry_points.txt
+writing requirements to ../../build/planning_bolide/planning_bolide.egg-info/requires.txt
+writing top-level names to ../../build/planning_bolide/planning_bolide.egg-info/top_level.txt
+writing manifest file '../../build/planning_bolide/planning_bolide.egg-info/SOURCES.txt'
+reading manifest file '../../build/planning_bolide/planning_bolide.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../build/planning_bolide/planning_bolide.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/voiture/course_2025_slam_pkgs/workspace/build/planning_bolide/build
+creating /home/voiture/course_2025_slam_pkgs/workspace/build/planning_bolide/build/lib
+creating /home/voiture/course_2025_slam_pkgs/workspace/build/planning_bolide/build/lib/planning_bolide
+copying planning_bolide/teleop_keyboard.py -> /home/voiture/course_2025_slam_pkgs/workspace/build/planning_bolide/build/lib/planning_bolide
+copying planning_bolide/__init__.py -> /home/voiture/course_2025_slam_pkgs/workspace/build/planning_bolide/build/lib/planning_bolide
+running install
+running install_lib
+creating /home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide/lib/python3.12/site-packages/planning_bolide
+copying /home/voiture/course_2025_slam_pkgs/workspace/build/planning_bolide/build/lib/planning_bolide/teleop_keyboard.py -> /home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide/lib/python3.12/site-packages/planning_bolide
+copying /home/voiture/course_2025_slam_pkgs/workspace/build/planning_bolide/build/lib/planning_bolide/__init__.py -> /home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide/lib/python3.12/site-packages/planning_bolide
+byte-compiling /home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide/lib/python3.12/site-packages/planning_bolide/teleop_keyboard.py to teleop_keyboard.cpython-312.pyc
+byte-compiling /home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide/lib/python3.12/site-packages/planning_bolide/__init__.py to __init__.cpython-312.pyc
+running install_data
+creating /home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide/share/ament_index
+creating /home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide/share/ament_index/resource_index
+creating /home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide/share/ament_index/resource_index/packages
+copying resource/planning_bolide -> /home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide/share/ament_index/resource_index/packages
+copying package.xml -> /home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide/share/planning_bolide
+running install_egg_info
+Copying ../../build/planning_bolide/planning_bolide.egg-info to /home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide/lib/python3.12/site-packages/planning_bolide-0.0.0-py3.12.egg-info
+running install_scripts
+Installing teleop_node script to /home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide/lib/planning_bolide
+writing list of installed files to '/home/voiture/course_2025_slam_pkgs/workspace/build/planning_bolide/install.log'

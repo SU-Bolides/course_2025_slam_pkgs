@@ -20,7 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'teleop_node = planning_control.teleop_keyboard:main',
+            'teleop_node = planning_bolide.teleop_keyboard:main',
         ],
     },
 )

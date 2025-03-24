@@ -1,0 +1,2 @@
+[console_scripts]
+teleop_node = planning_bolide.teleop_keyboard:main
