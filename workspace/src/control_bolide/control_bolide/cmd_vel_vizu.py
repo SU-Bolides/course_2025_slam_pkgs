@@ -2,7 +2,7 @@ import numpy as np
 import cv2
 import rclpy
 from bolide_interfaces.msg import SpeedDirection
-from rclpy.node import Node
+from rclpy.node import Node 
 
 class CmdVelVisualisation(Node) :
     def __init__(self, mode = 2) :
