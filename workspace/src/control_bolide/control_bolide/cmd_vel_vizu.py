@@ -10,13 +10,13 @@ class CmdVelVisualisation(Node) :
         self.mode = mode
 
         if mode == 1 : 
-            self.sub = self.create_subscription(SpeedDirection, 'cmd_vel', self.callback)
+            self.sub = self.create_subscription(SpeedDirection, '/cmd_vel', self.callback)
         elif mode == 2 :
             self.init_compteur()
-            self.sub = self.create_subscription(SpeedDirection, 'cmd_vel', self.callback_compteur)
+            self.sub = self.create_subscription(SpeedDirection, '/cmd_vel', self.callback_compteur)
         elif mode == 3 :    
             self.init_written()
-            self.sub = self.create_subscription(SpeedDirection, 'cmd_vel', self.callback_written)
+            self.sub = self.create_subscription(SpeedDirection, '/cmd_vel', self.callback_written)
         rclpy.spin(self)
 
     def init_written(self) :

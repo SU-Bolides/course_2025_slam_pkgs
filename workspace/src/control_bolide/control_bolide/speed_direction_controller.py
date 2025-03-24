@@ -32,8 +32,8 @@ class ControllerListener:
         # Node initialisation
         rclpy.init()
         self.node = rclpy.create_node('speed_direction_listener')
-        self.node.create_subscription(SpeedDirection, "cmd_vel", self.callback)
-        self.node.create_subscription(Bool, "emergency_brake", self.emergency_brake_callback)
+        self.node.create_subscription(SpeedDirection, "/cmd_vel", self.callback)
+        self.node.create_subscription(Bool, "/emergency_brake", self.emergency_brake_callback)
 
         # emergency brake boolean
         self.emergency_brake = False

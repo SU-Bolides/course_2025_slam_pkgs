@@ -43,7 +43,7 @@ def set_dir_deg(angle_degre) :
     pos = degrees2pos(math.degrees(theta))
     return pos
 
-class ControllerListener:
+class ControllerListener(Node):
     def __init__(self, pwm_prop):
         super().__init__('ackermann_controller')
         # Servo PWM cyclic ratio values for the direction

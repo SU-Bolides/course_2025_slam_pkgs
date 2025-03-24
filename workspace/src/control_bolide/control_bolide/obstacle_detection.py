@@ -44,9 +44,9 @@ class ObstacleDetection:
         self.STEERING_LIMIT_DEG = float(self.get_parameter("steering_limit_deg").get_parameter_value().double_value)
         self.BRAKE_THRESHOLD_MS = float(self.get_parameter("brake_threshold_ms").get_parameter_value().double_value)
 
-        self.occup_grid_sub = self.create_subscription(OccupancyGrid, "ocucpancy_grid", self.occup_grid, 1)
-        self.current_waypoint_pub = self.create_publisher(Marker, "move_around", 10)
-        self.waypoint_pub = self.create_publisher(Marker, "next_waypoint", 10)
+        self.occup_grid_sub = self.create_subscription(OccupancyGrid, "/ocucpancy_grid", self.occup_grid, 1)
+        self.current_waypoint_pub = self.create_publisher(Marker, "/move_around", 10)
+        self.waypoint_pub = self.create_publisher(Marker, "/next_waypoint", 10)
 
 
         self.occupancy_grid = None 
