@@ -1,0 +1,8 @@
+[console_scripts]
+ackermann_controller = control_bolide.ackermann_controller:main
+calibration_direction = control_bolide.calibration_direction:main
+calibration_direction_copy = control_bolide.calibration_direction_copy:main
+cmd_vel_vizu = control_bolide.cmd_vel_vizu:main
+obstacle_detection = control_bolide.obstacle_detection:main
+speed_direction_controller = control_bolide.speed_direction_controller:main
+stanley_controller = control_bolide.stanley_controller:main
