@@ -1,6 +1,5 @@
 import threading
 
-
 import rclpy
 from rclpy.node import Node
 from rclpy.executors import ExternalShutdownException
@@ -112,7 +111,7 @@ class STM32_Parser(Node):
             self.sensor_data.data = [self.yaw, self.speed, self.ir_gauche, self.ir_droit, self.distance_US, self.acc_x, self.yaw_rate]
 
             self.fork_data.speed = self.speed
-            self.fork_data.header.stamp = self.get_clock().now()
+            self.fork_data.header.stamp = self.get_clock().now().to_msg()
 
 
 
@@ -144,9 +143,9 @@ class STM32_Parser(Node):
             # self.multi_range_frame.Sonar_rear.range = Sonar_rear
             # self.multi_range_frame.Sonar_rear.header.stamp = rospy.Time.now()
             self.multi_range_frame.ir_rear_left.range = IR_rear_left
-            self.multi_range_frame.ir_rear_left.header.stamp = self.get_clock().now()
+            self.multi_range_frame.ir_rear_left.header.stamp = self.get_clock().now().to_msg()
             self.multi_range_frame.ir_rear_right.range = IR_rear_right
-            self.multi_range_frame.ir_rear_right.header.stamp = self.get_clock().now()
+            self.multi_range_frame.ir_rear_right.header.stamp = self.get_clock().now().to_msg()
 
             #########################################################
 
@@ -158,7 +157,7 @@ class STM32_Parser(Node):
 
 
         #stamp = rospy.Time.now()
-        stamp = self.get_clock().now()
+        stamp = self.get_clock().now().to_msg()
         self.fork_data.header.stamp = stamp
         self.imu_data.header.stamp = stamp
 

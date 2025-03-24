@@ -19,7 +19,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/ForkSpeed.msg"
   "msg/MultipleRange.msg"
   "msg/SpeedDirection.msg"
-  "srv/launch_ekf.srv"
+  "srv/LaunchEkf.srv"
   DEPENDENCIES std_msgs sensor_msgs
 )
 

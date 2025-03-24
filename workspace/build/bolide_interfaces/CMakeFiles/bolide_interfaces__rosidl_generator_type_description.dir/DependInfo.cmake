@@ -14,6 +14,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
 set(CMAKE_MULTIPLE_OUTPUT_PAIRS
   "/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_generator_type_description/bolide_interfaces/msg/ForkSpeed.json" "/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_generator_type_description/bolide_interfaces/msg/CameraInfo.json"
   "/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_generator_type_description/bolide_interfaces/msg/MultipleRange.json" "/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_generator_type_description/bolide_interfaces/msg/CameraInfo.json"
+  "/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_generator_type_description/bolide_interfaces/msg/SpeedDirection.json" "/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_generator_type_description/bolide_interfaces/msg/CameraInfo.json"
+  "/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_generator_type_description/bolide_interfaces/srv/LaunchEkf.json" "/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_generator_type_description/bolide_interfaces/msg/CameraInfo.json"
   )
 
 

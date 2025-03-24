@@ -80,6 +80,8 @@ rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/camera_info__ros
 rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/camera_info__rosidl_typesupport_introspection_c.h: rosidl_adapter/bolide_interfaces/msg/CameraInfo.idl
 rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/camera_info__rosidl_typesupport_introspection_c.h: rosidl_adapter/bolide_interfaces/msg/ForkSpeed.idl
 rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/camera_info__rosidl_typesupport_introspection_c.h: rosidl_adapter/bolide_interfaces/msg/MultipleRange.idl
+rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/camera_info__rosidl_typesupport_introspection_c.h: rosidl_adapter/bolide_interfaces/msg/SpeedDirection.idl
+rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/camera_info__rosidl_typesupport_introspection_c.h: rosidl_adapter/bolide_interfaces/srv/LaunchEkf.idl
 rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/camera_info__rosidl_typesupport_introspection_c.h: /opt/ros/jazzy/share/std_msgs/msg/Bool.idl
 rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/camera_info__rosidl_typesupport_introspection_c.h: /opt/ros/jazzy/share/std_msgs/msg/Byte.idl
 rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/camera_info__rosidl_typesupport_introspection_c.h: /opt/ros/jazzy/share/std_msgs/msg/ByteMultiArray.idl
@@ -182,6 +184,12 @@ rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/fork_speed__rosi
 rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/multiple_range__rosidl_typesupport_introspection_c.h: rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/camera_info__rosidl_typesupport_introspection_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/multiple_range__rosidl_typesupport_introspection_c.h
 
+rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/speed_direction__rosidl_typesupport_introspection_c.h: rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/camera_info__rosidl_typesupport_introspection_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/speed_direction__rosidl_typesupport_introspection_c.h
+
+rosidl_typesupport_introspection_c/bolide_interfaces/srv/detail/launch_ekf__rosidl_typesupport_introspection_c.h: rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/camera_info__rosidl_typesupport_introspection_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/bolide_interfaces/srv/detail/launch_ekf__rosidl_typesupport_introspection_c.h
+
 rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/camera_info__type_support.c: rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/camera_info__rosidl_typesupport_introspection_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/camera_info__type_support.c
 
@@ -190,6 +198,12 @@ rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/fork_speed__type
 
 rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/multiple_range__type_support.c: rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/camera_info__rosidl_typesupport_introspection_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/multiple_range__type_support.c
+
+rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/speed_direction__type_support.c: rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/camera_info__rosidl_typesupport_introspection_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/speed_direction__type_support.c
+
+rosidl_typesupport_introspection_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c: rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/camera_info__rosidl_typesupport_introspection_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c
 
 CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/camera_info__type_support.c.o: CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/flags.make
 CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/camera_info__type_support.c.o: rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/camera_info__type_support.c
@@ -233,11 +247,41 @@ CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_type
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/multiple_range__type_support.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/multiple_range__type_support.c -o CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/multiple_range__type_support.c.s
 
+CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/speed_direction__type_support.c.o: CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/flags.make
+CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/speed_direction__type_support.c.o: rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/speed_direction__type_support.c
+CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/speed_direction__type_support.c.o: CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/speed_direction__type_support.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/speed_direction__type_support.c.o -MF CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/speed_direction__type_support.c.o.d -o CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/speed_direction__type_support.c.o -c /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/speed_direction__type_support.c
+
+CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/speed_direction__type_support.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/speed_direction__type_support.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/speed_direction__type_support.c > CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/speed_direction__type_support.c.i
+
+CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/speed_direction__type_support.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/speed_direction__type_support.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/speed_direction__type_support.c -o CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/speed_direction__type_support.c.s
+
+CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c.o: CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/flags.make
+CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c.o: rosidl_typesupport_introspection_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c
+CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c.o: CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c.o -MF CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c.o.d -o CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c.o -c /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_typesupport_introspection_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c
+
+CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_typesupport_introspection_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c > CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c.i
+
+CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_typesupport_introspection_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c -o CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c.s
+
 # Object files for target bolide_interfaces__rosidl_typesupport_introspection_c
 bolide_interfaces__rosidl_typesupport_introspection_c_OBJECTS = \
 "CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/camera_info__type_support.c.o" \
 "CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/fork_speed__type_support.c.o" \
-"CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/multiple_range__type_support.c.o"
+"CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/multiple_range__type_support.c.o" \
+"CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/speed_direction__type_support.c.o" \
+"CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c.o"
 
 # External object files for target bolide_interfaces__rosidl_typesupport_introspection_c
 bolide_interfaces__rosidl_typesupport_introspection_c_EXTERNAL_OBJECTS =
@@ -245,6 +289,8 @@ bolide_interfaces__rosidl_typesupport_introspection_c_EXTERNAL_OBJECTS =
 libbolide_interfaces__rosidl_typesupport_introspection_c.so: CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/camera_info__type_support.c.o
 libbolide_interfaces__rosidl_typesupport_introspection_c.so: CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/fork_speed__type_support.c.o
 libbolide_interfaces__rosidl_typesupport_introspection_c.so: CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/multiple_range__type_support.c.o
+libbolide_interfaces__rosidl_typesupport_introspection_c.so: CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/speed_direction__type_support.c.o
+libbolide_interfaces__rosidl_typesupport_introspection_c.so: CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c.o
 libbolide_interfaces__rosidl_typesupport_introspection_c.so: CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/build.make
 libbolide_interfaces__rosidl_typesupport_introspection_c.so: libbolide_interfaces__rosidl_generator_c.so
 libbolide_interfaces__rosidl_typesupport_introspection_c.so: /opt/ros/jazzy/lib/libsensor_msgs__rosidl_typesupport_introspection_c.so
@@ -261,7 +307,7 @@ libbolide_interfaces__rosidl_typesupport_introspection_c.so: /opt/ros/jazzy/lib/
 libbolide_interfaces__rosidl_typesupport_introspection_c.so: /opt/ros/jazzy/lib/librosidl_runtime_c.so
 libbolide_interfaces__rosidl_typesupport_introspection_c.so: /opt/ros/jazzy/lib/librcutils.so
 libbolide_interfaces__rosidl_typesupport_introspection_c.so: CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C shared library libbolide_interfaces__rosidl_typesupport_introspection_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C shared library libbolide_interfaces__rosidl_typesupport_introspection_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -278,6 +324,10 @@ CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/depend: ros
 CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/fork_speed__type_support.c
 CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/multiple_range__rosidl_typesupport_introspection_c.h
 CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/multiple_range__type_support.c
+CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/speed_direction__rosidl_typesupport_introspection_c.h
+CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/speed_direction__type_support.c
+CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/bolide_interfaces/srv/detail/launch_ekf__rosidl_typesupport_introspection_c.h
+CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c
 	cd /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/voiture/course_2025_slam_pkgs/workspace/src/bolide_interfaces /home/voiture/course_2025_slam_pkgs/workspace/src/bolide_interfaces /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/depend
 

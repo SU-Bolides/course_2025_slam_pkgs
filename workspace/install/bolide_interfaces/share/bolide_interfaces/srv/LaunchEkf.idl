@@ -1,0 +1,15 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from bolide_interfaces/srv/LaunchEkf.srv
+// generated code does not contain a copyright notice
+
+
+module bolide_interfaces {
+  module srv {
+    struct LaunchEkf_Request {
+      boolean start;
+    };
+    struct LaunchEkf_Response {
+      boolean gotcha;
+    };
+  };
+};

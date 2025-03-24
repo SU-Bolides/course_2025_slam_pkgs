@@ -1,2 +1,14 @@
 [console_scripts]
+camera_opencv = perception_bolide.camera_opencv:main
+camera_publisher = perception_bolide.camera_publisher:main
+dbscan_node = perception_bolide.dbscan_node:main
+fork_publisher = perception_bolide.fork_publisher:main
+imu_publisher = perception_bolide.imu_publisher:main
+launch_ekf_map = perception_bolide.launch_ekf_map:main
+lidar_process = perception_bolide.lidar_process:main
+lidar_publisher = perception_bolide.lidar_publisher:main
+lidar_vizu = perception_bolide.lidar_vizu:main
+odom_fork_imu = perception_bolide.odom_fork_imu:main
+odom_fork_imu_sim = perception_bolide.odom_fork_imu:main
+rear_ranges_publisher = perception_bolide.rear_ranges_publisher:main
 stm32_publisher = perception_bolide.stm32_publisher:main

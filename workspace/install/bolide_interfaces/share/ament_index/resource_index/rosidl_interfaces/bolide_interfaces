@@ -4,3 +4,7 @@ msg/ForkSpeed.idl
 msg/ForkSpeed.msg
 msg/MultipleRange.idl
 msg/MultipleRange.msg
+msg/SpeedDirection.idl
+msg/SpeedDirection.msg
+srv/LaunchEkf.idl
+srv/LaunchEkf.srv

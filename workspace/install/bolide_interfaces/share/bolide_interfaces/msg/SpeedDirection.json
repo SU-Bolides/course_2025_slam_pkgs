@@ -1,0 +1,36 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "bolide_interfaces/msg/SpeedDirection",
+      "fields": [
+        {
+          "name": "speed",
+          "type": {
+            "type_id": 11,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "direction",
+          "type": {
+            "type_id": 11,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "bolide_interfaces/msg/SpeedDirection",
+      "hash_string": "RIHS01_e8de3c4534828f896efbbe1b2caecff2f22bc90a88c4384730e65ff589e63f32"
+    }
+  ]
+}

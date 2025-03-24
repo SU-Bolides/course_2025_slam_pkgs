@@ -69,6 +69,8 @@ include CMakeFiles/bolide_interfaces.dir/progress.make
 CMakeFiles/bolide_interfaces: /home/voiture/course_2025_slam_pkgs/workspace/src/bolide_interfaces/msg/CameraInfo.msg
 CMakeFiles/bolide_interfaces: /home/voiture/course_2025_slam_pkgs/workspace/src/bolide_interfaces/msg/ForkSpeed.msg
 CMakeFiles/bolide_interfaces: /home/voiture/course_2025_slam_pkgs/workspace/src/bolide_interfaces/msg/MultipleRange.msg
+CMakeFiles/bolide_interfaces: /home/voiture/course_2025_slam_pkgs/workspace/src/bolide_interfaces/msg/SpeedDirection.msg
+CMakeFiles/bolide_interfaces: /home/voiture/course_2025_slam_pkgs/workspace/src/bolide_interfaces/srv/LaunchEkf.srv
 CMakeFiles/bolide_interfaces: /opt/ros/jazzy/share/std_msgs/msg/Bool.idl
 CMakeFiles/bolide_interfaces: /opt/ros/jazzy/share/std_msgs/msg/Byte.idl
 CMakeFiles/bolide_interfaces: /opt/ros/jazzy/share/std_msgs/msg/ByteMultiArray.idl
@@ -127,6 +129,7 @@ CMakeFiles/bolide_interfaces: /opt/ros/jazzy/share/sensor_msgs/msg/RelativeHumid
 CMakeFiles/bolide_interfaces: /opt/ros/jazzy/share/sensor_msgs/msg/Temperature.idl
 CMakeFiles/bolide_interfaces: /opt/ros/jazzy/share/sensor_msgs/msg/TimeReference.idl
 CMakeFiles/bolide_interfaces: /opt/ros/jazzy/share/sensor_msgs/srv/SetCameraInfo.idl
+CMakeFiles/bolide_interfaces: /opt/ros/jazzy/share/service_msgs/msg/ServiceEventInfo.idl
 
 bolide_interfaces: CMakeFiles/bolide_interfaces
 bolide_interfaces: CMakeFiles/bolide_interfaces.dir/build.make

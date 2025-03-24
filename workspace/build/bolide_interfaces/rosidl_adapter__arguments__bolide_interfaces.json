@@ -3,6 +3,8 @@
   "non_idl_tuples": [
     "/home/voiture/course_2025_slam_pkgs/workspace/src/bolide_interfaces:msg/CameraInfo.msg",
     "/home/voiture/course_2025_slam_pkgs/workspace/src/bolide_interfaces:msg/ForkSpeed.msg",
-    "/home/voiture/course_2025_slam_pkgs/workspace/src/bolide_interfaces:msg/MultipleRange.msg"
+    "/home/voiture/course_2025_slam_pkgs/workspace/src/bolide_interfaces:msg/MultipleRange.msg",
+    "/home/voiture/course_2025_slam_pkgs/workspace/src/bolide_interfaces:msg/SpeedDirection.msg",
+    "/home/voiture/course_2025_slam_pkgs/workspace/src/bolide_interfaces:srv/LaunchEkf.srv"
   ]
 }

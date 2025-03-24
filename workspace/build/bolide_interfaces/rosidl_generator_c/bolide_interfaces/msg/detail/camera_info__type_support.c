@@ -4,10 +4,10 @@
 
 #include <string.h>
 
+#include "bolide_interfaces/msg/detail/camera_info__struct.h"
+#include "rosidl_typesupport_interface/macros.h"
 #include "bolide_interfaces/msg/detail/camera_info__functions.h"
 #include "bolide_interfaces/msg/detail/camera_info__type_support.h"
-#include "rosidl_typesupport_interface/macros.h"
-#include "bolide_interfaces/msg/detail/camera_info__struct.h"
 
 #ifdef __cplusplus
 extern "C"

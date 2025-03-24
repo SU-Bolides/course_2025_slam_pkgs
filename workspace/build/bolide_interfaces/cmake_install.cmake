@@ -59,6 +59,14 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bolide_interfaces/msg" TYPE FILE FILES "/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_generator_type_description/bolide_interfaces/msg/SpeedDirection.json")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bolide_interfaces/srv" TYPE FILE FILES "/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_generator_type_description/bolide_interfaces/srv/LaunchEkf.json")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/bolide_interfaces/bolide_interfaces" TYPE DIRECTORY FILES "/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_generator_c/bolide_interfaces/" REGEX "/[^/]*\\.h$")
 endif()
 
@@ -383,6 +391,14 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bolide_interfaces/msg" TYPE FILE FILES "/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_adapter/bolide_interfaces/msg/SpeedDirection.idl")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bolide_interfaces/srv" TYPE FILE FILES "/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_adapter/bolide_interfaces/srv/LaunchEkf.idl")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bolide_interfaces/msg" TYPE FILE FILES "/home/voiture/course_2025_slam_pkgs/workspace/src/bolide_interfaces/msg/CameraInfo.msg")
 endif()
 
@@ -392,6 +408,14 @@ endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bolide_interfaces/msg" TYPE FILE FILES "/home/voiture/course_2025_slam_pkgs/workspace/src/bolide_interfaces/msg/MultipleRange.msg")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bolide_interfaces/msg" TYPE FILE FILES "/home/voiture/course_2025_slam_pkgs/workspace/src/bolide_interfaces/msg/SpeedDirection.msg")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bolide_interfaces/srv" TYPE FILE FILES "/home/voiture/course_2025_slam_pkgs/workspace/src/bolide_interfaces/srv/LaunchEkf.srv")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)

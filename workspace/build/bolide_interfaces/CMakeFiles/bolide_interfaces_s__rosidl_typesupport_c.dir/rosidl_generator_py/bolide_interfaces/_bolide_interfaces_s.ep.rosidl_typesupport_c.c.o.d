@@ -240,4 +240,11 @@ CMakeFiles/bolide_interfaces_s__rosidl_typesupport_c.dir/rosidl_generator_py/bol
  /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_generator_c/bolide_interfaces/msg/detail/multiple_range__type_support.h \
  /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_generator_c/bolide_interfaces/msg/detail/multiple_range__struct.h \
  /opt/ros/jazzy/include/sensor_msgs/sensor_msgs/msg/detail/range__struct.h \
- /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_generator_c/bolide_interfaces/msg/detail/multiple_range__functions.h
+ /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_generator_c/bolide_interfaces/msg/detail/multiple_range__functions.h \
+ /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__type_support.h \
+ /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__struct.h \
+ /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__functions.h \
+ /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__type_support.h \
+ /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__struct.h \
+ /opt/ros/jazzy/include/service_msgs/service_msgs/msg/detail/service_event_info__struct.h \
+ /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__functions.h

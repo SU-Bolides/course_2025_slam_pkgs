@@ -634,6 +634,150 @@ rosidl_generator_c/bolide_interfaces/msg/detail/multiple_range__type_support.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/multiple_range__type_support.c.s
 .PHONY : rosidl_generator_c/bolide_interfaces/msg/detail/multiple_range__type_support.c.s
 
+rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__description.o: rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__description.c.o
+.PHONY : rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__description.o
+
+# target to build an object file
+rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__description.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__description.c.o
+.PHONY : rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__description.c.o
+
+rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__description.i: rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__description.c.i
+.PHONY : rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__description.i
+
+# target to preprocess a source file
+rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__description.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__description.c.i
+.PHONY : rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__description.c.i
+
+rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__description.s: rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__description.c.s
+.PHONY : rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__description.s
+
+# target to generate assembly for a file
+rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__description.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__description.c.s
+.PHONY : rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__description.c.s
+
+rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__functions.o: rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__functions.c.o
+.PHONY : rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__functions.o
+
+# target to build an object file
+rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__functions.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__functions.c.o
+.PHONY : rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__functions.c.o
+
+rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__functions.i: rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__functions.c.i
+.PHONY : rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__functions.i
+
+# target to preprocess a source file
+rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__functions.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__functions.c.i
+.PHONY : rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__functions.c.i
+
+rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__functions.s: rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__functions.c.s
+.PHONY : rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__functions.s
+
+# target to generate assembly for a file
+rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__functions.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__functions.c.s
+.PHONY : rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__functions.c.s
+
+rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__type_support.o: rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__type_support.c.o
+.PHONY : rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__type_support.o
+
+# target to build an object file
+rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__type_support.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__type_support.c.o
+.PHONY : rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__type_support.c.o
+
+rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__type_support.i: rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__type_support.c.i
+.PHONY : rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__type_support.i
+
+# target to preprocess a source file
+rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__type_support.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__type_support.c.i
+.PHONY : rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__type_support.c.i
+
+rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__type_support.s: rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__type_support.c.s
+.PHONY : rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__type_support.s
+
+# target to generate assembly for a file
+rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__type_support.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__type_support.c.s
+.PHONY : rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__type_support.c.s
+
+rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__description.o: rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__description.c.o
+.PHONY : rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__description.o
+
+# target to build an object file
+rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__description.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__description.c.o
+.PHONY : rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__description.c.o
+
+rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__description.i: rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__description.c.i
+.PHONY : rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__description.i
+
+# target to preprocess a source file
+rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__description.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__description.c.i
+.PHONY : rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__description.c.i
+
+rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__description.s: rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__description.c.s
+.PHONY : rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__description.s
+
+# target to generate assembly for a file
+rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__description.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__description.c.s
+.PHONY : rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__description.c.s
+
+rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__functions.o: rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__functions.c.o
+.PHONY : rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__functions.o
+
+# target to build an object file
+rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__functions.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__functions.c.o
+.PHONY : rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__functions.c.o
+
+rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__functions.i: rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__functions.c.i
+.PHONY : rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__functions.i
+
+# target to preprocess a source file
+rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__functions.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__functions.c.i
+.PHONY : rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__functions.c.i
+
+rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__functions.s: rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__functions.c.s
+.PHONY : rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__functions.s
+
+# target to generate assembly for a file
+rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__functions.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__functions.c.s
+.PHONY : rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__functions.c.s
+
+rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__type_support.o: rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c.o
+.PHONY : rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__type_support.o
+
+# target to build an object file
+rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c.o
+.PHONY : rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c.o
+
+rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__type_support.i: rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c.i
+.PHONY : rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__type_support.i
+
+# target to preprocess a source file
+rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c.i
+.PHONY : rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c.i
+
+rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__type_support.s: rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c.s
+.PHONY : rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__type_support.s
+
+# target to generate assembly for a file
+rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c.s
+.PHONY : rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c.s
+
 rosidl_generator_py/bolide_interfaces/_bolide_interfaces_s.ep.rosidl_typesupport_c.o: rosidl_generator_py/bolide_interfaces/_bolide_interfaces_s.ep.rosidl_typesupport_c.c.o
 .PHONY : rosidl_generator_py/bolide_interfaces/_bolide_interfaces_s.ep.rosidl_typesupport_c.o
 
@@ -778,6 +922,54 @@ rosidl_generator_py/bolide_interfaces/msg/_multiple_range_s.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/bolide_interfaces__rosidl_generator_py.dir/rosidl_generator_py/bolide_interfaces/msg/_multiple_range_s.c.s
 .PHONY : rosidl_generator_py/bolide_interfaces/msg/_multiple_range_s.c.s
 
+rosidl_generator_py/bolide_interfaces/msg/_speed_direction_s.o: rosidl_generator_py/bolide_interfaces/msg/_speed_direction_s.c.o
+.PHONY : rosidl_generator_py/bolide_interfaces/msg/_speed_direction_s.o
+
+# target to build an object file
+rosidl_generator_py/bolide_interfaces/msg/_speed_direction_s.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/bolide_interfaces__rosidl_generator_py.dir/rosidl_generator_py/bolide_interfaces/msg/_speed_direction_s.c.o
+.PHONY : rosidl_generator_py/bolide_interfaces/msg/_speed_direction_s.c.o
+
+rosidl_generator_py/bolide_interfaces/msg/_speed_direction_s.i: rosidl_generator_py/bolide_interfaces/msg/_speed_direction_s.c.i
+.PHONY : rosidl_generator_py/bolide_interfaces/msg/_speed_direction_s.i
+
+# target to preprocess a source file
+rosidl_generator_py/bolide_interfaces/msg/_speed_direction_s.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/bolide_interfaces__rosidl_generator_py.dir/rosidl_generator_py/bolide_interfaces/msg/_speed_direction_s.c.i
+.PHONY : rosidl_generator_py/bolide_interfaces/msg/_speed_direction_s.c.i
+
+rosidl_generator_py/bolide_interfaces/msg/_speed_direction_s.s: rosidl_generator_py/bolide_interfaces/msg/_speed_direction_s.c.s
+.PHONY : rosidl_generator_py/bolide_interfaces/msg/_speed_direction_s.s
+
+# target to generate assembly for a file
+rosidl_generator_py/bolide_interfaces/msg/_speed_direction_s.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/bolide_interfaces__rosidl_generator_py.dir/rosidl_generator_py/bolide_interfaces/msg/_speed_direction_s.c.s
+.PHONY : rosidl_generator_py/bolide_interfaces/msg/_speed_direction_s.c.s
+
+rosidl_generator_py/bolide_interfaces/srv/_launch_ekf_s.o: rosidl_generator_py/bolide_interfaces/srv/_launch_ekf_s.c.o
+.PHONY : rosidl_generator_py/bolide_interfaces/srv/_launch_ekf_s.o
+
+# target to build an object file
+rosidl_generator_py/bolide_interfaces/srv/_launch_ekf_s.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/bolide_interfaces__rosidl_generator_py.dir/rosidl_generator_py/bolide_interfaces/srv/_launch_ekf_s.c.o
+.PHONY : rosidl_generator_py/bolide_interfaces/srv/_launch_ekf_s.c.o
+
+rosidl_generator_py/bolide_interfaces/srv/_launch_ekf_s.i: rosidl_generator_py/bolide_interfaces/srv/_launch_ekf_s.c.i
+.PHONY : rosidl_generator_py/bolide_interfaces/srv/_launch_ekf_s.i
+
+# target to preprocess a source file
+rosidl_generator_py/bolide_interfaces/srv/_launch_ekf_s.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/bolide_interfaces__rosidl_generator_py.dir/rosidl_generator_py/bolide_interfaces/srv/_launch_ekf_s.c.i
+.PHONY : rosidl_generator_py/bolide_interfaces/srv/_launch_ekf_s.c.i
+
+rosidl_generator_py/bolide_interfaces/srv/_launch_ekf_s.s: rosidl_generator_py/bolide_interfaces/srv/_launch_ekf_s.c.s
+.PHONY : rosidl_generator_py/bolide_interfaces/srv/_launch_ekf_s.s
+
+# target to generate assembly for a file
+rosidl_generator_py/bolide_interfaces/srv/_launch_ekf_s.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/bolide_interfaces__rosidl_generator_py.dir/rosidl_generator_py/bolide_interfaces/srv/_launch_ekf_s.c.s
+.PHONY : rosidl_generator_py/bolide_interfaces/srv/_launch_ekf_s.c.s
+
 rosidl_typesupport_c/bolide_interfaces/msg/camera_info__type_support.o: rosidl_typesupport_c/bolide_interfaces/msg/camera_info__type_support.cpp.o
 .PHONY : rosidl_typesupport_c/bolide_interfaces/msg/camera_info__type_support.o
 
@@ -849,6 +1041,54 @@ rosidl_typesupport_c/bolide_interfaces/msg/multiple_range__type_support.s: rosid
 rosidl_typesupport_c/bolide_interfaces/msg/multiple_range__type_support.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/bolide_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/bolide_interfaces/msg/multiple_range__type_support.cpp.s
 .PHONY : rosidl_typesupport_c/bolide_interfaces/msg/multiple_range__type_support.cpp.s
+
+rosidl_typesupport_c/bolide_interfaces/msg/speed_direction__type_support.o: rosidl_typesupport_c/bolide_interfaces/msg/speed_direction__type_support.cpp.o
+.PHONY : rosidl_typesupport_c/bolide_interfaces/msg/speed_direction__type_support.o
+
+# target to build an object file
+rosidl_typesupport_c/bolide_interfaces/msg/speed_direction__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/bolide_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/bolide_interfaces/msg/speed_direction__type_support.cpp.o
+.PHONY : rosidl_typesupport_c/bolide_interfaces/msg/speed_direction__type_support.cpp.o
+
+rosidl_typesupport_c/bolide_interfaces/msg/speed_direction__type_support.i: rosidl_typesupport_c/bolide_interfaces/msg/speed_direction__type_support.cpp.i
+.PHONY : rosidl_typesupport_c/bolide_interfaces/msg/speed_direction__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_c/bolide_interfaces/msg/speed_direction__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/bolide_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/bolide_interfaces/msg/speed_direction__type_support.cpp.i
+.PHONY : rosidl_typesupport_c/bolide_interfaces/msg/speed_direction__type_support.cpp.i
+
+rosidl_typesupport_c/bolide_interfaces/msg/speed_direction__type_support.s: rosidl_typesupport_c/bolide_interfaces/msg/speed_direction__type_support.cpp.s
+.PHONY : rosidl_typesupport_c/bolide_interfaces/msg/speed_direction__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_c/bolide_interfaces/msg/speed_direction__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/bolide_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/bolide_interfaces/msg/speed_direction__type_support.cpp.s
+.PHONY : rosidl_typesupport_c/bolide_interfaces/msg/speed_direction__type_support.cpp.s
+
+rosidl_typesupport_c/bolide_interfaces/srv/launch_ekf__type_support.o: rosidl_typesupport_c/bolide_interfaces/srv/launch_ekf__type_support.cpp.o
+.PHONY : rosidl_typesupport_c/bolide_interfaces/srv/launch_ekf__type_support.o
+
+# target to build an object file
+rosidl_typesupport_c/bolide_interfaces/srv/launch_ekf__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/bolide_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/bolide_interfaces/srv/launch_ekf__type_support.cpp.o
+.PHONY : rosidl_typesupport_c/bolide_interfaces/srv/launch_ekf__type_support.cpp.o
+
+rosidl_typesupport_c/bolide_interfaces/srv/launch_ekf__type_support.i: rosidl_typesupport_c/bolide_interfaces/srv/launch_ekf__type_support.cpp.i
+.PHONY : rosidl_typesupport_c/bolide_interfaces/srv/launch_ekf__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_c/bolide_interfaces/srv/launch_ekf__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/bolide_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/bolide_interfaces/srv/launch_ekf__type_support.cpp.i
+.PHONY : rosidl_typesupport_c/bolide_interfaces/srv/launch_ekf__type_support.cpp.i
+
+rosidl_typesupport_c/bolide_interfaces/srv/launch_ekf__type_support.s: rosidl_typesupport_c/bolide_interfaces/srv/launch_ekf__type_support.cpp.s
+.PHONY : rosidl_typesupport_c/bolide_interfaces/srv/launch_ekf__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_c/bolide_interfaces/srv/launch_ekf__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/bolide_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/bolide_interfaces/srv/launch_ekf__type_support.cpp.s
+.PHONY : rosidl_typesupport_c/bolide_interfaces/srv/launch_ekf__type_support.cpp.s
 
 rosidl_typesupport_cpp/bolide_interfaces/msg/camera_info__type_support.o: rosidl_typesupport_cpp/bolide_interfaces/msg/camera_info__type_support.cpp.o
 .PHONY : rosidl_typesupport_cpp/bolide_interfaces/msg/camera_info__type_support.o
@@ -922,6 +1162,54 @@ rosidl_typesupport_cpp/bolide_interfaces/msg/multiple_range__type_support.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/bolide_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/bolide_interfaces/msg/multiple_range__type_support.cpp.s
 .PHONY : rosidl_typesupport_cpp/bolide_interfaces/msg/multiple_range__type_support.cpp.s
 
+rosidl_typesupport_cpp/bolide_interfaces/msg/speed_direction__type_support.o: rosidl_typesupport_cpp/bolide_interfaces/msg/speed_direction__type_support.cpp.o
+.PHONY : rosidl_typesupport_cpp/bolide_interfaces/msg/speed_direction__type_support.o
+
+# target to build an object file
+rosidl_typesupport_cpp/bolide_interfaces/msg/speed_direction__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/bolide_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/bolide_interfaces/msg/speed_direction__type_support.cpp.o
+.PHONY : rosidl_typesupport_cpp/bolide_interfaces/msg/speed_direction__type_support.cpp.o
+
+rosidl_typesupport_cpp/bolide_interfaces/msg/speed_direction__type_support.i: rosidl_typesupport_cpp/bolide_interfaces/msg/speed_direction__type_support.cpp.i
+.PHONY : rosidl_typesupport_cpp/bolide_interfaces/msg/speed_direction__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_cpp/bolide_interfaces/msg/speed_direction__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/bolide_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/bolide_interfaces/msg/speed_direction__type_support.cpp.i
+.PHONY : rosidl_typesupport_cpp/bolide_interfaces/msg/speed_direction__type_support.cpp.i
+
+rosidl_typesupport_cpp/bolide_interfaces/msg/speed_direction__type_support.s: rosidl_typesupport_cpp/bolide_interfaces/msg/speed_direction__type_support.cpp.s
+.PHONY : rosidl_typesupport_cpp/bolide_interfaces/msg/speed_direction__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_cpp/bolide_interfaces/msg/speed_direction__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/bolide_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/bolide_interfaces/msg/speed_direction__type_support.cpp.s
+.PHONY : rosidl_typesupport_cpp/bolide_interfaces/msg/speed_direction__type_support.cpp.s
+
+rosidl_typesupport_cpp/bolide_interfaces/srv/launch_ekf__type_support.o: rosidl_typesupport_cpp/bolide_interfaces/srv/launch_ekf__type_support.cpp.o
+.PHONY : rosidl_typesupport_cpp/bolide_interfaces/srv/launch_ekf__type_support.o
+
+# target to build an object file
+rosidl_typesupport_cpp/bolide_interfaces/srv/launch_ekf__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/bolide_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/bolide_interfaces/srv/launch_ekf__type_support.cpp.o
+.PHONY : rosidl_typesupport_cpp/bolide_interfaces/srv/launch_ekf__type_support.cpp.o
+
+rosidl_typesupport_cpp/bolide_interfaces/srv/launch_ekf__type_support.i: rosidl_typesupport_cpp/bolide_interfaces/srv/launch_ekf__type_support.cpp.i
+.PHONY : rosidl_typesupport_cpp/bolide_interfaces/srv/launch_ekf__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_cpp/bolide_interfaces/srv/launch_ekf__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/bolide_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/bolide_interfaces/srv/launch_ekf__type_support.cpp.i
+.PHONY : rosidl_typesupport_cpp/bolide_interfaces/srv/launch_ekf__type_support.cpp.i
+
+rosidl_typesupport_cpp/bolide_interfaces/srv/launch_ekf__type_support.s: rosidl_typesupport_cpp/bolide_interfaces/srv/launch_ekf__type_support.cpp.s
+.PHONY : rosidl_typesupport_cpp/bolide_interfaces/srv/launch_ekf__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_cpp/bolide_interfaces/srv/launch_ekf__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/bolide_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/bolide_interfaces/srv/launch_ekf__type_support.cpp.s
+.PHONY : rosidl_typesupport_cpp/bolide_interfaces/srv/launch_ekf__type_support.cpp.s
+
 rosidl_typesupport_fastrtps_c/bolide_interfaces/msg/detail/camera_info__type_support_c.o: rosidl_typesupport_fastrtps_c/bolide_interfaces/msg/detail/camera_info__type_support_c.cpp.o
 .PHONY : rosidl_typesupport_fastrtps_c/bolide_interfaces/msg/detail/camera_info__type_support_c.o
 
@@ -993,6 +1281,54 @@ rosidl_typesupport_fastrtps_c/bolide_interfaces/msg/detail/multiple_range__type_
 rosidl_typesupport_fastrtps_c/bolide_interfaces/msg/detail/multiple_range__type_support_c.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/bolide_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/bolide_interfaces/msg/detail/multiple_range__type_support_c.cpp.s
 .PHONY : rosidl_typesupport_fastrtps_c/bolide_interfaces/msg/detail/multiple_range__type_support_c.cpp.s
+
+rosidl_typesupport_fastrtps_c/bolide_interfaces/msg/detail/speed_direction__type_support_c.o: rosidl_typesupport_fastrtps_c/bolide_interfaces/msg/detail/speed_direction__type_support_c.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_c/bolide_interfaces/msg/detail/speed_direction__type_support_c.o
+
+# target to build an object file
+rosidl_typesupport_fastrtps_c/bolide_interfaces/msg/detail/speed_direction__type_support_c.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/bolide_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/bolide_interfaces/msg/detail/speed_direction__type_support_c.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_c/bolide_interfaces/msg/detail/speed_direction__type_support_c.cpp.o
+
+rosidl_typesupport_fastrtps_c/bolide_interfaces/msg/detail/speed_direction__type_support_c.i: rosidl_typesupport_fastrtps_c/bolide_interfaces/msg/detail/speed_direction__type_support_c.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_c/bolide_interfaces/msg/detail/speed_direction__type_support_c.i
+
+# target to preprocess a source file
+rosidl_typesupport_fastrtps_c/bolide_interfaces/msg/detail/speed_direction__type_support_c.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/bolide_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/bolide_interfaces/msg/detail/speed_direction__type_support_c.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_c/bolide_interfaces/msg/detail/speed_direction__type_support_c.cpp.i
+
+rosidl_typesupport_fastrtps_c/bolide_interfaces/msg/detail/speed_direction__type_support_c.s: rosidl_typesupport_fastrtps_c/bolide_interfaces/msg/detail/speed_direction__type_support_c.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_c/bolide_interfaces/msg/detail/speed_direction__type_support_c.s
+
+# target to generate assembly for a file
+rosidl_typesupport_fastrtps_c/bolide_interfaces/msg/detail/speed_direction__type_support_c.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/bolide_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/bolide_interfaces/msg/detail/speed_direction__type_support_c.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_c/bolide_interfaces/msg/detail/speed_direction__type_support_c.cpp.s
+
+rosidl_typesupport_fastrtps_c/bolide_interfaces/srv/detail/launch_ekf__type_support_c.o: rosidl_typesupport_fastrtps_c/bolide_interfaces/srv/detail/launch_ekf__type_support_c.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_c/bolide_interfaces/srv/detail/launch_ekf__type_support_c.o
+
+# target to build an object file
+rosidl_typesupport_fastrtps_c/bolide_interfaces/srv/detail/launch_ekf__type_support_c.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/bolide_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/bolide_interfaces/srv/detail/launch_ekf__type_support_c.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_c/bolide_interfaces/srv/detail/launch_ekf__type_support_c.cpp.o
+
+rosidl_typesupport_fastrtps_c/bolide_interfaces/srv/detail/launch_ekf__type_support_c.i: rosidl_typesupport_fastrtps_c/bolide_interfaces/srv/detail/launch_ekf__type_support_c.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_c/bolide_interfaces/srv/detail/launch_ekf__type_support_c.i
+
+# target to preprocess a source file
+rosidl_typesupport_fastrtps_c/bolide_interfaces/srv/detail/launch_ekf__type_support_c.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/bolide_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/bolide_interfaces/srv/detail/launch_ekf__type_support_c.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_c/bolide_interfaces/srv/detail/launch_ekf__type_support_c.cpp.i
+
+rosidl_typesupport_fastrtps_c/bolide_interfaces/srv/detail/launch_ekf__type_support_c.s: rosidl_typesupport_fastrtps_c/bolide_interfaces/srv/detail/launch_ekf__type_support_c.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_c/bolide_interfaces/srv/detail/launch_ekf__type_support_c.s
+
+# target to generate assembly for a file
+rosidl_typesupport_fastrtps_c/bolide_interfaces/srv/detail/launch_ekf__type_support_c.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/bolide_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/bolide_interfaces/srv/detail/launch_ekf__type_support_c.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_c/bolide_interfaces/srv/detail/launch_ekf__type_support_c.cpp.s
 
 rosidl_typesupport_fastrtps_cpp/bolide_interfaces/msg/detail/dds_fastrtps/camera_info__type_support.o: rosidl_typesupport_fastrtps_cpp/bolide_interfaces/msg/detail/dds_fastrtps/camera_info__type_support.cpp.o
 .PHONY : rosidl_typesupport_fastrtps_cpp/bolide_interfaces/msg/detail/dds_fastrtps/camera_info__type_support.o
@@ -1066,6 +1402,54 @@ rosidl_typesupport_fastrtps_cpp/bolide_interfaces/msg/detail/dds_fastrtps/multip
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/bolide_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/bolide_interfaces/msg/detail/dds_fastrtps/multiple_range__type_support.cpp.s
 .PHONY : rosidl_typesupport_fastrtps_cpp/bolide_interfaces/msg/detail/dds_fastrtps/multiple_range__type_support.cpp.s
 
+rosidl_typesupport_fastrtps_cpp/bolide_interfaces/msg/detail/dds_fastrtps/speed_direction__type_support.o: rosidl_typesupport_fastrtps_cpp/bolide_interfaces/msg/detail/dds_fastrtps/speed_direction__type_support.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_cpp/bolide_interfaces/msg/detail/dds_fastrtps/speed_direction__type_support.o
+
+# target to build an object file
+rosidl_typesupport_fastrtps_cpp/bolide_interfaces/msg/detail/dds_fastrtps/speed_direction__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/bolide_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/bolide_interfaces/msg/detail/dds_fastrtps/speed_direction__type_support.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_cpp/bolide_interfaces/msg/detail/dds_fastrtps/speed_direction__type_support.cpp.o
+
+rosidl_typesupport_fastrtps_cpp/bolide_interfaces/msg/detail/dds_fastrtps/speed_direction__type_support.i: rosidl_typesupport_fastrtps_cpp/bolide_interfaces/msg/detail/dds_fastrtps/speed_direction__type_support.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_cpp/bolide_interfaces/msg/detail/dds_fastrtps/speed_direction__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_fastrtps_cpp/bolide_interfaces/msg/detail/dds_fastrtps/speed_direction__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/bolide_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/bolide_interfaces/msg/detail/dds_fastrtps/speed_direction__type_support.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_cpp/bolide_interfaces/msg/detail/dds_fastrtps/speed_direction__type_support.cpp.i
+
+rosidl_typesupport_fastrtps_cpp/bolide_interfaces/msg/detail/dds_fastrtps/speed_direction__type_support.s: rosidl_typesupport_fastrtps_cpp/bolide_interfaces/msg/detail/dds_fastrtps/speed_direction__type_support.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_cpp/bolide_interfaces/msg/detail/dds_fastrtps/speed_direction__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_fastrtps_cpp/bolide_interfaces/msg/detail/dds_fastrtps/speed_direction__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/bolide_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/bolide_interfaces/msg/detail/dds_fastrtps/speed_direction__type_support.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_cpp/bolide_interfaces/msg/detail/dds_fastrtps/speed_direction__type_support.cpp.s
+
+rosidl_typesupport_fastrtps_cpp/bolide_interfaces/srv/detail/dds_fastrtps/launch_ekf__type_support.o: rosidl_typesupport_fastrtps_cpp/bolide_interfaces/srv/detail/dds_fastrtps/launch_ekf__type_support.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_cpp/bolide_interfaces/srv/detail/dds_fastrtps/launch_ekf__type_support.o
+
+# target to build an object file
+rosidl_typesupport_fastrtps_cpp/bolide_interfaces/srv/detail/dds_fastrtps/launch_ekf__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/bolide_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/bolide_interfaces/srv/detail/dds_fastrtps/launch_ekf__type_support.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_cpp/bolide_interfaces/srv/detail/dds_fastrtps/launch_ekf__type_support.cpp.o
+
+rosidl_typesupport_fastrtps_cpp/bolide_interfaces/srv/detail/dds_fastrtps/launch_ekf__type_support.i: rosidl_typesupport_fastrtps_cpp/bolide_interfaces/srv/detail/dds_fastrtps/launch_ekf__type_support.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_cpp/bolide_interfaces/srv/detail/dds_fastrtps/launch_ekf__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_fastrtps_cpp/bolide_interfaces/srv/detail/dds_fastrtps/launch_ekf__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/bolide_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/bolide_interfaces/srv/detail/dds_fastrtps/launch_ekf__type_support.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_cpp/bolide_interfaces/srv/detail/dds_fastrtps/launch_ekf__type_support.cpp.i
+
+rosidl_typesupport_fastrtps_cpp/bolide_interfaces/srv/detail/dds_fastrtps/launch_ekf__type_support.s: rosidl_typesupport_fastrtps_cpp/bolide_interfaces/srv/detail/dds_fastrtps/launch_ekf__type_support.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_cpp/bolide_interfaces/srv/detail/dds_fastrtps/launch_ekf__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_fastrtps_cpp/bolide_interfaces/srv/detail/dds_fastrtps/launch_ekf__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/bolide_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/bolide_interfaces/srv/detail/dds_fastrtps/launch_ekf__type_support.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_cpp/bolide_interfaces/srv/detail/dds_fastrtps/launch_ekf__type_support.cpp.s
+
 rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/camera_info__type_support.o: rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/camera_info__type_support.c.o
 .PHONY : rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/camera_info__type_support.o
 
@@ -1137,6 +1521,54 @@ rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/multiple_range__
 rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/multiple_range__type_support.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/multiple_range__type_support.c.s
 .PHONY : rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/multiple_range__type_support.c.s
+
+rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/speed_direction__type_support.o: rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/speed_direction__type_support.c.o
+.PHONY : rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/speed_direction__type_support.o
+
+# target to build an object file
+rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/speed_direction__type_support.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/speed_direction__type_support.c.o
+.PHONY : rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/speed_direction__type_support.c.o
+
+rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/speed_direction__type_support.i: rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/speed_direction__type_support.c.i
+.PHONY : rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/speed_direction__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/speed_direction__type_support.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/speed_direction__type_support.c.i
+.PHONY : rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/speed_direction__type_support.c.i
+
+rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/speed_direction__type_support.s: rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/speed_direction__type_support.c.s
+.PHONY : rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/speed_direction__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/speed_direction__type_support.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/speed_direction__type_support.c.s
+.PHONY : rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/speed_direction__type_support.c.s
+
+rosidl_typesupport_introspection_c/bolide_interfaces/srv/detail/launch_ekf__type_support.o: rosidl_typesupport_introspection_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c.o
+.PHONY : rosidl_typesupport_introspection_c/bolide_interfaces/srv/detail/launch_ekf__type_support.o
+
+# target to build an object file
+rosidl_typesupport_introspection_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c.o
+.PHONY : rosidl_typesupport_introspection_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c.o
+
+rosidl_typesupport_introspection_c/bolide_interfaces/srv/detail/launch_ekf__type_support.i: rosidl_typesupport_introspection_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c.i
+.PHONY : rosidl_typesupport_introspection_c/bolide_interfaces/srv/detail/launch_ekf__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_introspection_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c.i
+.PHONY : rosidl_typesupport_introspection_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c.i
+
+rosidl_typesupport_introspection_c/bolide_interfaces/srv/detail/launch_ekf__type_support.s: rosidl_typesupport_introspection_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c.s
+.PHONY : rosidl_typesupport_introspection_c/bolide_interfaces/srv/detail/launch_ekf__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_introspection_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c.s
+.PHONY : rosidl_typesupport_introspection_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c.s
 
 rosidl_typesupport_introspection_cpp/bolide_interfaces/msg/detail/camera_info__type_support.o: rosidl_typesupport_introspection_cpp/bolide_interfaces/msg/detail/camera_info__type_support.cpp.o
 .PHONY : rosidl_typesupport_introspection_cpp/bolide_interfaces/msg/detail/camera_info__type_support.o
@@ -1210,6 +1642,54 @@ rosidl_typesupport_introspection_cpp/bolide_interfaces/msg/detail/multiple_range
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/bolide_interfaces/msg/detail/multiple_range__type_support.cpp.s
 .PHONY : rosidl_typesupport_introspection_cpp/bolide_interfaces/msg/detail/multiple_range__type_support.cpp.s
 
+rosidl_typesupport_introspection_cpp/bolide_interfaces/msg/detail/speed_direction__type_support.o: rosidl_typesupport_introspection_cpp/bolide_interfaces/msg/detail/speed_direction__type_support.cpp.o
+.PHONY : rosidl_typesupport_introspection_cpp/bolide_interfaces/msg/detail/speed_direction__type_support.o
+
+# target to build an object file
+rosidl_typesupport_introspection_cpp/bolide_interfaces/msg/detail/speed_direction__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/bolide_interfaces/msg/detail/speed_direction__type_support.cpp.o
+.PHONY : rosidl_typesupport_introspection_cpp/bolide_interfaces/msg/detail/speed_direction__type_support.cpp.o
+
+rosidl_typesupport_introspection_cpp/bolide_interfaces/msg/detail/speed_direction__type_support.i: rosidl_typesupport_introspection_cpp/bolide_interfaces/msg/detail/speed_direction__type_support.cpp.i
+.PHONY : rosidl_typesupport_introspection_cpp/bolide_interfaces/msg/detail/speed_direction__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_introspection_cpp/bolide_interfaces/msg/detail/speed_direction__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/bolide_interfaces/msg/detail/speed_direction__type_support.cpp.i
+.PHONY : rosidl_typesupport_introspection_cpp/bolide_interfaces/msg/detail/speed_direction__type_support.cpp.i
+
+rosidl_typesupport_introspection_cpp/bolide_interfaces/msg/detail/speed_direction__type_support.s: rosidl_typesupport_introspection_cpp/bolide_interfaces/msg/detail/speed_direction__type_support.cpp.s
+.PHONY : rosidl_typesupport_introspection_cpp/bolide_interfaces/msg/detail/speed_direction__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_introspection_cpp/bolide_interfaces/msg/detail/speed_direction__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/bolide_interfaces/msg/detail/speed_direction__type_support.cpp.s
+.PHONY : rosidl_typesupport_introspection_cpp/bolide_interfaces/msg/detail/speed_direction__type_support.cpp.s
+
+rosidl_typesupport_introspection_cpp/bolide_interfaces/srv/detail/launch_ekf__type_support.o: rosidl_typesupport_introspection_cpp/bolide_interfaces/srv/detail/launch_ekf__type_support.cpp.o
+.PHONY : rosidl_typesupport_introspection_cpp/bolide_interfaces/srv/detail/launch_ekf__type_support.o
+
+# target to build an object file
+rosidl_typesupport_introspection_cpp/bolide_interfaces/srv/detail/launch_ekf__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/bolide_interfaces/srv/detail/launch_ekf__type_support.cpp.o
+.PHONY : rosidl_typesupport_introspection_cpp/bolide_interfaces/srv/detail/launch_ekf__type_support.cpp.o
+
+rosidl_typesupport_introspection_cpp/bolide_interfaces/srv/detail/launch_ekf__type_support.i: rosidl_typesupport_introspection_cpp/bolide_interfaces/srv/detail/launch_ekf__type_support.cpp.i
+.PHONY : rosidl_typesupport_introspection_cpp/bolide_interfaces/srv/detail/launch_ekf__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_introspection_cpp/bolide_interfaces/srv/detail/launch_ekf__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/bolide_interfaces/srv/detail/launch_ekf__type_support.cpp.i
+.PHONY : rosidl_typesupport_introspection_cpp/bolide_interfaces/srv/detail/launch_ekf__type_support.cpp.i
+
+rosidl_typesupport_introspection_cpp/bolide_interfaces/srv/detail/launch_ekf__type_support.s: rosidl_typesupport_introspection_cpp/bolide_interfaces/srv/detail/launch_ekf__type_support.cpp.s
+.PHONY : rosidl_typesupport_introspection_cpp/bolide_interfaces/srv/detail/launch_ekf__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_introspection_cpp/bolide_interfaces/srv/detail/launch_ekf__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/bolide_interfaces/srv/detail/launch_ekf__type_support.cpp.s
+.PHONY : rosidl_typesupport_introspection_cpp/bolide_interfaces/srv/detail/launch_ekf__type_support.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1269,6 +1749,24 @@ help:
 	@echo "... rosidl_generator_c/bolide_interfaces/msg/detail/multiple_range__type_support.o"
 	@echo "... rosidl_generator_c/bolide_interfaces/msg/detail/multiple_range__type_support.i"
 	@echo "... rosidl_generator_c/bolide_interfaces/msg/detail/multiple_range__type_support.s"
+	@echo "... rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__description.o"
+	@echo "... rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__description.i"
+	@echo "... rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__description.s"
+	@echo "... rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__functions.o"
+	@echo "... rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__functions.i"
+	@echo "... rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__functions.s"
+	@echo "... rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__type_support.o"
+	@echo "... rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__type_support.i"
+	@echo "... rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__type_support.s"
+	@echo "... rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__description.o"
+	@echo "... rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__description.i"
+	@echo "... rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__description.s"
+	@echo "... rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__functions.o"
+	@echo "... rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__functions.i"
+	@echo "... rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__functions.s"
+	@echo "... rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__type_support.o"
+	@echo "... rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__type_support.i"
+	@echo "... rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__type_support.s"
 	@echo "... rosidl_generator_py/bolide_interfaces/_bolide_interfaces_s.ep.rosidl_typesupport_c.o"
 	@echo "... rosidl_generator_py/bolide_interfaces/_bolide_interfaces_s.ep.rosidl_typesupport_c.i"
 	@echo "... rosidl_generator_py/bolide_interfaces/_bolide_interfaces_s.ep.rosidl_typesupport_c.s"
@@ -1287,6 +1785,12 @@ help:
 	@echo "... rosidl_generator_py/bolide_interfaces/msg/_multiple_range_s.o"
 	@echo "... rosidl_generator_py/bolide_interfaces/msg/_multiple_range_s.i"
 	@echo "... rosidl_generator_py/bolide_interfaces/msg/_multiple_range_s.s"
+	@echo "... rosidl_generator_py/bolide_interfaces/msg/_speed_direction_s.o"
+	@echo "... rosidl_generator_py/bolide_interfaces/msg/_speed_direction_s.i"
+	@echo "... rosidl_generator_py/bolide_interfaces/msg/_speed_direction_s.s"
+	@echo "... rosidl_generator_py/bolide_interfaces/srv/_launch_ekf_s.o"
+	@echo "... rosidl_generator_py/bolide_interfaces/srv/_launch_ekf_s.i"
+	@echo "... rosidl_generator_py/bolide_interfaces/srv/_launch_ekf_s.s"
 	@echo "... rosidl_typesupport_c/bolide_interfaces/msg/camera_info__type_support.o"
 	@echo "... rosidl_typesupport_c/bolide_interfaces/msg/camera_info__type_support.i"
 	@echo "... rosidl_typesupport_c/bolide_interfaces/msg/camera_info__type_support.s"
@@ -1296,6 +1800,12 @@ help:
 	@echo "... rosidl_typesupport_c/bolide_interfaces/msg/multiple_range__type_support.o"
 	@echo "... rosidl_typesupport_c/bolide_interfaces/msg/multiple_range__type_support.i"
 	@echo "... rosidl_typesupport_c/bolide_interfaces/msg/multiple_range__type_support.s"
+	@echo "... rosidl_typesupport_c/bolide_interfaces/msg/speed_direction__type_support.o"
+	@echo "... rosidl_typesupport_c/bolide_interfaces/msg/speed_direction__type_support.i"
+	@echo "... rosidl_typesupport_c/bolide_interfaces/msg/speed_direction__type_support.s"
+	@echo "... rosidl_typesupport_c/bolide_interfaces/srv/launch_ekf__type_support.o"
+	@echo "... rosidl_typesupport_c/bolide_interfaces/srv/launch_ekf__type_support.i"
+	@echo "... rosidl_typesupport_c/bolide_interfaces/srv/launch_ekf__type_support.s"
 	@echo "... rosidl_typesupport_cpp/bolide_interfaces/msg/camera_info__type_support.o"
 	@echo "... rosidl_typesupport_cpp/bolide_interfaces/msg/camera_info__type_support.i"
 	@echo "... rosidl_typesupport_cpp/bolide_interfaces/msg/camera_info__type_support.s"
@@ -1305,6 +1815,12 @@ help:
 	@echo "... rosidl_typesupport_cpp/bolide_interfaces/msg/multiple_range__type_support.o"
 	@echo "... rosidl_typesupport_cpp/bolide_interfaces/msg/multiple_range__type_support.i"
 	@echo "... rosidl_typesupport_cpp/bolide_interfaces/msg/multiple_range__type_support.s"
+	@echo "... rosidl_typesupport_cpp/bolide_interfaces/msg/speed_direction__type_support.o"
+	@echo "... rosidl_typesupport_cpp/bolide_interfaces/msg/speed_direction__type_support.i"
+	@echo "... rosidl_typesupport_cpp/bolide_interfaces/msg/speed_direction__type_support.s"
+	@echo "... rosidl_typesupport_cpp/bolide_interfaces/srv/launch_ekf__type_support.o"
+	@echo "... rosidl_typesupport_cpp/bolide_interfaces/srv/launch_ekf__type_support.i"
+	@echo "... rosidl_typesupport_cpp/bolide_interfaces/srv/launch_ekf__type_support.s"
 	@echo "... rosidl_typesupport_fastrtps_c/bolide_interfaces/msg/detail/camera_info__type_support_c.o"
 	@echo "... rosidl_typesupport_fastrtps_c/bolide_interfaces/msg/detail/camera_info__type_support_c.i"
 	@echo "... rosidl_typesupport_fastrtps_c/bolide_interfaces/msg/detail/camera_info__type_support_c.s"
@@ -1314,6 +1830,12 @@ help:
 	@echo "... rosidl_typesupport_fastrtps_c/bolide_interfaces/msg/detail/multiple_range__type_support_c.o"
 	@echo "... rosidl_typesupport_fastrtps_c/bolide_interfaces/msg/detail/multiple_range__type_support_c.i"
 	@echo "... rosidl_typesupport_fastrtps_c/bolide_interfaces/msg/detail/multiple_range__type_support_c.s"
+	@echo "... rosidl_typesupport_fastrtps_c/bolide_interfaces/msg/detail/speed_direction__type_support_c.o"
+	@echo "... rosidl_typesupport_fastrtps_c/bolide_interfaces/msg/detail/speed_direction__type_support_c.i"
+	@echo "... rosidl_typesupport_fastrtps_c/bolide_interfaces/msg/detail/speed_direction__type_support_c.s"
+	@echo "... rosidl_typesupport_fastrtps_c/bolide_interfaces/srv/detail/launch_ekf__type_support_c.o"
+	@echo "... rosidl_typesupport_fastrtps_c/bolide_interfaces/srv/detail/launch_ekf__type_support_c.i"
+	@echo "... rosidl_typesupport_fastrtps_c/bolide_interfaces/srv/detail/launch_ekf__type_support_c.s"
 	@echo "... rosidl_typesupport_fastrtps_cpp/bolide_interfaces/msg/detail/dds_fastrtps/camera_info__type_support.o"
 	@echo "... rosidl_typesupport_fastrtps_cpp/bolide_interfaces/msg/detail/dds_fastrtps/camera_info__type_support.i"
 	@echo "... rosidl_typesupport_fastrtps_cpp/bolide_interfaces/msg/detail/dds_fastrtps/camera_info__type_support.s"
@@ -1323,6 +1845,12 @@ help:
 	@echo "... rosidl_typesupport_fastrtps_cpp/bolide_interfaces/msg/detail/dds_fastrtps/multiple_range__type_support.o"
 	@echo "... rosidl_typesupport_fastrtps_cpp/bolide_interfaces/msg/detail/dds_fastrtps/multiple_range__type_support.i"
 	@echo "... rosidl_typesupport_fastrtps_cpp/bolide_interfaces/msg/detail/dds_fastrtps/multiple_range__type_support.s"
+	@echo "... rosidl_typesupport_fastrtps_cpp/bolide_interfaces/msg/detail/dds_fastrtps/speed_direction__type_support.o"
+	@echo "... rosidl_typesupport_fastrtps_cpp/bolide_interfaces/msg/detail/dds_fastrtps/speed_direction__type_support.i"
+	@echo "... rosidl_typesupport_fastrtps_cpp/bolide_interfaces/msg/detail/dds_fastrtps/speed_direction__type_support.s"
+	@echo "... rosidl_typesupport_fastrtps_cpp/bolide_interfaces/srv/detail/dds_fastrtps/launch_ekf__type_support.o"
+	@echo "... rosidl_typesupport_fastrtps_cpp/bolide_interfaces/srv/detail/dds_fastrtps/launch_ekf__type_support.i"
+	@echo "... rosidl_typesupport_fastrtps_cpp/bolide_interfaces/srv/detail/dds_fastrtps/launch_ekf__type_support.s"
 	@echo "... rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/camera_info__type_support.o"
 	@echo "... rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/camera_info__type_support.i"
 	@echo "... rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/camera_info__type_support.s"
@@ -1332,6 +1860,12 @@ help:
 	@echo "... rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/multiple_range__type_support.o"
 	@echo "... rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/multiple_range__type_support.i"
 	@echo "... rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/multiple_range__type_support.s"
+	@echo "... rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/speed_direction__type_support.o"
+	@echo "... rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/speed_direction__type_support.i"
+	@echo "... rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/speed_direction__type_support.s"
+	@echo "... rosidl_typesupport_introspection_c/bolide_interfaces/srv/detail/launch_ekf__type_support.o"
+	@echo "... rosidl_typesupport_introspection_c/bolide_interfaces/srv/detail/launch_ekf__type_support.i"
+	@echo "... rosidl_typesupport_introspection_c/bolide_interfaces/srv/detail/launch_ekf__type_support.s"
 	@echo "... rosidl_typesupport_introspection_cpp/bolide_interfaces/msg/detail/camera_info__type_support.o"
 	@echo "... rosidl_typesupport_introspection_cpp/bolide_interfaces/msg/detail/camera_info__type_support.i"
 	@echo "... rosidl_typesupport_introspection_cpp/bolide_interfaces/msg/detail/camera_info__type_support.s"
@@ -1341,6 +1875,12 @@ help:
 	@echo "... rosidl_typesupport_introspection_cpp/bolide_interfaces/msg/detail/multiple_range__type_support.o"
 	@echo "... rosidl_typesupport_introspection_cpp/bolide_interfaces/msg/detail/multiple_range__type_support.i"
 	@echo "... rosidl_typesupport_introspection_cpp/bolide_interfaces/msg/detail/multiple_range__type_support.s"
+	@echo "... rosidl_typesupport_introspection_cpp/bolide_interfaces/msg/detail/speed_direction__type_support.o"
+	@echo "... rosidl_typesupport_introspection_cpp/bolide_interfaces/msg/detail/speed_direction__type_support.i"
+	@echo "... rosidl_typesupport_introspection_cpp/bolide_interfaces/msg/detail/speed_direction__type_support.s"
+	@echo "... rosidl_typesupport_introspection_cpp/bolide_interfaces/srv/detail/launch_ekf__type_support.o"
+	@echo "... rosidl_typesupport_introspection_cpp/bolide_interfaces/srv/detail/launch_ekf__type_support.i"
+	@echo "... rosidl_typesupport_introspection_cpp/bolide_interfaces/srv/detail/launch_ekf__type_support.s"
 .PHONY : help
 
 

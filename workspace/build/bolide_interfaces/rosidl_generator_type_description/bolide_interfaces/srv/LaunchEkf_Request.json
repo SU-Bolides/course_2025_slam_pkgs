@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "bolide_interfaces/srv/LaunchEkf_Request",
+      "fields": [
+        {
+          "name": "start",
+          "type": {
+            "type_id": 15,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "bolide_interfaces/srv/LaunchEkf_Request",
+      "hash_string": "RIHS01_9ed705950bcfb725f86d8226ab611821dcd3e9f48ff7bac05c1e23dece676e19"
+    }
+  ]
+}

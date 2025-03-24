@@ -5,12 +5,16 @@
   "idl_tuples": [
     "/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_adapter/bolide_interfaces:msg/CameraInfo.idl",
     "/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_adapter/bolide_interfaces:msg/ForkSpeed.idl",
-    "/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_adapter/bolide_interfaces:msg/MultipleRange.idl"
+    "/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_adapter/bolide_interfaces:msg/MultipleRange.idl",
+    "/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_adapter/bolide_interfaces:msg/SpeedDirection.idl",
+    "/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_adapter/bolide_interfaces:srv/LaunchEkf.idl"
   ],
   "ros_interface_files": [
     "/home/voiture/course_2025_slam_pkgs/workspace/src/bolide_interfaces/msg/CameraInfo.msg",
     "/home/voiture/course_2025_slam_pkgs/workspace/src/bolide_interfaces/msg/ForkSpeed.msg",
-    "/home/voiture/course_2025_slam_pkgs/workspace/src/bolide_interfaces/msg/MultipleRange.msg"
+    "/home/voiture/course_2025_slam_pkgs/workspace/src/bolide_interfaces/msg/MultipleRange.msg",
+    "/home/voiture/course_2025_slam_pkgs/workspace/src/bolide_interfaces/msg/SpeedDirection.msg",
+    "/home/voiture/course_2025_slam_pkgs/workspace/src/bolide_interfaces/srv/LaunchEkf.srv"
   ],
   "ros_interface_dependencies": [
     "std_msgs:/opt/ros/jazzy/share/std_msgs/msg/Bool.idl",
@@ -130,6 +134,8 @@
     "/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_adapter/bolide_interfaces/msg/CameraInfo.idl",
     "/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_adapter/bolide_interfaces/msg/ForkSpeed.idl",
     "/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_adapter/bolide_interfaces/msg/MultipleRange.idl",
+    "/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_adapter/bolide_interfaces/msg/SpeedDirection.idl",
+    "/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_adapter/bolide_interfaces/srv/LaunchEkf.idl",
     "/opt/ros/jazzy/share/std_msgs/msg/Bool.idl",
     "/opt/ros/jazzy/share/std_msgs/msg/Byte.idl",
     "/opt/ros/jazzy/share/std_msgs/msg/ByteMultiArray.idl",
@@ -227,6 +233,8 @@
   "type_description_tuples": [
     "msg/CameraInfo.idl:/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_generator_type_description/bolide_interfaces/msg/CameraInfo.json",
     "msg/ForkSpeed.idl:/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_generator_type_description/bolide_interfaces/msg/ForkSpeed.json",
-    "msg/MultipleRange.idl:/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_generator_type_description/bolide_interfaces/msg/MultipleRange.json"
+    "msg/MultipleRange.idl:/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_generator_type_description/bolide_interfaces/msg/MultipleRange.json",
+    "msg/SpeedDirection.idl:/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_generator_type_description/bolide_interfaces/msg/SpeedDirection.json",
+    "srv/LaunchEkf.idl:/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_generator_type_description/bolide_interfaces/srv/LaunchEkf.json"
   ]
 }

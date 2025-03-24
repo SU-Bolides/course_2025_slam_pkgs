@@ -1,0 +1,14 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from bolide_interfaces/msg/SpeedDirection.msg
+// generated code does not contain a copyright notice
+
+
+module bolide_interfaces {
+  module msg {
+    struct SpeedDirection {
+      double speed;
+
+      double direction;
+    };
+  };
+};

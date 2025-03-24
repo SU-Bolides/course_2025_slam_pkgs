@@ -72,10 +72,15 @@ include /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/bo
 /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/bolide_interfaces__py/CMakeFiles/bolide_interfaces__py: rosidl_generator_py/bolide_interfaces/msg/_camera_info.py
 /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/bolide_interfaces__py/CMakeFiles/bolide_interfaces__py: rosidl_generator_py/bolide_interfaces/msg/_fork_speed.py
 /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/bolide_interfaces__py/CMakeFiles/bolide_interfaces__py: rosidl_generator_py/bolide_interfaces/msg/_multiple_range.py
+/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/bolide_interfaces__py/CMakeFiles/bolide_interfaces__py: rosidl_generator_py/bolide_interfaces/msg/_speed_direction.py
+/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/bolide_interfaces__py/CMakeFiles/bolide_interfaces__py: rosidl_generator_py/bolide_interfaces/srv/_launch_ekf.py
 /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/bolide_interfaces__py/CMakeFiles/bolide_interfaces__py: rosidl_generator_py/bolide_interfaces/msg/__init__.py
+/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/bolide_interfaces__py/CMakeFiles/bolide_interfaces__py: rosidl_generator_py/bolide_interfaces/srv/__init__.py
 /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/bolide_interfaces__py/CMakeFiles/bolide_interfaces__py: rosidl_generator_py/bolide_interfaces/msg/_camera_info_s.c
 /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/bolide_interfaces__py/CMakeFiles/bolide_interfaces__py: rosidl_generator_py/bolide_interfaces/msg/_fork_speed_s.c
 /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/bolide_interfaces__py/CMakeFiles/bolide_interfaces__py: rosidl_generator_py/bolide_interfaces/msg/_multiple_range_s.c
+/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/bolide_interfaces__py/CMakeFiles/bolide_interfaces__py: rosidl_generator_py/bolide_interfaces/msg/_speed_direction_s.c
+/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/bolide_interfaces__py/CMakeFiles/bolide_interfaces__py: rosidl_generator_py/bolide_interfaces/srv/_launch_ekf_s.c
 
 rosidl_generator_py/bolide_interfaces/_bolide_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/lib/rosidl_generator_py/rosidl_generator_py
 rosidl_generator_py/bolide_interfaces/_bolide_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/lib/python3.12/site-packages/rosidl_generator_py/__init__.py
@@ -93,6 +98,8 @@ rosidl_generator_py/bolide_interfaces/_bolide_interfaces_s.ep.rosidl_typesupport
 rosidl_generator_py/bolide_interfaces/_bolide_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/bolide_interfaces/msg/CameraInfo.idl
 rosidl_generator_py/bolide_interfaces/_bolide_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/bolide_interfaces/msg/ForkSpeed.idl
 rosidl_generator_py/bolide_interfaces/_bolide_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/bolide_interfaces/msg/MultipleRange.idl
+rosidl_generator_py/bolide_interfaces/_bolide_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/bolide_interfaces/msg/SpeedDirection.idl
+rosidl_generator_py/bolide_interfaces/_bolide_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/bolide_interfaces/srv/LaunchEkf.idl
 rosidl_generator_py/bolide_interfaces/_bolide_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/share/std_msgs/msg/Bool.idl
 rosidl_generator_py/bolide_interfaces/_bolide_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/share/std_msgs/msg/Byte.idl
 rosidl_generator_py/bolide_interfaces/_bolide_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/share/std_msgs/msg/ByteMultiArray.idl
@@ -204,8 +211,17 @@ rosidl_generator_py/bolide_interfaces/msg/_fork_speed.py: rosidl_generator_py/bo
 rosidl_generator_py/bolide_interfaces/msg/_multiple_range.py: rosidl_generator_py/bolide_interfaces/_bolide_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/bolide_interfaces/msg/_multiple_range.py
 
+rosidl_generator_py/bolide_interfaces/msg/_speed_direction.py: rosidl_generator_py/bolide_interfaces/_bolide_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/bolide_interfaces/msg/_speed_direction.py
+
+rosidl_generator_py/bolide_interfaces/srv/_launch_ekf.py: rosidl_generator_py/bolide_interfaces/_bolide_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/bolide_interfaces/srv/_launch_ekf.py
+
 rosidl_generator_py/bolide_interfaces/msg/__init__.py: rosidl_generator_py/bolide_interfaces/_bolide_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/bolide_interfaces/msg/__init__.py
+
+rosidl_generator_py/bolide_interfaces/srv/__init__.py: rosidl_generator_py/bolide_interfaces/_bolide_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/bolide_interfaces/srv/__init__.py
 
 rosidl_generator_py/bolide_interfaces/msg/_camera_info_s.c: rosidl_generator_py/bolide_interfaces/_bolide_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/bolide_interfaces/msg/_camera_info_s.c
@@ -215,6 +231,12 @@ rosidl_generator_py/bolide_interfaces/msg/_fork_speed_s.c: rosidl_generator_py/b
 
 rosidl_generator_py/bolide_interfaces/msg/_multiple_range_s.c: rosidl_generator_py/bolide_interfaces/_bolide_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/bolide_interfaces/msg/_multiple_range_s.c
+
+rosidl_generator_py/bolide_interfaces/msg/_speed_direction_s.c: rosidl_generator_py/bolide_interfaces/_bolide_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/bolide_interfaces/msg/_speed_direction_s.c
+
+rosidl_generator_py/bolide_interfaces/srv/_launch_ekf_s.c: rosidl_generator_py/bolide_interfaces/_bolide_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/bolide_interfaces/srv/_launch_ekf_s.c
 
 bolide_interfaces__py: /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/bolide_interfaces__py/CMakeFiles/bolide_interfaces__py
 bolide_interfaces__py: rosidl_generator_py/bolide_interfaces/_bolide_interfaces_s.ep.rosidl_typesupport_c.c
@@ -227,6 +249,11 @@ bolide_interfaces__py: rosidl_generator_py/bolide_interfaces/msg/_fork_speed.py
 bolide_interfaces__py: rosidl_generator_py/bolide_interfaces/msg/_fork_speed_s.c
 bolide_interfaces__py: rosidl_generator_py/bolide_interfaces/msg/_multiple_range.py
 bolide_interfaces__py: rosidl_generator_py/bolide_interfaces/msg/_multiple_range_s.c
+bolide_interfaces__py: rosidl_generator_py/bolide_interfaces/msg/_speed_direction.py
+bolide_interfaces__py: rosidl_generator_py/bolide_interfaces/msg/_speed_direction_s.c
+bolide_interfaces__py: rosidl_generator_py/bolide_interfaces/srv/__init__.py
+bolide_interfaces__py: rosidl_generator_py/bolide_interfaces/srv/_launch_ekf.py
+bolide_interfaces__py: rosidl_generator_py/bolide_interfaces/srv/_launch_ekf_s.c
 bolide_interfaces__py: /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/bolide_interfaces__py/CMakeFiles/bolide_interfaces__py.dir/build.make
 .PHONY : bolide_interfaces__py
 

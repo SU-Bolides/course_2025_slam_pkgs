@@ -1,0 +1,771 @@
+[0.000000] (-) TimerEvent: {}
+[0.000452] (-) JobUnselected: {'identifier': 'control_bolide'}
+[0.000863] (-) JobUnselected: {'identifier': 'open_karto'}
+[0.001049] (-) JobUnselected: {'identifier': 'rplidar_ros'}
+[0.001291] (-) JobUnselected: {'identifier': 'sparse_bundle_adjustment'}
+[0.001453] (bolide_interfaces) JobQueued: {'identifier': 'bolide_interfaces', 'dependencies': OrderedDict()}
+[0.001503] (perception_bolide) JobQueued: {'identifier': 'perception_bolide', 'dependencies': OrderedDict({'bolide_interfaces': '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces'})}
+[0.001542] (bolide_interfaces) JobStarted: {'identifier': 'bolide_interfaces'}
+[0.013765] (bolide_interfaces) JobProgress: {'identifier': 'bolide_interfaces', 'progress': 'cmake'}
+[0.015200] (bolide_interfaces) JobProgress: {'identifier': 'bolide_interfaces', 'progress': 'build'}
+[0.016302] (bolide_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces', '--', '-j4', '-l4'], 'cwd': '/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces', 'env': OrderedDict({'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'voiture', 'XDG_SESSION_TYPE': 'wayland', 'GIT_ASKPASS': '/usr/share/code/resources/app/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/voiture', 'CHROME_DESKTOP': 'code.desktop', 'OLDPWD': '/home/voiture/course_2025_slam_pkgs', 'TERM_PROGRAM_VERSION': '1.98.2', 'DESKTOP_SESSION': 'ubuntu', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/code.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'VSCODE_GIT_ASKPASS_MAIN': '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/usr/share/code/code', 'MANAGERPID': '1415', 'SYSTEMD_EXEC_PID': '1635', 'IM_CONFIG_CHECK_ENV': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1002/bus', 'COLORTERM': 'truecolor', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '2738', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'voiture', 'JOURNAL_STREAM': '8:13083', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1002.slice/user@1002.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'voiture', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/voiture1:@/tmp/.ICE-unix/1586,unix/voiture1:/tmp/.ICE-unix/1586', 'INVOCATION_ID': '4ef43aa72dbe4dfaaa18d8ae620c752f', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1002', 'GDK_BACKEND': 'x11', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'XDG_CURRENT_DESKTOP': 'Unity', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1002/.mutter-Xwaylandauth.3STR32', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1002/vscode-git-6dd70431f9.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/run/user/1002/keyring/ssh', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'ORIGINAL_XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GJS_DEBUG_OUTPUT': 'stderr', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.084399] (bolide_interfaces) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[0.099763] (-) TimerEvent: {}
+[0.200488] (-) TimerEvent: {}
+[0.301155] (-) TimerEvent: {}
+[0.344548] (bolide_interfaces) StdoutLine: {'line': b'-- Found std_msgs: 5.3.5 (/opt/ros/jazzy/share/std_msgs/cmake)\n'}
+[0.387256] (bolide_interfaces) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[0.401729] (-) TimerEvent: {}
+[0.412675] (bolide_interfaces) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[0.438607] (bolide_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.472642] (bolide_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.501918] (-) TimerEvent: {}
+[0.524865] (bolide_interfaces) StdoutLine: {'line': b'-- Found sensor_msgs: 5.3.5 (/opt/ros/jazzy/share/sensor_msgs/cmake)\n'}
+[0.602117] (-) TimerEvent: {}
+[0.616342] (bolide_interfaces) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)\n'}
+[0.629190] (bolide_interfaces) StdoutLine: {'line': b'-- Found rosidl_adapter: 4.6.5 (/opt/ros/jazzy/share/rosidl_adapter/cmake)\n'}
+[0.702311] (-) TimerEvent: {}
+[0.803075] (-) TimerEvent: {}
+[0.903626] (-) TimerEvent: {}
+[1.004157] (-) TimerEvent: {}
+[1.104749] (-) TimerEvent: {}
+[1.205270] (-) TimerEvent: {}
+[1.305863] (-) TimerEvent: {}
+[1.376274] (bolide_interfaces) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.12.0 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)\n'}
+[1.406033] (-) TimerEvent: {}
+[1.506590] (-) TimerEvent: {}
+[1.607045] (-) TimerEvent: {}
+[1.707529] (-) TimerEvent: {}
+[1.808192] (-) TimerEvent: {}
+[1.908834] (-) TimerEvent: {}
+[2.009406] (-) TimerEvent: {}
+[2.059247] (bolide_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[2.109561] (-) TimerEvent: {}
+[2.210139] (-) TimerEvent: {}
+[2.310863] (-) TimerEvent: {}
+[2.325691] (bolide_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.331445] (bolide_interfaces) StdoutLine: {'line': b'-- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)\n'}
+[2.411470] (-) TimerEvent: {}
+[2.512117] (-) TimerEvent: {}
+[2.612576] (-) TimerEvent: {}
+[2.713023] (-) TimerEvent: {}
+[2.813586] (-) TimerEvent: {}
+[2.914158] (-) TimerEvent: {}
+[3.014592] (-) TimerEvent: {}
+[3.115050] (-) TimerEvent: {}
+[3.215520] (-) TimerEvent: {}
+[3.315973] (-) TimerEvent: {}
+[3.416430] (-) TimerEvent: {}
+[3.516944] (-) TimerEvent: {}
+[3.617464] (-) TimerEvent: {}
+[3.718005] (-) TimerEvent: {}
+[3.818620] (-) TimerEvent: {}
+[3.853044] (bolide_interfaces) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed \n'}
+[3.918813] (-) TimerEvent: {}
+[4.019483] (-) TimerEvent: {}
+[4.120222] (-) TimerEvent: {}
+[4.220940] (-) TimerEvent: {}
+[4.321597] (-) TimerEvent: {}
+[4.422233] (-) TimerEvent: {}
+[4.522938] (-) TimerEvent: {}
+[4.623675] (-) TimerEvent: {}
+[4.724402] (-) TimerEvent: {}
+[4.825155] (-) TimerEvent: {}
+[4.925897] (-) TimerEvent: {}
+[5.026563] (-) TimerEvent: {}
+[5.127091] (-) TimerEvent: {}
+[5.227616] (-) TimerEvent: {}
+[5.275721] (bolide_interfaces) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.17.1 (/opt/ros/jazzy/share/ament_lint_auto/cmake)\n'}
+[5.327770] (-) TimerEvent: {}
+[5.329122] (bolide_interfaces) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[5.333099] (bolide_interfaces) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[5.340810] (bolide_interfaces) StdoutLine: {'line': b'-- Configuring done (5.3s)\n'}
+[5.427998] (-) TimerEvent: {}
+[5.528666] (-) TimerEvent: {}
+[5.630821] (-) TimerEvent: {}
+[5.695366] (bolide_interfaces) StdoutLine: {'line': b'-- Generating done (0.3s)\n'}
+[5.731023] (-) TimerEvent: {}
+[5.804750] (bolide_interfaces) StdoutLine: {'line': b'-- Build files have been written to: /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces\n'}
+[5.831267] (-) TimerEvent: {}
+[5.933258] (-) TimerEvent: {}
+[5.935678] (bolide_interfaces) StdoutLine: {'line': b'[  1%] \x1b[34m\x1b[1mGenerating type hashes for ROS interfaces\x1b[0m\n'}
+[5.962998] (bolide_interfaces) StdoutLine: {'line': b'[  1%] Built target ament_cmake_python_copy_bolide_interfaces\n'}
+[6.033630] (-) TimerEvent: {}
+[6.134655] (-) TimerEvent: {}
+[6.235280] (-) TimerEvent: {}
+[6.335854] (-) TimerEvent: {}
+[6.436414] (-) TimerEvent: {}
+[6.441140] (bolide_interfaces) StdoutLine: {'line': b'running egg_info\n'}
+[6.486224] (bolide_interfaces) StdoutLine: {'line': b'writing bolide_interfaces.egg-info/PKG-INFO\n'}
+[6.486745] (bolide_interfaces) StdoutLine: {'line': b'writing dependency_links to bolide_interfaces.egg-info/dependency_links.txt\n'}
+[6.488365] (bolide_interfaces) StdoutLine: {'line': b'writing top-level names to bolide_interfaces.egg-info/top_level.txt\n'}
+[6.536589] (-) TimerEvent: {}
+[6.560921] (bolide_interfaces) StdoutLine: {'line': b'[  1%] Built target bolide_interfaces__rosidl_generator_type_description\n'}
+[6.597738] (bolide_interfaces) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[6.625382] (bolide_interfaces) StdoutLine: {'line': b"reading manifest file 'bolide_interfaces.egg-info/SOURCES.txt'\n"}
+[6.626849] (bolide_interfaces) StdoutLine: {'line': b'[  4%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[6.627312] (bolide_interfaces) StdoutLine: {'line': b"writing manifest file 'bolide_interfaces.egg-info/SOURCES.txt'\n"}
+[6.636789] (-) TimerEvent: {}
+[6.740698] (-) TimerEvent: {}
+[6.836766] (bolide_interfaces) StdoutLine: {'line': b'[  4%] Built target ament_cmake_python_build_bolide_interfaces_egg\n'}
+[6.845482] (-) TimerEvent: {}
+[6.947000] (-) TimerEvent: {}
+[7.047578] (-) TimerEvent: {}
+[7.149011] (-) TimerEvent: {}
+[7.249564] (-) TimerEvent: {}
+[7.350213] (-) TimerEvent: {}
+[7.452166] (-) TimerEvent: {}
+[7.552859] (-) TimerEvent: {}
+[7.676545] (-) TimerEvent: {}
+[7.780365] (-) TimerEvent: {}
+[7.851224] (bolide_interfaces) StdoutLine: {'line': b'[  4%] Built target bolide_interfaces__cpp\n'}
+[7.881529] (-) TimerEvent: {}
+[7.984091] (-) TimerEvent: {}
+[8.087966] (-) TimerEvent: {}
+[8.189454] (-) TimerEvent: {}
+[8.289976] (-) TimerEvent: {}
+[8.388151] (bolide_interfaces) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding C object CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/camera_info__functions.c.o\x1b[0m\n'}
+[8.388824] (bolide_interfaces) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding C object CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/camera_info__description.c.o\x1b[0m\n'}
+[8.389845] (bolide_interfaces) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding C object CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/camera_info__type_support.c.o\x1b[0m\n'}
+[8.390518] (-) TimerEvent: {}
+[8.401610] (bolide_interfaces) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/fork_speed__description.c.o\x1b[0m\n'}
+[8.490695] (-) TimerEvent: {}
+[8.591230] (-) TimerEvent: {}
+[8.692725] (-) TimerEvent: {}
+[8.793228] (-) TimerEvent: {}
+[8.869580] (bolide_interfaces) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/fork_speed__functions.c.o\x1b[0m\n'}
+[8.893422] (-) TimerEvent: {}
+[8.994060] (-) TimerEvent: {}
+[9.094625] (-) TimerEvent: {}
+[9.120666] (bolide_interfaces) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/fork_speed__type_support.c.o\x1b[0m\n'}
+[9.150075] (bolide_interfaces) StdoutLine: {'line': b'[ 13%] \x1b[32mBuilding C object CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/multiple_range__description.c.o\x1b[0m\n'}
+[9.197690] (-) TimerEvent: {}
+[9.254222] (bolide_interfaces) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding C object CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/multiple_range__functions.c.o\x1b[0m\n'}
+[9.267876] (bolide_interfaces) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding C object CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/multiple_range__type_support.c.o\x1b[0m\n'}
+[9.277716] (bolide_interfaces) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding C object CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__description.c.o\x1b[0m\n'}
+[9.302005] (-) TimerEvent: {}
+[9.317043] (bolide_interfaces) StdoutLine: {'line': b'[ 18%] \x1b[32mBuilding C object CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__functions.c.o\x1b[0m\n'}
+[9.403651] (-) TimerEvent: {}
+[9.405451] (bolide_interfaces) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding C object CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__type_support.c.o\x1b[0m\n'}
+[9.473703] (bolide_interfaces) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding C object CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__description.c.o\x1b[0m\n'}
+[9.487696] (bolide_interfaces) StdoutLine: {'line': b'[ 22%] \x1b[32mBuilding C object CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__functions.c.o\x1b[0m\n'}
+[9.503744] (-) TimerEvent: {}
+[9.518374] (bolide_interfaces) StdoutLine: {'line': b'[ 24%] \x1b[32mBuilding C object CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c.o\x1b[0m\n'}
+[9.603942] (-) TimerEvent: {}
+[9.680105] (bolide_interfaces) StdoutLine: {'line': b'[ 25%] \x1b[32m\x1b[1mLinking C shared library libbolide_interfaces__rosidl_generator_c.so\x1b[0m\n'}
+[9.704135] (-) TimerEvent: {}
+[9.804800] (-) TimerEvent: {}
+[9.905429] (-) TimerEvent: {}
+[9.961137] (bolide_interfaces) StdoutLine: {'line': b'[ 25%] Built target bolide_interfaces__rosidl_generator_c\n'}
+[9.993381] (bolide_interfaces) StdoutLine: {'line': b'[ 29%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[9.996882] (bolide_interfaces) StdoutLine: {'line': b'[ 29%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[9.997237] (bolide_interfaces) StdoutLine: {'line': b'[ 29%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[9.997504] (bolide_interfaces) StdoutLine: {'line': b'[ 31%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[10.009666] (-) TimerEvent: {}
+[10.110324] (-) TimerEvent: {}
+[10.210982] (-) TimerEvent: {}
+[10.313911] (-) TimerEvent: {}
+[10.414400] (-) TimerEvent: {}
+[10.516277] (-) TimerEvent: {}
+[10.617226] (-) TimerEvent: {}
+[10.721147] (-) TimerEvent: {}
+[10.821904] (-) TimerEvent: {}
+[10.925628] (-) TimerEvent: {}
+[11.026334] (-) TimerEvent: {}
+[11.029241] (bolide_interfaces) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding CXX object CMakeFiles/bolide_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/bolide_interfaces/msg/camera_info__type_support.cpp.o\x1b[0m\n'}
+[11.126594] (-) TimerEvent: {}
+[11.235349] (-) TimerEvent: {}
+[11.336034] (-) TimerEvent: {}
+[11.375037] (bolide_interfaces) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding C object CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/camera_info__type_support.c.o\x1b[0m\n'}
+[11.436617] (-) TimerEvent: {}
+[11.522466] (bolide_interfaces) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding C object CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/fork_speed__type_support.c.o\x1b[0m\n'}
+[11.536840] (-) TimerEvent: {}
+[11.560720] (bolide_interfaces) StdoutLine: {'line': b'[ 37%] \x1b[32mBuilding CXX object CMakeFiles/bolide_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/bolide_interfaces/msg/detail/dds_fastrtps/camera_info__type_support.cpp.o\x1b[0m\n'}
+[11.561288] (bolide_interfaces) StdoutLine: {'line': b'[ 37%] \x1b[32mBuilding CXX object CMakeFiles/bolide_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/bolide_interfaces/msg/detail/camera_info__type_support_c.cpp.o\x1b[0m\n'}
+[11.637063] (-) TimerEvent: {}
+[11.653823] (bolide_interfaces) StdoutLine: {'line': b'[ 39%] \x1b[32mBuilding C object CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/multiple_range__type_support.c.o\x1b[0m\n'}
+[11.738082] (-) TimerEvent: {}
+[11.772085] (bolide_interfaces) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding C object CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/speed_direction__type_support.c.o\x1b[0m\n'}
+[11.838293] (-) TimerEvent: {}
+[11.880676] (bolide_interfaces) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding C object CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c.o\x1b[0m\n'}
+[11.938549] (-) TimerEvent: {}
+[12.039469] (-) TimerEvent: {}
+[12.042130] (bolide_interfaces) StdoutLine: {'line': b'[ 43%] \x1b[32m\x1b[1mLinking C shared library libbolide_interfaces__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[12.139682] (-) TimerEvent: {}
+[12.242702] (-) TimerEvent: {}
+[12.307564] (bolide_interfaces) StdoutLine: {'line': b'[ 43%] Built target bolide_interfaces__rosidl_typesupport_introspection_c\n'}
+[12.336285] (bolide_interfaces) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding CXX object CMakeFiles/bolide_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/bolide_interfaces/msg/detail/dds_fastrtps/fork_speed__type_support.cpp.o\x1b[0m\n'}
+[12.342935] (-) TimerEvent: {}
+[12.448072] (-) TimerEvent: {}
+[12.551196] (-) TimerEvent: {}
+[12.659650] (-) TimerEvent: {}
+[12.760413] (-) TimerEvent: {}
+[12.862673] (-) TimerEvent: {}
+[12.963390] (-) TimerEvent: {}
+[13.065451] (-) TimerEvent: {}
+[13.169690] (-) TimerEvent: {}
+[13.270557] (-) TimerEvent: {}
+[13.373687] (-) TimerEvent: {}
+[13.474356] (-) TimerEvent: {}
+[13.568356] (bolide_interfaces) StdoutLine: {'line': b'[ 45%] \x1b[32mBuilding CXX object CMakeFiles/bolide_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/bolide_interfaces/msg/fork_speed__type_support.cpp.o\x1b[0m\n'}
+[13.576668] (-) TimerEvent: {}
+[13.677416] (-) TimerEvent: {}
+[13.778709] (-) TimerEvent: {}
+[13.881590] (-) TimerEvent: {}
+[13.983306] (-) TimerEvent: {}
+[14.037244] (bolide_interfaces) StdoutLine: {'line': b'[ 47%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[14.068639] (bolide_interfaces) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding CXX object CMakeFiles/bolide_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/bolide_interfaces/msg/detail/fork_speed__type_support_c.cpp.o\x1b[0m\n'}
+[14.083532] (-) TimerEvent: {}
+[14.184907] (-) TimerEvent: {}
+[14.286990] (-) TimerEvent: {}
+[14.390643] (-) TimerEvent: {}
+[14.491353] (-) TimerEvent: {}
+[14.499613] (bolide_interfaces) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/bolide_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/bolide_interfaces/msg/detail/dds_fastrtps/multiple_range__type_support.cpp.o\x1b[0m\n'}
+[14.593640] (-) TimerEvent: {}
+[14.694668] (-) TimerEvent: {}
+[14.768374] (bolide_interfaces) StdoutLine: {'line': b'[ 51%] \x1b[32mBuilding CXX object CMakeFiles/bolide_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/bolide_interfaces/msg/multiple_range__type_support.cpp.o\x1b[0m\n'}
+[14.795901] (-) TimerEvent: {}
+[14.898331] (-) TimerEvent: {}
+[15.002037] (-) TimerEvent: {}
+[15.104728] (-) TimerEvent: {}
+[15.205531] (-) TimerEvent: {}
+[15.308670] (-) TimerEvent: {}
+[15.372898] (bolide_interfaces) StdoutLine: {'line': b'[ 52%] \x1b[32mBuilding CXX object CMakeFiles/bolide_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/bolide_interfaces/msg/camera_info__type_support.cpp.o\x1b[0m\n'}
+[15.411670] (-) TimerEvent: {}
+[15.512442] (-) TimerEvent: {}
+[15.589271] (bolide_interfaces) StdoutLine: {'line': b'[ 54%] \x1b[32mBuilding CXX object CMakeFiles/bolide_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/bolide_interfaces/msg/fork_speed__type_support.cpp.o\x1b[0m\n'}
+[15.613775] (-) TimerEvent: {}
+[15.716610] (-) TimerEvent: {}
+[15.814849] (bolide_interfaces) StdoutLine: {'line': b'[ 55%] \x1b[32mBuilding CXX object CMakeFiles/bolide_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/bolide_interfaces/msg/multiple_range__type_support.cpp.o\x1b[0m\n'}
+[15.816747] (-) TimerEvent: {}
+[15.919637] (-) TimerEvent: {}
+[15.986351] (bolide_interfaces) StdoutLine: {'line': b'[ 56%] \x1b[32mBuilding CXX object CMakeFiles/bolide_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/bolide_interfaces/msg/speed_direction__type_support.cpp.o\x1b[0m\n'}
+[16.019826] (-) TimerEvent: {}
+[16.067957] (bolide_interfaces) StdoutLine: {'line': b'[ 58%] \x1b[32mBuilding CXX object CMakeFiles/bolide_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/bolide_interfaces/msg/detail/multiple_range__type_support_c.cpp.o\x1b[0m\n'}
+[16.122242] (-) TimerEvent: {}
+[16.156149] (bolide_interfaces) StdoutLine: {'line': b'[ 59%] \x1b[32mBuilding CXX object CMakeFiles/bolide_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/bolide_interfaces/srv/launch_ekf__type_support.cpp.o\x1b[0m\n'}
+[16.189763] (bolide_interfaces) StdoutLine: {'line': b'[ 60%] \x1b[32mBuilding CXX object CMakeFiles/bolide_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/bolide_interfaces/msg/speed_direction__type_support.cpp.o\x1b[0m\n'}
+[16.223747] (-) TimerEvent: {}
+[16.326346] (-) TimerEvent: {}
+[16.341208] (bolide_interfaces) StdoutLine: {'line': b'[ 62%] \x1b[32mBuilding CXX object CMakeFiles/bolide_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/bolide_interfaces/msg/detail/dds_fastrtps/speed_direction__type_support.cpp.o\x1b[0m\n'}
+[16.347648] (bolide_interfaces) StdoutLine: {'line': b'[ 63%] \x1b[32m\x1b[1mLinking CXX shared library libbolide_interfaces__rosidl_typesupport_c.so\x1b[0m\n'}
+[16.427623] (-) TimerEvent: {}
+[16.532866] (-) TimerEvent: {}
+[16.542285] (bolide_interfaces) StdoutLine: {'line': b'[ 63%] Built target bolide_interfaces__rosidl_typesupport_c\n'}
+[16.585769] (bolide_interfaces) StdoutLine: {'line': b'[ 64%] \x1b[32mBuilding CXX object CMakeFiles/bolide_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/bolide_interfaces/srv/detail/dds_fastrtps/launch_ekf__type_support.cpp.o\x1b[0m\n'}
+[16.633897] (-) TimerEvent: {}
+[16.739683] (-) TimerEvent: {}
+[16.840330] (-) TimerEvent: {}
+[16.942942] (-) TimerEvent: {}
+[17.044717] (-) TimerEvent: {}
+[17.148674] (-) TimerEvent: {}
+[17.249439] (-) TimerEvent: {}
+[17.352655] (-) TimerEvent: {}
+[17.380586] (bolide_interfaces) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/bolide_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/bolide_interfaces/srv/launch_ekf__type_support.cpp.o\x1b[0m\n'}
+[17.454649] (-) TimerEvent: {}
+[17.555319] (-) TimerEvent: {}
+[17.657675] (-) TimerEvent: {}
+[17.759693] (-) TimerEvent: {}
+[17.860549] (-) TimerEvent: {}
+[17.925098] (bolide_interfaces) StdoutLine: {'line': b'[ 67%] \x1b[32mBuilding CXX object CMakeFiles/bolide_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/bolide_interfaces/msg/detail/speed_direction__type_support_c.cpp.o\x1b[0m\n'}
+[17.961684] (-) TimerEvent: {}
+[18.065829] (-) TimerEvent: {}
+[18.169720] (-) TimerEvent: {}
+[18.270379] (-) TimerEvent: {}
+[18.350286] (bolide_interfaces) StdoutLine: {'line': b'[ 68%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[18.370587] (-) TimerEvent: {}
+[18.474977] (-) TimerEvent: {}
+[18.575820] (-) TimerEvent: {}
+[18.676521] (-) TimerEvent: {}
+[18.779635] (-) TimerEvent: {}
+[18.881710] (-) TimerEvent: {}
+[18.920078] (bolide_interfaces) StdoutLine: {'line': b'[ 70%] \x1b[32m\x1b[1mLinking CXX shared library libbolide_interfaces__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[18.981887] (-) TimerEvent: {}
+[19.056002] (bolide_interfaces) StdoutLine: {'line': b'[ 71%] \x1b[32m\x1b[1mLinking CXX shared library libbolide_interfaces__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[19.083669] (-) TimerEvent: {}
+[19.184723] (-) TimerEvent: {}
+[19.287325] (-) TimerEvent: {}
+[19.350557] (bolide_interfaces) StdoutLine: {'line': b'[ 71%] Built target bolide_interfaces__rosidl_typesupport_cpp\n'}
+[19.391680] (-) TimerEvent: {}
+[19.416074] (bolide_interfaces) StdoutLine: {'line': b'[ 72%] \x1b[32mBuilding CXX object CMakeFiles/bolide_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/bolide_interfaces/srv/detail/launch_ekf__type_support_c.cpp.o\x1b[0m\n'}
+[19.491843] (-) TimerEvent: {}
+[19.593805] (-) TimerEvent: {}
+[19.666121] (bolide_interfaces) StdoutLine: {'line': b'[ 72%] Built target bolide_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[19.694090] (-) TimerEvent: {}
+[19.796726] (-) TimerEvent: {}
+[19.898410] (-) TimerEvent: {}
+[19.942643] (bolide_interfaces) StdoutLine: {'line': b'[ 74%] \x1b[32mBuilding CXX object CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/bolide_interfaces/msg/detail/fork_speed__type_support.cpp.o\x1b[0m\n'}
+[19.943352] (bolide_interfaces) StdoutLine: {'line': b'[ 77%] \x1b[32mBuilding CXX object CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/bolide_interfaces/msg/detail/multiple_range__type_support.cpp.o\x1b[0m\n'}
+[19.945718] (bolide_interfaces) StdoutLine: {'line': b'[ 77%] \x1b[32mBuilding CXX object CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/bolide_interfaces/msg/detail/camera_info__type_support.cpp.o\x1b[0m\n'}
+[20.001638] (-) TimerEvent: {}
+[20.102292] (-) TimerEvent: {}
+[20.203027] (-) TimerEvent: {}
+[20.304119] (-) TimerEvent: {}
+[20.408071] (-) TimerEvent: {}
+[20.509530] (-) TimerEvent: {}
+[20.612676] (-) TimerEvent: {}
+[20.713421] (-) TimerEvent: {}
+[20.817886] (-) TimerEvent: {}
+[20.918654] (-) TimerEvent: {}
+[21.023129] (-) TimerEvent: {}
+[21.127279] (-) TimerEvent: {}
+[21.218862] (bolide_interfaces) StdoutLine: {'line': b'[ 78%] \x1b[32mBuilding CXX object CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/bolide_interfaces/srv/detail/launch_ekf__type_support.cpp.o\x1b[0m\n'}
+[21.222418] (bolide_interfaces) StdoutLine: {'line': b'[ 79%] \x1b[32mBuilding CXX object CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/bolide_interfaces/msg/detail/speed_direction__type_support.cpp.o\x1b[0m\n'}
+[21.228724] (-) TimerEvent: {}
+[21.332661] (-) TimerEvent: {}
+[21.433410] (-) TimerEvent: {}
+[21.538688] (-) TimerEvent: {}
+[21.556227] (bolide_interfaces) StdoutLine: {'line': b'[ 81%] \x1b[32m\x1b[1mLinking CXX shared library libbolide_interfaces__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[21.638866] (-) TimerEvent: {}
+[21.739569] (-) TimerEvent: {}
+[21.841464] (-) TimerEvent: {}
+[21.942973] (-) TimerEvent: {}
+[21.945035] (bolide_interfaces) StdoutLine: {'line': b'[ 81%] Built target bolide_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[22.043180] (-) TimerEvent: {}
+[22.143989] (-) TimerEvent: {}
+[22.245141] (-) TimerEvent: {}
+[22.345952] (-) TimerEvent: {}
+[22.446680] (-) TimerEvent: {}
+[22.521550] (bolide_interfaces) StdoutLine: {'line': b'[ 82%] \x1b[32m\x1b[1mLinking CXX shared library libbolide_interfaces__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[22.546888] (-) TimerEvent: {}
+[22.647629] (-) TimerEvent: {}
+[22.748408] (-) TimerEvent: {}
+[22.845245] (bolide_interfaces) StdoutLine: {'line': b'[ 82%] Built target bolide_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[22.848561] (-) TimerEvent: {}
+[22.903218] (bolide_interfaces) StdoutLine: {'line': b'[ 82%] Built target bolide_interfaces\n'}
+[22.948738] (-) TimerEvent: {}
+[22.962957] (bolide_interfaces) StdoutLine: {'line': b'[ 83%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[23.048861] (-) TimerEvent: {}
+[23.149365] (-) TimerEvent: {}
+[23.249919] (-) TimerEvent: {}
+[23.350419] (-) TimerEvent: {}
+[23.450986] (-) TimerEvent: {}
+[23.551567] (-) TimerEvent: {}
+[23.652120] (-) TimerEvent: {}
+[23.752775] (-) TimerEvent: {}
+[23.853338] (-) TimerEvent: {}
+[23.954028] (-) TimerEvent: {}
+[24.054973] (-) TimerEvent: {}
+[24.158715] (-) TimerEvent: {}
+[24.222979] (bolide_interfaces) StdoutLine: {'line': b'[ 83%] Built target bolide_interfaces__py\n'}
+[24.258921] (-) TimerEvent: {}
+[24.308847] (bolide_interfaces) StdoutLine: {'line': b'[ 86%] \x1b[32mBuilding C object CMakeFiles/bolide_interfaces__rosidl_generator_py.dir/rosidl_generator_py/bolide_interfaces/msg/_camera_info_s.c.o\x1b[0m\n'}
+[24.309655] (bolide_interfaces) StdoutLine: {'line': b'[ 86%] \x1b[32mBuilding C object CMakeFiles/bolide_interfaces__rosidl_generator_py.dir/rosidl_generator_py/bolide_interfaces/msg/_multiple_range_s.c.o\x1b[0m\n'}
+[24.316428] (bolide_interfaces) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/bolide_interfaces__rosidl_generator_py.dir/rosidl_generator_py/bolide_interfaces/msg/_fork_speed_s.c.o\x1b[0m\n'}
+[24.320600] (bolide_interfaces) StdoutLine: {'line': b'[ 89%] \x1b[32mBuilding C object CMakeFiles/bolide_interfaces__rosidl_generator_py.dir/rosidl_generator_py/bolide_interfaces/msg/_speed_direction_s.c.o\x1b[0m\n'}
+[24.359148] (-) TimerEvent: {}
+[24.461893] (-) TimerEvent: {}
+[24.566388] (-) TimerEvent: {}
+[24.667098] (-) TimerEvent: {}
+[24.771164] (-) TimerEvent: {}
+[24.875032] (-) TimerEvent: {}
+[24.976953] (bolide_interfaces) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding C object CMakeFiles/bolide_interfaces__rosidl_generator_py.dir/rosidl_generator_py/bolide_interfaces/srv/_launch_ekf_s.c.o\x1b[0m\n'}
+[24.977711] (-) TimerEvent: {}
+[25.078921] (-) TimerEvent: {}
+[25.181985] (-) TimerEvent: {}
+[25.282804] (-) TimerEvent: {}
+[25.384008] (-) TimerEvent: {}
+[25.461617] (bolide_interfaces) StdoutLine: {'line': b'[ 91%] \x1b[32m\x1b[1mLinking C shared library libbolide_interfaces__rosidl_generator_py.so\x1b[0m\n'}
+[25.486698] (-) TimerEvent: {}
+[25.587413] (-) TimerEvent: {}
+[25.688550] (-) TimerEvent: {}
+[25.756051] (bolide_interfaces) StdoutLine: {'line': b'[ 91%] Built target bolide_interfaces__rosidl_generator_py\n'}
+[25.789688] (-) TimerEvent: {}
+[25.844025] (bolide_interfaces) StdoutLine: {'line': b'[ 93%] \x1b[32mBuilding C object CMakeFiles/bolide_interfaces_s__rosidl_typesupport_c.dir/rosidl_generator_py/bolide_interfaces/_bolide_interfaces_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[25.858808] (bolide_interfaces) StdoutLine: {'line': b'[ 95%] \x1b[32mBuilding C object CMakeFiles/bolide_interfaces_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/bolide_interfaces/_bolide_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[25.861822] (bolide_interfaces) StdoutLine: {'line': b'[ 95%] \x1b[32mBuilding C object CMakeFiles/bolide_interfaces_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/bolide_interfaces/_bolide_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[25.889891] (-) TimerEvent: {}
+[25.994638] (-) TimerEvent: {}
+[26.097663] (-) TimerEvent: {}
+[26.198598] (-) TimerEvent: {}
+[26.301516] (-) TimerEvent: {}
+[26.366747] (bolide_interfaces) StdoutLine: {'line': b'[ 97%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/bolide_interfaces/bolide_interfaces_s__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[26.401730] (-) TimerEvent: {}
+[26.438945] (bolide_interfaces) StdoutLine: {'line': b'[ 98%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/bolide_interfaces/bolide_interfaces_s__rosidl_typesupport_c.so\x1b[0m\n'}
+[26.503647] (-) TimerEvent: {}
+[26.596331] (bolide_interfaces) StdoutLine: {'line': b'[ 98%] Built target bolide_interfaces_s__rosidl_typesupport_fastrtps_c\n'}
+[26.604966] (-) TimerEvent: {}
+[26.617843] (bolide_interfaces) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/bolide_interfaces/bolide_interfaces_s__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[26.639677] (bolide_interfaces) StdoutLine: {'line': b'[100%] Built target bolide_interfaces_s__rosidl_typesupport_c\n'}
+[26.705819] (-) TimerEvent: {}
+[26.739636] (bolide_interfaces) StdoutLine: {'line': b'[100%] Built target bolide_interfaces_s__rosidl_typesupport_introspection_c\n'}
+[26.785762] (bolide_interfaces) CommandEnded: {'returncode': 0}
+[26.787913] (bolide_interfaces) JobProgress: {'identifier': 'bolide_interfaces', 'progress': 'install'}
+[26.806013] (-) TimerEvent: {}
+[26.825714] (bolide_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces'], 'cwd': '/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces', 'env': OrderedDict({'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'voiture', 'XDG_SESSION_TYPE': 'wayland', 'GIT_ASKPASS': '/usr/share/code/resources/app/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/voiture', 'CHROME_DESKTOP': 'code.desktop', 'OLDPWD': '/home/voiture/course_2025_slam_pkgs', 'TERM_PROGRAM_VERSION': '1.98.2', 'DESKTOP_SESSION': 'ubuntu', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/code.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'VSCODE_GIT_ASKPASS_MAIN': '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/usr/share/code/code', 'MANAGERPID': '1415', 'SYSTEMD_EXEC_PID': '1635', 'IM_CONFIG_CHECK_ENV': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1002/bus', 'COLORTERM': 'truecolor', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '2738', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'voiture', 'JOURNAL_STREAM': '8:13083', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1002.slice/user@1002.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'voiture', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/voiture1:@/tmp/.ICE-unix/1586,unix/voiture1:/tmp/.ICE-unix/1586', 'INVOCATION_ID': '4ef43aa72dbe4dfaaa18d8ae620c752f', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1002', 'GDK_BACKEND': 'x11', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'XDG_CURRENT_DESKTOP': 'Unity', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1002/.mutter-Xwaylandauth.3STR32', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1002/vscode-git-6dd70431f9.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/run/user/1002/keyring/ssh', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'ORIGINAL_XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GJS_DEBUG_OUTPUT': 'stderr', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[26.858229] (bolide_interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[26.859895] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/ament_index/resource_index/rosidl_interfaces/bolide_interfaces\n'}
+[26.860548] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/msg/CameraInfo.json\n'}
+[26.860806] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/msg/ForkSpeed.json\n'}
+[26.860976] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/msg/MultipleRange.json\n'}
+[26.861353] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/msg/SpeedDirection.json\n'}
+[26.862230] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/srv/LaunchEkf.json\n'}
+[26.863831] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces\n'}
+[26.864984] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/srv\n'}
+[26.866533] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/srv/detail\n'}
+[26.866965] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/srv/detail/launch_ekf__type_support.c\n'}
+[26.867224] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/srv/detail/launch_ekf__functions.c\n'}
+[26.867665] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/srv/detail/launch_ekf__struct.h\n'}
+[26.867839] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/srv/detail/launch_ekf__type_support.h\n'}
+[26.867957] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/srv/detail/launch_ekf__functions.h\n'}
+[26.868096] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/srv/detail/launch_ekf__description.c\n'}
+[26.868216] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/srv/launch_ekf.h\n'}
+[26.868334] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg\n'}
+[26.868439] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/camera_info.h\n'}
+[26.868581] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[26.868704] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail\n'}
+[26.868805] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/multiple_range__functions.h\n'}
+[26.868908] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/multiple_range__type_support.c\n'}
+[26.869005] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/camera_info__type_support.h\n'}
+[26.869105] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/multiple_range__struct.h\n'}
+[26.869206] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/fork_speed__type_support.h\n'}
+[26.869318] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/multiple_range__description.c\n'}
+[26.869423] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/speed_direction__type_support.h\n'}
+[26.869568] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/fork_speed__type_support.c\n'}
+[26.869847] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/camera_info__type_support.c\n'}
+[26.870021] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/fork_speed__functions.c\n'}
+[26.870144] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/fork_speed__struct.h\n'}
+[26.870250] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/speed_direction__type_support.c\n'}
+[26.870359] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/fork_speed__description.c\n'}
+[26.870471] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/camera_info__functions.c\n'}
+[26.870639] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/speed_direction__functions.h\n'}
+[26.870768] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/fork_speed__functions.h\n'}
+[26.870869] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/speed_direction__functions.c\n'}
+[26.871122] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/camera_info__struct.h\n'}
+[26.871281] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/speed_direction__description.c\n'}
+[26.871528] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/camera_info__description.c\n'}
+[26.871698] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/speed_direction__struct.h\n'}
+[26.871891] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/camera_info__functions.h\n'}
+[26.872105] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/multiple_range__functions.c\n'}
+[26.872313] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/multiple_range__type_support.h\n'}
+[26.872456] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/speed_direction.h\n'}
+[26.872650] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/multiple_range.h\n'}
+[26.872825] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/fork_speed.h\n'}
+[26.873589] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/environment/library_path.sh\n'}
+[26.873895] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/environment/library_path.dsv\n'}
+[26.874032] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/libbolide_interfaces__rosidl_generator_c.so\n'}
+[26.874397] (bolide_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/libbolide_interfaces__rosidl_generator_c.so" to ""\n'}
+[26.874711] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces\n'}
+[26.874956] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/srv\n'}
+[26.875291] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/srv/detail\n'}
+[26.875468] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/srv/detail/launch_ekf__rosidl_typesupport_fastrtps_c.h\n'}
+[26.875623] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg\n'}
+[26.875800] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[26.876012] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail\n'}
+[26.876150] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/fork_speed__rosidl_typesupport_fastrtps_c.h\n'}
+[26.876270] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/speed_direction__rosidl_typesupport_fastrtps_c.h\n'}
+[26.876385] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/camera_info__rosidl_typesupport_fastrtps_c.h\n'}
+[26.876614] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/multiple_range__rosidl_typesupport_fastrtps_c.h\n'}
+[26.876903] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/libbolide_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[26.877873] (bolide_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/libbolide_interfaces__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[26.878208] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces\n'}
+[26.878405] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/srv\n'}
+[26.878636] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/srv/launch_ekf.hpp\n'}
+[26.878805] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/srv/detail\n'}
+[26.878995] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/srv/detail/launch_ekf__type_support.hpp\n'}
+[26.879137] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/srv/detail/launch_ekf__builder.hpp\n'}
+[26.879305] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/srv/detail/launch_ekf__struct.hpp\n'}
+[26.879576] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/srv/detail/launch_ekf__traits.hpp\n'}
+[26.879782] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg\n'}
+[26.879929] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/speed_direction.hpp\n'}
+[26.880161] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/multiple_range.hpp\n'}
+[26.880548] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail\n'}
+[26.880816] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/multiple_range__traits.hpp\n'}
+[26.882763] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/multiple_range__builder.hpp\n'}
+[26.883686] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/camera_info__struct.hpp\n'}
+[26.883973] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/fork_speed__struct.hpp\n'}
+[26.884189] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/speed_direction__traits.hpp\n'}
+[26.884404] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/multiple_range__type_support.hpp\n'}
+[26.884681] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/speed_direction__type_support.hpp\n'}
+[26.888962] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/speed_direction__struct.hpp\n'}
+[26.892244] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/camera_info__builder.hpp\n'}
+[26.896126] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/camera_info__traits.hpp\n'}
+[26.896483] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/fork_speed__builder.hpp\n'}
+[26.896813] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/fork_speed__traits.hpp\n'}
+[26.897009] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/camera_info__type_support.hpp\n'}
+[26.897259] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/speed_direction__builder.hpp\n'}
+[26.897792] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/fork_speed__type_support.hpp\n'}
+[26.898467] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/multiple_range__struct.hpp\n'}
+[26.899279] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[26.899548] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/fork_speed.hpp\n'}
+[26.899822] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/camera_info.hpp\n'}
+[26.900010] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces\n'}
+[26.900194] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/srv\n'}
+[26.900398] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/srv/detail\n'}
+[26.904169] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/srv/detail/dds_fastrtps\n'}
+[26.904604] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/srv/detail/launch_ekf__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[26.904884] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg\n'}
+[26.905079] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail\n'}
+[26.905242] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/multiple_range__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[26.905395] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/dds_fastrtps\n'}
+[26.905569] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/speed_direction__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[26.905760] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/camera_info__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[26.905898] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/fork_speed__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[26.906044] (-) TimerEvent: {}
+[26.908767] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[26.909544] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/libbolide_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[26.909997] (bolide_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/libbolide_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[26.910269] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces\n'}
+[26.910474] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/srv\n'}
+[26.911014] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/srv/detail\n'}
+[26.911472] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/srv/detail/launch_ekf__type_support.c\n'}
+[26.915282] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/srv/detail/launch_ekf__rosidl_typesupport_introspection_c.h\n'}
+[26.916677] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg\n'}
+[26.917175] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail\n'}
+[26.917501] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/multiple_range__type_support.c\n'}
+[26.917790] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/fork_speed__rosidl_typesupport_introspection_c.h\n'}
+[26.918023] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/multiple_range__rosidl_typesupport_introspection_c.h\n'}
+[26.918286] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/fork_speed__type_support.c\n'}
+[26.918558] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/camera_info__type_support.c\n'}
+[26.918740] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/speed_direction__type_support.c\n'}
+[26.918925] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/camera_info__rosidl_typesupport_introspection_c.h\n'}
+[26.919228] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/speed_direction__rosidl_typesupport_introspection_c.h\n'}
+[26.919530] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[26.919772] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/libbolide_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[26.921038] (bolide_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/libbolide_interfaces__rosidl_typesupport_introspection_c.so" to ""\n'}
+[26.921925] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/libbolide_interfaces__rosidl_typesupport_c.so\n'}
+[26.922546] (bolide_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/libbolide_interfaces__rosidl_typesupport_c.so" to ""\n'}
+[26.923168] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces\n'}
+[26.923672] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/srv\n'}
+[26.923959] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/srv/detail\n'}
+[26.924156] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/srv/detail/launch_ekf__rosidl_typesupport_introspection_cpp.hpp\n'}
+[26.924405] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/srv/detail/launch_ekf__type_support.cpp\n'}
+[26.924622] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg\n'}
+[26.924762] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail\n'}
+[26.924864] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/multiple_range__rosidl_typesupport_introspection_cpp.hpp\n'}
+[26.924970] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/speed_direction__type_support.cpp\n'}
+[26.925398] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/speed_direction__rosidl_typesupport_introspection_cpp.hpp\n'}
+[26.925607] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/camera_info__type_support.cpp\n'}
+[26.925739] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/fork_speed__type_support.cpp\n'}
+[26.925842] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/camera_info__rosidl_typesupport_introspection_cpp.hpp\n'}
+[26.925969] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/fork_speed__rosidl_typesupport_introspection_cpp.hpp\n'}
+[26.926094] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/include/bolide_interfaces/bolide_interfaces/msg/detail/multiple_range__type_support.cpp\n'}
+[26.926269] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/libbolide_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[26.926403] (bolide_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/libbolide_interfaces__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[26.926606] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/libbolide_interfaces__rosidl_typesupport_cpp.so\n'}
+[26.926739] (bolide_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/libbolide_interfaces__rosidl_typesupport_cpp.so" to ""\n'}
+[26.926868] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/environment/pythonpath.sh\n'}
+[26.926997] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/environment/pythonpath.dsv\n'}
+[26.927126] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages/bolide_interfaces-0.0.0-py3.12.egg-info\n'}
+[26.927249] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages/bolide_interfaces-0.0.0-py3.12.egg-info/dependency_links.txt\n'}
+[26.927366] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages/bolide_interfaces-0.0.0-py3.12.egg-info/PKG-INFO\n'}
+[26.927471] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages/bolide_interfaces-0.0.0-py3.12.egg-info/top_level.txt\n'}
+[26.927646] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages/bolide_interfaces-0.0.0-py3.12.egg-info/SOURCES.txt\n'}
+[26.927786] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages/bolide_interfaces\n'}
+[26.927888] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages/bolide_interfaces/_bolide_interfaces_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[26.927989] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages/bolide_interfaces/srv\n'}
+[26.928122] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages/bolide_interfaces/srv/_launch_ekf.py\n'}
+[26.928244] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages/bolide_interfaces/srv/_launch_ekf_s.c\n'}
+[26.928371] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages/bolide_interfaces/srv/__init__.py\n'}
+[26.928524] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages/bolide_interfaces/_bolide_interfaces_s.ep.rosidl_typesupport_c.c\n'}
+[26.928749] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages/bolide_interfaces/__init__.py\n'}
+[26.928904] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages/bolide_interfaces/bolide_interfaces_s__rosidl_typesupport_c.so\n'}
+[26.929027] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages/bolide_interfaces/msg\n'}
+[26.929159] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages/bolide_interfaces/msg/_multiple_range_s.c\n'}
+[26.929290] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages/bolide_interfaces/msg/_camera_info_s.c\n'}
+[26.929430] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages/bolide_interfaces/msg/_fork_speed_s.c\n'}
+[26.929602] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages/bolide_interfaces/msg/_camera_info.py\n'}
+[26.929758] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages/bolide_interfaces/msg/_fork_speed.py\n'}
+[26.929889] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages/bolide_interfaces/msg/_speed_direction_s.c\n'}
+[26.930008] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages/bolide_interfaces/msg/_speed_direction.py\n'}
+[26.930129] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages/bolide_interfaces/msg/__init__.py\n'}
+[26.930246] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages/bolide_interfaces/msg/_multiple_range.py\n'}
+[26.930358] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages/bolide_interfaces/bolide_interfaces_s__rosidl_typesupport_fastrtps_c.so\n'}
+[26.930466] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages/bolide_interfaces/_bolide_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[26.930718] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages/bolide_interfaces/bolide_interfaces_s__rosidl_typesupport_introspection_c.so\n'}
+[27.008638] (-) TimerEvent: {}
+[27.087620] (bolide_interfaces) StdoutLine: {'line': b"Listing '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages/bolide_interfaces'...\n"}
+[27.088358] (bolide_interfaces) StdoutLine: {'line': b"Compiling '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages/bolide_interfaces/__init__.py'...\n"}
+[27.088737] (bolide_interfaces) StdoutLine: {'line': b"Listing '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages/bolide_interfaces/msg'...\n"}
+[27.088999] (bolide_interfaces) StdoutLine: {'line': b"Compiling '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages/bolide_interfaces/msg/__init__.py'...\n"}
+[27.089264] (bolide_interfaces) StdoutLine: {'line': b"Compiling '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages/bolide_interfaces/msg/_camera_info.py'...\n"}
+[27.089477] (bolide_interfaces) StdoutLine: {'line': b"Compiling '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages/bolide_interfaces/msg/_fork_speed.py'...\n"}
+[27.094225] (bolide_interfaces) StdoutLine: {'line': b"Compiling '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages/bolide_interfaces/msg/_multiple_range.py'...\n"}
+[27.094522] (bolide_interfaces) StdoutLine: {'line': b"Compiling '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages/bolide_interfaces/msg/_speed_direction.py'...\n"}
+[27.094746] (bolide_interfaces) StdoutLine: {'line': b"Listing '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages/bolide_interfaces/srv'...\n"}
+[27.094911] (bolide_interfaces) StdoutLine: {'line': b"Compiling '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages/bolide_interfaces/srv/__init__.py'...\n"}
+[27.095136] (bolide_interfaces) StdoutLine: {'line': b"Compiling '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages/bolide_interfaces/srv/_launch_ekf.py'...\n"}
+[27.109918] (-) TimerEvent: {}
+[27.119296] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages/bolide_interfaces/bolide_interfaces_s__rosidl_typesupport_fastrtps_c.so\n'}
+[27.120678] (bolide_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages/bolide_interfaces/bolide_interfaces_s__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[27.130768] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages/bolide_interfaces/bolide_interfaces_s__rosidl_typesupport_introspection_c.so\n'}
+[27.131396] (bolide_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages/bolide_interfaces/bolide_interfaces_s__rosidl_typesupport_introspection_c.so" to ""\n'}
+[27.131737] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages/bolide_interfaces/bolide_interfaces_s__rosidl_typesupport_c.so\n'}
+[27.131916] (bolide_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages/bolide_interfaces/bolide_interfaces_s__rosidl_typesupport_c.so" to ""\n'}
+[27.132545] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/libbolide_interfaces__rosidl_generator_py.so\n'}
+[27.134104] (bolide_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/libbolide_interfaces__rosidl_generator_py.so" to ""\n'}
+[27.137193] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/msg/CameraInfo.idl\n'}
+[27.137832] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/msg/ForkSpeed.idl\n'}
+[27.138210] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/msg/MultipleRange.idl\n'}
+[27.138412] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/msg/SpeedDirection.idl\n'}
+[27.138599] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/srv/LaunchEkf.idl\n'}
+[27.141298] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/msg/CameraInfo.msg\n'}
+[27.141764] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/msg/ForkSpeed.msg\n'}
+[27.141918] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/msg/MultipleRange.msg\n'}
+[27.143674] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/msg/SpeedDirection.msg\n'}
+[27.144014] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/srv/LaunchEkf.srv\n'}
+[27.144131] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/ament_index/resource_index/package_run_dependencies/bolide_interfaces\n'}
+[27.144228] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/ament_index/resource_index/parent_prefix_path/bolide_interfaces\n'}
+[27.144321] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/environment/ament_prefix_path.sh\n'}
+[27.144416] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/environment/ament_prefix_path.dsv\n'}
+[27.144539] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/environment/path.sh\n'}
+[27.146032] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/environment/path.dsv\n'}
+[27.146482] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/local_setup.bash\n'}
+[27.146650] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/local_setup.sh\n'}
+[27.147184] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/local_setup.zsh\n'}
+[27.147515] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/local_setup.dsv\n'}
+[27.147895] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/package.dsv\n'}
+[27.148143] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/ament_index/resource_index/packages/bolide_interfaces\n'}
+[27.148317] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/cmake/export_bolide_interfaces__rosidl_generator_cExport.cmake\n'}
+[27.148632] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/cmake/export_bolide_interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[27.148933] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/cmake/export_bolide_interfaces__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[27.149065] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/cmake/export_bolide_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[27.149183] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/cmake/export_bolide_interfaces__rosidl_generator_cppExport.cmake\n'}
+[27.149291] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/cmake/export_bolide_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[27.149397] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/cmake/export_bolide_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[27.149544] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/cmake/bolide_interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[27.152134] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/cmake/bolide_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[27.152776] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/cmake/bolide_interfaces__rosidl_typesupport_cExport.cmake\n'}
+[27.153390] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/cmake/bolide_interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[27.153967] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/cmake/bolide_interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[27.154278] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/cmake/bolide_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[27.154600] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/cmake/bolide_interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[27.154907] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/cmake/bolide_interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[27.155314] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/cmake/export_bolide_interfaces__rosidl_generator_pyExport.cmake\n'}
+[27.155738] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/cmake/export_bolide_interfaces__rosidl_generator_pyExport-noconfig.cmake\n'}
+[27.156035] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[27.159638] (bolide_interfaces) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[27.160350] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[27.160717] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[27.161029] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[27.161363] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[27.161639] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[27.161884] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/cmake/bolide_interfacesConfig.cmake\n'}
+[27.162104] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/cmake/bolide_interfacesConfig-version.cmake\n'}
+[27.162269] (bolide_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/package.xml\n'}
+[27.169009] (bolide_interfaces) CommandEnded: {'returncode': 0}
+[27.213268] (-) TimerEvent: {}
+[27.250602] (bolide_interfaces) JobEnded: {'identifier': 'bolide_interfaces', 'rc': 0}
+[27.254671] (perception_bolide) JobStarted: {'identifier': 'perception_bolide'}
+[27.315640] (-) TimerEvent: {}
+[27.416270] (-) TimerEvent: {}
+[27.516969] (-) TimerEvent: {}
+[27.619823] (-) TimerEvent: {}
+[27.722024] (-) TimerEvent: {}
+[27.826584] (-) TimerEvent: {}
+[27.929736] (-) TimerEvent: {}
+[28.030769] (-) TimerEvent: {}
+[28.135733] (-) TimerEvent: {}
+[28.238640] (-) TimerEvent: {}
+[28.339185] (-) TimerEvent: {}
+[28.439813] (-) TimerEvent: {}
+[28.542135] (-) TimerEvent: {}
+[28.642769] (-) TimerEvent: {}
+[28.743333] (-) TimerEvent: {}
+[28.843953] (-) TimerEvent: {}
+[28.945665] (-) TimerEvent: {}
+[29.047665] (-) TimerEvent: {}
+[29.148308] (-) TimerEvent: {}
+[29.250841] (-) TimerEvent: {}
+[29.352888] (-) TimerEvent: {}
+[29.453385] (-) TimerEvent: {}
+[29.553860] (-) TimerEvent: {}
+[29.654375] (-) TimerEvent: {}
+[29.754974] (-) TimerEvent: {}
+[29.855545] (-) TimerEvent: {}
+[29.956121] (-) TimerEvent: {}
+[30.056658] (-) TimerEvent: {}
+[30.157123] (-) TimerEvent: {}
+[30.257596] (-) TimerEvent: {}
+[30.358139] (-) TimerEvent: {}
+[30.458853] (-) TimerEvent: {}
+[30.486181] (perception_bolide) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/perception_bolide', 'build', '--build-base', '/home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/build', 'install', '--record', '/home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/voiture/course_2025_slam_pkgs/workspace/src/perception_bolide', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'voiture', 'XDG_SESSION_TYPE': 'wayland', 'GIT_ASKPASS': '/usr/share/code/resources/app/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/voiture', 'CHROME_DESKTOP': 'code.desktop', 'OLDPWD': '/home/voiture/course_2025_slam_pkgs', 'TERM_PROGRAM_VERSION': '1.98.2', 'DESKTOP_SESSION': 'ubuntu', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/code.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'VSCODE_GIT_ASKPASS_MAIN': '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/usr/share/code/code', 'MANAGERPID': '1415', 'SYSTEMD_EXEC_PID': '1635', 'IM_CONFIG_CHECK_ENV': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1002/bus', 'COLORTERM': 'truecolor', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '2738', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'voiture', 'JOURNAL_STREAM': '8:13083', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1002.slice/user@1002.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'voiture', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/voiture1:@/tmp/.ICE-unix/1586,unix/voiture1:/tmp/.ICE-unix/1586', 'INVOCATION_ID': '4ef43aa72dbe4dfaaa18d8ae620c752f', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1002', 'GDK_BACKEND': 'x11', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'XDG_CURRENT_DESKTOP': 'Unity', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1002/.mutter-Xwaylandauth.3STR32', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1002/vscode-git-6dd70431f9.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/run/user/1002/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces:/opt/ros/jazzy', 'ORIGINAL_XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GJS_DEBUG_OUTPUT': 'stderr', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages:/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'CMAKE_PREFIX_PATH': '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[30.559007] (-) TimerEvent: {}
+[30.659531] (-) TimerEvent: {}
+[30.760004] (-) TimerEvent: {}
+[30.860519] (-) TimerEvent: {}
+[30.960983] (-) TimerEvent: {}
+[31.021583] (perception_bolide) StdoutLine: {'line': b'running egg_info\n'}
+[31.053337] (perception_bolide) StdoutLine: {'line': b'writing ../../build/perception_bolide/perception_bolide.egg-info/PKG-INFO\n'}
+[31.054059] (perception_bolide) StdoutLine: {'line': b'writing dependency_links to ../../build/perception_bolide/perception_bolide.egg-info/dependency_links.txt\n'}
+[31.056132] (perception_bolide) StdoutLine: {'line': b'writing entry points to ../../build/perception_bolide/perception_bolide.egg-info/entry_points.txt\n'}
+[31.057324] (perception_bolide) StdoutLine: {'line': b'writing requirements to ../../build/perception_bolide/perception_bolide.egg-info/requires.txt\n'}
+[31.058813] (perception_bolide) StdoutLine: {'line': b'writing top-level names to ../../build/perception_bolide/perception_bolide.egg-info/top_level.txt\n'}
+[31.061034] (-) TimerEvent: {}
+[31.132274] (perception_bolide) StdoutLine: {'line': b"reading manifest file '../../build/perception_bolide/perception_bolide.egg-info/SOURCES.txt'\n"}
+[31.132834] (perception_bolide) StdoutLine: {'line': b"adding license file 'LICENSE'\n"}
+[31.133953] (perception_bolide) StdoutLine: {'line': b"writing manifest file '../../build/perception_bolide/perception_bolide.egg-info/SOURCES.txt'\n"}
+[31.134344] (perception_bolide) StdoutLine: {'line': b'running build\n'}
+[31.134510] (perception_bolide) StdoutLine: {'line': b'running build_py\n'}
+[31.134936] (perception_bolide) StdoutLine: {'line': b'copying perception_bolide/odom_fork_imu.py -> /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/build/lib/perception_bolide\n'}
+[31.135236] (perception_bolide) StdoutLine: {'line': b'copying perception_bolide/camera_publisher.py -> /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/build/lib/perception_bolide\n'}
+[31.135483] (perception_bolide) StdoutLine: {'line': b'copying perception_bolide/processing_dbscan.py -> /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/build/lib/perception_bolide\n'}
+[31.135714] (perception_bolide) StdoutLine: {'line': b'copying perception_bolide/lidar_publisher.py -> /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/build/lib/perception_bolide\n'}
+[31.135932] (perception_bolide) StdoutLine: {'line': b'copying perception_bolide/rear_ranges_publisher.py -> /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/build/lib/perception_bolide\n'}
+[31.136126] (perception_bolide) StdoutLine: {'line': b'copying perception_bolide/db_scan.py -> /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/build/lib/perception_bolide\n'}
+[31.136316] (perception_bolide) StdoutLine: {'line': b'copying perception_bolide/lidar_process.py -> /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/build/lib/perception_bolide\n'}
+[31.136539] (perception_bolide) StdoutLine: {'line': b'copying perception_bolide/odom_fork_imu_sim.py -> /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/build/lib/perception_bolide\n'}
+[31.136724] (perception_bolide) StdoutLine: {'line': b'copying perception_bolide/lidar_vizu.py -> /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/build/lib/perception_bolide\n'}
+[31.136909] (perception_bolide) StdoutLine: {'line': b'copying perception_bolide/stm32_publisher.py -> /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/build/lib/perception_bolide\n'}
+[31.137281] (perception_bolide) StdoutLine: {'line': b'copying perception_bolide/fork_publisher.py -> /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/build/lib/perception_bolide\n'}
+[31.137460] (perception_bolide) StdoutLine: {'line': b'copying perception_bolide/camera_opencv.py -> /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/build/lib/perception_bolide\n'}
+[31.137674] (perception_bolide) StdoutLine: {'line': b'copying perception_bolide/launch_ekf_map.py -> /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/build/lib/perception_bolide\n'}
+[31.137853] (perception_bolide) StdoutLine: {'line': b'copying perception_bolide/imu_publisher.py -> /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/build/lib/perception_bolide\n'}
+[31.138417] (perception_bolide) StdoutLine: {'line': b'running install\n'}
+[31.149931] (perception_bolide) StdoutLine: {'line': b'running install_lib\n'}
+[31.161182] (-) TimerEvent: {}
+[31.184663] (perception_bolide) StdoutLine: {'line': b'copying /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/build/lib/perception_bolide/odom_fork_imu.py -> /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception_bolide\n'}
+[31.185109] (perception_bolide) StdoutLine: {'line': b'copying /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/build/lib/perception_bolide/camera_publisher.py -> /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception_bolide\n'}
+[31.185350] (perception_bolide) StdoutLine: {'line': b'copying /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/build/lib/perception_bolide/processing_dbscan.py -> /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception_bolide\n'}
+[31.185609] (perception_bolide) StdoutLine: {'line': b'copying /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/build/lib/perception_bolide/lidar_publisher.py -> /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception_bolide\n'}
+[31.185896] (perception_bolide) StdoutLine: {'line': b'copying /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/build/lib/perception_bolide/rear_ranges_publisher.py -> /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception_bolide\n'}
+[31.186169] (perception_bolide) StdoutLine: {'line': b'copying /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/build/lib/perception_bolide/db_scan.py -> /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception_bolide\n'}
+[31.186403] (perception_bolide) StdoutLine: {'line': b'copying /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/build/lib/perception_bolide/lidar_process.py -> /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception_bolide\n'}
+[31.186700] (perception_bolide) StdoutLine: {'line': b'copying /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/build/lib/perception_bolide/odom_fork_imu_sim.py -> /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception_bolide\n'}
+[31.187025] (perception_bolide) StdoutLine: {'line': b'copying /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/build/lib/perception_bolide/lidar_vizu.py -> /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception_bolide\n'}
+[31.189441] (perception_bolide) StdoutLine: {'line': b'copying /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/build/lib/perception_bolide/stm32_publisher.py -> /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception_bolide\n'}
+[31.189818] (perception_bolide) StdoutLine: {'line': b'copying /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/build/lib/perception_bolide/fork_publisher.py -> /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception_bolide\n'}
+[31.189974] (perception_bolide) StdoutLine: {'line': b'copying /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/build/lib/perception_bolide/camera_opencv.py -> /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception_bolide\n'}
+[31.190108] (perception_bolide) StdoutLine: {'line': b'copying /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/build/lib/perception_bolide/launch_ekf_map.py -> /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception_bolide\n'}
+[31.190263] (perception_bolide) StdoutLine: {'line': b'copying /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/build/lib/perception_bolide/imu_publisher.py -> /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception_bolide\n'}
+[31.193315] (perception_bolide) StdoutLine: {'line': b'byte-compiling /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception_bolide/odom_fork_imu.py to odom_fork_imu.cpython-312.pyc\n'}
+[31.195756] (perception_bolide) StdoutLine: {'line': b'byte-compiling /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception_bolide/camera_publisher.py to camera_publisher.cpython-312.pyc\n'}
+[31.196259] (perception_bolide) StdoutLine: {'line': b'byte-compiling /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception_bolide/processing_dbscan.py to processing_dbscan.cpython-312.pyc\n'}
+[31.198844] (perception_bolide) StdoutLine: {'line': b'byte-compiling /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception_bolide/lidar_publisher.py to lidar_publisher.cpython-312.pyc\n'}
+[31.201414] (perception_bolide) StdoutLine: {'line': b'byte-compiling /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception_bolide/rear_ranges_publisher.py to rear_ranges_publisher.cpython-312.pyc\n'}
+[31.203393] (perception_bolide) StdoutLine: {'line': b'byte-compiling /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception_bolide/db_scan.py to db_scan.cpython-312.pyc\n'}
+[31.205336] (perception_bolide) StdoutLine: {'line': b'byte-compiling /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception_bolide/lidar_process.py to lidar_process.cpython-312.pyc\n'}
+[31.210613] (perception_bolide) StdoutLine: {'line': b'byte-compiling /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception_bolide/odom_fork_imu_sim.py to odom_fork_imu_sim.cpython-312.pyc\n'}
+[31.213438] (perception_bolide) StdoutLine: {'line': b'byte-compiling /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception_bolide/lidar_vizu.py to lidar_vizu.cpython-312.pyc\n'}
+[31.216853] (perception_bolide) StdoutLine: {'line': b'byte-compiling /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception_bolide/stm32_publisher.py to stm32_publisher.cpython-312.pyc\n'}
+[31.225510] (perception_bolide) StdoutLine: {'line': b'byte-compiling /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception_bolide/fork_publisher.py to fork_publisher.cpython-312.pyc\n'}
+[31.226297] (perception_bolide) StdoutLine: {'line': b'byte-compiling /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception_bolide/camera_opencv.py to camera_opencv.cpython-312.pyc\n'}
+[31.228369] (perception_bolide) StdoutLine: {'line': b'byte-compiling /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception_bolide/launch_ekf_map.py to launch_ekf_map.cpython-312.pyc\n'}
+[31.230004] (perception_bolide) StdoutLine: {'line': b'byte-compiling /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception_bolide/imu_publisher.py to imu_publisher.cpython-312.pyc\n'}
+[31.231560] (perception_bolide) StdoutLine: {'line': b'running install_data\n'}
+[31.231939] (perception_bolide) StdoutLine: {'line': b'running install_egg_info\n'}
+[31.261327] (-) TimerEvent: {}
+[31.280186] (perception_bolide) StdoutLine: {'line': b"removing '/home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception_bolide-0.0.0-py3.12.egg-info' (and everything under it)\n"}
+[31.280930] (perception_bolide) StdoutLine: {'line': b'Copying ../../build/perception_bolide/perception_bolide.egg-info to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception_bolide-0.0.0-py3.12.egg-info\n'}
+[31.282577] (perception_bolide) StdoutLine: {'line': b'running install_scripts\n'}
+[31.361447] (-) TimerEvent: {}
+[31.461932] (-) TimerEvent: {}
+[31.547393] (perception_bolide) StdoutLine: {'line': b'Installing camera_opencv script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide\n'}
+[31.548045] (perception_bolide) StdoutLine: {'line': b'Installing camera_publisher script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide\n'}
+[31.548346] (perception_bolide) StdoutLine: {'line': b'Installing dbscan_node script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide\n'}
+[31.548794] (perception_bolide) StdoutLine: {'line': b'Installing fork_publisher script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide\n'}
+[31.549179] (perception_bolide) StdoutLine: {'line': b'Installing imu_publisher script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide\n'}
+[31.549347] (perception_bolide) StdoutLine: {'line': b'Installing launch_ekf_map script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide\n'}
+[31.549545] (perception_bolide) StdoutLine: {'line': b'Installing lidar_process script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide\n'}
+[31.549779] (perception_bolide) StdoutLine: {'line': b'Installing lidar_publisher script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide\n'}
+[31.549992] (perception_bolide) StdoutLine: {'line': b'Installing lidar_vizu script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide\n'}
+[31.550142] (perception_bolide) StdoutLine: {'line': b'Installing odom_fork_imu script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide\n'}
+[31.550300] (perception_bolide) StdoutLine: {'line': b'Installing odom_fork_imu_sim script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide\n'}
+[31.550423] (perception_bolide) StdoutLine: {'line': b'Installing rear_ranges_publisher script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide\n'}
+[31.550597] (perception_bolide) StdoutLine: {'line': b'Installing stm32_publisher script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide\n'}
+[31.551503] (perception_bolide) StdoutLine: {'line': b"writing list of installed files to '/home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/install.log'\n"}
+[31.562090] (-) TimerEvent: {}
+[31.662682] (-) TimerEvent: {}
+[31.704783] (perception_bolide) CommandEnded: {'returncode': 0}
+[31.724224] (perception_bolide) JobEnded: {'identifier': 'perception_bolide', 'rc': 0}
+[31.726373] (-) EventReactorShutdown: {}

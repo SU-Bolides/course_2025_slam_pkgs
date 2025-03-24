@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "rosidl_generator_type_description/bolide_interfaces/msg/CameraInfo.json"
   "rosidl_generator_type_description/bolide_interfaces/msg/ForkSpeed.json"
   "rosidl_generator_type_description/bolide_interfaces/msg/MultipleRange.json"
+  "rosidl_generator_type_description/bolide_interfaces/msg/SpeedDirection.json"
+  "rosidl_generator_type_description/bolide_interfaces/srv/LaunchEkf.json"
 )
 
 # Per-language clean rules from dependency scanning.

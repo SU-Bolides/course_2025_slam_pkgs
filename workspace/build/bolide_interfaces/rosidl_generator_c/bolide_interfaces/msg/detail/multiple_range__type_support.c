@@ -5,8 +5,8 @@
 #include <string.h>
 
 #include "bolide_interfaces/msg/detail/multiple_range__type_support.h"
-#include "bolide_interfaces/msg/detail/multiple_range__functions.h"
 #include "bolide_interfaces/msg/detail/multiple_range__struct.h"
+#include "bolide_interfaces/msg/detail/multiple_range__functions.h"
 #include "rosidl_typesupport_interface/macros.h"
 
 #ifdef __cplusplus

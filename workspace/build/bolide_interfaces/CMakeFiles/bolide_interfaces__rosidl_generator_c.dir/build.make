@@ -91,6 +91,8 @@ rosidl_generator_c/bolide_interfaces/msg/camera_info.h: /opt/ros/jazzy/share/ros
 rosidl_generator_c/bolide_interfaces/msg/camera_info.h: rosidl_adapter/bolide_interfaces/msg/CameraInfo.idl
 rosidl_generator_c/bolide_interfaces/msg/camera_info.h: rosidl_adapter/bolide_interfaces/msg/ForkSpeed.idl
 rosidl_generator_c/bolide_interfaces/msg/camera_info.h: rosidl_adapter/bolide_interfaces/msg/MultipleRange.idl
+rosidl_generator_c/bolide_interfaces/msg/camera_info.h: rosidl_adapter/bolide_interfaces/msg/SpeedDirection.idl
+rosidl_generator_c/bolide_interfaces/msg/camera_info.h: rosidl_adapter/bolide_interfaces/srv/LaunchEkf.idl
 rosidl_generator_c/bolide_interfaces/msg/camera_info.h: /opt/ros/jazzy/share/std_msgs/msg/Bool.idl
 rosidl_generator_c/bolide_interfaces/msg/camera_info.h: /opt/ros/jazzy/share/std_msgs/msg/Byte.idl
 rosidl_generator_c/bolide_interfaces/msg/camera_info.h: /opt/ros/jazzy/share/std_msgs/msg/ByteMultiArray.idl
@@ -220,6 +222,30 @@ rosidl_generator_c/bolide_interfaces/msg/detail/multiple_range__struct.h: rosidl
 rosidl_generator_c/bolide_interfaces/msg/detail/multiple_range__type_support.h: rosidl_generator_c/bolide_interfaces/msg/camera_info.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/bolide_interfaces/msg/detail/multiple_range__type_support.h
 
+rosidl_generator_c/bolide_interfaces/msg/speed_direction.h: rosidl_generator_c/bolide_interfaces/msg/camera_info.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/bolide_interfaces/msg/speed_direction.h
+
+rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__functions.h: rosidl_generator_c/bolide_interfaces/msg/camera_info.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__functions.h
+
+rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__struct.h: rosidl_generator_c/bolide_interfaces/msg/camera_info.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__struct.h
+
+rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__type_support.h: rosidl_generator_c/bolide_interfaces/msg/camera_info.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__type_support.h
+
+rosidl_generator_c/bolide_interfaces/srv/launch_ekf.h: rosidl_generator_c/bolide_interfaces/msg/camera_info.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/bolide_interfaces/srv/launch_ekf.h
+
+rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__functions.h: rosidl_generator_c/bolide_interfaces/msg/camera_info.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__functions.h
+
+rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__struct.h: rosidl_generator_c/bolide_interfaces/msg/camera_info.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__struct.h
+
+rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__type_support.h: rosidl_generator_c/bolide_interfaces/msg/camera_info.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__type_support.h
+
 rosidl_generator_c/bolide_interfaces/msg/detail/camera_info__description.c: rosidl_generator_c/bolide_interfaces/msg/camera_info.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/bolide_interfaces/msg/detail/camera_info__description.c
 
@@ -246,6 +272,24 @@ rosidl_generator_c/bolide_interfaces/msg/detail/multiple_range__functions.c: ros
 
 rosidl_generator_c/bolide_interfaces/msg/detail/multiple_range__type_support.c: rosidl_generator_c/bolide_interfaces/msg/camera_info.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/bolide_interfaces/msg/detail/multiple_range__type_support.c
+
+rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__description.c: rosidl_generator_c/bolide_interfaces/msg/camera_info.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__description.c
+
+rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__functions.c: rosidl_generator_c/bolide_interfaces/msg/camera_info.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__functions.c
+
+rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__type_support.c: rosidl_generator_c/bolide_interfaces/msg/camera_info.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__type_support.c
+
+rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__description.c: rosidl_generator_c/bolide_interfaces/msg/camera_info.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__description.c
+
+rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__functions.c: rosidl_generator_c/bolide_interfaces/msg/camera_info.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__functions.c
+
+rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c: rosidl_generator_c/bolide_interfaces/msg/camera_info.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c
 
 CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/camera_info__description.c.o: CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/flags.make
 CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/camera_info__description.c.o: rosidl_generator_c/bolide_interfaces/msg/detail/camera_info__description.c
@@ -373,6 +417,90 @@ CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_i
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/multiple_range__type_support.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_generator_c/bolide_interfaces/msg/detail/multiple_range__type_support.c -o CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/multiple_range__type_support.c.s
 
+CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__description.c.o: CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/flags.make
+CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__description.c.o: rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__description.c
+CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__description.c.o: CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__description.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__description.c.o -MF CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__description.c.o.d -o CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__description.c.o -c /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__description.c
+
+CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__description.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__description.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__description.c > CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__description.c.i
+
+CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__description.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__description.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__description.c -o CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__description.c.s
+
+CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__functions.c.o: CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/flags.make
+CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__functions.c.o: rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__functions.c
+CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__functions.c.o: CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__functions.c.o -MF CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__functions.c.o.d -o CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__functions.c.o -c /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__functions.c
+
+CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__functions.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__functions.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__functions.c > CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__functions.c.i
+
+CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__functions.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__functions.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__functions.c -o CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__functions.c.s
+
+CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__type_support.c.o: CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/flags.make
+CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__type_support.c.o: rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__type_support.c
+CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__type_support.c.o: CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__type_support.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__type_support.c.o -MF CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__type_support.c.o.d -o CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__type_support.c.o -c /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__type_support.c
+
+CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__type_support.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__type_support.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__type_support.c > CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__type_support.c.i
+
+CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__type_support.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__type_support.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__type_support.c -o CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__type_support.c.s
+
+CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__description.c.o: CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/flags.make
+CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__description.c.o: rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__description.c
+CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__description.c.o: CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__description.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__description.c.o -MF CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__description.c.o.d -o CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__description.c.o -c /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__description.c
+
+CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__description.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__description.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__description.c > CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__description.c.i
+
+CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__description.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__description.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__description.c -o CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__description.c.s
+
+CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__functions.c.o: CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/flags.make
+CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__functions.c.o: rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__functions.c
+CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__functions.c.o: CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__functions.c.o -MF CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__functions.c.o.d -o CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__functions.c.o -c /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__functions.c
+
+CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__functions.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__functions.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__functions.c > CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__functions.c.i
+
+CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__functions.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__functions.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__functions.c -o CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__functions.c.s
+
+CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c.o: CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/flags.make
+CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c.o: rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c
+CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c.o: CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c.o -MF CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c.o.d -o CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c.o -c /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c
+
+CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c > CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c.i
+
+CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c -o CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c.s
+
 # Object files for target bolide_interfaces__rosidl_generator_c
 bolide_interfaces__rosidl_generator_c_OBJECTS = \
 "CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/camera_info__description.c.o" \
@@ -383,7 +511,13 @@ bolide_interfaces__rosidl_generator_c_OBJECTS = \
 "CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/fork_speed__type_support.c.o" \
 "CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/multiple_range__description.c.o" \
 "CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/multiple_range__functions.c.o" \
-"CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/multiple_range__type_support.c.o"
+"CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/multiple_range__type_support.c.o" \
+"CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__description.c.o" \
+"CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__functions.c.o" \
+"CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__type_support.c.o" \
+"CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__description.c.o" \
+"CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__functions.c.o" \
+"CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c.o"
 
 # External object files for target bolide_interfaces__rosidl_generator_c
 bolide_interfaces__rosidl_generator_c_EXTERNAL_OBJECTS =
@@ -397,6 +531,12 @@ libbolide_interfaces__rosidl_generator_c.so: CMakeFiles/bolide_interfaces__rosid
 libbolide_interfaces__rosidl_generator_c.so: CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/multiple_range__description.c.o
 libbolide_interfaces__rosidl_generator_c.so: CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/multiple_range__functions.c.o
 libbolide_interfaces__rosidl_generator_c.so: CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/multiple_range__type_support.c.o
+libbolide_interfaces__rosidl_generator_c.so: CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__description.c.o
+libbolide_interfaces__rosidl_generator_c.so: CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__functions.c.o
+libbolide_interfaces__rosidl_generator_c.so: CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__type_support.c.o
+libbolide_interfaces__rosidl_generator_c.so: CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__description.c.o
+libbolide_interfaces__rosidl_generator_c.so: CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__functions.c.o
+libbolide_interfaces__rosidl_generator_c.so: CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c.o
 libbolide_interfaces__rosidl_generator_c.so: CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/build.make
 libbolide_interfaces__rosidl_generator_c.so: /opt/ros/jazzy/lib/libsensor_msgs__rosidl_generator_c.so
 libbolide_interfaces__rosidl_generator_c.so: /opt/ros/jazzy/lib/libgeometry_msgs__rosidl_generator_c.so
@@ -406,7 +546,7 @@ libbolide_interfaces__rosidl_generator_c.so: /opt/ros/jazzy/lib/libbuiltin_inter
 libbolide_interfaces__rosidl_generator_c.so: /opt/ros/jazzy/lib/librosidl_runtime_c.so
 libbolide_interfaces__rosidl_generator_c.so: /opt/ros/jazzy/lib/librcutils.so
 libbolide_interfaces__rosidl_generator_c.so: CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking C shared library libbolide_interfaces__rosidl_generator_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking C shared library libbolide_interfaces__rosidl_generator_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -436,8 +576,22 @@ CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/
 CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/bolide_interfaces/msg/detail/multiple_range__struct.h
 CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/bolide_interfaces/msg/detail/multiple_range__type_support.c
 CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/bolide_interfaces/msg/detail/multiple_range__type_support.h
+CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__description.c
+CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__functions.c
+CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__functions.h
+CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__struct.h
+CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__type_support.c
+CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__type_support.h
 CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/bolide_interfaces/msg/fork_speed.h
 CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/bolide_interfaces/msg/multiple_range.h
+CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/bolide_interfaces/msg/speed_direction.h
+CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__description.c
+CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__functions.c
+CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__functions.h
+CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__struct.h
+CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c
+CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__type_support.h
+CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/bolide_interfaces/srv/launch_ekf.h
 	cd /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/voiture/course_2025_slam_pkgs/workspace/src/bolide_interfaces /home/voiture/course_2025_slam_pkgs/workspace/src/bolide_interfaces /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/depend
 
