@@ -120,12 +120,12 @@ class ControllerListener(Node):
         self.y_pos = 0
 
         #Subscribers and publishers
-        self.create_subscription(SpeedDirection, "cmd_vel", self.cmd_callback, 10)  # Subscribe to cmd_vel for speed and direction commands
-        self.create_subscription(Float32MultiArray, "stm32_sensors", self.stm32_callback, 10)   # Subscribe to the STM32 for the current speed and direction
+        self.create_subscription(SpeedDirection, "/cmd_vel", self.cmd_callback, 10)  # Subscribe to cmd_vel for speed and direction commands
+        self.create_subscription(Float32MultiArray, "/stm32_sensors", self.stm32_callback, 10)   # Subscribe to the STM32 for the current speed and direction
 
-        self.odom_pub = self.create_publisher(Odometry, "ackermann_odom", 10)   # Publish the car's current state (speed and steering angle) for odometry
+        self.odom_pub = self.create_publisher(Odometry, "/ackermann_odom", 10)   # Publish the car's current state (speed and steering angle) for odometry
         self.odom_tf = tf_transformations.TransformBroadcaster(self)
-        self.car_state_pub = self.create_publisher(SpeedDirection, "car_state", 10)# Publish the car's current state (speed and steering angle) for odometry
+        self.car_state_pub = self.create_publisher(SpeedDirection, "/car_state", 10)# Publish the car's current state (speed and steering angle) for odometry
         
         # Initialize watchdog timer
         self.watchdog_timer = self.create_timer(0.5, self.watchdog_callback)    # Check if the car is still receiving commands
