@@ -20,7 +20,7 @@ class DBSCAN(Node):
         self.get_logger.info("[INFO] -- Initializing the dbscan data node")
         
         # SUBSCRIBER
-        self.sub = self.create_subscription(OccupancyGrid, '/occupancy_grid', self.occupCB)
+        self.sub = self.create_subscription(OccupancyGrid, '/occupancy_grid', self.occupCB, 10)
         # PUBLISHER
         self.obstacle_pub = self.create_publisher(Marker, '/obstacle_marker', 10)
         

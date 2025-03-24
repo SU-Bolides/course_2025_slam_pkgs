@@ -44,8 +44,8 @@ class LidarProcess(Node):
         self.grid_width = 2 * self.CELLS_PER_METER
 
         # SUBSCRIBER
-        self.sub_raw_lidar_data = self.create_subscription(LaserScan, '/raw_lidar_data', self.callback)
-        self.sub_param_change = self.create_subscription(Bool, '/param_change_alert', self.callback_parameters)
+        self.sub_raw_lidar_data = self.create_subscription(LaserScan, '/raw_lidar_data', self.callback, 10)
+        self.sub_param_change = self.create_subscription(Bool, '/param_change_alert', self.callback_parameters, 10)
         # PUBLISHER
         self.pub = self.create_publisher(LaserScan, '/lidar_data', 10)
         self.occupancy_grid_pub = self.create_publisher(OccupancyGrid, '/occupancy_grid', 10)

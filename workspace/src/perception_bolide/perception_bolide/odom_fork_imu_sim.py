@@ -16,10 +16,10 @@ class OdomForkImu(Node):
         super().__init__('odom_fork_imu_sim')
 
         # SUBSCRIBER
-        self.sub_raw_fork_data = self.create_subscription(ForkSpeed, '/raw_fork_data', self.get_fork)
-        self.sub_vel = self.create_subscription(SpeedDirection, '/cmd_vel', self.get_speedsign)
-        self.sub_raw_imu_data = self.create_subscription(Imu, '/raw_imu_data', self.get_dir)
-        self.sub_gps_odom = self.create_subscription(Odometry, '/gps/odom', self.get_gps)
+        self.sub_raw_fork_data = self.create_subscription(ForkSpeed, '/raw_fork_data', self.get_fork, 10)
+        self.sub_vel = self.create_subscription(SpeedDirection, '/cmd_vel', self.get_speedsign, 10)
+        self.sub_raw_imu_data = self.create_subscription(Imu, '/raw_imu_data', self.get_dir, 10)
+        self.sub_gps_odom = self.create_subscription(Odometry, '/gps/odom', self.get_gps, 10)
 
         # PUBLISHER
         self.pub = self.Create_publisher(Odometry, '/odom', 10)
