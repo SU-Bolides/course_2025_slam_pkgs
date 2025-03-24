@@ -19,9 +19,9 @@ class OdomForkImu(Node):
         super().__init__('odom_fork_imu')
 
         #SUBSCRIBER
-        self.sub_raw_fork_data = self.create_subscription(ForkSpeed, '/raw_fork_data', self.get_fork)
-        self.sub_vel = self.create_subscription(SpeedDirection, '/cmd_vel', self.get_speed)
-        self.sub_raw_imu_data = self.create_subscription(Imu, '/raw_imu_data', self.get_imu)
+        self.sub_raw_fork_data = self.create_subscription(ForkSpeed, '/raw_fork_data', self.get_fork, 10)
+        self.sub_vel = self.create_subscription(SpeedDirection, '/cmd_vel', self.get_speed, 10)
+        self.sub_raw_imu_data = self.create_subscription(Imu, '/raw_imu_data', self.get_imu, 10)
         # PUBLISHER
         self.pub = self.create_publisher(Odometry, '/odom', 10)
 

@@ -11,7 +11,7 @@ class Optical_Fork(Node):
         super().__init__("fork_publisher")
 
         # SUBSCRIBER
-        self.subscription = self.create_subscription(Float32MultiArray, '/stm32_sensors', self.callback)
+        self.subscription = self.create_subscription(Float32MultiArray, '/stm32_sensors', self.callback, 10)
         # PUBLISHER
         self.pub = self.create_publisher(ForkSpeed, '/raw_fork_data', 10)
   
