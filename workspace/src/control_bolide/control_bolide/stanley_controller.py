@@ -21,9 +21,9 @@ class StanleyController(Node):
         super().__init__('stanley_controller')
         
     # Declare parameters
-        self.declare_parameter('waypoints_path', '~/bolide_ws/course_2024_pkgs/control_bolide/racelines/esclangon_couloir_reverse.csv')
+        self.declare_parameter('waypoints_path', '~/workspace/course_2024_pkgs/control_bolide/racelines/esclangon_couloir_reverse.csv')
         self.declare_parameter('odom_topic', '/pf/pos/odom')
-        self.declare_parameter('cmd_topic', '/cmd_vel')
+        self.declare_parameter('cmd_topic', 'cmd_vel')
         self.declare_parameter('K_E', 2.0)
         self.declare_parameter('K_H', 1.5)
         self.declare_parameter('K_V', 0.5)
