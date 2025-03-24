@@ -1,0 +1,8 @@
+[0.000000] (-) TimerEvent: {}
+[0.000588] (-) JobUnselected: {'identifier': 'bolide_interfaces'}
+[0.001019] (-) JobUnselected: {'identifier': 'control_bolide'}
+[0.001298] (-) JobUnselected: {'identifier': 'open_karto'}
+[0.001385] (-) JobUnselected: {'identifier': 'perception_bolide'}
+[0.001416] (-) JobUnselected: {'identifier': 'rplidar_ros'}
+[0.001466] (-) JobUnselected: {'identifier': 'sparse_bundle_adjustment'}
+[0.001746] (-) EventReactorShutdown: {}
