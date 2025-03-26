@@ -13,7 +13,7 @@ def generate_launch_description():
             parameters=[
                 {'odom_topic': '/pf/pos/odom'},
                 {'waypoints_path': '/home/course_2025_slam_pkgs/workspace/course_2024_pkgs/control_bolide/racelines/esclangon_couloir_reverse.csv'},
-                {'cmd_topic': 'cmd_vel'},
+                {'cmd_topic': '/cmd_vel'},
                 {'K_E': 0.4},
                 {'K_H': 0.4},
                 {'K_V': 0.5},
