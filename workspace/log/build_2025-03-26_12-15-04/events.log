@@ -1,0 +1,402 @@
+[0.000000] (-) TimerEvent: {}
+[0.000430] (bolide_interfaces) JobQueued: {'identifier': 'bolide_interfaces', 'dependencies': OrderedDict()}
+[0.001273] (rplidar_ros) JobQueued: {'identifier': 'rplidar_ros', 'dependencies': OrderedDict()}
+[0.002725] (sparse_bundle_adjustment) JobQueued: {'identifier': 'sparse_bundle_adjustment', 'dependencies': OrderedDict()}
+[0.003223] (control_bolide) JobQueued: {'identifier': 'control_bolide', 'dependencies': OrderedDict({'bolide_interfaces': '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces'})}
+[0.003368] (open_karto) JobQueued: {'identifier': 'open_karto', 'dependencies': OrderedDict({'sparse_bundle_adjustment': '/home/voiture/course_2025_slam_pkgs/workspace/install/sparse_bundle_adjustment'})}
+[0.003400] (perception_bolide) JobQueued: {'identifier': 'perception_bolide', 'dependencies': OrderedDict({'bolide_interfaces': '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces'})}
+[0.003426] (planning_bolide) JobQueued: {'identifier': 'planning_bolide', 'dependencies': OrderedDict({'bolide_interfaces': '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces'})}
+[0.003451] (bolide_interfaces) JobStarted: {'identifier': 'bolide_interfaces'}
+[0.026793] (sparse_bundle_adjustment) JobStarted: {'identifier': 'sparse_bundle_adjustment'}
+[0.032092] (rplidar_ros) JobStarted: {'identifier': 'rplidar_ros'}
+[0.039781] (bolide_interfaces) JobProgress: {'identifier': 'bolide_interfaces', 'progress': 'cmake'}
+[0.046367] (bolide_interfaces) JobProgress: {'identifier': 'bolide_interfaces', 'progress': 'build'}
+[0.047792] (bolide_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces', '--', '-j4', '-l4'], 'cwd': '/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'voiture', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/voiture', 'OLDPWD': '/home/voiture', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '1668', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1002/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'voiture', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1002.slice/user@1002.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'voiture', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/voiture1:@/tmp/.ICE-unix/1621,unix/voiture1:/tmp/.ICE-unix/1621', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/24df145c_eac9_4240_8c0f_965b0c014937', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1002', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1002/.mutter-Xwaylandauth.T7LD42', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.112', 'SSH_AUTH_SOCK': '/run/user/1002/keyring/ssh', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.060188] (sparse_bundle_adjustment) JobProgress: {'identifier': 'sparse_bundle_adjustment', 'progress': 'cmake'}
+[0.070461] (sparse_bundle_adjustment) Command: {'cmd': ['/usr/bin/cmake', '/home/voiture/course_2025_slam_pkgs/workspace/sparse_bundle_adjustment-melodic-devel', '-DCATKIN_INSTALL_INTO_PREFIX_ROOT=0', '-DCMAKE_INSTALL_PREFIX=/home/voiture/course_2025_slam_pkgs/workspace/install/sparse_bundle_adjustment'], 'cwd': '/home/voiture/course_2025_slam_pkgs/workspace/build/sparse_bundle_adjustment', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'voiture', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/voiture', 'OLDPWD': '/home/voiture', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '1668', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1002/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'voiture', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1002.slice/user@1002.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'voiture', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/voiture1:@/tmp/.ICE-unix/1621,unix/voiture1:/tmp/.ICE-unix/1621', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/24df145c_eac9_4240_8c0f_965b0c014937', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1002', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1002/.mutter-Xwaylandauth.T7LD42', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.112', 'SSH_AUTH_SOCK': '/run/user/1002/keyring/ssh', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/voiture/course_2025_slam_pkgs/workspace/build/sparse_bundle_adjustment', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}), 'shell': False}
+[0.079955] (rplidar_ros) JobProgress: {'identifier': 'rplidar_ros', 'progress': 'cmake'}
+[0.084901] (rplidar_ros) Command: {'cmd': ['/usr/bin/cmake', '/home/voiture/course_2025_slam_pkgs/workspace/rplidar_ros-master', '-DCATKIN_INSTALL_INTO_PREFIX_ROOT=0', '-DCMAKE_INSTALL_PREFIX=/home/voiture/course_2025_slam_pkgs/workspace/install/rplidar_ros'], 'cwd': '/home/voiture/course_2025_slam_pkgs/workspace/build/rplidar_ros', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'voiture', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/voiture', 'OLDPWD': '/home/voiture', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '1668', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1002/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'voiture', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1002.slice/user@1002.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'voiture', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/voiture1:@/tmp/.ICE-unix/1621,unix/voiture1:/tmp/.ICE-unix/1621', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/24df145c_eac9_4240_8c0f_965b0c014937', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1002', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1002/.mutter-Xwaylandauth.T7LD42', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.112', 'SSH_AUTH_SOCK': '/run/user/1002/keyring/ssh', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/voiture/course_2025_slam_pkgs/workspace/build/rplidar_ros', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}), 'shell': False}
+[0.099878] (-) TimerEvent: {}
+[0.200384] (-) TimerEvent: {}
+[0.300872] (-) TimerEvent: {}
+[0.401484] (-) TimerEvent: {}
+[0.502188] (-) TimerEvent: {}
+[0.511566] (rplidar_ros) StderrLine: {'line': b'\x1b[0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):\n'}
+[0.512522] (rplidar_ros) StderrLine: {'line': b'  Compatibility with CMake < 3.5 will be removed from a future version of\n'}
+[0.512770] (rplidar_ros) StderrLine: {'line': b'  CMake.\n'}
+[0.512993] (rplidar_ros) StderrLine: {'line': b'\n'}
+[0.513196] (rplidar_ros) StderrLine: {'line': b'  Update the VERSION argument <min> value or use a ...<max> suffix to tell\n'}
+[0.513346] (rplidar_ros) StderrLine: {'line': b'  CMake that the project does not need compatibility with older versions.\n'}
+[0.513510] (rplidar_ros) StderrLine: {'line': b'\n'}
+[0.513660] (rplidar_ros) StderrLine: {'line': b'\x1b[0m\n'}
+[0.513812] (sparse_bundle_adjustment) StderrLine: {'line': b'\x1b[0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):\n'}
+[0.514153] (sparse_bundle_adjustment) StderrLine: {'line': b'  Compatibility with CMake < 3.5 will be removed from a future version of\n'}
+[0.514295] (sparse_bundle_adjustment) StderrLine: {'line': b'  CMake.\n'}
+[0.514409] (sparse_bundle_adjustment) StderrLine: {'line': b'\n'}
+[0.514723] (sparse_bundle_adjustment) StderrLine: {'line': b'  Update the VERSION argument <min> value or use a ...<max> suffix to tell\n'}
+[0.514861] (sparse_bundle_adjustment) StderrLine: {'line': b'  CMake that the project does not need compatibility with older versions.\n'}
+[0.515011] (sparse_bundle_adjustment) StderrLine: {'line': b'\n'}
+[0.515121] (sparse_bundle_adjustment) StderrLine: {'line': b'\x1b[0m\n'}
+[0.602380] (-) TimerEvent: {}
+[0.630508] (rplidar_ros) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:16 (find_package):\n'}
+[0.631201] (rplidar_ros) StderrLine: {'line': b'  By not providing "Findcatkin.cmake" in CMAKE_MODULE_PATH this project has\n'}
+[0.631333] (rplidar_ros) StderrLine: {'line': b'  asked CMake to find a package configuration file provided by "catkin", but\n'}
+[0.631435] (rplidar_ros) StderrLine: {'line': b'  CMake did not find one.\n'}
+[0.631531] (rplidar_ros) StderrLine: {'line': b'\n'}
+[0.631626] (rplidar_ros) StderrLine: {'line': b'  Could not find a package configuration file provided by "catkin" with any\n'}
+[0.631721] (rplidar_ros) StderrLine: {'line': b'  of the following names:\n'}
+[0.631813] (rplidar_ros) StderrLine: {'line': b'\n'}
+[0.631923] (rplidar_ros) StderrLine: {'line': b'    catkinConfig.cmake\n'}
+[0.632037] (rplidar_ros) StderrLine: {'line': b'    catkin-config.cmake\n'}
+[0.632130] (rplidar_ros) StderrLine: {'line': b'\n'}
+[0.632227] (rplidar_ros) StderrLine: {'line': b'  Add the installation prefix of "catkin" to CMAKE_PREFIX_PATH or set\n'}
+[0.632322] (rplidar_ros) StderrLine: {'line': b'  "catkin_DIR" to a directory containing one of the above files.  If "catkin"\n'}
+[0.632413] (rplidar_ros) StderrLine: {'line': b'  provides a separate development package or SDK, be sure it has been\n'}
+[0.632512] (rplidar_ros) StderrLine: {'line': b'  installed.\n'}
+[0.632600] (rplidar_ros) StderrLine: {'line': b'\n'}
+[0.632683] (rplidar_ros) StderrLine: {'line': b'\x1b[0m\n'}
+[0.632765] (sparse_bundle_adjustment) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:8 (find_package):\n'}
+[0.632895] (sparse_bundle_adjustment) StderrLine: {'line': b'  By not providing "Findcatkin.cmake" in CMAKE_MODULE_PATH this project has\n'}
+[0.633002] (sparse_bundle_adjustment) StderrLine: {'line': b'  asked CMake to find a package configuration file provided by "catkin", but\n'}
+[0.633090] (sparse_bundle_adjustment) StderrLine: {'line': b'  CMake did not find one.\n'}
+[0.633177] (sparse_bundle_adjustment) StderrLine: {'line': b'\n'}
+[0.633263] (sparse_bundle_adjustment) StderrLine: {'line': b'  Could not find a package configuration file provided by "catkin" with any\n'}
+[0.633349] (sparse_bundle_adjustment) StderrLine: {'line': b'  of the following names:\n'}
+[0.633434] (sparse_bundle_adjustment) StderrLine: {'line': b'\n'}
+[0.633516] (sparse_bundle_adjustment) StderrLine: {'line': b'    catkinConfig.cmake\n'}
+[0.633602] (sparse_bundle_adjustment) StderrLine: {'line': b'    catkin-config.cmake\n'}
+[0.633683] (sparse_bundle_adjustment) StderrLine: {'line': b'\n'}
+[0.633799] (sparse_bundle_adjustment) StderrLine: {'line': b'  Add the installation prefix of "catkin" to CMAKE_PREFIX_PATH or set\n'}
+[0.633885] (sparse_bundle_adjustment) StderrLine: {'line': b'  "catkin_DIR" to a directory containing one of the above files.  If "catkin"\n'}
+[0.633987] (sparse_bundle_adjustment) StderrLine: {'line': b'  provides a separate development package or SDK, be sure it has been\n'}
+[0.634075] (sparse_bundle_adjustment) StderrLine: {'line': b'  installed.\n'}
+[0.634161] (sparse_bundle_adjustment) StderrLine: {'line': b'\n'}
+[0.634246] (sparse_bundle_adjustment) StderrLine: {'line': b'\x1b[0m\n'}
+[0.634330] (sparse_bundle_adjustment) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[0.634480] (rplidar_ros) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[0.662855] (sparse_bundle_adjustment) CommandEnded: {'returncode': 1}
+[0.665982] (rplidar_ros) CommandEnded: {'returncode': 1}
+[0.693772] (bolide_interfaces) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[0.702485] (-) TimerEvent: {}
+[0.740308] (sparse_bundle_adjustment) JobEnded: {'identifier': 'sparse_bundle_adjustment', 'rc': 1}
+[0.758754] (rplidar_ros) JobEnded: {'identifier': 'rplidar_ros', 'rc': 1}
+[0.783353] (bolide_interfaces) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[0.802682] (-) TimerEvent: {}
+[0.903309] (-) TimerEvent: {}
+[1.003957] (-) TimerEvent: {}
+[1.039117] (bolide_interfaces) StdoutLine: {'line': b'-- Found std_msgs: 5.3.5 (/opt/ros/jazzy/share/std_msgs/cmake)\n'}
+[1.104115] (-) TimerEvent: {}
+[1.118644] (bolide_interfaces) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[1.146880] (bolide_interfaces) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[1.185163] (bolide_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.204222] (-) TimerEvent: {}
+[1.226893] (bolide_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.293089] (bolide_interfaces) StdoutLine: {'line': b'-- Found sensor_msgs: 5.3.5 (/opt/ros/jazzy/share/sensor_msgs/cmake)\n'}
+[1.304311] (-) TimerEvent: {}
+[1.404680] (-) TimerEvent: {}
+[1.423821] (bolide_interfaces) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)\n'}
+[1.455170] (bolide_interfaces) StdoutLine: {'line': b'-- Found rosidl_adapter: 4.6.5 (/opt/ros/jazzy/share/rosidl_adapter/cmake)\n'}
+[1.504799] (-) TimerEvent: {}
+[1.605419] (-) TimerEvent: {}
+[1.707148] (-) TimerEvent: {}
+[1.807730] (-) TimerEvent: {}
+[1.908291] (-) TimerEvent: {}
+[2.008874] (-) TimerEvent: {}
+[2.109593] (-) TimerEvent: {}
+[2.210153] (-) TimerEvent: {}
+[2.254044] (bolide_interfaces) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.12.0 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)\n'}
+[2.310315] (-) TimerEvent: {}
+[2.410837] (-) TimerEvent: {}
+[2.511371] (-) TimerEvent: {}
+[2.611959] (-) TimerEvent: {}
+[2.712392] (-) TimerEvent: {}
+[2.812779] (-) TimerEvent: {}
+[2.898659] (bolide_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[2.912866] (-) TimerEvent: {}
+[3.013247] (-) TimerEvent: {}
+[3.113709] (-) TimerEvent: {}
+[3.140069] (bolide_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[3.145037] (bolide_interfaces) StdoutLine: {'line': b'-- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)\n'}
+[3.213833] (-) TimerEvent: {}
+[3.314264] (-) TimerEvent: {}
+[3.414706] (-) TimerEvent: {}
+[3.515112] (-) TimerEvent: {}
+[3.615538] (-) TimerEvent: {}
+[3.715973] (-) TimerEvent: {}
+[3.816347] (-) TimerEvent: {}
+[3.916726] (-) TimerEvent: {}
+[4.017167] (-) TimerEvent: {}
+[4.117543] (-) TimerEvent: {}
+[4.205657] (bolide_interfaces) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed \n'}
+[4.217631] (-) TimerEvent: {}
+[4.288504] (bolide_interfaces) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.17.1 (/opt/ros/jazzy/share/ament_lint_auto/cmake)\n'}
+[4.317767] (-) TimerEvent: {}
+[4.339575] (bolide_interfaces) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[4.342984] (bolide_interfaces) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[4.355102] (bolide_interfaces) StdoutLine: {'line': b'-- Configuring done (3.7s)\n'}
+[4.417886] (-) TimerEvent: {}
+[4.518293] (-) TimerEvent: {}
+[4.626865] (-) TimerEvent: {}
+[4.727310] (-) TimerEvent: {}
+[4.827741] (-) TimerEvent: {}
+[4.928171] (-) TimerEvent: {}
+[5.028601] (-) TimerEvent: {}
+[5.129026] (-) TimerEvent: {}
+[5.171272] (bolide_interfaces) StdoutLine: {'line': b'-- Generating done (0.8s)\n'}
+[5.220014] (bolide_interfaces) StdoutLine: {'line': b'-- Build files have been written to: /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces\n'}
+[5.229192] (-) TimerEvent: {}
+[5.300410] (bolide_interfaces) StdoutLine: {'line': b'[  1%] Built target bolide_interfaces__rosidl_generator_type_description\n'}
+[5.329337] (-) TimerEvent: {}
+[5.350100] (bolide_interfaces) StdoutLine: {'line': b'[  2%] Built target ament_cmake_python_copy_bolide_interfaces\n'}
+[5.350463] (bolide_interfaces) StdoutLine: {'line': b'[  2%] Built target bolide_interfaces__cpp\n'}
+[5.389376] (bolide_interfaces) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding C object CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/camera_info__type_support.c.o\x1b[0m\n'}
+[5.391827] (bolide_interfaces) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding C object CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/camera_info__functions.c.o\x1b[0m\n'}
+[5.392622] (bolide_interfaces) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding C object CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/camera_info__description.c.o\x1b[0m\n'}
+[5.429435] (-) TimerEvent: {}
+[5.529931] (-) TimerEvent: {}
+[5.630422] (-) TimerEvent: {}
+[5.730832] (-) TimerEvent: {}
+[5.831218] (-) TimerEvent: {}
+[5.856214] (bolide_interfaces) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding C object CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/fork_speed__description.c.o\x1b[0m\n'}
+[5.857270] (bolide_interfaces) StdoutLine: {'line': b'running egg_info\n'}
+[5.886561] (bolide_interfaces) StdoutLine: {'line': b'writing bolide_interfaces.egg-info/PKG-INFO\n'}
+[5.887030] (bolide_interfaces) StdoutLine: {'line': b'writing dependency_links to bolide_interfaces.egg-info/dependency_links.txt\n'}
+[5.887297] (bolide_interfaces) StdoutLine: {'line': b'writing top-level names to bolide_interfaces.egg-info/top_level.txt\n'}
+[5.931335] (-) TimerEvent: {}
+[5.987950] (bolide_interfaces) StdoutLine: {'line': b"reading manifest file 'bolide_interfaces.egg-info/SOURCES.txt'\n"}
+[6.002860] (bolide_interfaces) StdoutLine: {'line': b"writing manifest file 'bolide_interfaces.egg-info/SOURCES.txt'\n"}
+[6.031456] (-) TimerEvent: {}
+[6.089345] (bolide_interfaces) StdoutLine: {'line': b'[  8%] Built target ament_cmake_python_build_bolide_interfaces_egg\n'}
+[6.106066] (bolide_interfaces) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/fork_speed__functions.c.o\x1b[0m\n'}
+[6.131615] (-) TimerEvent: {}
+[6.142548] (bolide_interfaces) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/fork_speed__type_support.c.o\x1b[0m\n'}
+[6.168223] (bolide_interfaces) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/multiple_range__description.c.o\x1b[0m\n'}
+[6.233131] (-) TimerEvent: {}
+[6.233554] (bolide_interfaces) StdoutLine: {'line': b'[ 13%] \x1b[32mBuilding C object CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/multiple_range__functions.c.o\x1b[0m\n'}
+[6.258809] (bolide_interfaces) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding C object CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/multiple_range__type_support.c.o\x1b[0m\n'}
+[6.268114] (bolide_interfaces) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding C object CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__description.c.o\x1b[0m\n'}
+[6.302099] (bolide_interfaces) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding C object CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__functions.c.o\x1b[0m\n'}
+[6.333322] (-) TimerEvent: {}
+[6.369193] (bolide_interfaces) StdoutLine: {'line': b'[ 18%] \x1b[32mBuilding C object CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__type_support.c.o\x1b[0m\n'}
+[6.378382] (bolide_interfaces) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding C object CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__description.c.o\x1b[0m\n'}
+[6.404580] (bolide_interfaces) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding C object CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__functions.c.o\x1b[0m\n'}
+[6.435064] (-) TimerEvent: {}
+[6.474016] (bolide_interfaces) StdoutLine: {'line': b'[ 22%] \x1b[32mBuilding C object CMakeFiles/bolide_interfaces__rosidl_generator_c.dir/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c.o\x1b[0m\n'}
+[6.538044] (-) TimerEvent: {}
+[6.606927] (bolide_interfaces) StdoutLine: {'line': b'[ 24%] \x1b[32m\x1b[1mLinking C shared library libbolide_interfaces__rosidl_generator_c.so\x1b[0m\n'}
+[6.639154] (-) TimerEvent: {}
+[6.739611] (-) TimerEvent: {}
+[6.840880] (-) TimerEvent: {}
+[6.900871] (bolide_interfaces) StdoutLine: {'line': b'[ 25%] Built target bolide_interfaces__rosidl_generator_c\n'}
+[6.944036] (-) TimerEvent: {}
+[7.019430] (bolide_interfaces) StdoutLine: {'line': b'[ 27%] \x1b[32mBuilding C object CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/camera_info__type_support.c.o\x1b[0m\n'}
+[7.045690] (-) TimerEvent: {}
+[7.069851] (bolide_interfaces) StdoutLine: {'line': b'[ 28%] \x1b[32mBuilding CXX object CMakeFiles/bolide_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/bolide_interfaces/msg/detail/camera_info__type_support_c.cpp.o\x1b[0m\n'}
+[7.074500] (bolide_interfaces) StdoutLine: {'line': b'[ 29%] \x1b[32mBuilding CXX object CMakeFiles/bolide_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/bolide_interfaces/msg/camera_info__type_support.cpp.o\x1b[0m\n'}
+[7.080852] (bolide_interfaces) StdoutLine: {'line': b'[ 31%] \x1b[32mBuilding CXX object CMakeFiles/bolide_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/bolide_interfaces/msg/detail/dds_fastrtps/camera_info__type_support.cpp.o\x1b[0m\n'}
+[7.145996] (-) TimerEvent: {}
+[7.198041] (bolide_interfaces) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding C object CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/fork_speed__type_support.c.o\x1b[0m\n'}
+[7.246161] (-) TimerEvent: {}
+[7.349469] (-) TimerEvent: {}
+[7.393990] (bolide_interfaces) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding C object CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/multiple_range__type_support.c.o\x1b[0m\n'}
+[7.452395] (-) TimerEvent: {}
+[7.555973] (-) TimerEvent: {}
+[7.572988] (bolide_interfaces) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding C object CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bolide_interfaces/msg/detail/speed_direction__type_support.c.o\x1b[0m\n'}
+[7.659157] (-) TimerEvent: {}
+[7.750554] (bolide_interfaces) StdoutLine: {'line': b'[ 36%] \x1b[32mBuilding C object CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bolide_interfaces/srv/detail/launch_ekf__type_support.c.o\x1b[0m\n'}
+[7.760260] (-) TimerEvent: {}
+[7.861062] (-) TimerEvent: {}
+[7.961830] (-) TimerEvent: {}
+[7.999483] (bolide_interfaces) StdoutLine: {'line': b'[ 37%] \x1b[32m\x1b[1mLinking C shared library libbolide_interfaces__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[8.063330] (-) TimerEvent: {}
+[8.167463] (-) TimerEvent: {}
+[8.268382] (-) TimerEvent: {}
+[8.326017] (bolide_interfaces) StdoutLine: {'line': b'[ 39%] Built target bolide_interfaces__rosidl_typesupport_introspection_c\n'}
+[8.370784] (-) TimerEvent: {}
+[8.474957] (-) TimerEvent: {}
+[8.500659] (bolide_interfaces) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/bolide_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/bolide_interfaces/msg/camera_info__type_support.cpp.o\x1b[0m\n'}
+[8.575317] (-) TimerEvent: {}
+[8.678135] (-) TimerEvent: {}
+[8.778937] (-) TimerEvent: {}
+[8.881420] (-) TimerEvent: {}
+[8.942115] (bolide_interfaces) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding CXX object CMakeFiles/bolide_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/bolide_interfaces/msg/fork_speed__type_support.cpp.o\x1b[0m\n'}
+[8.984109] (-) TimerEvent: {}
+[9.084957] (-) TimerEvent: {}
+[9.188070] (-) TimerEvent: {}
+[9.263289] (bolide_interfaces) StdoutLine: {'line': b'[ 43%] \x1b[32mBuilding CXX object CMakeFiles/bolide_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/bolide_interfaces/msg/multiple_range__type_support.cpp.o\x1b[0m\n'}
+[9.291204] (-) TimerEvent: {}
+[9.393427] (-) TimerEvent: {}
+[9.497470] (-) TimerEvent: {}
+[9.633279] (bolide_interfaces) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding CXX object CMakeFiles/bolide_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/bolide_interfaces/msg/speed_direction__type_support.cpp.o\x1b[0m\n'}
+[9.634137] (-) TimerEvent: {}
+[9.738070] (-) TimerEvent: {}
+[9.840185] (-) TimerEvent: {}
+[9.881171] (bolide_interfaces) StdoutLine: {'line': b'[ 45%] \x1b[32mBuilding CXX object CMakeFiles/bolide_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/bolide_interfaces/srv/launch_ekf__type_support.cpp.o\x1b[0m\n'}
+[9.940387] (-) TimerEvent: {}
+[10.041680] (-) TimerEvent: {}
+[10.145306] (-) TimerEvent: {}
+[10.190172] (bolide_interfaces) StdoutLine: {'line': b'[ 47%] \x1b[32mBuilding CXX object CMakeFiles/bolide_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/bolide_interfaces/msg/fork_speed__type_support.cpp.o\x1b[0m\n'}
+[10.246324] (-) TimerEvent: {}
+[10.347550] (-) TimerEvent: {}
+[10.448337] (-) TimerEvent: {}
+[10.504286] (bolide_interfaces) StdoutLine: {'line': b'[ 48%] \x1b[32m\x1b[1mLinking CXX shared library libbolide_interfaces__rosidl_typesupport_c.so\x1b[0m\n'}
+[10.551099] (-) TimerEvent: {}
+[10.651849] (-) TimerEvent: {}
+[10.754126] (-) TimerEvent: {}
+[10.858494] (-) TimerEvent: {}
+[10.940286] (bolide_interfaces) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/bolide_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/bolide_interfaces/msg/detail/dds_fastrtps/fork_speed__type_support.cpp.o\x1b[0m\n'}
+[10.963219] (-) TimerEvent: {}
+[10.977816] (bolide_interfaces) StdoutLine: {'line': b'[ 51%] \x1b[32mBuilding CXX object CMakeFiles/bolide_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/bolide_interfaces/msg/detail/fork_speed__type_support_c.cpp.o\x1b[0m\n'}
+[11.064072] (-) TimerEvent: {}
+[11.120998] (bolide_interfaces) StdoutLine: {'line': b'[ 52%] Built target bolide_interfaces__rosidl_typesupport_c\n'}
+[11.168079] (-) TimerEvent: {}
+[11.178251] (bolide_interfaces) StdoutLine: {'line': b'[ 54%] \x1b[32mBuilding CXX object CMakeFiles/bolide_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/bolide_interfaces/msg/detail/multiple_range__type_support_c.cpp.o\x1b[0m\n'}
+[11.268346] (-) TimerEvent: {}
+[11.376077] (-) TimerEvent: {}
+[11.476976] (-) TimerEvent: {}
+[11.580534] (-) TimerEvent: {}
+[11.688437] (-) TimerEvent: {}
+[11.789232] (-) TimerEvent: {}
+[11.891440] (-) TimerEvent: {}
+[11.995026] (-) TimerEvent: {}
+[12.097520] (-) TimerEvent: {}
+[12.199741] (-) TimerEvent: {}
+[12.236124] (bolide_interfaces) StdoutLine: {'line': b'[ 55%] \x1b[32mBuilding CXX object CMakeFiles/bolide_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/bolide_interfaces/msg/multiple_range__type_support.cpp.o\x1b[0m\n'}
+[12.300192] (-) TimerEvent: {}
+[12.401433] (-) TimerEvent: {}
+[12.504863] (-) TimerEvent: {}
+[12.608369] (-) TimerEvent: {}
+[12.713649] (-) TimerEvent: {}
+[12.816648] (-) TimerEvent: {}
+[12.921465] (-) TimerEvent: {}
+[13.026164] (-) TimerEvent: {}
+[13.127092] (-) TimerEvent: {}
+[13.228462] (-) TimerEvent: {}
+[13.248652] (bolide_interfaces) StdoutLine: {'line': b'[ 56%] \x1b[32mBuilding CXX object CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/bolide_interfaces/msg/detail/camera_info__type_support.cpp.o\x1b[0m\n'}
+[13.330113] (-) TimerEvent: {}
+[13.431163] (-) TimerEvent: {}
+[13.538059] (-) TimerEvent: {}
+[13.641975] (-) TimerEvent: {}
+[13.742723] (-) TimerEvent: {}
+[13.785658] (bolide_interfaces) StdoutLine: {'line': b'[ 58%] \x1b[32mBuilding CXX object CMakeFiles/bolide_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/bolide_interfaces/msg/detail/dds_fastrtps/multiple_range__type_support.cpp.o\x1b[0m\n'}
+[13.840514] (bolide_interfaces) StdoutLine: {'line': b'[ 59%] \x1b[32mBuilding CXX object CMakeFiles/bolide_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/bolide_interfaces/msg/detail/speed_direction__type_support_c.cpp.o\x1b[0m\n'}
+[13.846083] (-) TimerEvent: {}
+[13.946894] (-) TimerEvent: {}
+[14.047731] (-) TimerEvent: {}
+[14.082081] (bolide_interfaces) StdoutLine: {'line': b'[ 60%] \x1b[32mBuilding CXX object CMakeFiles/bolide_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/bolide_interfaces/msg/speed_direction__type_support.cpp.o\x1b[0m\n'}
+[14.147948] (-) TimerEvent: {}
+[14.252741] (-) TimerEvent: {}
+[14.356083] (-) TimerEvent: {}
+[14.461327] (-) TimerEvent: {}
+[14.565064] (-) TimerEvent: {}
+[14.666486] (-) TimerEvent: {}
+[14.768738] (-) TimerEvent: {}
+[14.871058] (-) TimerEvent: {}
+[14.974073] (-) TimerEvent: {}
+[15.036152] (bolide_interfaces) StdoutLine: {'line': b'[ 62%] \x1b[32mBuilding CXX object CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/bolide_interfaces/msg/detail/fork_speed__type_support.cpp.o\x1b[0m\n'}
+[15.078702] (-) TimerEvent: {}
+[15.182097] (-) TimerEvent: {}
+[15.282926] (-) TimerEvent: {}
+[15.383820] (-) TimerEvent: {}
+[15.486329] (-) TimerEvent: {}
+[15.589146] (-) TimerEvent: {}
+[15.692029] (-) TimerEvent: {}
+[15.794026] (-) TimerEvent: {}
+[15.836243] (bolide_interfaces) StdoutLine: {'line': b'[ 63%] \x1b[32mBuilding CXX object CMakeFiles/bolide_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/bolide_interfaces/srv/launch_ekf__type_support.cpp.o\x1b[0m\n'}
+[15.895165] (-) TimerEvent: {}
+[16.000937] (-) TimerEvent: {}
+[16.111442] (-) TimerEvent: {}
+[16.214363] (-) TimerEvent: {}
+[16.315069] (-) TimerEvent: {}
+[16.419074] (-) TimerEvent: {}
+[16.519854] (-) TimerEvent: {}
+[16.623315] (-) TimerEvent: {}
+[16.724227] (-) TimerEvent: {}
+[16.828046] (-) TimerEvent: {}
+[16.929213] (-) TimerEvent: {}
+[16.942105] (bolide_interfaces) StdoutLine: {'line': b'[ 64%] \x1b[32mBuilding CXX object CMakeFiles/bolide_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/bolide_interfaces/srv/detail/launch_ekf__type_support_c.cpp.o\x1b[0m\n'}
+[16.955061] (bolide_interfaces) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/bolide_interfaces/msg/detail/multiple_range__type_support.cpp.o\x1b[0m\n'}
+[17.029366] (-) TimerEvent: {}
+[17.059759] (bolide_interfaces) StdoutLine: {'line': b'[ 67%] \x1b[32mBuilding CXX object CMakeFiles/bolide_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/bolide_interfaces/msg/detail/dds_fastrtps/speed_direction__type_support.cpp.o\x1b[0m\n'}
+[17.129552] (-) TimerEvent: {}
+[17.234363] (-) TimerEvent: {}
+[17.336071] (-) TimerEvent: {}
+[17.440801] (-) TimerEvent: {}
+[17.543093] (-) TimerEvent: {}
+[17.643969] (-) TimerEvent: {}
+[17.719337] (bolide_interfaces) StdoutLine: {'line': b'[ 68%] \x1b[32m\x1b[1mLinking CXX shared library libbolide_interfaces__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[17.744100] (-) TimerEvent: {}
+[17.844958] (-) TimerEvent: {}
+[17.949351] (-) TimerEvent: {}
+[18.035059] (bolide_interfaces) StdoutLine: {'line': b'[ 70%] Built target bolide_interfaces__rosidl_typesupport_cpp\n'}
+[18.049519] (-) TimerEvent: {}
+[18.071809] (bolide_interfaces) StdoutLine: {'line': b'[ 71%] \x1b[32mBuilding CXX object CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/bolide_interfaces/msg/detail/speed_direction__type_support.cpp.o\x1b[0m\n'}
+[18.106222] (bolide_interfaces) StdoutLine: {'line': b'[ 72%] \x1b[32mBuilding CXX object CMakeFiles/bolide_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/bolide_interfaces/srv/detail/dds_fastrtps/launch_ekf__type_support.cpp.o\x1b[0m\n'}
+[18.151035] (-) TimerEvent: {}
+[18.251594] (-) TimerEvent: {}
+[18.352138] (-) TimerEvent: {}
+[18.455399] (-) TimerEvent: {}
+[18.556058] (-) TimerEvent: {}
+[18.656653] (-) TimerEvent: {}
+[18.686981] (bolide_interfaces) StdoutLine: {'line': b'[ 74%] \x1b[32m\x1b[1mLinking CXX shared library libbolide_interfaces__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[18.693525] (bolide_interfaces) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/bolide_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/bolide_interfaces/srv/detail/launch_ekf__type_support.cpp.o\x1b[0m\n'}
+[18.756791] (-) TimerEvent: {}
+[18.859385] (-) TimerEvent: {}
+[18.963039] (-) TimerEvent: {}
+[19.063598] (-) TimerEvent: {}
+[19.066978] (bolide_interfaces) StdoutLine: {'line': b'[ 77%] Built target bolide_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[19.163771] (-) TimerEvent: {}
+[19.267292] (-) TimerEvent: {}
+[19.368010] (-) TimerEvent: {}
+[19.468531] (-) TimerEvent: {}
+[19.569004] (-) TimerEvent: {}
+[19.669472] (-) TimerEvent: {}
+[19.740987] (bolide_interfaces) StdoutLine: {'line': b'[ 78%] \x1b[32m\x1b[1mLinking CXX shared library libbolide_interfaces__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[19.769017] (bolide_interfaces) StdoutLine: {'line': b'[ 79%] \x1b[32m\x1b[1mLinking CXX shared library libbolide_interfaces__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[19.769547] (-) TimerEvent: {}
+[19.869904] (-) TimerEvent: {}
+[19.970409] (-) TimerEvent: {}
+[20.070947] (-) TimerEvent: {}
+[20.171627] (-) TimerEvent: {}
+[20.236373] (bolide_interfaces) StdoutLine: {'line': b'[ 82%] Built target bolide_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[20.243348] (bolide_interfaces) StdoutLine: {'line': b'[ 82%] Built target bolide_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[20.271773] (-) TimerEvent: {}
+[20.292626] (bolide_interfaces) StdoutLine: {'line': b'[ 82%] Built target bolide_interfaces\n'}
+[20.338107] (bolide_interfaces) StdoutLine: {'line': b'[ 83%] Built target bolide_interfaces__py\n'}
+[20.371899] (-) TimerEvent: {}
+[20.413205] (bolide_interfaces) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/bolide_interfaces__rosidl_generator_py.dir/rosidl_generator_py/bolide_interfaces/msg/_fork_speed_s.c.o\x1b[0m\n'}
+[20.413653] (bolide_interfaces) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/bolide_interfaces__rosidl_generator_py.dir/rosidl_generator_py/bolide_interfaces/msg/_multiple_range_s.c.o\x1b[0m\n'}
+[20.413837] (bolide_interfaces) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/bolide_interfaces__rosidl_generator_py.dir/rosidl_generator_py/bolide_interfaces/msg/_camera_info_s.c.o\x1b[0m\n'}
+[20.414019] (bolide_interfaces) StdoutLine: {'line': b'[ 89%] \x1b[32mBuilding C object CMakeFiles/bolide_interfaces__rosidl_generator_py.dir/rosidl_generator_py/bolide_interfaces/msg/_speed_direction_s.c.o\x1b[0m\n'}
+[20.475028] (-) TimerEvent: {}
+[20.575636] (-) TimerEvent: {}
+[20.676188] (-) TimerEvent: {}
+[20.776663] (-) TimerEvent: {}
+[20.873616] (bolide_interfaces) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding C object CMakeFiles/bolide_interfaces__rosidl_generator_py.dir/rosidl_generator_py/bolide_interfaces/srv/_launch_ekf_s.c.o\x1b[0m\n'}
+[20.876743] (-) TimerEvent: {}
+[20.978287] (-) TimerEvent: {}
+[21.078725] (-) TimerEvent: {}
+[21.160501] (bolide_interfaces) StdoutLine: {'line': b'[ 91%] \x1b[32m\x1b[1mLinking C shared library libbolide_interfaces__rosidl_generator_py.so\x1b[0m\n'}
+[21.178929] (-) TimerEvent: {}
+[21.279400] (-) TimerEvent: {}
+[21.303212] (bolide_interfaces) StdoutLine: {'line': b'[ 91%] Built target bolide_interfaces__rosidl_generator_py\n'}
+[21.359310] (bolide_interfaces) StdoutLine: {'line': b'[ 93%] \x1b[32mBuilding C object CMakeFiles/bolide_interfaces_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/bolide_interfaces/_bolide_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[21.361121] (bolide_interfaces) StdoutLine: {'line': b'[ 94%] \x1b[32mBuilding C object CMakeFiles/bolide_interfaces_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/bolide_interfaces/_bolide_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[21.365023] (bolide_interfaces) StdoutLine: {'line': b'[ 95%] \x1b[32mBuilding C object CMakeFiles/bolide_interfaces_s__rosidl_typesupport_c.dir/rosidl_generator_py/bolide_interfaces/_bolide_interfaces_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[21.379570] (-) TimerEvent: {}
+[21.480180] (-) TimerEvent: {}
+[21.580699] (-) TimerEvent: {}
+[21.678479] (bolide_interfaces) StdoutLine: {'line': b'[ 97%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/bolide_interfaces/bolide_interfaces_s__rosidl_typesupport_c.so\x1b[0m\n'}
+[21.678966] (bolide_interfaces) StdoutLine: {'line': b'[ 98%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/bolide_interfaces/bolide_interfaces_s__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[21.680823] (-) TimerEvent: {}
+[21.732383] (bolide_interfaces) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/bolide_interfaces/bolide_interfaces_s__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[21.762124] (bolide_interfaces) StdoutLine: {'line': b'[100%] Built target bolide_interfaces_s__rosidl_typesupport_c\n'}
+[21.774460] (bolide_interfaces) StdoutLine: {'line': b'[100%] Built target bolide_interfaces_s__rosidl_typesupport_introspection_c\n'}
+[21.780991] (-) TimerEvent: {}
+[21.817586] (bolide_interfaces) StdoutLine: {'line': b'[100%] Built target bolide_interfaces_s__rosidl_typesupport_fastrtps_c\n'}
+[21.850657] (bolide_interfaces) JobEnded: {'identifier': 'bolide_interfaces', 'rc': 'SIGINT'}
+[21.862159] (control_bolide) JobSkipped: {'identifier': 'control_bolide'}
+[21.862343] (open_karto) JobSkipped: {'identifier': 'open_karto'}
+[21.862446] (perception_bolide) JobSkipped: {'identifier': 'perception_bolide'}
+[21.862480] (planning_bolide) JobSkipped: {'identifier': 'planning_bolide'}
+[21.862513] (-) EventReactorShutdown: {}

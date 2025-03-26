@@ -1,1 +1,1 @@
-bolide_interfaces:geometry_msgs:rclpy:sensor_msgs:std_msgs:visualization_msgs
+bolide_interfaces:geometry_msgs:rclpy:ros-jazzy-dynamixel-sdk:sensor_msgs:std_msgs:visualization_msgs

@@ -11,7 +11,13 @@ CMakeFiles/bolide_interfaces_s__rosidl_typesupport_c.dir/rosidl_generator_py/bol
   rosidl_generator_c/bolide_interfaces/msg/detail/multiple_range__functions.h \
   rosidl_generator_c/bolide_interfaces/msg/detail/multiple_range__struct.h \
   rosidl_generator_c/bolide_interfaces/msg/detail/multiple_range__type_support.h \
+  rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__functions.h \
+  rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__struct.h \
+  rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__type_support.h \
   rosidl_generator_c/bolide_interfaces/msg/rosidl_generator_c__visibility_control.h \
+  rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__functions.h \
+  rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__struct.h \
+  rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__type_support.h \
   /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.h \
   /opt/ros/jazzy/include/rcutils/rcutils/allocator.h \
   /opt/ros/jazzy/include/rcutils/rcutils/macros.h \
@@ -33,6 +39,7 @@ CMakeFiles/bolide_interfaces_s__rosidl_typesupport_c.dir/rosidl_generator_py/bol
   /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h \
   /opt/ros/jazzy/include/rosidl_typesupport_interface/rosidl_typesupport_interface/macros.h \
   /opt/ros/jazzy/include/sensor_msgs/sensor_msgs/msg/detail/range__struct.h \
+  /opt/ros/jazzy/include/service_msgs/service_msgs/msg/detail/service_event_info__struct.h \
   /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/header__struct.h \
   /usr/include/aarch64-linux-gnu/asm/bitsperlong.h \
   /usr/include/aarch64-linux-gnu/asm/errno.h \
@@ -312,11 +319,11 @@ CMakeFiles/bolide_interfaces_s__rosidl_typesupport_c.dir/rosidl_generator_py/bol
 
 /usr/include/python3.12/typeslots.h:
 
-/usr/include/aarch64-linux-gnu/python3.12/pyconfig.h:
+/usr/include/python3.12/sysmodule.h:
 
-/usr/include/aarch64-linux-gnu/bits/wordsize.h:
+/usr/include/python3.12/sliceobject.h:
 
-/usr/include/asm-generic/errno-base.h:
+/usr/include/python3.12/pytypedefs.h:
 
 /usr/include/aarch64-linux-gnu/bits/wchar.h:
 
@@ -356,8 +363,6 @@ CMakeFiles/bolide_interfaces_s__rosidl_typesupport_c.dir/rosidl_generator_py/bol
 
 /usr/include/aarch64-linux-gnu/bits/types/__FILE.h:
 
-/usr/include/python3.12/cpython/pylifecycle.h:
-
 /usr/include/aarch64-linux-gnu/bits/types.h:
 
 /usr/include/aarch64-linux-gnu/bits/struct_mutex.h:
@@ -374,11 +379,13 @@ CMakeFiles/bolide_interfaces_s__rosidl_typesupport_c.dir/rosidl_generator_py/bol
 
 /usr/include/aarch64-linux-gnu/bits/time64.h:
 
-/usr/include/alloca.h:
-
 /usr/include/aarch64-linux-gnu/bits/time.h:
 
 /usr/include/python3.12/cpython/pydebug.h:
+
+/usr/include/python3.12/structseq.h:
+
+/usr/include/aarch64-linux-gnu/bits/stdio_lim.h:
 
 /usr/include/aarch64-linux-gnu/bits/stdint-least.h:
 
@@ -394,35 +401,25 @@ CMakeFiles/bolide_interfaces_s__rosidl_typesupport_c.dir/rosidl_generator_py/bol
 
 /usr/include/aarch64-linux-gnu/bits/sched.h:
 
-/usr/include/python3.12/cpython/modsupport.h:
-
 /usr/include/aarch64-linux-gnu/bits/posix_opt.h:
 
 /usr/include/aarch64-linux-gnu/bits/floatn.h:
 
-/usr/include/aarch64-linux-gnu/bits/types/__fpos64_t.h:
+/usr/include/aarch64-linux-gnu/gnu/stubs.h:
 
-/usr/include/aarch64-linux-gnu/bits/statx.h:
+/usr/include/aarch64-linux-gnu/bits/math-vector.h:
 
-rosidl_generator_c/bolide_interfaces/msg/detail/multiple_range__struct.h:
+/usr/include/aarch64-linux-gnu/bits/libm-simd-decl-stubs.h:
 
-/usr/include/python3.12/cpython/initconfig.h:
+/opt/ros/jazzy/include/rcutils/rcutils/types/rcutils_ret.h:
 
-/usr/include/aarch64-linux-gnu/bits/posix2_lim.h:
+/usr/include/aarch64-linux-gnu/bits/types/__mbstate_t.h:
 
-/usr/include/aarch64-linux-gnu/bits/getopt_posix.h:
+/usr/include/aarch64-linux-gnu/bits/local_lim.h:
 
-/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/individual_type_description__struct.h:
+/usr/include/aarch64-linux-gnu/bits/endianness.h:
 
-/usr/include/aarch64-linux-gnu/bits/mathcalls-narrow.h:
-
-/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h:
-
-/usr/include/aarch64-linux-gnu/bits/pthreadtypes-arch.h:
-
-/usr/include/aarch64-linux-gnu/bits/uintn-identity.h:
-
-/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/type_description__struct.h:
+/usr/include/ctype.h:
 
 /usr/include/aarch64-linux-gnu/bits/stdint-intn.h:
 
@@ -431,16 +428,6 @@ rosidl_generator_c/bolide_interfaces/msg/detail/multiple_range__struct.h:
 /opt/ros/jazzy/include/rcutils/rcutils/sha256.h:
 
 /opt/ros/jazzy/include/sensor_msgs/sensor_msgs/msg/detail/range__struct.h:
-
-/usr/include/aarch64-linux-gnu/bits/types/clock_t.h:
-
-/usr/include/aarch64-linux-gnu/bits/types/locale_t.h:
-
-/usr/include/python3.12/sliceobject.h:
-
-rosidl_generator_c/bolide_interfaces/msg/rosidl_generator_c__visibility_control.h:
-
-/usr/include/python3.12/pyconfig.h:
 
 /usr/include/aarch64-linux-gnu/bits/types/cookie_io_functions_t.h:
 
@@ -454,10 +441,6 @@ rosidl_generator_c/bolide_interfaces/msg/rosidl_generator_c__visibility_control.
 
 /usr/include/python3.12/pyerrors.h:
 
-/usr/include/aarch64-linux-gnu/bits/types/__sigset_t.h:
-
-/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h:
-
 /usr/include/python3.12/warnings.h:
 
 /usr/include/aarch64-linux-gnu/bits/libc-header-start.h:
@@ -466,37 +449,125 @@ rosidl_generator_c/bolide_interfaces/msg/rosidl_generator_c__visibility_control.
 
 /usr/include/python3.12/fileobject.h:
 
-/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/type_source__struct.h:
+/usr/include/python3.12/cpython/modsupport.h:
+
+rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__functions.h:
+
+rosidl_generator_c/bolide_interfaces/msg/rosidl_generator_c__visibility_control.h:
+
+/usr/include/python3.12/pyconfig.h:
+
+/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/service_type_support_struct.h:
+
+/usr/include/aarch64-linux-gnu/bits/types/__fpos_t.h:
+
+/usr/include/python3.12/cpython/pylifecycle.h:
+
+rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__type_support.h:
+
+/usr/include/python3.12/cpython/complexobject.h:
+
+/usr/include/aarch64-linux-gnu/bits/errno.h:
+
+/usr/include/aarch64-linux-gnu/bits/types/__fpos64_t.h:
+
+/usr/include/aarch64-linux-gnu/bits/statx.h:
+
+rosidl_generator_c/bolide_interfaces/msg/detail/multiple_range__struct.h:
+
+/usr/include/python3.12/cpython/initconfig.h:
+
+/usr/include/aarch64-linux-gnu/bits/posix2_lim.h:
+
+/usr/include/python3.12/rangeobject.h:
+
+/usr/include/python3.12/bytearrayobject.h:
+
+rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__struct.h:
+
+/usr/include/aarch64-linux-gnu/bits/types/locale_t.h:
+
+/usr/include/aarch64-linux-gnu/bits/types/clock_t.h:
+
+/usr/include/aarch64-linux-gnu/bits/getopt_posix.h:
+
+/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/individual_type_description__struct.h:
+
+/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h:
+
+/usr/include/aarch64-linux-gnu/bits/types/__sigset_t.h:
+
+rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__functions.h:
+
+/usr/include/aarch64-linux-gnu/bits/mathcalls-narrow.h:
+
+/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h:
+
+/usr/include/aarch64-linux-gnu/bits/pthreadtypes-arch.h:
 
 rosidl_generator_py/bolide_interfaces/_bolide_interfaces_s.ep.rosidl_typesupport_c.c:
 
-/usr/include/aarch64-linux-gnu/gnu/stubs.h:
+/usr/include/aarch64-linux-gnu/bits/mathcalls-helper-functions.h:
 
-/usr/include/aarch64-linux-gnu/bits/math-vector.h:
+/usr/include/alloca.h:
 
-/opt/ros/jazzy/include/rcutils/rcutils/types/rcutils_ret.h:
+rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__struct.h:
 
-/usr/include/aarch64-linux-gnu/bits/libm-simd-decl-stubs.h:
+/usr/include/aarch64-linux-gnu/bits/confname.h:
+
+/usr/include/aarch64-linux-gnu/bits/types/wint_t.h:
+
+/usr/include/aarch64-linux-gnu/bits/flt-eval-method.h:
+
+/usr/include/aarch64-linux-gnu/bits/types/struct_statx_timestamp.h:
+
+/usr/include/aarch64-linux-gnu/bits/environments.h:
 
 rosidl_generator_c/bolide_interfaces/msg/detail/multiple_range__functions.h:
 
 /usr/include/aarch64-linux-gnu/bits/types/struct_itimerspec.h:
 
-/usr/include/aarch64-linux-gnu/sys/select.h:
+/usr/include/aarch64-linux-gnu/bits/uintn-identity.h:
 
-/usr/include/aarch64-linux-gnu/gnu/stubs-lp64.h:
+/usr/include/python3.12/setobject.h:
 
-/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/field_type__struct.h:
+rosidl_generator_c/bolide_interfaces/msg/detail/camera_info__struct.h:
 
-/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/string.h:
+rosidl_generator_c/bolide_interfaces/msg/detail/fork_speed__struct.h:
+
+rosidl_generator_c/bolide_interfaces/msg/detail/multiple_range__type_support.h:
+
+/usr/include/python3.12/traceback.h:
+
+rosidl_generator_c/bolide_interfaces/msg/detail/camera_info__type_support.h:
+
+/usr/include/aarch64-linux-gnu/bits/endian.h:
+
+rosidl_generator_c/bolide_interfaces/msg/detail/fork_speed__functions.h:
+
+/opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/header__struct.h:
+
+rosidl_generator_c/bolide_interfaces/msg/detail/fork_speed__type_support.h:
+
+/usr/include/python3.12/cpython/dictobject.h:
+
+/usr/include/aarch64-linux-gnu/bits/types/__locale_t.h:
+
+/usr/include/python3.12/cpython/weakrefobject.h:
+
+/usr/include/aarch64-linux-gnu/bits/floatn-common.h:
 
 /usr/include/aarch64-linux-gnu/bits/stdlib-float.h:
 
 /opt/ros/jazzy/include/rcutils/rcutils/visibility_control.h:
 
-rosidl_generator_c/bolide_interfaces/msg/detail/fork_speed__struct.h:
+/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/field_type__struct.h:
 
-rosidl_generator_c/bolide_interfaces/msg/detail/multiple_range__type_support.h:
+/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/string.h:
+
+/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/type_description__struct.h:
+
+/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/type_source__struct.h:
 
 /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_hash.h:
 
@@ -512,49 +583,23 @@ rosidl_generator_c/bolide_interfaces/msg/detail/multiple_range__type_support.h:
 
 /usr/include/python3.12/cpython/classobject.h:
 
-/usr/include/aarch64-linux-gnu/bits/types/wint_t.h:
+/usr/include/aarch64-linux-gnu/bits/posix1_lim.h:
 
-/usr/include/aarch64-linux-gnu/bits/flt-eval-method.h:
+/usr/include/aarch64-linux-gnu/bits/long-double.h:
 
-/usr/include/aarch64-linux-gnu/bits/types/struct_statx_timestamp.h:
+/usr/include/aarch64-linux-gnu/bits/types/FILE.h:
 
-/usr/include/aarch64-linux-gnu/bits/environments.h:
-
-/usr/include/aarch64-linux-gnu/bits/types/__mbstate_t.h:
-
-/usr/include/aarch64-linux-gnu/bits/local_lim.h:
-
-/usr/include/aarch64-linux-gnu/bits/endianness.h:
-
-/usr/include/ctype.h:
-
-/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/service_type_support_struct.h:
-
-/usr/include/aarch64-linux-gnu/bits/types/__fpos_t.h:
-
-rosidl_generator_c/bolide_interfaces/msg/detail/fork_speed__functions.h:
-
-/usr/include/python3.12/traceback.h:
-
-rosidl_generator_c/bolide_interfaces/msg/detail/camera_info__type_support.h:
-
-/usr/include/aarch64-linux-gnu/bits/endian.h:
-
-/opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/header__struct.h:
-
-rosidl_generator_c/bolide_interfaces/msg/detail/fork_speed__type_support.h:
-
-/usr/include/python3.12/cpython/dictobject.h:
-
-/usr/include/aarch64-linux-gnu/bits/types/__locale_t.h:
-
-/usr/include/python3.12/cpython/weakrefobject.h:
-
-/usr/include/aarch64-linux-gnu/bits/floatn-common.h:
+/usr/include/aarch64-linux-gnu/bits/fp-fast.h:
 
 /usr/include/aarch64-linux-gnu/asm/errno.h:
 
 /usr/include/inttypes.h:
+
+rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__type_support.h:
+
+/usr/include/python3.12/cpython/longobject.h:
+
+/usr/include/python3.12/cpython/pyerrors.h:
 
 /usr/include/aarch64-linux-gnu/bits/setjmp.h:
 
@@ -563,10 +608,6 @@ rosidl_generator_c/bolide_interfaces/msg/detail/fork_speed__type_support.h:
 /usr/include/aarch64-linux-gnu/bits/timex.h:
 
 /usr/include/python3.12/import.h:
-
-rosidl_generator_c/bolide_interfaces/msg/detail/camera_info__struct.h:
-
-/usr/include/python3.12/setobject.h:
 
 /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/action_type_support_struct.h:
 
@@ -580,27 +621,21 @@ rosidl_generator_c/bolide_interfaces/msg/detail/camera_info__struct.h:
 
 /usr/include/asm-generic/int-ll64.h:
 
-/usr/include/python3.12/cpython/complexobject.h:
+/usr/include/aarch64-linux-gnu/bits/getopt_core.h:
 
-/usr/include/aarch64-linux-gnu/bits/errno.h:
+/usr/include/aarch64-linux-gnu/bits/wordsize.h:
 
-/usr/include/aarch64-linux-gnu/bits/posix1_lim.h:
-
-/usr/include/aarch64-linux-gnu/bits/long-double.h:
-
-/usr/include/aarch64-linux-gnu/bits/types/FILE.h:
-
-/usr/include/aarch64-linux-gnu/bits/fp-fast.h:
+/usr/include/asm-generic/errno-base.h:
 
 rosidl_generator_c/bolide_interfaces/msg/detail/camera_info__functions.h:
 
 /usr/include/aarch64-linux-gnu/bits/xopen_lim.h:
 
-/usr/include/aarch64-linux-gnu/bits/getopt_core.h:
+/usr/include/aarch64-linux-gnu/python3.12/pyconfig.h:
 
-/usr/include/aarch64-linux-gnu/bits/confname.h:
+/usr/include/aarch64-linux-gnu/gnu/stubs-lp64.h:
 
-/usr/include/aarch64-linux-gnu/bits/mathcalls-helper-functions.h:
+/usr/include/aarch64-linux-gnu/sys/select.h:
 
 /usr/include/aarch64-linux-gnu/sys/stat.h:
 
@@ -617,6 +652,8 @@ rosidl_generator_c/bolide_interfaces/msg/detail/camera_info__functions.h:
 /usr/include/python3.12/cpython/bytearrayobject.h:
 
 /usr/include/asm-generic/errno.h:
+
+/opt/ros/jazzy/include/service_msgs/service_msgs/msg/detail/service_event_info__struct.h:
 
 /usr/include/asm-generic/posix_types.h:
 
@@ -728,17 +765,9 @@ rosidl_generator_c/bolide_interfaces/msg/detail/camera_info__functions.h:
 
 /usr/include/python3.12/cpython/listobject.h:
 
-/usr/include/python3.12/cpython/longobject.h:
-
-/usr/include/python3.12/cpython/pyerrors.h:
-
 /usr/include/python3.12/cpython/memoryobject.h:
 
 /usr/include/python3.12/cpython/object.h:
-
-/usr/include/python3.12/bytearrayobject.h:
-
-/usr/include/python3.12/rangeobject.h:
 
 /usr/include/python3.12/cpython/objimpl.h:
 
@@ -831,11 +860,3 @@ rosidl_generator_c/bolide_interfaces/msg/detail/camera_info__functions.h:
 /usr/include/python3.12/pythonrun.h:
 
 /usr/include/python3.12/pythread.h:
-
-/usr/include/python3.12/pytypedefs.h:
-
-/usr/include/aarch64-linux-gnu/bits/stdio_lim.h:
-
-/usr/include/python3.12/structseq.h:
-
-/usr/include/python3.12/sysmodule.h:

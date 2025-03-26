@@ -1,0 +1,22 @@
+[3.032s] Invoking command in '/home/voiture/course_2025_slam_pkgs/workspace/src/planning_bolide': AMENT_PREFIX_PATH=/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/voiture/course_2025_slam_pkgs/workspace/build/planning_bolide/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide/lib/python3.12/site-packages:/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/planning_bolide build --build-base /home/voiture/course_2025_slam_pkgs/workspace/build/planning_bolide/build install --record /home/voiture/course_2025_slam_pkgs/workspace/build/planning_bolide/install.log --single-version-externally-managed install_data
+[3.477s] running egg_info
+[3.503s] writing ../../build/planning_bolide/planning_bolide.egg-info/PKG-INFO
+[3.504s] writing dependency_links to ../../build/planning_bolide/planning_bolide.egg-info/dependency_links.txt
+[3.506s] writing entry points to ../../build/planning_bolide/planning_bolide.egg-info/entry_points.txt
+[3.510s] writing requirements to ../../build/planning_bolide/planning_bolide.egg-info/requires.txt
+[3.510s] writing top-level names to ../../build/planning_bolide/planning_bolide.egg-info/top_level.txt
+[3.575s] reading manifest file '../../build/planning_bolide/planning_bolide.egg-info/SOURCES.txt'
+[3.576s] adding license file 'LICENSE'
+[3.577s] writing manifest file '../../build/planning_bolide/planning_bolide.egg-info/SOURCES.txt'
+[3.578s] running build
+[3.579s] running build_py
+[3.579s] running install
+[3.591s] running install_lib
+[3.635s] running install_data
+[3.636s] running install_egg_info
+[3.674s] removing '/home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide/lib/python3.12/site-packages/planning_bolide-0.0.0-py3.12.egg-info' (and everything under it)
+[3.674s] Copying ../../build/planning_bolide/planning_bolide.egg-info to /home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide/lib/python3.12/site-packages/planning_bolide-0.0.0-py3.12.egg-info
+[3.679s] running install_scripts
+[3.909s] Installing teleop_node script to /home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide/lib/planning_bolide
+[3.911s] writing list of installed files to '/home/voiture/course_2025_slam_pkgs/workspace/build/planning_bolide/install.log'
+[4.056s] Invoked command in '/home/voiture/course_2025_slam_pkgs/workspace/src/planning_bolide' returned '0': AMENT_PREFIX_PATH=/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/voiture/course_2025_slam_pkgs/workspace/build/planning_bolide/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide/lib/python3.12/site-packages:/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/planning_bolide build --build-base /home/voiture/course_2025_slam_pkgs/workspace/build/planning_bolide/build install --record /home/voiture/course_2025_slam_pkgs/workspace/build/planning_bolide/install.log --single-version-externally-managed install_data

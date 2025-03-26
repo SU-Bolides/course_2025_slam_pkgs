@@ -1,0 +1,1 @@
+Invoking command in '/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces -- -j4 -l4

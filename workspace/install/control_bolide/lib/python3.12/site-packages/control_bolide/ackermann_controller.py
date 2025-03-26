@@ -8,6 +8,7 @@ from std_msgs.msg import Float32MultiArray
 import tf_transformations
 import math
 from dynamixel_sdk import *
+from rpi_hardware_pwm import HardwarePWM
 
 ### Here, we try to establish a controller that takes an input in m/s and rad (or deg)
 ### We also want to have an estimation of the current state of the front wheels' angle, by means
@@ -76,9 +77,10 @@ class ControllerListener(Node):
 
         self.portHandler = PortHandler(self.DEVICENAME)
         self.packetHandler = PacketHandler(self.PROTOCOL_VERSION)
+        self.get_logger.info("Succeeded to open the port")
 
         if self.portHandler.openPort():
-            self.get_logger("Succeeded to open the port")
+            self.get_logger.info("Succeeded to open the port")
         else:
             self.get_logger().error("Failed to open the port")
 
@@ -358,14 +360,14 @@ class SpeedController:
         self.ctrl.pwm_prop.change_duty_cycle(max(self.throttle, self.REVERSEMAXSPEED))
         pass
 
-if __name__ == '__main__':
-    pwm_prop = HardwarePWM(pwm_channel=0, frequency=50)
+def main():
+    pwm_prop = HardwarePWM(pwm_channel=0, hz=50)
     try:
         rclpy.init()
         listener = ControllerListener(pwm_prop)
         rclpy.spin(listener)
         print("Terminated ackermann_controller")
-    except rclpy.ROSInterruptException:
+    except Exception:
         print("Error in ackermann_controller")
         pass
 

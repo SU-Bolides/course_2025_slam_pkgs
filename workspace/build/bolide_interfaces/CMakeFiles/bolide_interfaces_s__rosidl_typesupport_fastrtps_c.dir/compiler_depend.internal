@@ -12,7 +12,13 @@ CMakeFiles/bolide_interfaces_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generat
  /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_generator_c/bolide_interfaces/msg/detail/multiple_range__functions.h
  /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_generator_c/bolide_interfaces/msg/detail/multiple_range__struct.h
  /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_generator_c/bolide_interfaces/msg/detail/multiple_range__type_support.h
+ /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__functions.h
+ /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__struct.h
+ /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_generator_c/bolide_interfaces/msg/detail/speed_direction__type_support.h
  /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_generator_c/bolide_interfaces/msg/rosidl_generator_c__visibility_control.h
+ /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__functions.h
+ /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__struct.h
+ /home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/rosidl_generator_c/bolide_interfaces/srv/detail/launch_ekf__type_support.h
  /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.h
  /opt/ros/jazzy/include/rcutils/rcutils/allocator.h
  /opt/ros/jazzy/include/rcutils/rcutils/macros.h
@@ -34,6 +40,7 @@ CMakeFiles/bolide_interfaces_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generat
  /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h
  /opt/ros/jazzy/include/rosidl_typesupport_interface/rosidl_typesupport_interface/macros.h
  /opt/ros/jazzy/include/sensor_msgs/sensor_msgs/msg/detail/range__struct.h
+ /opt/ros/jazzy/include/service_msgs/service_msgs/msg/detail/service_event_info__struct.h
  /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/header__struct.h
  /usr/include/aarch64-linux-gnu/asm/bitsperlong.h
  /usr/include/aarch64-linux-gnu/asm/errno.h

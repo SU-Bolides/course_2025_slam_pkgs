@@ -10,6 +10,13 @@ def generate_launch_description():
             name='speed_direction_controller',
             prefix=["sudo -E env \"PYTHONPATH=$PYTHONPATH\" \"LD_LIBRARY_PATH=$LD_LIBRARY_PATH\" \"PATH=$PATH\" \"USER=$USER\" bash -c"],
             shell = True
+        ),
+        Node(
+            package='control_bolide',
+            executable='ackermann_controller',
+            name='ackermann_controller',
+            prefix=["sudo -E env \"PYTHONPATH=$PYTHONPATH\" \"LD_LIBRARY_PATH=$LD_LIBRARY_PATH\" \"PATH=$PATH\" \"USER=$USER\" bash -c"],
+            shell = True
         )
     ])
 

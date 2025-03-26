@@ -8,3 +8,6 @@ bolide_interfaces/msg/__init__.py
 bolide_interfaces/msg/_camera_info.py
 bolide_interfaces/msg/_fork_speed.py
 bolide_interfaces/msg/_multiple_range.py
+bolide_interfaces/msg/_speed_direction.py
+bolide_interfaces/srv/__init__.py
+bolide_interfaces/srv/_launch_ekf.py

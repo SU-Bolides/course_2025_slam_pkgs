@@ -1,0 +1,76 @@
+[3.034s] Invoking command in '/home/voiture/course_2025_slam_pkgs/workspace/src/perception_bolide': AMENT_PREFIX_PATH=/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages:/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/perception_bolide build --build-base /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/build install --record /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/install.log --single-version-externally-managed install_data
+[3.493s] running egg_info
+[3.528s] writing ../../build/perception_bolide/perception_bolide.egg-info/PKG-INFO
+[3.529s] writing dependency_links to ../../build/perception_bolide/perception_bolide.egg-info/dependency_links.txt
+[3.530s] writing entry points to ../../build/perception_bolide/perception_bolide.egg-info/entry_points.txt
+[3.531s] writing requirements to ../../build/perception_bolide/perception_bolide.egg-info/requires.txt
+[3.532s] writing top-level names to ../../build/perception_bolide/perception_bolide.egg-info/top_level.txt
+[3.593s] reading manifest file '../../build/perception_bolide/perception_bolide.egg-info/SOURCES.txt'
+[3.595s] adding license file 'LICENSE'
+[3.596s] writing manifest file '../../build/perception_bolide/perception_bolide.egg-info/SOURCES.txt'
+[3.596s] running build
+[3.597s] running build_py
+[3.600s] copying perception_bolide/odom_fork_imu.py -> /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/build/lib/perception_bolide
+[3.600s] copying perception_bolide/camera_publisher.py -> /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/build/lib/perception_bolide
+[3.600s] copying perception_bolide/processing_dbscan.py -> /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/build/lib/perception_bolide
+[3.601s] copying perception_bolide/lidar_publisher.py -> /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/build/lib/perception_bolide
+[3.601s] copying perception_bolide/rear_ranges_publisher.py -> /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/build/lib/perception_bolide
+[3.601s] copying perception_bolide/db_scan.py -> /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/build/lib/perception_bolide
+[3.601s] copying perception_bolide/lidar_process.py -> /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/build/lib/perception_bolide
+[3.601s] copying perception_bolide/odom_fork_imu_sim.py -> /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/build/lib/perception_bolide
+[3.601s] copying perception_bolide/lidar_vizu.py -> /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/build/lib/perception_bolide
+[3.601s] copying perception_bolide/stm32_publisher.py -> /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/build/lib/perception_bolide
+[3.601s] copying perception_bolide/fork_publisher.py -> /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/build/lib/perception_bolide
+[3.601s] copying perception_bolide/camera_opencv.py -> /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/build/lib/perception_bolide
+[3.601s] copying perception_bolide/launch_ekf_map.py -> /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/build/lib/perception_bolide
+[3.602s] copying perception_bolide/imu_publisher.py -> /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/build/lib/perception_bolide
+[3.602s] running install
+[3.614s] running install_lib
+[3.655s] copying /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/build/lib/perception_bolide/odom_fork_imu.py -> /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception_bolide
+[3.655s] copying /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/build/lib/perception_bolide/camera_publisher.py -> /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception_bolide
+[3.655s] copying /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/build/lib/perception_bolide/processing_dbscan.py -> /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception_bolide
+[3.656s] copying /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/build/lib/perception_bolide/lidar_publisher.py -> /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception_bolide
+[3.656s] copying /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/build/lib/perception_bolide/rear_ranges_publisher.py -> /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception_bolide
+[3.656s] copying /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/build/lib/perception_bolide/db_scan.py -> /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception_bolide
+[3.656s] copying /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/build/lib/perception_bolide/lidar_process.py -> /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception_bolide
+[3.656s] copying /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/build/lib/perception_bolide/odom_fork_imu_sim.py -> /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception_bolide
+[3.656s] copying /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/build/lib/perception_bolide/lidar_vizu.py -> /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception_bolide
+[3.656s] copying /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/build/lib/perception_bolide/stm32_publisher.py -> /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception_bolide
+[3.656s] copying /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/build/lib/perception_bolide/fork_publisher.py -> /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception_bolide
+[3.656s] copying /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/build/lib/perception_bolide/camera_opencv.py -> /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception_bolide
+[3.657s] copying /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/build/lib/perception_bolide/launch_ekf_map.py -> /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception_bolide
+[3.657s] copying /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/build/lib/perception_bolide/imu_publisher.py -> /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception_bolide
+[3.657s] byte-compiling /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception_bolide/odom_fork_imu.py to odom_fork_imu.cpython-312.pyc
+[3.659s] byte-compiling /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception_bolide/camera_publisher.py to camera_publisher.cpython-312.pyc
+[3.661s] byte-compiling /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception_bolide/processing_dbscan.py to processing_dbscan.cpython-312.pyc
+[3.664s] byte-compiling /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception_bolide/lidar_publisher.py to lidar_publisher.cpython-312.pyc
+[3.666s] byte-compiling /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception_bolide/rear_ranges_publisher.py to rear_ranges_publisher.cpython-312.pyc
+[3.670s] byte-compiling /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception_bolide/db_scan.py to db_scan.cpython-312.pyc
+[3.670s] byte-compiling /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception_bolide/lidar_process.py to lidar_process.cpython-312.pyc
+[3.673s] byte-compiling /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception_bolide/odom_fork_imu_sim.py to odom_fork_imu_sim.cpython-312.pyc
+[3.678s] byte-compiling /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception_bolide/fork_publisher.py to fork_publisher.cpython-312.pyc
+[3.680s] byte-compiling /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception_bolide/camera_opencv.py to camera_opencv.cpython-312.pyc
+[3.683s] byte-compiling /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception_bolide/launch_ekf_map.py to launch_ekf_map.cpython-312.pyc
+[3.685s] byte-compiling /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception_bolide/imu_publisher.py to imu_publisher.cpython-312.pyc
+[3.685s] running install_data
+[3.685s] copying resource/perception_bolide -> /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/share/ament_index/resource_index/packages
+[3.686s] copying package.xml -> /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/share/perception_bolide
+[3.692s] running install_egg_info
+[3.725s] removing '/home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception_bolide-0.0.0-py3.12.egg-info' (and everything under it)
+[3.725s] Copying ../../build/perception_bolide/perception_bolide.egg-info to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception_bolide-0.0.0-py3.12.egg-info
+[3.728s] running install_scripts
+[3.968s] Installing camera_opencv script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide
+[3.997s] Installing camera_publisher script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide
+[3.998s] Installing dbscan_node script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide
+[3.999s] Installing fork_publisher script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide
+[4.000s] Installing imu_publisher script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide
+[4.002s] Installing launch_ekf_map script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide
+[4.002s] Installing lidar_process script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide
+[4.004s] Installing lidar_publisher script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide
+[4.006s] Installing lidar_vizu script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide
+[4.008s] Installing odom_fork_imu script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide
+[4.008s] Installing odom_fork_imu_sim script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide
+[4.010s] Installing rear_ranges_publisher script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide
+[4.011s] Installing stm32_publisher script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide
+[4.011s] writing list of installed files to '/home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/install.log'
+[4.158s] Invoked command in '/home/voiture/course_2025_slam_pkgs/workspace/src/perception_bolide' returned '0': AMENT_PREFIX_PATH=/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages:/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/perception_bolide build --build-base /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/build install --record /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/install.log --single-version-externally-managed install_data
