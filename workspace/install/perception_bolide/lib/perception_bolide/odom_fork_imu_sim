@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 # EASY-INSTALL-ENTRY-SCRIPT: 'perception-bolide==0.0.0','console_scripts','odom_fork_imu_sim'
 import re
 import sys

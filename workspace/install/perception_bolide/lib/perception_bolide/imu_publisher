@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 # EASY-INSTALL-ENTRY-SCRIPT: 'perception-bolide==0.0.0','console_scripts','imu_publisher'
 import re
 import sys
