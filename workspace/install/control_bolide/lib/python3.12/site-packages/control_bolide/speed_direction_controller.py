@@ -32,8 +32,8 @@ class ControllerListener:
         # Node initialisation
         rclpy.init()
         self.node = rclpy.create_node('speed_direction_listener')
-        self.node.create_subscription(SpeedDirection, "cmd_vel", self.callback)
-        self.node.create_subscription(Bool, "emergency_brake", self.emergency_brake_callback)
+        self.node.create_subscription(SpeedDirection, "/cmd_vel", self.callback, 10)
+        self.node.create_subscription(Bool, "/emergency_brake", self.emergency_brake_callback, 10)
 
         # emergency brake boolean
         self.emergency_brake = False
@@ -178,8 +178,11 @@ class StateMachine:
         else:
             self.controller.pwm_prop.change_duty_cycle(self.controller.NEUTRAL)
 
-if __name__ == '__main__':
+def main(args=None):
+    #rclpy.init(args=args)
     try:
         listener = ControllerListener()
-    except rclpy.ROSInterruptException:
+    except KeyboardInterrupt:
         pass
+
+    rclpy.shutdown()

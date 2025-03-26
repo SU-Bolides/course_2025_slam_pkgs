@@ -17,6 +17,7 @@ control_bolide/cmd_vel_vizu.py
 control_bolide/obstacle_detection.py
 control_bolide/speed_direction_controller.py
 control_bolide/stanley_controller.py
+launch/launch_speed_direction.launch.py
 launch/stanley_launch.launch.py
 resource/control_bolide
 test/test_copyright.py
