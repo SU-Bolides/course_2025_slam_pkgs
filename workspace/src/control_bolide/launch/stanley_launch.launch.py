@@ -21,7 +21,7 @@ def generate_launch_description():
                 {'K_dh': 0.0},
                 {'velocity_percentage': 1.0},
                 {'steering_limit_deg': 15.3},
-                {'brake_threshold_ms': 5},
+                {'brake_threshold_ms': 5.},
             ]
         )
     ])

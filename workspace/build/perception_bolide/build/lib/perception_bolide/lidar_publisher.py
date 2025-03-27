@@ -19,7 +19,7 @@ class LidarPublisher(Node):
         self.time_increment = self.scan_time/360 # in s (because there are 360 points)
 
         # Connect to the RPLidar
-        self.lidar = RPLidar("/dev/ttyUSB0", baudrate = 256000)
+        self.lidar = RPLidar("/dev/ttyUSB1", baudrate = 256000)
         self.lidar.connect()
 
         try:

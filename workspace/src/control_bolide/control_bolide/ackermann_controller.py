@@ -69,7 +69,7 @@ class ControllerListener(Node):
         # Default setting
         self.DXL_ID                      = 1                 
         self.BAUDRATE                    = 115200            
-        self.DEVICENAME                  = '/dev/ttyUSB0'    # Symlink it in the udev to ttyU2D2
+        self.DEVICENAME                  = '/dev/ttyUSB1'    # Symlink it in the udev to ttyU2D2
 
 
         # init propulsion pwm and direction pwm
@@ -105,6 +105,7 @@ class ControllerListener(Node):
                                            0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
                                            0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
                                            0.0, 0.0, 0.0, 0.0, 0.0, 5e-2]
+        
 
         self.curr_velocity_m_s = 0.0
         self.curr_steering_angle_deg = 0.0
