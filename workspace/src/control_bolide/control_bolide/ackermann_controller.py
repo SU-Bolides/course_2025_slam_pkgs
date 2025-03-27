@@ -8,7 +8,7 @@ from std_msgs.msg import Float32MultiArray
 import tf_transformations
 import math
 from dynamixel_sdk import *
-# from rpi_hardware_pwm import HardwarePWM
+from rpi_hardware_pwm import HardwarePWM
 
 ### Here, we try to establish a controller that takes an input in m/s and rad (or deg)
 ### We also want to have an estimation of the current state of the front wheels' angle, by means
@@ -362,7 +362,7 @@ class SpeedController:
         pass
 
 def main():
-    pwm_prop = HardwarePWM(pwm_channel=0, f=50)
+    pwm_prop = HardwarePWM(pwm_channel=0, hz=50)
     try:
         rclpy.init()
         listener = ControllerListener(pwm_prop)
