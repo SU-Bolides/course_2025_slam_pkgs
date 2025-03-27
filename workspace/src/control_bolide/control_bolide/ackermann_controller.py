@@ -77,10 +77,9 @@ class ControllerListener(Node):
 
         self.portHandler = PortHandler(self.DEVICENAME)
         self.packetHandler = PacketHandler(self.PROTOCOL_VERSION)
-        self.get_logger.info("Succeeded to open the port")
 
         if self.portHandler.openPort():
-            self.get_logger.info("Succeeded to open the port")
+            self.get_logger().info("Succeeded to open the port")
         else:
             self.get_logger().error("Failed to open the port")
 
@@ -142,9 +141,9 @@ class ControllerListener(Node):
         self.packetHandler.write1ByteTxRx(self.portHandler, self.DXL_ID, 24, 1)
         
         if self.MS:
-            self.get_logger().info("Excpeting speed in m/s")
+            self.get_logger().warn("Excpeting speed in m/s")
         else:
-            self.get_logger().info("Expecting speed in [-1, 1]")
+            self.get_logger().warn("Expecting speed in [-1, 1]")
     
     def cmd_callback(self, data):
         # Update the target speed and direction by applying a cmd_vel message
@@ -344,7 +343,7 @@ class SpeedController:
             self.controller.get_logger().info("D %f", derivative)
             self.controller.get_logger().info("Throttle %f", self.throttle)
             self.controller.get_logger().info("Current speed %f", self.controller.curr_velocity_m_s)
-            self.controller.get_logger().info("Target speed %f", cmd_speed_m_s)
+            self.controller.get_logger().info("Target spesudo-1] Error in ackermann_controllered %f", cmd_speed_m_s)
 
             self.forward_speed()
         elif (not cmd_speed_m_s):
@@ -368,8 +367,8 @@ def main():
         listener = ControllerListener(pwm_prop)
         rclpy.spin(listener)
         print("Terminated ackermann_controller")
-    except Exception:
-        print("Error in ackermann_controller")
+    except Exception as e:
+        print(f"Error in ackermann_controller : {e}")
         pass
 
             

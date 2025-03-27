@@ -1,7 +1,13 @@
 /home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide/lib/python3.12/site-packages/planning_bolide/teleop_keyboard.py
+/home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide/lib/python3.12/site-packages/planning_bolide/keyboard_emergency_brake.py
 /home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide/lib/python3.12/site-packages/planning_bolide/__init__.py
+/home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide/lib/python3.12/site-packages/planning_bolide/nav_forward.py
+/home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide/lib/python3.12/site-packages/planning_bolide/nav_3states.py
 /home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide/lib/python3.12/site-packages/planning_bolide/__pycache__/teleop_keyboard.cpython-312.pyc
+/home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide/lib/python3.12/site-packages/planning_bolide/__pycache__/keyboard_emergency_brake.cpython-312.pyc
 /home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide/lib/python3.12/site-packages/planning_bolide/__pycache__/__init__.cpython-312.pyc
+/home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide/lib/python3.12/site-packages/planning_bolide/__pycache__/nav_forward.cpython-312.pyc
+/home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide/lib/python3.12/site-packages/planning_bolide/__pycache__/nav_3states.cpython-312.pyc
 /home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide/share/ament_index/resource_index/packages/planning_bolide
 /home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide/share/planning_bolide/package.xml
 /home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide/lib/python3.12/site-packages/planning_bolide-0.0.0-py3.12.egg-info/dependency_links.txt

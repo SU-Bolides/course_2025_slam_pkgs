@@ -1,0 +1,29 @@
+running egg_info
+writing ../../build/planning_bolide/planning_bolide.egg-info/PKG-INFO
+writing dependency_links to ../../build/planning_bolide/planning_bolide.egg-info/dependency_links.txt
+writing entry points to ../../build/planning_bolide/planning_bolide.egg-info/entry_points.txt
+writing requirements to ../../build/planning_bolide/planning_bolide.egg-info/requires.txt
+writing top-level names to ../../build/planning_bolide/planning_bolide.egg-info/top_level.txt
+reading manifest file '../../build/planning_bolide/planning_bolide.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../build/planning_bolide/planning_bolide.egg-info/SOURCES.txt'
+running build
+running build_py
+copying planning_bolide/keyboard_emergency_brake.py -> /home/voiture/course_2025_slam_pkgs/workspace/build/planning_bolide/build/lib/planning_bolide
+copying planning_bolide/nav_forward.py -> /home/voiture/course_2025_slam_pkgs/workspace/build/planning_bolide/build/lib/planning_bolide
+copying planning_bolide/nav_3states.py -> /home/voiture/course_2025_slam_pkgs/workspace/build/planning_bolide/build/lib/planning_bolide
+running install
+running install_lib
+copying /home/voiture/course_2025_slam_pkgs/workspace/build/planning_bolide/build/lib/planning_bolide/keyboard_emergency_brake.py -> /home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide/lib/python3.12/site-packages/planning_bolide
+copying /home/voiture/course_2025_slam_pkgs/workspace/build/planning_bolide/build/lib/planning_bolide/nav_forward.py -> /home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide/lib/python3.12/site-packages/planning_bolide
+copying /home/voiture/course_2025_slam_pkgs/workspace/build/planning_bolide/build/lib/planning_bolide/nav_3states.py -> /home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide/lib/python3.12/site-packages/planning_bolide
+byte-compiling /home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide/lib/python3.12/site-packages/planning_bolide/keyboard_emergency_brake.py to keyboard_emergency_brake.cpython-312.pyc
+byte-compiling /home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide/lib/python3.12/site-packages/planning_bolide/nav_forward.py to nav_forward.cpython-312.pyc
+byte-compiling /home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide/lib/python3.12/site-packages/planning_bolide/nav_3states.py to nav_3states.cpython-312.pyc
+running install_data
+running install_egg_info
+removing '/home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide/lib/python3.12/site-packages/planning_bolide-0.0.0-py3.12.egg-info' (and everything under it)
+Copying ../../build/planning_bolide/planning_bolide.egg-info to /home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide/lib/python3.12/site-packages/planning_bolide-0.0.0-py3.12.egg-info
+running install_scripts
+Installing teleop_node script to /home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide/lib/planning_bolide
+writing list of installed files to '/home/voiture/course_2025_slam_pkgs/workspace/build/planning_bolide/install.log'

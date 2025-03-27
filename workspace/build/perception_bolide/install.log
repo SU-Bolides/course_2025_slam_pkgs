@@ -30,6 +30,9 @@
 /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception_bolide/__pycache__/imu_publisher.cpython-312.pyc
 /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/share/ament_index/resource_index/packages/perception_bolide
 /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/share/perception_bolide/package.xml
+/home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/share/perception_bolide/launch/perception.launch.py
+/home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/share/perception_bolide/launch/process.launch.py
+/home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/share/perception_bolide/launch/main_publisher.launch.py
 /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception_bolide-0.0.0-py3.12.egg-info/dependency_links.txt
 /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception_bolide-0.0.0-py3.12.egg-info/PKG-INFO
 /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception_bolide-0.0.0-py3.12.egg-info/entry_points.txt

@@ -10,6 +10,9 @@ setup.py
 ../../build/planning_bolide/planning_bolide.egg-info/top_level.txt
 ../../build/planning_bolide/planning_bolide.egg-info/zip-safe
 planning_bolide/__init__.py
+planning_bolide/keyboard_emergency_brake.py
+planning_bolide/nav_3states.py
+planning_bolide/nav_forward.py
 planning_bolide/teleop_keyboard.py
 resource/planning_bolide
 test/test_copyright.py

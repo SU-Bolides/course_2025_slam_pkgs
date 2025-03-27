@@ -9,6 +9,9 @@ setup.py
 ../../build/perception_bolide/perception_bolide.egg-info/requires.txt
 ../../build/perception_bolide/perception_bolide.egg-info/top_level.txt
 ../../build/perception_bolide/perception_bolide.egg-info/zip-safe
+launch/main_publisher.launch.py
+launch/perception.launch.py
+launch/process.launch.py
 perception_bolide/__init__.py
 perception_bolide/camera_opencv.py
 perception_bolide/camera_publisher.py
