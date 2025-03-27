@@ -8,7 +8,7 @@ from std_msgs.msg import Float32MultiArray
 import tf_transformations
 import math
 from dynamixel_sdk import *
-from rpi_hardware_pwm import HardwarePWM
+# from rpi_hardware_pwm import HardwarePWM
 
 ### Here, we try to establish a controller that takes an input in m/s and rad (or deg)
 ### We also want to have an estimation of the current state of the front wheels' angle, by means
@@ -69,7 +69,7 @@ class ControllerListener(Node):
         # Default setting
         self.DXL_ID                      = 1                 
         self.BAUDRATE                    = 115200            
-        self.DEVICENAME                  = '/dev/ttyUSB1'    # Symlink it in the udev to ttyU2D2
+        self.DEVICENAME                  = '/dev/ttyUSB0'    # Symlink it in the udev to ttyU2D2
 
 
         # init propulsion pwm and direction pwm
@@ -255,12 +255,12 @@ class SpeedController:
 
         self.block           = False    
 
-        self.ctrl.pwm_prop.start(self.throttle)
+        self.controller.pwm_prop.start(self.throttle)
     
     def neutral_transition(self,_):
         self.neutral()
         self.block = True
-        self.create_timer(0.15, self.backward, oneshot=True)
+        self.controller.create_timer(0.15, self.backward, oneshot=True)
     
     def command(self, cmd_speed_m_s):
         # No PID control, just set the speed
@@ -275,16 +275,16 @@ class SpeedController:
             if self.state == -1:
                 self.block = True
                 self.neutral()
-                self.create_timer(0.15, self.forward, oneshot=True)
+                self.controller.create_timer(0.15, self.forward, oneshot=True)
                 return 
             self.forward(self.cmd_speed_esc)
         
         # Reverse
         elif (-1e-2>self.cmd_speed_esc>=-1):
             if self.state == 1 or (not self.state and self.old_dir == 1):
-                self.ctrl.pwm_prop.change_duty_cycle(self.REVERSEMINSPEED)
+                self.controller.pwm_prop.change_duty_cycle(self.REVERSEMINSPEED)
                 self.block = True
-                self.create_timer(0.15, self.neutral_transition, oneshot=True)
+                self.controller.create_timer(0.15, self.neutral_transition, oneshot=True)
                 return
             self.backward(self.cmd_speed_esc)
         
@@ -305,30 +305,30 @@ class SpeedController:
             self.block = False
             self.state = 1
             self.old_dir = 1
-        self.ctrl.pwm_prop.change_duty_cycle(self.MIN_SPEED + self.cmd_speed_esc * (self.MAX_SPEED - self.MIN_SPEED))
+        self.controller.pwm_prop.change_duty_cycle(self.MIN_SPEED + self.cmd_speed_esc * (self.MAX_SPEED - self.MIN_SPEED))
 
     def backward(self,_):  
         if self.state != -1:
             self.block = False
             self.state = -1
             self.old_dir = -1
-        self.ctrl.pwm_prop.change_duty_cycle(self.REVERSEMINSPEED + self.cmd_speed_esc * (self.REVERSEMINSPEED - self.REVERSEMAXSPEED))
+        self.controller.pwm_prop.change_duty_cycle(self.REVERSEMINSPEED + self.cmd_speed_esc * (self.REVERSEMINSPEED - self.REVERSEMAXSPEED))
 
     def neutral(self):
         # print("N")
-        self.ctrl.pwm_prop.change_duty_cycle(self.NEUTRAL)
+        self.controller.pwm_prop.change_duty_cycle(self.NEUTRAL)
 
     def brake(self):
         # print("BRK")
         if self.state != 1 or (self.state and self.old_dir != 1):
-            self.ctrl.pwm_prop.change_duty_cycle(self.BRAKE)
+            self.controller.pwm_prop.change_duty_cycle(self.BRAKE)
 
     def command_pid(self, cmd_speed_m_s):
         # PID controller to respect a given speed
 
         if cmd_speed_m_s > 0 :
 
-            e_m_s = cmd_speed_m_s - self.ctrl.curr_velocity_m_s # Error in m/s
+            e_m_s = cmd_speed_m_s - self.controller.curr_velocity_m_s # Error in m/s
             self.integral += self.dt * e_m_s    # Integral of the error
             derivative = (e_m_s - self.prev_e_m_s) / self.dt
             pid_output = self.Kp * e_m_s + self.Ki * self.integral + self.Kd * derivative
@@ -338,13 +338,13 @@ class SpeedController:
 
             pid_output = min(max(pid_output, -1), 1)
             self.throttle += pid_output
-            self.throttle = max(self.MINSPEED, self.throttle)
+            self.throttle = max(self.MIN_SPEED, self.throttle)
 
-            self.get_logger().info("ERR / P %f", e_m_s)
-            self.get_logger().info("D %f", derivative)
-            self.get_logger().info("Throttle %f", self.throttle)
-            self.get_logger().info("Current speed %f", self.ctrl.curr_velocity_m_s)
-            self.get_logger().info("Target speed %f", cmd_speed_m_s)
+            self.controller.get_logger().info("ERR / P %f", e_m_s)
+            self.controller.get_logger().info("D %f", derivative)
+            self.controller.get_logger().info("Throttle %f", self.throttle)
+            self.controller.get_logger().info("Current speed %f", self.controller.curr_velocity_m_s)
+            self.controller.get_logger().info("Target speed %f", cmd_speed_m_s)
 
             self.forward_speed()
         elif (not cmd_speed_m_s):
@@ -354,15 +354,15 @@ class SpeedController:
         pass
 
     def forward_speed(self):
-        self.ctrl.pwm_prop.change_duty_cycle(min(self.throttle, self.MAX_SPEED))
+        self.controller.pwm_prop.change_duty_cycle(min(self.throttle, self.MAX_SPEED))
         pass
 
     def reverse_speed(self):
-        self.ctrl.pwm_prop.change_duty_cycle(max(self.throttle, self.REVERSEMAXSPEED))
+        self.controller.pwm_prop.change_duty_cycle(max(self.throttle, self.REVERSEMAXSPEED))
         pass
 
 def main():
-    pwm_prop = HardwarePWM(pwm_channel=0, hz=50)
+    pwm_prop = HardwarePWM(pwm_channel=0, f=50)
     try:
         rclpy.init()
         listener = ControllerListener(pwm_prop)
