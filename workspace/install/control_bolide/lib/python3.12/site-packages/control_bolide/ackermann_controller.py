@@ -166,15 +166,20 @@ class ControllerListener(Node):
                 # rospy.loginfo("Switched direction (speed sign): %s", str(self.cur_dir))
 
         # Update the last command time
-        self.last_command_time = self.get_clock().now
+        self.last_command_time = self.get_clock().now()
 
     def dxl_callback(self):
+        print("-----------------------------")
         # Update the dynamixels
         # We check if the target steering angle is within the limits of the steering angle
         self.target_steering_angle_deg = max(min(self.target_steering_angle_deg, self.MAX_STEERING_ANGLE_DEG), -self.MAX_STEERING_ANGLE_DEG)
+        print("target : ",self.target_steering_angle_deg)
         try:
             pos,_,_ = self.packetHandler.read2ByteTxRx(self.portHandler, self.DXL_ID, 36)   # Read the current position of the steering servo
+            print("Position : ", pos)
             self.curr_steering_angle_deg = -180/3.14159*pos2psi(pos)    # Convert the position to an angle in degrees
+            print("current : ", self.curr_steering_angle_deg)
+            print("setdir : ", set_dir_deg(self.target_steering_angle_deg))
             self.packetHandler.write2ByteTxRx(self.portHandler, self.DXL_ID, 30, set_dir_deg(self.target_steering_angle_deg))   # Set the target position of the steering servo
         except:
             pass
@@ -254,7 +259,7 @@ class SpeedController:
 
         self.block           = False    
 
-        self.controller.pwm_prop.start(self.throttle)
+        #self.controller.pwm_prop.start(self.throttle)
     
     def neutral_transition(self,_):
         self.neutral()
@@ -281,7 +286,7 @@ class SpeedController:
         # Reverse
         elif (-1e-2>self.cmd_speed_esc>=-1):
             if self.state == 1 or (not self.state and self.old_dir == 1):
-                self.controller.pwm_prop.change_duty_cycle(self.REVERSEMINSPEED)
+                #self.controller.pwm_prop.change_duty_cycle(self.REVERSEMINSPEED)
                 self.block = True
                 self.controller.create_timer(0.15, self.neutral_transition, oneshot=True)
                 return
@@ -304,23 +309,25 @@ class SpeedController:
             self.block = False
             self.state = 1
             self.old_dir = 1
-        self.controller.pwm_prop.change_duty_cycle(self.MIN_SPEED + self.cmd_speed_esc * (self.MAX_SPEED - self.MIN_SPEED))
+        #self.controller.pwm_prop.change_duty_cycle(self.MIN_SPEED + self.cmd_speed_esc * (self.MAX_SPEED - self.MIN_SPEED))
 
     def backward(self):  
         if self.state != -1:
             self.block = False
             self.state = -1
             self.old_dir = -1
-        self.controller.pwm_prop.change_duty_cycle(self.REVERSEMINSPEED + self.cmd_speed_esc * (self.REVERSEMINSPEED - self.REVERSEMAXSPEED))
+        #self.controller.pwm_prop.change_duty_cycle(self.REVERSEMINSPEED + self.cmd_speed_esc * (self.REVERSEMINSPEED - self.REVERSEMAXSPEED))
 
     def neutral(self):
+        pass
         # print("N")
-        self.controller.pwm_prop.change_duty_cycle(self.NEUTRAL)
+        #self.controller.pwm_prop.change_duty_cycle(self.NEUTRAL)
 
     def brake(self):
         # print("BRK")
         if self.state != 1 or (self.state and self.old_dir != 1):
-            self.controller.pwm_prop.change_duty_cycle(self.BRAKE)
+            pass
+            #self.controller.pwm_prop.change_duty_cycle(self.BRAKE)
 
     def command_pid(self, cmd_speed_m_s):
         # PID controller to respect a given speed
@@ -353,15 +360,15 @@ class SpeedController:
         pass
 
     def forward_speed(self):
-        self.controller.pwm_prop.change_duty_cycle(min(self.throttle, self.MAX_SPEED))
+        #self.controller.pwm_prop.change_duty_cycle(min(self.throttle, self.MAX_SPEED))
         pass
 
     def reverse_speed(self):
-        self.controller.pwm_prop.change_duty_cycle(max(self.throttle, self.REVERSEMAXSPEED))
+        #self.controller.pwm_prop.change_duty_cycle(max(self.throttle, self.REVERSEMAXSPEED))
         pass
 
 def main():
-    pwm_prop = HardwarePWM(pwm_channel=0, hz=50)
+    pwm_prop = HardwarePWM(pwm_channel=2, hz=50)
     try:
         rclpy.init()
         listener = ControllerListener(pwm_prop)

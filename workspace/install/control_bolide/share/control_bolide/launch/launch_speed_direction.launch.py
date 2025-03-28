@@ -17,7 +17,7 @@ def generate_launch_description():
             name='ackermann_controller',
             output='screen',
             arguments=['--ros-args', '--log-level', 'debug'],
-            prefix=["sudo -E env \"PYTHONPATH=$PYTHONPATH\" \"LD_LIBRARY_PATH=$LD_LIBRARY_PATH\" \"PATH=$PATH\" \"USER=$USER\" bash -c"],
+            #prefix=["sudo -E env \"PYTHONPATH=$PYTHONPATH\" \"ROS_DOMAIN_ID=10\" \"LD_LIBRARY_PATH=$LD_LIBRARY_PATH\" \"PATH=$PATH\" \"USER=$USER\" bash -c"],
             shell = True
         )
     ])

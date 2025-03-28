@@ -1,0 +1,70 @@
+[0.000000] (-) TimerEvent: {}
+[0.001015] (-) JobUnselected: {'identifier': 'bolide_interfaces'}
+[0.001371] (-) JobUnselected: {'identifier': 'open_karto'}
+[0.001495] (-) JobUnselected: {'identifier': 'perception_bolide'}
+[0.002199] (-) JobUnselected: {'identifier': 'planning_bolide'}
+[0.002569] (-) JobUnselected: {'identifier': 'rplidar_ros'}
+[0.002847] (-) JobUnselected: {'identifier': 'sllidar_ros2'}
+[0.003047] (-) JobUnselected: {'identifier': 'sparse_bundle_adjustment'}
+[0.003181] (control_bolide) JobQueued: {'identifier': 'control_bolide', 'dependencies': OrderedDict({'bolide_interfaces': '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces'})}
+[0.004885] (control_bolide) JobStarted: {'identifier': 'control_bolide'}
+[0.099599] (-) TimerEvent: {}
+[0.202560] (-) TimerEvent: {}
+[0.303063] (-) TimerEvent: {}
+[0.408691] (-) TimerEvent: {}
+[0.510078] (-) TimerEvent: {}
+[0.610632] (-) TimerEvent: {}
+[0.711375] (-) TimerEvent: {}
+[0.811980] (-) TimerEvent: {}
+[0.912535] (-) TimerEvent: {}
+[1.013176] (-) TimerEvent: {}
+[1.113656] (-) TimerEvent: {}
+[1.214014] (-) TimerEvent: {}
+[1.314406] (-) TimerEvent: {}
+[1.414819] (-) TimerEvent: {}
+[1.515197] (-) TimerEvent: {}
+[1.618643] (-) TimerEvent: {}
+[1.719028] (-) TimerEvent: {}
+[1.819369] (-) TimerEvent: {}
+[1.919751] (-) TimerEvent: {}
+[2.020138] (-) TimerEvent: {}
+[2.109461] (control_bolide) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/voiture/course_2025_slam_pkgs/workspace/build/control_bolide/build', '--no-deps', 'symlink_data', '--force'], 'cwd': '/home/voiture/course_2025_slam_pkgs/workspace/build/control_bolide', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'voiture', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/voiture', 'OLDPWD': '/home/voiture', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'PS1': '(venv) \\[\\e]0;\\u@\\h: \\w\\a\\]${debian_chroot:+($debian_chroot)}\\[\\033[01;32m\\]\\u@\\h\\[\\033[00m\\]:\\[\\033[01;34m\\]\\w\\[\\033[00m\\]\\$', 'SYSTEMD_EXEC_PID': '1639', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1002/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/voiture/course_2025_slam_pkgs/workspace/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'voiture', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1002.slice/user@1002.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'voiture', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/home/voiture/course_2025_slam_pkgs/workspace/venv/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/voiture1:@/tmp/.ICE-unix/1599,unix/voiture1:/tmp/.ICE-unix/1599', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/e747beb7_043f_4843_82aa_991aa37035e8', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1002', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'VIRTUAL_ENV_PROMPT': '(venv)', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1002/.mutter-Xwaylandauth.O3ZW32', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.97', 'SSH_AUTH_SOCK': '/run/user/1002/keyring/ssh', 'ROS_DOMAIN_ID': '10', 'AMENT_PREFIX_PATH': '/home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2:/home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide:/home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide:/home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide:/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'VIRTUAL_ENV': '/home/voiture/course_2025_slam_pkgs/workspace/venv', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/voiture/course_2025_slam_pkgs/workspace/build/control_bolide', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/voiture/course_2025_slam_pkgs/workspace/build/control_bolide/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/python3.12/site-packages:/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages:/home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide/lib/python3.12/site-packages:/home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages:/home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces:/home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[2.120225] (-) TimerEvent: {}
+[2.220610] (-) TimerEvent: {}
+[2.320962] (-) TimerEvent: {}
+[2.421304] (-) TimerEvent: {}
+[2.521675] (-) TimerEvent: {}
+[2.600716] (control_bolide) StdoutLine: {'line': b'running develop\n'}
+[2.621747] (-) TimerEvent: {}
+[2.722018] (-) TimerEvent: {}
+[2.822393] (-) TimerEvent: {}
+[2.882574] (control_bolide) StdoutLine: {'line': b'running egg_info\n'}
+[2.907526] (control_bolide) StdoutLine: {'line': b'writing control_bolide.egg-info/PKG-INFO\n'}
+[2.908013] (control_bolide) StdoutLine: {'line': b'writing dependency_links to control_bolide.egg-info/dependency_links.txt\n'}
+[2.909864] (control_bolide) StdoutLine: {'line': b'writing entry points to control_bolide.egg-info/entry_points.txt\n'}
+[2.911068] (control_bolide) StdoutLine: {'line': b'writing requirements to control_bolide.egg-info/requires.txt\n'}
+[2.912531] (control_bolide) StdoutLine: {'line': b'writing top-level names to control_bolide.egg-info/top_level.txt\n'}
+[2.922466] (-) TimerEvent: {}
+[2.972597] (control_bolide) StdoutLine: {'line': b"reading manifest file 'control_bolide.egg-info/SOURCES.txt'\n"}
+[2.973924] (control_bolide) StdoutLine: {'line': b"writing manifest file 'control_bolide.egg-info/SOURCES.txt'\n"}
+[3.001647] (control_bolide) StdoutLine: {'line': b'running build_ext\n'}
+[3.001867] (control_bolide) StdoutLine: {'line': b'Creating /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/python3.12/site-packages/control-bolide.egg-link (link to .)\n'}
+[3.002847] (control_bolide) StdoutLine: {'line': b'Installing ackermann_controller script to /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/control_bolide\n'}
+[3.003202] (control_bolide) StdoutLine: {'line': b'Installing calibration_direction script to /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/control_bolide\n'}
+[3.003413] (control_bolide) StdoutLine: {'line': b'Installing calibration_direction_copy script to /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/control_bolide\n'}
+[3.003620] (control_bolide) StdoutLine: {'line': b'Installing cmd_vel_vizu script to /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/control_bolide\n'}
+[3.003805] (control_bolide) StdoutLine: {'line': b'Installing obstacle_detection script to /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/control_bolide\n'}
+[3.003991] (control_bolide) StdoutLine: {'line': b'Installing speed_direction_controller script to /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/control_bolide\n'}
+[3.004170] (control_bolide) StdoutLine: {'line': b'Installing stanley_controller script to /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/control_bolide\n'}
+[3.004497] (control_bolide) StdoutLine: {'line': b'\n'}
+[3.004597] (control_bolide) StdoutLine: {'line': b'Installed /home/voiture/course_2025_slam_pkgs/workspace/build/control_bolide\n'}
+[3.004713] (control_bolide) StdoutLine: {'line': b'running symlink_data\n'}
+[3.004852] (control_bolide) StdoutLine: {'line': b'symbolically linking /home/voiture/course_2025_slam_pkgs/workspace/build/control_bolide/resource/control_bolide -> /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/share/ament_index/resource_index/packages\n'}
+[3.005062] (control_bolide) StdoutLine: {'line': b'symbolically linking /home/voiture/course_2025_slam_pkgs/workspace/build/control_bolide/package.xml -> /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/share/control_bolide\n'}
+[3.005249] (control_bolide) StdoutLine: {'line': b'symbolically linking /home/voiture/course_2025_slam_pkgs/workspace/build/control_bolide/launch/launch_speed_direction.launch.py -> /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/share/control_bolide/launch\n'}
+[3.005405] (control_bolide) StdoutLine: {'line': b'symbolically linking /home/voiture/course_2025_slam_pkgs/workspace/build/control_bolide/launch/stanley_launch.launch.py -> /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/share/control_bolide/launch\n'}
+[3.022561] (-) TimerEvent: {}
+[3.114879] (control_bolide) CommandEnded: {'returncode': 0}
+[3.122631] (-) TimerEvent: {}
+[3.154877] (control_bolide) JobEnded: {'identifier': 'control_bolide', 'rc': 0}
+[3.156790] (-) EventReactorShutdown: {}

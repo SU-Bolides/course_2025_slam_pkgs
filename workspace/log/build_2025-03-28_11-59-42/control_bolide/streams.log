@@ -1,0 +1,31 @@
+[2.885s] Invoking command in '/home/voiture/course_2025_slam_pkgs/workspace/src/control_bolide': CMAKE_PREFIX_PATH=/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces:/home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/voiture/course_2025_slam_pkgs/workspace/build/control_bolide/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/python3.12/site-packages:/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages:/home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide/lib/python3.12/site-packages:/home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages:/home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/control_bolide build --build-base /home/voiture/course_2025_slam_pkgs/workspace/build/control_bolide/build install --record /home/voiture/course_2025_slam_pkgs/workspace/build/control_bolide/install.log --single-version-externally-managed install_data
+[3.299s] running egg_info
+[3.327s] writing ../../build/control_bolide/control_bolide.egg-info/PKG-INFO
+[3.327s] writing dependency_links to ../../build/control_bolide/control_bolide.egg-info/dependency_links.txt
+[3.335s] writing entry points to ../../build/control_bolide/control_bolide.egg-info/entry_points.txt
+[3.338s] writing requirements to ../../build/control_bolide/control_bolide.egg-info/requires.txt
+[3.339s] writing top-level names to ../../build/control_bolide/control_bolide.egg-info/top_level.txt
+[3.396s] reading manifest file '../../build/control_bolide/control_bolide.egg-info/SOURCES.txt'
+[3.397s] adding license file 'LICENSE'
+[3.398s] writing manifest file '../../build/control_bolide/control_bolide.egg-info/SOURCES.txt'
+[3.398s] running build
+[3.398s] running build_py
+[3.399s] copying control_bolide/ackermann_controller.py -> /home/voiture/course_2025_slam_pkgs/workspace/build/control_bolide/build/lib/control_bolide
+[3.399s] running install
+[3.409s] running install_lib
+[3.439s] copying /home/voiture/course_2025_slam_pkgs/workspace/build/control_bolide/build/lib/control_bolide/ackermann_controller.py -> /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/python3.12/site-packages/control_bolide
+[3.440s] byte-compiling /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/python3.12/site-packages/control_bolide/ackermann_controller.py to ackermann_controller.cpython-312.pyc
+[3.446s] running install_data
+[3.446s] running install_egg_info
+[3.477s] removing '/home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/python3.12/site-packages/control_bolide-0.0.0-py3.12.egg-info' (and everything under it)
+[3.477s] Copying ../../build/control_bolide/control_bolide.egg-info to /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/python3.12/site-packages/control_bolide-0.0.0-py3.12.egg-info
+[3.480s] running install_scripts
+[3.683s] Installing ackermann_controller script to /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/control_bolide
+[3.686s] Installing calibration_direction script to /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/control_bolide
+[3.688s] Installing calibration_direction_copy script to /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/control_bolide
+[3.691s] Installing cmd_vel_vizu script to /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/control_bolide
+[3.692s] Installing obstacle_detection script to /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/control_bolide
+[3.693s] Installing speed_direction_controller script to /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/control_bolide
+[3.694s] Installing stanley_controller script to /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/control_bolide
+[3.695s] writing list of installed files to '/home/voiture/course_2025_slam_pkgs/workspace/build/control_bolide/install.log'
+[3.842s] Invoked command in '/home/voiture/course_2025_slam_pkgs/workspace/src/control_bolide' returned '0': CMAKE_PREFIX_PATH=/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces:/home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/voiture/course_2025_slam_pkgs/workspace/build/control_bolide/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/python3.12/site-packages:/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages:/home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide/lib/python3.12/site-packages:/home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages:/home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/control_bolide build --build-base /home/voiture/course_2025_slam_pkgs/workspace/build/control_bolide/build install --record /home/voiture/course_2025_slam_pkgs/workspace/build/control_bolide/install.log --single-version-externally-managed install_data

@@ -1,0 +1,25 @@
+running develop
+running egg_info
+writing control_bolide.egg-info/PKG-INFO
+writing dependency_links to control_bolide.egg-info/dependency_links.txt
+writing entry points to control_bolide.egg-info/entry_points.txt
+writing requirements to control_bolide.egg-info/requires.txt
+writing top-level names to control_bolide.egg-info/top_level.txt
+reading manifest file 'control_bolide.egg-info/SOURCES.txt'
+writing manifest file 'control_bolide.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/python3.12/site-packages/control-bolide.egg-link (link to .)
+Installing ackermann_controller script to /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/control_bolide
+Installing calibration_direction script to /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/control_bolide
+Installing calibration_direction_copy script to /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/control_bolide
+Installing cmd_vel_vizu script to /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/control_bolide
+Installing obstacle_detection script to /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/control_bolide
+Installing speed_direction_controller script to /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/control_bolide
+Installing stanley_controller script to /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/control_bolide
+
+Installed /home/voiture/course_2025_slam_pkgs/workspace/build/control_bolide
+running symlink_data
+symbolically linking /home/voiture/course_2025_slam_pkgs/workspace/build/control_bolide/resource/control_bolide -> /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/share/ament_index/resource_index/packages
+symbolically linking /home/voiture/course_2025_slam_pkgs/workspace/build/control_bolide/package.xml -> /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/share/control_bolide
+symbolically linking /home/voiture/course_2025_slam_pkgs/workspace/build/control_bolide/launch/launch_speed_direction.launch.py -> /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/share/control_bolide/launch
+symbolically linking /home/voiture/course_2025_slam_pkgs/workspace/build/control_bolide/launch/stanley_launch.launch.py -> /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/share/control_bolide/launch

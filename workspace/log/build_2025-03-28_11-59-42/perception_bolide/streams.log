@@ -1,0 +1,35 @@
+[2.756s] Invoking command in '/home/voiture/course_2025_slam_pkgs/workspace/src/perception_bolide': CMAKE_PREFIX_PATH=/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces:/home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages:/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages:/home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide/lib/python3.12/site-packages:/home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages:/home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/perception_bolide build --build-base /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/build install --record /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/install.log --single-version-externally-managed install_data
+[3.175s] running egg_info
+[3.203s] writing ../../build/perception_bolide/perception_bolide.egg-info/PKG-INFO
+[3.204s] writing dependency_links to ../../build/perception_bolide/perception_bolide.egg-info/dependency_links.txt
+[3.204s] writing entry points to ../../build/perception_bolide/perception_bolide.egg-info/entry_points.txt
+[3.204s] writing requirements to ../../build/perception_bolide/perception_bolide.egg-info/requires.txt
+[3.204s] writing top-level names to ../../build/perception_bolide/perception_bolide.egg-info/top_level.txt
+[3.268s] reading manifest file '../../build/perception_bolide/perception_bolide.egg-info/SOURCES.txt'
+[3.269s] adding license file 'LICENSE'
+[3.270s] writing manifest file '../../build/perception_bolide/perception_bolide.egg-info/SOURCES.txt'
+[3.270s] running build
+[3.270s] running build_py
+[3.271s] running install
+[3.282s] running install_lib
+[3.314s] running install_data
+[3.314s] copying launch/perception.launch.py -> /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/share/perception_bolide/launch
+[3.315s] running install_egg_info
+[3.345s] removing '/home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception_bolide-0.0.0-py3.12.egg-info' (and everything under it)
+[3.346s] Copying ../../build/perception_bolide/perception_bolide.egg-info to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception_bolide-0.0.0-py3.12.egg-info
+[3.349s] running install_scripts
+[3.555s] Installing camera_opencv script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide
+[3.555s] Installing camera_publisher script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide
+[3.557s] Installing dbscan_node script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide
+[3.558s] Installing fork_publisher script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide
+[3.559s] Installing imu_publisher script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide
+[3.560s] Installing launch_ekf_map script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide
+[3.560s] Installing lidar_process script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide
+[3.560s] Installing lidar_publisher script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide
+[3.560s] Installing lidar_vizu script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide
+[3.561s] Installing odom_fork_imu script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide
+[3.561s] Installing odom_fork_imu_sim script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide
+[3.561s] Installing rear_ranges_publisher script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide
+[3.561s] Installing stm32_publisher script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide
+[3.562s] writing list of installed files to '/home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/install.log'
+[3.681s] Invoked command in '/home/voiture/course_2025_slam_pkgs/workspace/src/perception_bolide' returned '0': CMAKE_PREFIX_PATH=/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces:/home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages:/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages:/home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide/lib/python3.12/site-packages:/home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages:/home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/perception_bolide build --build-base /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/build install --record /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/install.log --single-version-externally-managed install_data
