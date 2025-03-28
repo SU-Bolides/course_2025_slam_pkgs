@@ -395,7 +395,7 @@ class SpeedController:
 def main():
     try:
         rclpy.init()
-        listener = ControllerListener(pwm_prop)
+        listener = ControllerListener()
         rclpy.spin(listener)
         print("Terminated ackermann_controller")
     except Exception as e:
