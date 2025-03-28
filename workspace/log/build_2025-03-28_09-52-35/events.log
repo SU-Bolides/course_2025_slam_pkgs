@@ -1,0 +1,202 @@
+[0.000000] (-) TimerEvent: {}
+[0.000311] (-) JobUnselected: {'identifier': 'bolide_interfaces'}
+[0.000545] (-) JobUnselected: {'identifier': 'control_bolide'}
+[0.000884] (-) JobUnselected: {'identifier': 'open_karto'}
+[0.001106] (-) JobUnselected: {'identifier': 'perception_bolide'}
+[0.002208] (-) JobUnselected: {'identifier': 'planning_bolide'}
+[0.003187] (-) JobUnselected: {'identifier': 'rplidar_ros'}
+[0.003632] (-) JobUnselected: {'identifier': 'sparse_bundle_adjustment'}
+[0.003852] (sllidar_ros2) JobQueued: {'identifier': 'sllidar_ros2', 'dependencies': OrderedDict()}
+[0.004258] (sllidar_ros2) JobStarted: {'identifier': 'sllidar_ros2'}
+[0.041462] (sllidar_ros2) JobProgress: {'identifier': 'sllidar_ros2', 'progress': 'cmake'}
+[0.043199] (sllidar_ros2) JobProgress: {'identifier': 'sllidar_ros2', 'progress': 'build'}
+[0.046798] (sllidar_ros2) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/voiture/course_2025_slam_pkgs/workspace/build/sllidar_ros2', '--', '-j4', '-l4'], 'cwd': '/home/voiture/course_2025_slam_pkgs/workspace/build/sllidar_ros2', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'voiture', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/voiture', 'OLDPWD': '/home/voiture', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'PS1': '(venv) \\[\\e]0;\\u@\\h: \\w\\a\\]${debian_chroot:+($debian_chroot)}\\[\\033[01;32m\\]\\u@\\h\\[\\033[00m\\]:\\[\\033[01;34m\\]\\w\\[\\033[00m\\]\\$', 'SYSTEMD_EXEC_PID': '1629', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1002/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/voiture/course_2025_slam_pkgs/workspace/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'voiture', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1002.slice/user@1002.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'voiture', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/home/voiture/course_2025_slam_pkgs/workspace/venv/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/voiture1:@/tmp/.ICE-unix/1588,unix/voiture1:/tmp/.ICE-unix/1588', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/5e48601f_6238_4872_9cba_f9b63b68bccb', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1002', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'VIRTUAL_ENV_PROMPT': '(venv)', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1002/.mutter-Xwaylandauth.XKB332', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.119', 'SSH_AUTH_SOCK': '/run/user/1002/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2:/home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide:/home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide:/home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide:/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'VIRTUAL_ENV': '/home/voiture/course_2025_slam_pkgs/workspace/venv', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/voiture/course_2025_slam_pkgs/workspace/build/sllidar_ros2', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide/lib/python3.12/site-packages:/home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages:/home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/python3.12/site-packages:/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2:/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide:/home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide:/home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide:/opt/ros/jazzy'}), 'shell': False}
+[0.099664] (-) TimerEvent: {}
+[0.177479] (sllidar_ros2) StdoutLine: {'line': b'[ 10%] Built target sllidar_client\n'}
+[0.199768] (-) TimerEvent: {}
+[0.231371] (sllidar_ros2) StdoutLine: {'line': b'[ 15%] \x1b[32mBuilding CXX object CMakeFiles/sllidar_node.dir/src/sllidar_node.cpp.o\x1b[0m\n'}
+[0.299920] (-) TimerEvent: {}
+[0.400436] (-) TimerEvent: {}
+[0.501131] (-) TimerEvent: {}
+[0.601948] (-) TimerEvent: {}
+[0.703024] (-) TimerEvent: {}
+[0.803811] (-) TimerEvent: {}
+[0.905034] (-) TimerEvent: {}
+[1.007370] (-) TimerEvent: {}
+[1.107978] (-) TimerEvent: {}
+[1.208546] (-) TimerEvent: {}
+[1.309170] (-) TimerEvent: {}
+[1.409763] (-) TimerEvent: {}
+[1.510411] (-) TimerEvent: {}
+[1.610967] (-) TimerEvent: {}
+[1.711369] (-) TimerEvent: {}
+[1.811771] (-) TimerEvent: {}
+[1.912200] (-) TimerEvent: {}
+[2.012576] (-) TimerEvent: {}
+[2.112973] (-) TimerEvent: {}
+[2.213394] (-) TimerEvent: {}
+[2.313795] (-) TimerEvent: {}
+[2.414229] (-) TimerEvent: {}
+[2.514682] (-) TimerEvent: {}
+[2.618325] (-) TimerEvent: {}
+[2.718879] (-) TimerEvent: {}
+[2.819312] (-) TimerEvent: {}
+[2.922007] (-) TimerEvent: {}
+[3.022538] (-) TimerEvent: {}
+[3.123033] (-) TimerEvent: {}
+[3.223449] (-) TimerEvent: {}
+[3.323858] (-) TimerEvent: {}
+[3.424276] (-) TimerEvent: {}
+[3.524693] (-) TimerEvent: {}
+[3.625103] (-) TimerEvent: {}
+[3.725504] (-) TimerEvent: {}
+[3.825884] (-) TimerEvent: {}
+[3.926280] (-) TimerEvent: {}
+[4.026657] (-) TimerEvent: {}
+[4.127074] (-) TimerEvent: {}
+[4.227469] (-) TimerEvent: {}
+[4.327868] (-) TimerEvent: {}
+[4.428300] (-) TimerEvent: {}
+[4.528700] (-) TimerEvent: {}
+[4.629144] (-) TimerEvent: {}
+[4.729503] (-) TimerEvent: {}
+[4.829972] (-) TimerEvent: {}
+[4.865870] (sllidar_ros2) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/voiture/course_2025_slam_pkgs/workspace/src/sllidar_ros2/./sdk/include/sl_lidar_cmd.h:41\x1b[m\x1b[K,\n'}
+[4.866244] (sllidar_ros2) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/voiture/course_2025_slam_pkgs/workspace/src/sllidar_ros2/./sdk/include/sl_lidar_driver.h:54\x1b[m\x1b[K,\n'}
+[4.866379] (sllidar_ros2) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/voiture/course_2025_slam_pkgs/workspace/src/sllidar_ros2/./sdk/include/sl_lidar.h:36\x1b[m\x1b[K,\n'}
+[4.866558] (sllidar_ros2) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/voiture/course_2025_slam_pkgs/workspace/src/sllidar_ros2/src/sllidar_node.cpp:38\x1b[m\x1b[K:\n'}
+[4.866649] (sllidar_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/home/voiture/course_2025_slam_pkgs/workspace/src/sllidar_ros2/./sdk/include/sl_lidar_protocol.h:66:16:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[KISO C++ forbids zero-size array \xe2\x80\x98\x1b[01m\x1b[Kdata\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic\x07-Wpedantic\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.866749] (sllidar_ros2) StderrLine: {'line': b'   66 |     sl_u8 data[\x1b[01;35m\x1b[K0\x1b[m\x1b[K];\n'}
+[4.866841] (sllidar_ros2) StderrLine: {'line': b'      |                \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[4.866969] (sllidar_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/home/voiture/course_2025_slam_pkgs/workspace/src/sllidar_ros2/./sdk/include/sl_lidar_cmd.h:324:20:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[KISO C++ forbids zero-size array \xe2\x80\x98\x1b[01m\x1b[Kpayload\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic\x07-Wpedantic\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.867074] (sllidar_ros2) StderrLine: {'line': b'  324 |     sl_u8  payload[\x1b[01;35m\x1b[K0\x1b[m\x1b[K];\n'}
+[4.867160] (sllidar_ros2) StderrLine: {'line': b'      |                    \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[4.930094] (-) TimerEvent: {}
+[5.030498] (-) TimerEvent: {}
+[5.130929] (-) TimerEvent: {}
+[5.231331] (-) TimerEvent: {}
+[5.331737] (-) TimerEvent: {}
+[5.432155] (-) TimerEvent: {}
+[5.532576] (-) TimerEvent: {}
+[5.632982] (-) TimerEvent: {}
+[5.733392] (-) TimerEvent: {}
+[5.833793] (-) TimerEvent: {}
+[5.934219] (-) TimerEvent: {}
+[6.034615] (-) TimerEvent: {}
+[6.135011] (-) TimerEvent: {}
+[6.235399] (-) TimerEvent: {}
+[6.335803] (-) TimerEvent: {}
+[6.436243] (-) TimerEvent: {}
+[6.536630] (-) TimerEvent: {}
+[6.637025] (-) TimerEvent: {}
+[6.737428] (-) TimerEvent: {}
+[6.837814] (-) TimerEvent: {}
+[6.938221] (-) TimerEvent: {}
+[7.038649] (-) TimerEvent: {}
+[7.139109] (-) TimerEvent: {}
+[7.239485] (-) TimerEvent: {}
+[7.339853] (-) TimerEvent: {}
+[7.440238] (-) TimerEvent: {}
+[7.540611] (-) TimerEvent: {}
+[7.640994] (-) TimerEvent: {}
+[7.741379] (-) TimerEvent: {}
+[7.841760] (-) TimerEvent: {}
+[7.942218] (-) TimerEvent: {}
+[8.042624] (-) TimerEvent: {}
+[8.143020] (-) TimerEvent: {}
+[8.243430] (-) TimerEvent: {}
+[8.343828] (-) TimerEvent: {}
+[8.444221] (-) TimerEvent: {}
+[8.544615] (-) TimerEvent: {}
+[8.645010] (-) TimerEvent: {}
+[8.745400] (-) TimerEvent: {}
+[8.845777] (-) TimerEvent: {}
+[8.946172] (-) TimerEvent: {}
+[9.046509] (-) TimerEvent: {}
+[9.146895] (-) TimerEvent: {}
+[9.247287] (-) TimerEvent: {}
+[9.347663] (-) TimerEvent: {}
+[9.448046] (-) TimerEvent: {}
+[9.548417] (-) TimerEvent: {}
+[9.648800] (-) TimerEvent: {}
+[9.749215] (-) TimerEvent: {}
+[9.849594] (-) TimerEvent: {}
+[9.949988] (-) TimerEvent: {}
+[10.050370] (-) TimerEvent: {}
+[10.150758] (-) TimerEvent: {}
+[10.251147] (-) TimerEvent: {}
+[10.351531] (-) TimerEvent: {}
+[10.451927] (-) TimerEvent: {}
+[10.552322] (-) TimerEvent: {}
+[10.652747] (-) TimerEvent: {}
+[10.753210] (-) TimerEvent: {}
+[10.853621] (-) TimerEvent: {}
+[10.954001] (-) TimerEvent: {}
+[11.054415] (-) TimerEvent: {}
+[11.154869] (-) TimerEvent: {}
+[11.255362] (-) TimerEvent: {}
+[11.355999] (-) TimerEvent: {}
+[11.425884] (sllidar_ros2) StdoutLine: {'line': b'[ 20%] \x1b[32m\x1b[1mLinking CXX executable sllidar_node\x1b[0m\n'}
+[11.456183] (-) TimerEvent: {}
+[11.556658] (-) TimerEvent: {}
+[11.657486] (-) TimerEvent: {}
+[11.758209] (-) TimerEvent: {}
+[11.859067] (-) TimerEvent: {}
+[11.959703] (-) TimerEvent: {}
+[12.060176] (-) TimerEvent: {}
+[12.140942] (sllidar_ros2) StdoutLine: {'line': b'[100%] Built target sllidar_node\n'}
+[12.160301] (-) TimerEvent: {}
+[12.172619] (sllidar_ros2) CommandEnded: {'returncode': 0}
+[12.174322] (sllidar_ros2) JobProgress: {'identifier': 'sllidar_ros2', 'progress': 'install'}
+[12.197660] (sllidar_ros2) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/voiture/course_2025_slam_pkgs/workspace/build/sllidar_ros2'], 'cwd': '/home/voiture/course_2025_slam_pkgs/workspace/build/sllidar_ros2', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'voiture', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/voiture', 'OLDPWD': '/home/voiture', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'PS1': '(venv) \\[\\e]0;\\u@\\h: \\w\\a\\]${debian_chroot:+($debian_chroot)}\\[\\033[01;32m\\]\\u@\\h\\[\\033[00m\\]:\\[\\033[01;34m\\]\\w\\[\\033[00m\\]\\$', 'SYSTEMD_EXEC_PID': '1629', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1002/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/voiture/course_2025_slam_pkgs/workspace/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'voiture', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1002.slice/user@1002.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'voiture', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/home/voiture/course_2025_slam_pkgs/workspace/venv/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/voiture1:@/tmp/.ICE-unix/1588,unix/voiture1:/tmp/.ICE-unix/1588', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/5e48601f_6238_4872_9cba_f9b63b68bccb', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1002', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'VIRTUAL_ENV_PROMPT': '(venv)', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1002/.mutter-Xwaylandauth.XKB332', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.119', 'SSH_AUTH_SOCK': '/run/user/1002/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2:/home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide:/home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide:/home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide:/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'VIRTUAL_ENV': '/home/voiture/course_2025_slam_pkgs/workspace/venv', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/voiture/course_2025_slam_pkgs/workspace/build/sllidar_ros2', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide/lib/python3.12/site-packages:/home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages:/home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/python3.12/site-packages:/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2:/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide:/home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide:/home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide:/opt/ros/jazzy'}), 'shell': False}
+[12.213548] (sllidar_ros2) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[12.213994] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/launch\n'}
+[12.214141] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_s3_launch.py\n'}
+[12.214297] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_t1_launch.py\n'}
+[12.214452] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_s2e_launch.py\n'}
+[12.214621] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_a2m8_launch.py\n'}
+[12.214734] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_c1_launch.py\n'}
+[12.214880] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_a2m12_launch.py\n'}
+[12.215004] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_a2m7_launch.py\n'}
+[12.215106] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_a2m7_launch.py\n'}
+[12.215211] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_s1_launch.py\n'}
+[12.215310] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_a3_launch.py\n'}
+[12.215405] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_c1_launch.py\n'}
+[12.215499] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_t1_launch.py\n'}
+[12.215606] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_a1_launch.py\n'}
+[12.215742] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_a3_launch.py\n'}
+[12.215836] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_a2m8_launch.py\n'}
+[12.215940] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_a2m12_launch .py\n'}
+[12.216038] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_s1_tcp_launch.py\n'}
+[12.216128] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_s2e_launch.py\n'}
+[12.216214] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_a1_launch.py\n'}
+[12.216330] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_s3_launch.py\n'}
+[12.216429] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_s1_launch.py\n'}
+[12.216522] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_s2_launch.py\n'}
+[12.216609] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_s1_tcp_launch.py\n'}
+[12.216697] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_s2_launch.py\n'}
+[12.216787] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/rviz\n'}
+[12.216879] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/rviz/sllidar_ros2.rviz\n'}
+[12.217012] (sllidar_ros2) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/lib/sllidar_ros2/sllidar_node\n'}
+[12.222916] (sllidar_ros2) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/lib/sllidar_ros2/sllidar_node" to ""\n'}
+[12.223176] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/lib/sllidar_ros2/sllidar_client\n'}
+[12.223401] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/ament_index/resource_index/package_run_dependencies/sllidar_ros2\n'}
+[12.223559] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/ament_index/resource_index/parent_prefix_path/sllidar_ros2\n'}
+[12.223690] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/environment/ament_prefix_path.sh\n'}
+[12.223787] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/environment/ament_prefix_path.dsv\n'}
+[12.223877] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/environment/path.sh\n'}
+[12.224019] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/environment/path.dsv\n'}
+[12.224110] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/local_setup.bash\n'}
+[12.224191] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/local_setup.sh\n'}
+[12.224297] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/local_setup.zsh\n'}
+[12.224399] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/local_setup.dsv\n'}
+[12.224489] (sllidar_ros2) StdoutLine: {'line': b'-- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/package.dsv\n'}
+[12.224578] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/ament_index/resource_index/packages/sllidar_ros2\n'}
+[12.224668] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[12.224803] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[12.224896] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/cmake/sllidar_ros2Config.cmake\n'}
+[12.225014] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/cmake/sllidar_ros2Config-version.cmake\n'}
+[12.225097] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/package.xml\n'}
+[12.227654] (sllidar_ros2) CommandEnded: {'returncode': 0}
+[12.256906] (sllidar_ros2) JobEnded: {'identifier': 'sllidar_ros2', 'rc': 0}
+[12.258371] (-) EventReactorShutdown: {}

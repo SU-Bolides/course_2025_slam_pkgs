@@ -5,7 +5,7 @@ from bolide_interfaces.msg import ForkSpeed, SpeedDirection
 from sensor_msgs.msg import Imu
 from nav_msgs.msg import Odometry
 from std_msgs.msg import Float32MultiArray
-import tf_transformations
+import tf2_ros
 import math
 from dynamixel_sdk import *
 from rpi_hardware_pwm import HardwarePWM
@@ -99,7 +99,7 @@ class ControllerListener(Node):
         self.current_odom.header.frame_id = 'odom'
         self.current_odom.child_frame_id = 'base_link'
 
-        self.curr_odom.twist.covariance = [1e-4, 0.0, 0.0, 0.0, 0.0, 0.0,
+        self.current_odom.twist.covariance = [1e-4, 0.0, 0.0, 0.0, 0.0, 0.0,
                                            0.0, 1e-6, 0.0, 0.0, 0.0, 0.0,
                                            0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
                                            0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
@@ -126,7 +126,7 @@ class ControllerListener(Node):
         self.create_subscription(Float32MultiArray, "/stm32_sensors", self.stm32_callback, 10)   # Subscribe to the STM32 for the current speed and direction
 
         self.odom_pub = self.create_publisher(Odometry, "/ackermann_odom", 10)   # Publish the car's current state (speed and steering angle) for odometry
-        self.odom_tf = tf_transformations.TransformBroadcaster(self)
+        self.odom_tf = tf2_ros.TransformBroadcaster(self)
         self.car_state_pub = self.create_publisher(SpeedDirection, "/car_state", 10)# Publish the car's current state (speed and steering angle) for odometry
         
         # Initialize watchdog timer
@@ -166,9 +166,9 @@ class ControllerListener(Node):
                 # rospy.loginfo("Switched direction (speed sign): %s", str(self.cur_dir))
 
         # Update the last command time
-        self.last_command_time = self.get_clock().now()
+        self.last_command_time = self.get_clock().now
 
-    def dxl_callback(self,_):
+    def dxl_callback(self):
         # Update the dynamixels
         # We check if the target steering angle is within the limits of the steering angle
         self.target_steering_angle_deg = max(min(self.target_steering_angle_deg, self.MAX_STEERING_ANGLE_DEG), -self.MAX_STEERING_ANGLE_DEG)
@@ -184,22 +184,22 @@ class ControllerListener(Node):
         self.curr_yaw = data.data[0]
         self.curr_velocity_m_s = self.cur_dir * data.data[1]
     
-    def update_callback(self, _):
+    def update_callback(self):
         # Update the car's state
 
         if self.cmd_velocity_m_s != 2.0:    # If the car is not in emergency brake mode
-            self.target_velocity_m_s += self.self.SPEED_FILTER * (self.cmd_velocity_m_s - self.target_velocity_m_s)
+            self.target_velocity_m_s += self.SPEED_FILTER * (self.cmd_velocity_m_s - self.target_velocity_m_s)
         else:
             self.target_velocity_m_s = 0.0
         
         # Odometry
         angular_rate = self.curr_velocity_m_s * (-1 * math.tan(self.curr_steering_angle_deg*(3.14159/180.))) / self.WHEELBASE
 
-        self.curr_odom.header.stamp = self.get_clock().now().to_msg()
-        self.curr_odom.twist.twist = Twist(Vector3(self.curr_velocity_m_s, 0, 0), Vector3(0, 0, angular_rate))
+        self.current_odom.header.stamp = self.get_clock().now().to_msg()
+        self.current_odom.twist.twist = Twist(linear = Vector3(x= self.curr_velocity_m_s, y = 0., z= 0.), angular = Vector3(x= 0., y=0.,z=angular_rate))
 
         self.car_state_pub.publish(SpeedDirection(speed=self.curr_velocity_m_s, direction=self.curr_steering_angle_deg))
-        self.odom_pub.publish(self.curr_odom)
+        self.odom_pub.publish(self.current_odom)
 
         # Publish the odometry transform
         if self.cmd_velocity_m_s == 2.0:
@@ -213,10 +213,10 @@ class ControllerListener(Node):
             self.speed_controller.command(esc_cmd)
     
 
-    def watchdog_callback(self, _):
+    def watchdog_callback(self):
         # If it's been more than 0.5s since the last command, stop the robot
         # This is to prevent the robot from moving if the controller crashes
-        if ((self.get_clock().now() - self.last_command_time).seconds > 0.5):
+        if ((self.get_clock().now() - self.last_command_time).nanoseconds > 0.5*1e9):
             self.cmd_velocity_m_s = 0.0
             self.speed_controller.neutral()
 
@@ -299,14 +299,14 @@ class SpeedController:
             else:
                 self.neutral()
 
-    def forward(self,_):
+    def forward(self):
         if self.state != 1:
             self.block = False
             self.state = 1
             self.old_dir = 1
         self.controller.pwm_prop.change_duty_cycle(self.MIN_SPEED + self.cmd_speed_esc * (self.MAX_SPEED - self.MIN_SPEED))
 
-    def backward(self,_):  
+    def backward(self):  
         if self.state != -1:
             self.block = False
             self.state = -1

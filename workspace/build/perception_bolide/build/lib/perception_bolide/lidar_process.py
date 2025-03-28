@@ -22,7 +22,7 @@ class LidarProcess(Node):
         # Set the parameters :
         self.declare_parameter('temporal_filter_bool', False)
         self.declare_parameter('spatial_filter_bool', False)
-        self.delcare_parameter('anti_jumping_filter_bool', False)
+        self.declare_parameter('anti_jumping_filter_bool', False)
         self.declare_parameter('spatial_filter_range', 1)
         self.declare_parameter('temporal_filter_range', 5)
         self.declare_parameter('anti_jumping_filter_range', 5)
@@ -30,8 +30,8 @@ class LidarProcess(Node):
         # all the following parameters could be set in the launch file
         self.declare_parameter('lidar_min_angle_deg', -90) # in degrees
         self.declare_parameter('lidar_max_angle_deg', 90)
-        self.old_min = self.get_parameter('lidar_min_angle_deg').get_parameter_value().int_value
-        self.old_max = self.get_parameter('lidar_max_angle_deg').get_parameter_value().int_value # we store this 2 variables for futur utilities in callback function
+        self.old_min = self.get_parameter('lidar_min_angle_deg').get_parameter_value().integer_value
+        self.old_max = self.get_parameter('lidar_max_angle_deg').get_parameter_value().integer_value # we store this 2 variables for futur utilities in callback function
         self.declare_parameter('lidar_min_angle_rad', self.old_min*np.pi/180)
         self.declare_parameter('lidar_max_angle_rad', self.old_max*np.pi/180)
 
@@ -94,8 +94,8 @@ class LidarProcess(Node):
 
         # When we change the range of angles, it can cause problem for temporal median filtering
         # We must then reinitialize the last values stored
-        min_angle_deg = self.get_parameter('min_angle_deg').get_parameter_value().int_value
-        max_angle_deg = self.get_parameter('max_angle_deg').get_parameter_value().int_value
+        min_angle_deg = self.get_parameter('min_angle_deg').get_parameter_value().integer_value
+        max_angle_deg = self.get_parameter('max_angle_deg').get_parameter_value().integer_value
 
         if self.old_min != min_angle_deg or self.old_max != max_angle_deg :
             self.last_values = []
@@ -116,10 +116,10 @@ class LidarProcess(Node):
             self.get_logger().debug(len(data.ranges))
             return
 
-        min_angle_deg = self.get_parameter('min_angle_deg').get_parameter_value().int_value
-        max_angle_deg = self.get_parameter('max_angle_deg').get_parameter_value().int_value
-        min_angle_rad = self.get_parameter('min_angle_rad').get_parameter_value().int_value
-        max_angle_rad = self.get_parameter('max_angle_rad').get_parameter_value().int_value
+        min_angle_deg = self.get_parameter('min_angle_deg').get_parameter_value().integer_value
+        max_angle_deg = self.get_parameter('max_angle_deg').get_parameter_value().integer_value
+        min_angle_rad = self.get_parameter('min_angle_rad').get_parameter_value().integer_value
+        max_angle_rad = self.get_parameter('max_angle_rad').get_parameter_value().integer_value
         # Check that the min angle is less than the max angle
         if not min_angle_deg < max_angle_deg:
             self.get_logger().warn("The min angle must be inferior to the max angle")
@@ -161,8 +161,8 @@ class LidarProcess(Node):
 
     def crop_data(self, data:list, angle_increment) :
 
-        min_angle_rad = self.get_parameter('min_angle_rad').get_parameter_value().int_value
-        max_angle_rad = self.get_parameter('max_angle_rad').get_parameter_value().int_value
+        min_angle_rad = self.get_parameter('min_angle_rad').get_parameter_value().integer_value
+        max_angle_rad = self.get_parameter('max_angle_rad').get_parameter_value().integer_value
 
         angle_min_crop = min_angle_rad
         angle_max_crop = max_angle_rad
@@ -198,9 +198,9 @@ class LidarProcess(Node):
         spatial_filter = self.get_parameter('spatial_filter_bool').get_parameter_value().bool_value
         temporal_filter = self.get_parameter('temporal_filter_bool').get_parameter_value().bool_value
         anti_jumping_filter = self.get_parameter('anti_jumping_filter_bool').get_parameter_value().bool_value
-        spatial_filter_range = self.get_parameter('spatial_filter_range').get_parameter_value().int_value
-        temporal_filter_range = self.get_parameter('temporal_spatial_range').get_parameter_value().int_value
-        anti_jumping_filter_range = self.get_parameter('anti_jumping_filter_range').get_parameter_value().int_value
+        spatial_filter_range = self.get_parameter('spatial_filter_range').get_parameter_value().integer_value
+        temporal_filter_range = self.get_parameter('temporal_spatial_range').get_parameter_value().integer_value
+        anti_jumping_filter_range = self.get_parameter('anti_jumping_filter_range').get_parameter_value().integer_value
 
         if spatial_filter :
             # Spatial median filter:
