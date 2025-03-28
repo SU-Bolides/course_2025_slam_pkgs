@@ -15,6 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+
 #include <sstream>
 #include <fstream>
 #include <stdexcept>
@@ -31,7 +32,7 @@ namespace karto
 {
 
   // enable this for verbose debug information
-  // #define KARTO_DEBUG
+  //#define KARTO_DEBUG
 
   #define MAX_VARIANCE            500.0
   #define DISTANCE_PENALTY_GAIN   0.2

@@ -7,19 +7,21 @@
 
     <param name="odom_topic" value="/pf/pos/odom"/> 
 
-    <param name="waypoints_path" value="/home/bolide1/bolide_ws/src/course_2024_pkgs/control_bolide/racelines/esclangon_couloir_reverse.csv"/> 
+    <param name="waypoints_path" value="/home/bolide1/bolide_ws/src/course_2024_pkgs/control_bolide/racelines/saintcyr.csv"/> 
     <param name="cmd_topic" value="cmd_vel"/> 
 
     <!-- <param name="K_E" value="0.8"/> 
     <param name="K_H" value="0.8"/> 
     <param name="K_V" value="0.5"/>  -->
-    <param name="K_E" value="0.4"/> 
+    <param name="K_E" value="1.7"/> 
     <param name="K_H" value="0.4"/> 
-    <param name="K_V" value="0.5"/> 
-    <param name="K_p_obstacle" value="0.4"/> 
+    <param name="K_V" value="0.0"/> 
+    <param name="K_p_obstacle" value="0.8"/> 
     <param name="K_dh" value="0.0"/> 
-    <param name="velocity_percentage" value="1.0"/>
-    <param name="steering_limit_deg" value="15.3"/>    
+    <param name="K_ds" value="0.0"/> 
+
+    <param name="velocity_percentage" value="0.065"/>
+    <param name="steering_limit_deg" value="15.7"/>    
     <param name="brake_threshold_ms" value="5"/>    
   </node> 
 

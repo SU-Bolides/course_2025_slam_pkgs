@@ -10,12 +10,16 @@ from geometry_msgs.msg import Point, Pose, Twist, Vector3
 from perception_bolide.msg import ForkSpeed
 from sensor_msgs.msg import Imu
 from nav_msgs.msg import Odometry
-from rpi_hardware_pwm import HardwarePWM
-from std_msgs.msg import Float32MultiArray
+from std_msgs.msg import Float32MultiArray, Int16
 import tf
 import math
 from dynamixel_sdk import *
 
+
+import atexit
+from collections import deque
+import csv
+import time
 
 
 ### Here, we try to establish a controller that takes an input in m/s and rad (or deg)
@@ -52,13 +56,16 @@ def set_dir_deg(angle_degre) :
 
 
 class ControllerListener:
-    def __init__(self, pwm_prop):
+    def __init__(self):
 
-        # Servo PWM cyclic ratio values for the direction
-        # This corresponds to about 15 deg either direction. 
-        self.CENTER          = 8.7
-        self.LEFT            = 7.2
-        self.RIGHT           = 10.2
+        self.esc_period = 20000 #us
+
+        self.init = False
+
+
+        # TO LOG FILES (for param ident)
+        self.log_buffer = deque()
+        self.log_file = "param_ident.csv"
 
         self.MAX_STEERING_ANGLE_DEG = 15.5 # deg
         self.DIR_VEL_THRESHOLD_M_S  = 0.05 # Threshold under which we can consider the car to change directions (fw <-> bw). 
@@ -76,18 +83,20 @@ class ControllerListener:
         # Default setting
         self.DXL_ID                      = 1                 
         self.BAUDRATE                    = 115200            
-        self.DEVICENAME                  = '/dev/ttyU2D2'    # Symlink it in the udev to ttyU2D2
+        self.DEVICENAME                  = "/dev/ttyUSB1" #str(rospy.get_param("~u2d2_topic", "/dev/ttyUSB0"))    # Symlink it in the udev to ttyU2D2
 
 
         # init propulsion pwm and direction pwm
-        self.pwm_prop = pwm_prop
-
         self.portHandler = PortHandler(self.DEVICENAME)
         self.packetHandler = PacketHandler(self.PROTOCOL_VERSION)
 
 
+        self.start_time = time.time()
+
+
         if self.portHandler.openPort():
             rospy.loginfo("Succeeded to open the port for the U2D2")
+            print("Succeeded to open the port for the U2D2")
         else:
             print("Failed to open the port for the U2D2")
             rospy.logerr("Failed to open the port for the U2D2")
@@ -95,6 +104,8 @@ class ControllerListener:
         #Set the baudrate
         if self.portHandler.setBaudRate(self.BAUDRATE):
             rospy.loginfo("Succeeded to change the baudrate")
+            print("Succeeded to change the baudrate")
+
         else:
             rospy.logerr("Failed to change the baudrate")
 
@@ -125,6 +136,9 @@ class ControllerListener:
         self.curr_velocity_m_s = 0.0 
         self.curr_steering_angle_deg = 0.0
 
+        self.count = 0
+
+
         self.target_velocity_m_s = 0.0
         self.cmd_velocity_m_s = 0.0
         self.target_steering_angle_deg = 0.0
@@ -138,13 +152,12 @@ class ControllerListener:
         self.y_pos = 0
         
 
-        rospy.Subscriber("cmd_vel", SpeedDirection, self.cmd_callback) # Subscribe to cmd_vel for velocities and directions command
-        rospy.Subscriber("stm32_sensors", Float32MultiArray, self.stm32_callback)
         # rospy.Subscriber("raw_fork_data", ForkSpeed, self.speed_callback) # Subscribe to speed_callback to get the current speed from the fork
         # rospy.Subscriber("raw_imu_data", Imu, self.imu_callback) # Subscribe to speed_callback to get the current speed from the fork
         self.odom_pub = rospy.Publisher("ackermann_odom", Odometry, queue_size=1) # Publish the car's current state (velocity and steering angle) for odometry. 
         self.odom_tf =  tf.TransformBroadcaster()
         self.car_state_pub = rospy.Publisher("car_state", SpeedDirection, queue_size=1) # Publish the car's current state (velocity and steering angle) for odometry. 
+        self.stm32_pub = rospy.Publisher("stm32_data", Int16, queue_size=1) # Publish the car's current state (velocity and steering angle) for odometry. 
         
         
         # Initialize watchdog timer
@@ -154,16 +167,58 @@ class ControllerListener:
 
 
         #LED on
-        self.packetHandler.write1ByteTxRx(self.portHandler, self.DXL_ID, 25, 1)
+        if self.packetHandler.write1ByteTxRx(self.portHandler, self.DXL_ID, 25, 1)[0]:
+            rospy.logerr("Could not communicate with U2D2. You probably need to switch out the LiDAR and U2D2 ports (from /dev/ttyUBS0 to /dev/ttyUBS1) in ackermann_controller.py and rplidar_a2m12.launch")
 
         #Torque on
-        self.packetHandler.write1ByteTxRx(self.portHandler, self.DXL_ID, 24, 1)
+        print(self.packetHandler.write1ByteTxRx(self.portHandler, self.DXL_ID, 24, 1))
 
         if self.MS:
             rospy.logwarn("EXPECTING SPEED IN m/s")
         else: 
             rospy.logwarn("EXPECTING SPEED IN [-1, 1]")
 
+        rospy.Subscriber("cmd_vel", SpeedDirection, self.cmd_callback) # Subscribe to cmd_vel for velocities and directions command
+        rospy.Subscriber("stm32_sensors", Float32MultiArray, self.stm32_callback)
+
+
+        # atexit.register(self.flush_to_file)
+        self.init = True
+
+
+    # def log_data(self, timestamp, var1, var2, var3=None, var4=None):
+
+    #     self.log_buffer.append((timestamp, var1,var2))
+
+
+    # def flush_to_file(self):
+    #     with open(self.log_file, "w", newline="") as f:
+    #         writer = csv.writer(f)
+    #         writer.writerow(["Timestamp", "Current speed", "Duty Cycle", "Var3", "Var4"])  # Header
+    #         writer.writerows(self.log_buffer)
+    #     rospy.loginfo(f"Flushed {len(self.log_buffer)} entries to {self.log_file}")
+
+
+
+
+
+
+    
+    def publish_stm32_data(self, cyclic_ratio):
+        if self.init:
+            tx_data = Int16()
+            tx_data.data = int(cyclic_ratio*0.00938 * self.esc_period) 
+
+            # The previous implementation used RPi PWM which was unreliable.
+            # Experiments showed the RPi to overshoot duration by 1.066. 
+
+            # Cyclic ratio is the time of the period spent high. So 100 would be constantly high, 50 would be half high half low, etc.
+            # The esc period is 20000 ns, and we send the actual pulse duration to the stm32. We also convert from RPi to "true".
+
+            if (not rospy.is_shutdown()):
+                self.stm32_pub.publish(tx_data)
+
+        
 
     def cmd_callback(self, data):  
         # Apply a cmd_vel, in m/s and deg 
@@ -197,6 +252,7 @@ class ControllerListener:
             self.curr_steering_angle_deg= -180/3.14159 * pos2psi(pos)
             self.packetHandler.write2ByteTxRx(self.portHandler, self.DXL_ID, 30, set_dir_deg(self.target_steering_angle_deg))
         except:
+            rospy.logwarn("DYNAMIXEL PROBLEM")
             pass
 
 
@@ -206,13 +262,16 @@ class ControllerListener:
     
     def update_callback(self, _):
 
+        # self.log_data(time.time() - self.start_time, self.curr_velocity_m_s, self.cmd_velocity_m_s)
+
+
         if self.cmd_velocity_m_s != 2.0:
             self.target_velocity_m_s += self.SPEED_FILTER * (self.cmd_velocity_m_s - self.target_velocity_m_s)
         else: 
             self.target_velocity_m_s = 0.0
 
         #Odom
-        angular_rate = self.curr_velocity_m_s * (-1 * math.tan(self.curr_steering_angle_deg*(3.1415926535/180.))) / self.WHEELBASE
+        angular_rate =  self.curr_velocity_m_s * (-1 * math.tan(self.curr_steering_angle_deg*(3.1415926535/180.))) / self.WHEELBASE
         # self.x_pos += math.cos(self.curr_yaw) * self.curr_velocity_m_s * 0.01 #Updated at 10ms 
         # self.y_pos += math.sin(self.curr_yaw) * self.curr_velocity_m_s * 0.01 #Updated at 10ms
 
@@ -227,9 +286,13 @@ class ControllerListener:
         self.curr_odom.twist.twist = Twist(Vector3(self.curr_velocity_m_s,0.0,0.0),Vector3(0.0,0.0,angular_rate))
 
 
+        if (not rospy.is_shutdown()):
 
-        self.car_state_pub.publish(SpeedDirection(self.curr_velocity_m_s, self.curr_steering_angle_deg))
-        self.odom_pub.publish(self.curr_odom)
+            if self.count>=3:
+                self.car_state_pub.publish(SpeedDirection(self.curr_velocity_m_s, self.curr_steering_angle_deg))
+                self.count = 0
+            self.count += 1
+            self.odom_pub.publish(self.curr_odom)
 
         if self.cmd_velocity_m_s == 2.0:
             esc_cmd = 2.0
@@ -244,9 +307,6 @@ class ControllerListener:
         else:
             self.speed_controller.command(esc_cmd)
         
-    
-
-
 
     def watchdog_callback(self, _):
         # If it's been more than 0.5 seconds since the last command, stop the robot
@@ -261,7 +321,7 @@ class SpeedController:
     def __init__(self, controller : ControllerListener):
         self.ctrl = controller
 
-        self.MAXSPEED        = 9.5 #Calibrated ESC to 10 max, 6.5 min
+        self.MAXSPEED        = 10.0 #Calibrated ESC to 10 max, 6.5 min
         self.MINSPEED        = 8.4
         self.NEUTRAL         = 8.0  
         self.REVERSEMINSPEED = 7.6
@@ -269,8 +329,9 @@ class SpeedController:
         self.BRAKE           = 5.0
 
         self.BRAKE_THRESHOLD = 0.5
-
         self.VMAX_M_S        = 5    #m/s
+
+
 
         self.Kp              = 2e-2
         self.Kd              = 0
@@ -284,12 +345,12 @@ class SpeedController:
         self.throttle        = self.NEUTRAL
         self.cmd_speed_esc   = 0
 
-        self.state           = 0 #0 is Neutral, 1 is Fw, -1 is Bw, 2 is brake
+        self.state           = -1 #0 is Neutral, 1 is Fw, -1 is Bw, 2 is brake
         self.old_dir         = 0 
 
         self.block           = False
 
-        self.ctrl.pwm_prop.start(self.throttle)
+        self.ctrl.publish_stm32_data(self.throttle)
 
     
 
@@ -307,70 +368,58 @@ class SpeedController:
         if self.cmd_speed_esc != 2.0:
             self.cmd_speed_esc = min(1, max(-1, self.cmd_speed_esc))
 
-        # rospy.loginfo("speed:", self.cmd_speed_esc)
-
         #Forwards
         if (1>=self.cmd_speed_esc>1e-2):
-            # rospy.loginfo("fw")
             if self.state == -1: 
                 self.block = True
                 self.neutral()
-                rospy.Timer(rospy.Duration(0.15), self.forward, oneshot=True)
+                rospy.Timer(rospy.Duration(0.25), self.forward, oneshot=True)
                 return
             self.forward(self.cmd_speed_esc)
 
         #Neutral
         elif (1e-2> self.cmd_speed_esc > -1e-2):
-            # rospy.loginfo("neutral")
             self.neutral()
 
         #Reverse
-        elif (-1e-2>self.cmd_speed_esc>=-1):
-            # rospy.loginfo("reverse")
+        elif (0.3>self.cmd_speed_esc>=-1):
             if self.state == 1 or (not self.state and self.old_dir == 1):
-                self.ctrl.pwm_prop.change_duty_cycle(self.REVERSEMINSPEED)
+                self.ctrl.publish_stm32_data(self.REVERSEMINSPEED)
                 self.block = True
-                rospy.Timer(rospy.Duration(0.15), self.neutral_transition, oneshot=True)
+                rospy.Timer(rospy.Duration(0.25), self.neutral_transition, oneshot=True)
                 return
             self.backward(self.cmd_speed_esc)
 
         #Brake
         elif (self.cmd_speed_esc == 2):
-            # rospy.loginfo("brake")
             if self.state != -1:
                 self.brake()
             else:
                 self.neutral()
 
     def forward(self, _):
-        # print("FW")
-        # print(self.cmd_speed_esc)
         if self.state != 1: 
             self.block = False
             self.state = 1
             self.old_dir = 1
-        self.ctrl.pwm_prop.change_duty_cycle(self.MINSPEED + self.cmd_speed_esc*(self.MAXSPEED - self.MINSPEED))
+        self.ctrl.publish_stm32_data(self.MINSPEED + self.cmd_speed_esc*(self.MAXSPEED - self.MINSPEED))
 
     def backward(self, _):
-        # print("BW")
-        # print(self.cmd_speed_esc)
-        # print(self.state)
-        # print(self.REVERSEMINSPEED + self.cmd_speed_esc*(self.REVERSEMINSPEED - self.REVERSEMAXSPEED))
         if self.state != -1:
             self.block = False
             self.state = -1
             self.old_dir = -1
-        self.ctrl.pwm_prop.change_duty_cycle(self.REVERSEMINSPEED + self.cmd_speed_esc*(self.REVERSEMINSPEED - self.REVERSEMAXSPEED))
+        self.ctrl.publish_stm32_data(self.REVERSEMINSPEED + self.cmd_speed_esc*(self.REVERSEMINSPEED - self.REVERSEMAXSPEED))
     
     
     def neutral(self):
         # print("N")
-        self.ctrl.pwm_prop.change_duty_cycle(self.NEUTRAL)
+        self.ctrl.publish_stm32_data(self.NEUTRAL)
 
     def brake(self):
         # print("BRK")
         if self.state != 1 or (self.state and self.old_dir != 1):
-            self.ctrl.pwm_prop.change_duty_cycle(self.BRAKE)
+            self.ctrl.publish_stm32_data(self.BRAKE)
 
 
     def command_pid(self, cmd_speed_m_s):
@@ -385,7 +434,6 @@ class SpeedController:
             derivative = (e_m_s - self.prev_e_m_s) / self.dt
             pid_output = self.Kp * e_m_s  + self.integral * self.Ki + derivative * self.Kd
             self.prev_e_m_s = e_m_s
-
 
             rospy.loginfo("PID %f", pid_output)
             
@@ -408,7 +456,7 @@ class SpeedController:
         pass
 
     def forward_speed(self):
-        self.ctrl.pwm_prop.change_duty_cycle(min(self.throttle, self.MAXSPEED))
+        self.ctrl.publish_stm32_data(min(self.throttle, self.MAXSPEED))
         pass
     
 
@@ -417,11 +465,6 @@ class SpeedController:
         pass
 
 if __name__ == '__main__':
-    prop = HardwarePWM(pwm_channel=0, hz=50)
-    try:
-        listener = ControllerListener(prop)
-        rospy.spin()
-        print("Terminated ackermann_controller")
-    except:
-        print("John?")
-        pass
+    listener = ControllerListener()
+    rospy.spin()
+    print("Terminated ackermann_controller")

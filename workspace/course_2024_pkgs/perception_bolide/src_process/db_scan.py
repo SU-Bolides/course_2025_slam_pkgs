@@ -47,7 +47,7 @@ class DBSCAN:
         rospy.init_node('dbscan_node')
         self.obstacle_pub = rospy.Publisher("obstacle_marker", Marker, queue_size=10)
 
-        rospy.Subscriber("/occupancy_grid", OccupancyGrid, self.occupCB)
+        rospy.Subscriber("occupancy_grid", OccupancyGrid, self.occupCB)
 
         rospy.spin()
 
@@ -61,13 +61,12 @@ class DBSCAN:
         self.CELL_Y_OFFSET = (self.grid_width // 2) - 1
 
 
+
         clusters = detect_clusters(self.occupancy_grid)  # Identification des clusters d'obstacles à l'aide de la fonction detect_clusters
 
         # Parcours de chaque obstacle détecté (clusters contient les positions des obstacles)
         for obstacle in clusters:
             # Marquage de chaque obstacle sur la grille copiée (occ_with_car)
-            print(obstacle)
-
             self.draw_marker(
                 "lidar_frame",
                 rospy.Time.now(),

@@ -1,0 +1,10 @@
+<launch>
+    <!-- Include main_publisher.launch -->
+    <node pkg="perception_bolide" type="stm32_publisher.py" name="stm32_publisher" output="screen" respawn="true"/>
+
+    <!-- Launch the speed_direction_control node -->
+    <!-- <node pkg="control_bolide" type="speed_direction_controller.py" name="speed_direction_controller" output="screen" /> -->
+        
+    <!-- <include file="$(find slam_karto)/launch/karto_slam.launch"/> -->
+
+</launch>

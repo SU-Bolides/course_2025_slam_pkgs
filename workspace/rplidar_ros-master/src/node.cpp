@@ -469,10 +469,12 @@ int main(int argc, char * argv[]) {
 
         ros::spinOnce();
     }
-
+    
     // done!
     drv->setMotorSpeed(0);
     drv->stop();
     delete drv;
+
+    ROS_INFO("TERMINATED LIDAR PROCESS");
     return 0;
 }

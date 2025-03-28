@@ -28,6 +28,9 @@ if __name__ == '__main__':
         timer = rospy.Timer(rospy.Duration(0.4), publish_msg)
         pub.publish(msg)
         msg=SpeedDirection()
+        speed = min(max(speed, -1.0), 1.0)
+        direction = min(max(direction, -1.0), 1.0)
+
         msg.speed= speed
         msg.direction = direction
         try:    
@@ -40,7 +43,7 @@ if __name__ == '__main__':
                 print("up")
                 if speed == 2.0:
                     speed = 0.0
-                speed += 0.1
+                speed += 0.5
 
                 
                 # Do something
@@ -48,7 +51,7 @@ if __name__ == '__main__':
                 print("down")
                 if speed == 2.0:
                     speed = 0.0
-                speed += -0.1
+                speed += -0.5
                 # Do something
             elif char == 'left':  # RIGHT key
                 direction -= 0.8

@@ -7,7 +7,7 @@ __version__ = "1.0.0"
 
 import rospy
 import spidev 
-from std_msgs.msg import Float32MultiArray
+from std_msgs.msg import Float32MultiArray, Int16
 from sensor_msgs.msg import Range, Imu
 from perception_bolide.msg import ForkSpeed, MultipleRange
 import math
@@ -27,6 +27,8 @@ class STM32_Parser:
         self.ranges_pub = rospy.Publisher('raw_rear_range_data', MultipleRange, queue_size=10)
         self.imu_pub = rospy.Publisher('raw_imu_data', Imu, queue_size=10)
 
+        self.get_cmd = rospy.Subscriber('stm32_data', Int16, self.get_command)
+
 
 
         self.spi = spidev.SpiDev()
@@ -41,6 +43,8 @@ class STM32_Parser:
         self.ir_droit = 0.
         self.speed = 0.
         self.distance_US = 0.
+
+        self.tx_buffer = [0] * 8
 
         self.acc_x = 0.
         self.yaw_rate = 0.
@@ -58,6 +62,25 @@ class STM32_Parser:
         self.ir_max_range = 0.3
 
         self.sensors_init()
+
+    def get_command(self, msg:Float32MultiArray):
+        command = []
+        cmded_bytes = msg.data#.to_bytes(2, 'big')
+        # print("data", msg.data)
+        command.append((cmded_bytes >> 8) & 0xFF)
+        command.append(cmded_bytes & 0xFF)
+
+        # print("cmd", command)
+
+        crc = self.crc32mpeg2(command)
+
+        command.append((crc >> 24) & 0xFF)
+        command.append((crc >> 16) & 0xFF)
+        command.append((crc >> 8) & 0xFF)
+        command.append((crc) & 0xFF)
+
+        self.tx_buffer = command + [0] * 2
+        #This should be not too big.
 
 
 
@@ -99,7 +122,8 @@ class STM32_Parser:
         
 
     def receiveSensorData(self):
-        data = self.spi.xfer2([0x45]*20)  # SPI happens simultaneously, so we need to send to receive. 
+        self.spi.writebytes(self.tx_buffer)
+        data = self.spi.readbytes(20)
 
 
         if (not self.crc32mpeg2(data)):
@@ -159,16 +183,17 @@ class STM32_Parser:
             self.imu_data.angular_velocity.z = self.yaw_rate
             # self.imu_data.linear_acceleration.x = self.acc_x + 0.043
 
+            stamp = rospy.Time.now()
+            self.fork_data.header.stamp = stamp
+            self.imu_data.header.stamp = stamp
+            self.stm_pub.publish(self.sensor_data)
 
-        stamp = rospy.Time.now()
-        self.fork_data.header.stamp = stamp
-        self.imu_data.header.stamp = stamp
 
 
-        self.speed_pub.publish(self.fork_data)
-        self.stm_pub.publish(self.sensor_data)
-        self.ranges_pub.publish(self.multi_range_frame)
-        self.imu_pub.publish(self.imu_data)
+        if (not rospy.is_shutdown()):
+            self.speed_pub.publish(self.fork_data)
+            self.ranges_pub.publish(self.multi_range_frame)
+            self.imu_pub.publish(self.imu_data)
 
         
 if __name__ == '__main__':

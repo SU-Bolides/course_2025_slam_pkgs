@@ -11,7 +11,8 @@ from std_msgs.msg import Float32MultiArray
 from control_bolide.msg import SpeedDirection
 from geometry_msgs.msg import Pose, Point
 from nav_msgs.msg import Odometry
-from sensor_msgs.msg import LaserScan
+from perception_bolide.msg import MultipleRange
+from sensor_msgs.msg import LaserScan, Imu
 from visualization_msgs.msg import Marker, MarkerArray
 
 from time import perf_counter_ns
@@ -41,7 +42,9 @@ class StanleyController:
         self.ODOM_TOPIC = str(rospy.get_param("~odom_topic", "/pf/pos/odom"))
         self.CMD_TOPIC = str(rospy.get_param("~cmd_topic", "cmd_vel"))
         
+        self.turn_around = False
         
+        self.started = False
         
         self.K_E = float(rospy.get_param("~K_E", "2.0"))
         self.K_H = float(rospy.get_param("~K_H", "1.5"))
@@ -49,6 +52,8 @@ class StanleyController:
         self.K_p_obstacle = float(rospy.get_param("~K_p_obstacle", "0.5"))
         self.K_dh = float(rospy.get_param("~K_dh", "0.01"))
         self.K_ds = float(rospy.get_param("~K_ds", "0.0"))
+
+        rospy.loginfo(self.K_E)
 
         self.VELOCITY_PERCENTAGE = float(rospy.get_param("~velocity_percentage", "0.3"))
         self.STEERING_LIMIT_DEG = float(rospy.get_param("~steering_limit_deg", "15.2"))
@@ -73,12 +78,15 @@ class StanleyController:
         self.speed_ackermann = 0
         self.counter = 0 
 
+        self.old_steering_angle = 0 
+        self.curr_steering_angle = 0
 
-        # self.car_state_sub = rospy.Subscriber("car_state", SpeedDirection, self.carstateCB, queue_size=1)
+
+        self.car_state_sub = rospy.Subscriber("car_state", SpeedDirection, self.carstateCB, queue_size=1)
         # self.timer = rospy.Timer(rospy.Duration(0.4), self.timer_callback)
 
         self.starting_check_timer = rospy.Timer(rospy.Duration(0.5), self.starting_check_timer)
-        self.stuck_timer = rospy.Timer(rospy.Duration(0.25), self.check_stuck)
+        self.stuck_timer = rospy.Timer(rospy.Duration(0.10), self.check_stuck)
 
         self.waypoint_utils = WaypointUtils(
             node=self,
@@ -90,6 +98,8 @@ class StanleyController:
 
         self.old_path_heading = [None, None]
 
+        self.current_rear_distance = 0.3
+
 
         # init speed and direction
         self.current_speed = 0.0
@@ -98,13 +108,19 @@ class StanleyController:
         self.old_target_vel = 0.0
         self.old_target_heading = 0.0
 
+        self.going_backwards = 0
+
         self.gp_none = 0
 
+        self.rear_index = 0
+        self.front_index = 1
 
         self.obstacle_detected = False
 
         self.old_error = None
         self.old_crosstrack_error = None
+
+        self.reversing = False
 
         self.started = False #START CAR NAV
 
@@ -117,8 +133,14 @@ class StanleyController:
 
         self.odom_sub = rospy.Subscriber(self.ODOM_TOPIC, Odometry, self.odomCB, queue_size=10)
         self.acker_sub = rospy.Subscriber("ackermann_odom", Odometry, self.ackerCB, queue_size=10)
-        self.acker_sub = rospy.Subscriber("ackermann_odom", Odometry, self.ackerCB, queue_size=10)
+        # self.imu_sub = rospy.Subscriber("raw_imu_data", Imu, self.imuCB, queue_size=10)
         self.laser_scan_sub = rospy.Subscriber("lidar_data", LaserScan, self.laser_scan_cb, queue_size=10)
+        self.infrared_sub = rospy.Subscriber("raw_rear_range_data", MultipleRange, self.rear_range_cb, queue_size=10)
+
+
+    def carstateCB(self, msg):
+        self.old_steering_angle = self.curr_steering_angle
+        self.curr_steering_angle = msg.direction
 
 
     def destroy_node(self):
@@ -126,6 +148,10 @@ class StanleyController:
         kill.speed = 0
         kill.direction = 0
         self.drive_pub.publish(kill)
+
+    def rear_range_cb(self, msg):
+        self.current_rear_distance = np.min([msg.IR_rear_left.range, msg.IR_rear_right.range])
+        pass
 
     def laser_scan_cb(self, msg):
         #Laser scan callback.
@@ -141,38 +167,61 @@ class StanleyController:
         self.laser_scan[self.laser_scan == np.inf] = 16.
 
     def check_stuck(self, _):
-        # Checks if commanded speed is pos and .    
-        if self.started:
-            if abs(self.speed_ackermann) < 0.5 and abs(self.commanded_velocity) > 0.2:
+        # Checks if commanded speed is pos and .  
+        # print("started?")  
+        if self.started:                
+            if abs(self.speed_ackermann) < 0.1 and not self.reversing:
                 self.counter += 1 
-                print("not moving.....???", self.counter)
-                if self.counter >= 4: 
+                # print("not moving.....???", self.counter)
+                if self.counter >= 10: 
 
                     front =  self.laser_scan[int(np.shape(self.laser_scan)[0] * 0.5)]%16.0
                     right = self.laser_scan[0]%16.0
                     left = self.laser_scan[int(np.shape(self.laser_scan)[0]) - 1]%16.0
 
-    
+
 
                     if front < 0.3 or right < 0.3 or left < 0.3:
-                        print("REVERSING, THIS SHIT AINT NORMAL MY G")
+                        # print("REVERSING, THIS SHIT AINT NORMAL MY G")
+                        self.reversing = True
                         self.reverse()
                     else:
                         if self.counter >= 12:
-                            print("I'm reversing, something ain't right in this btch")
+                            # print("I'm reversing, something ain't right in this btch")
+                            self.reversing = True
                             self.reverse()
             else:
-                self.counter = max(self.counter-1, 0)
+                # print("not stuck", self.speed_ackermann, self.reversing)
+                if self.reversing:
+                    self.counter = max(self.counter-1.0, 0)
+                    if not self.counter:
+                        self.reversing = False
+                    self.reverse()
+        else:
+            pass
+            # print("stuck not started")
+            # print(self.started)
+
 
             
     
 
     def reverse(self):
-        print("Uhhh idk what to do yet but wallahi this shit will reverse")
+        try:
+            angle_to_waypoint = math.atan2(self.goal_pos[1], self.goal_pos[0])
+            direction = -1*(angle_to_waypoint / abs(angle_to_waypoint)) 
+        except:
+            direction = - (self.current_direction / abs(self.current_direction + 1e-6)) * self.STEERING_LIMIT_DEG
 
+        if self.turn_around:
+            direction *= -1
+
+        speed = -10 * ((self.current_rear_distance+0.1)/ 0.3) - 0.33  
+        self.publish_cmd_vel(speed, direction)
 
     def ackerCB(self, msg):
         self.speed_ackermann = msg.twist.twist.linear.x
+        self.curr_ang_vel = msg.twist.twist.angular.z
 
     def starting_check_timer(self, _):
         #Check to start:
@@ -193,7 +242,7 @@ class StanleyController:
     ###TAKEN FROM STEVEN GONG
 
     def emergency_brake(self):
-        self.started = False
+        print("EMERGENCY BRAKE")
         angle = 0
         velocity = 0.0
         self.publish_cmd_vel(velocity, angle)
@@ -206,6 +255,8 @@ class StanleyController:
         if goal_pose is None:
             rospy.logwarn("No more checkpoints")
             self.gp_none += 1
+            self.drive_to_target_stanley()
+            return False, 0
         else:
             self.gp_none -= 1
         
@@ -216,6 +267,7 @@ class StanleyController:
         angle_to_waypoint_ranges = angle_to_waypoint / self.lidar_angle_incr
 
         dist = math.sqrt(goal_pose[0]**2 + goal_pose[1]**2)
+        # print("Dist", dist)
         angle = math.atan2(self.car_width*0.5, dist) #We want to check the distance on this twice
 
         center_pos = (np.shape(self.laser_scan)[0] * 0.5) + angle_to_waypoint_ranges
@@ -224,46 +276,43 @@ class StanleyController:
         # print(angle_to_waypoint)
         # print("mean_front", mean_front)
 
-        if (self.laser_scan[int(center_pos - angle/self.lidar_angle_incr) : int(center_pos+angle/self.lidar_angle_incr)] < dist).any():
-
-            print("Obstacle front!")
-
-            left_angle = min(max(0.27 - angle_to_waypoint, -0.27), 0.27)
-            left_pos = center_pos + left_angle/self.lidar_angle_incr
-            left_dist = dist / math.cos(left_angle)
-
-            obs_left = False
-            mean_left = np.mean(self.laser_scan[int(left_pos - angle/self.lidar_angle_incr) : int(left_pos+angle/self.lidar_angle_incr)])
-            if (self.laser_scan[int(left_pos - angle/self.lidar_angle_incr) : int(left_pos+angle/self.lidar_angle_incr)] < left_dist).any():
-                print("OBSTACLE LEFT")
-                obs_left = True
-
-            right_angle = min(max(-0.27 - angle_to_waypoint, -0.27), 0.27)
-            right_pos = center_pos + right_angle/self.lidar_angle_incr
-            right_dist = dist / math.cos(right_angle)
-
-            obs_right = False
-            mean_right = np.mean(self.laser_scan[int(right_pos - angle/self.lidar_angle_incr) : int(right_pos+angle/self.lidar_angle_incr)])
-            if (self.laser_scan[int(right_pos - angle/self.lidar_angle_incr) : int(right_pos+angle/self.lidar_angle_incr)] < right_dist).any():
-                print("OBSTACLE RIGHT")
-                obs_right = True
-
-
-
-            steering_angle = ((self.K_p_obstacle * (mean_left - mean_right)) / mean_front) * self.STEERING_LIMIT_DEG
-            print("1", steering_angle)
-            steering_angle += math.degrees(obs_right * 0.10 - obs_left * 0.10)
-            print("2", steering_angle)
-            steering_angle = min(self.STEERING_LIMIT_DEG, max(steering_angle, -self.STEERING_LIMIT_DEG))
-            print("3", steering_angle)
+        # if (np.sum(self.laser_scan[int(center_pos - angle/self.lidar_angle_incr) : int(center_pos+angle/self.lidar_angle_incr)] < dist)) > 5:
             
-            # print("Elapsed time collision check:",(perf_counter_ns()-t1_start) * 1e-6, 'ms')
+        #     print("dist", dist)
+        #     print("Obstacle front!", mean_front)
 
-            diag_msg = Float32MultiArray()
-            diag_msg.data = [angle_to_waypoint, mean_front, left_angle, mean_left, right_angle, mean_right, steering_angle]
-            self.diag_pub.publish(diag_msg)
+        #     left_angle = min(max(- 0.1 - angle_to_waypoint, -0.27), 0.27)
+        #     left_pos = center_pos + left_angle/self.lidar_angle_incr
+        #     left_dist = dist / math.cos(left_angle)
 
-            return True, steering_angle
+        #     obs_left = False
+        #     mean_left = np.mean(self.laser_scan[int(left_pos - angle/self.lidar_angle_incr) : int(left_pos+angle/self.lidar_angle_incr)])
+        #     if (np.sum(self.laser_scan[int(left_pos - angle/self.lidar_angle_incr) : int(left_pos+angle/self.lidar_angle_incr)] < left_dist)) > 8:
+        #         print("OBSTACLE LEFT", mean_left)
+        #         obs_left = True
+
+        #     right_angle = min(max(0.1 + angle_to_waypoint, -0.27), 0.27)
+        #     right_pos = center_pos + right_angle/self.lidar_angle_incr
+        #     right_dist = dist / math.cos(right_angle)
+
+        #     obs_right = False
+        #     mean_right = np.mean(self.laser_scan[int(right_pos - angle/self.lidar_angle_incr) : int(right_pos+angle/self.lidar_angle_incr)])
+        #     if (np.sum(self.laser_scan[int(right_pos - angle/self.lidar_angle_incr) : int(right_pos+angle/self.lidar_angle_incr)] < right_dist)) > 8:
+        #         print("OBSTACLE RIGHT", mean_right)
+        #         obs_right = True
+
+
+
+        #     steering_angle = ((self.K_p_obstacle * (mean_left - mean_right)) / mean_front) * self.STEERING_LIMIT_DEG
+        #     # print("1", steering_angle)
+        #     steering_angle += math.degrees(obs_right * 0.10 - obs_left * 0.10)
+        #     # print("2", steering_angle)
+        #     steering_angle = min(self.STEERING_LIMIT_DEG, max(steering_angle, -self.STEERING_LIMIT_DEG))
+        #     # print("3", steering_angle)
+            
+        #     # print("Elapsed time collision check:",(perf_counter_ns()-t1_start) * 1e-6, 'ms')
+
+        #     return True, steering_angle
             
 
             
@@ -275,7 +324,6 @@ class StanleyController:
 
 
     def check_for_obstacles(self):
-
         t1_start = perf_counter_ns()
 
         if self.laser_scan is None:
@@ -294,7 +342,6 @@ class StanleyController:
             else:
                 self.drive_around(angle)
         else:
-            print("no obs")
             self.drive_to_target_stanley()
 
         
@@ -307,21 +354,22 @@ class StanleyController:
         #This makes computing distances and angles trivial
 
         # determine velocity
-        if math.degrees(angle) < 5:
+        if angle < 5:
             velocity = self.target_velocity * self.VELOCITY_PERCENTAGE * 0.7
-        elif math.degrees(angle) < 10.0:
+        elif angle < 10.0:
             velocity = self.target_velocity * self.VELOCITY_PERCENTAGE * 0.2
         else:
             velocity = self.target_velocity * self.VELOCITY_PERCENTAGE * 0.0
-
-        self.publish_cmd_vel(velocity, angle)
+        print(angle)
+        self.publish_cmd_vel(velocity, -angle)
 
 
     def drive_to_target_stanley(self):
 
-        closest_wheelbase_front_point_car, closest_wheelbase_front_point_world = self.waypoint_utils.get_waypoint_stanley(
+        closest_wheelbase_front_point_car, closest_wheelbase_front_point_world, self.front_index = self.waypoint_utils.get_waypoint_stanley(
             self.current_pose_wheelbase_front
-        )
+        )  
+
 
         path_heading = math.atan2(
             closest_wheelbase_front_point_world[1] - self.closest_wheelbase_rear_point[1],
@@ -333,6 +381,19 @@ class StanleyController:
             self.current_pose_wheelbase_front.position.x - self.current_pose.position.x,
         )     
 
+        # print("FRONT, REAR ", self.front_index, self.rear_index)
+        if (self.front_index+2 < self.rear_index) and not ((self.rear_index - self.front_index) > (self.waypoint_utils.nb_points - 10)):
+            self.going_backwards +=1
+            if self.going_backwards > 3:
+                rospy.logwarn("GOING BACKWARDS!!")
+                print(self.front_index, self.rear_index)
+                self.target_velocity *= 0.3
+                current_heading += math.pi
+                self.turn_around = True
+        else: 
+            self.going_backwards -= 1
+            self.turn_around = False
+
 
 
         if path_heading < 0:
@@ -340,23 +401,17 @@ class StanleyController:
         if current_heading < 0:
             current_heading += 2 * math.pi
 
-        if self.old_path_heading[0]:
-            traj_yaw_rate = (path_heading - self.old_path_heading[0]) / (rospy.Time.now() - self.old_path_heading[1]).to_sec()
-        else:
-            traj_yaw_rate = 0.
 
+        steer_damper = self.old_steering_angle - self.curr_steering_angle
+        steer_damper *= self.K_ds
 
-        if traj_yaw_rate > math.pi:
-            traj_yaw_rate -= 2 * math.pi
-        elif traj_yaw_rate < -math.pi:
-            traj_yaw_rate += 2 * math.pi
-
-
-        rate_err = traj_yaw_rate - self.curr_ang_vel
-
+        rate_err = (self.target_curvature * self.speed_ackermann) - self.curr_ang_vel
         rate_err *= self.K_dh
 
-        rospy.logdebug(f"rate error: {rate_err:.2f}")
+
+        # print("Target, curr ang vel", (self.target_curvature * self.speed_ackermann), self.curr_ang_vel)
+
+        # rospy.loginfo(f"rate error: {rate_err:.2f}")
         
         self.old_path_heading = [path_heading, rospy.Time.now()]
 
@@ -369,19 +424,33 @@ class StanleyController:
             heading_error -= 2 * math.pi
         elif heading_error < -math.pi:
             heading_error += 2 * math.pi
-
+ 
         heading_error *= self.K_H
 
         # Calculate the steering angle using the Stanley controller formula
-        angle = heading_error + crosstrack_error + rate_err
+        angle = heading_error + crosstrack_error + rate_err + steer_damper
 
 
-        rospy.logdebug(f"heading_error: {heading_error:.2f} ... crosstrack_error: {crosstrack_error:.2f} angle: {np.degrees(angle):.2f}")
-        rospy.logdebug(f"current_heading: {current_heading:.2f} ... path_heading: {path_heading:.2f}")
+        # print("Heading, crosstrack, rate, damper", heading_error, crosstrack_error, rate_err, steer_damper)
+
+        debug = Float32MultiArray()
+        debug.data = [heading_error, crosstrack_error, rate_err]
+        self.diag_pub.publish(debug)
+
+        rospy.loginfo(f"heading_error: {heading_error:.2f} ... crosstrack_error: {crosstrack_error:.2f} angle: {np.degrees(angle):.2f}")
+        rospy.loginfo(f"current_heading: {current_heading:.2f} ... path_heading: {path_heading:.2f}")
 
         angle = np.clip(angle, -math.radians(self.STEERING_LIMIT_DEG), math.radians(self.STEERING_LIMIT_DEG))
 
+            
+
         velocity = self.target_velocity * self.VELOCITY_PERCENTAGE
+
+        # if abs(angle) > 0.24:
+        #     velocity *= 0.7
+
+
+        # print("angle", angle)
 
         self.publish_cmd_vel(velocity, angle)
 
@@ -395,12 +464,16 @@ class StanleyController:
             # rospy.logwarn((self.target_velocity - self.old_target_vel))
             if ((self.target_velocity - self.old_target_vel)) < -self.BRAKE_THRESHOLD_MS:
                 rospy.logwarn("BRAKING BRAKING BRAKING BRAKING BRAKING")
-                velocity = velocity * 0.25
+                velocity = 2.0
                 
 
             #Max Speed is 7 m/s
-            velocity_normalized = velocity / 10.0
-            velocity_normalized = min(max(velocity_normalized, -1), 1.0)
+            if not velocity == 2.0:
+                velocity_normalized = velocity / 10.0
+                velocity_normalized = min(max(velocity_normalized, -1), 1.0)
+            else:
+                velocity_normalized = 2.0
+
             drive_msg.speed = velocity_normalized
 
             self.commanded_velocity = velocity
@@ -410,15 +483,18 @@ class StanleyController:
             drive_msg.direction = -angle_normalized
             self.drive_pub.publish(drive_msg)
 
+
+    def imuCB(self, imudata: Imu):
+        self.curr_ang_vel = imudata.angular_velocity.z
+
+
     
     def odomCB(self, pose_msg: Odometry):
-
         # print("Elapsed time ODOM:",(perf_counter_ns()-self.t1_start) * 1e-6, 'ms') 
         self.t1_start = perf_counter_ns()
 
 
         self.current_pose = pose_msg.pose.pose
-        self.curr_ang_vel = pose_msg.twist.twist.angular.z
         
         current_pose_quaternion = np.array(
             [
@@ -443,7 +519,7 @@ class StanleyController:
 
         self.old_target_vel = self.target_velocity
 
-        self.closest_wheelbase_rear_point, self.target_velocity = self.waypoint_utils.get_closest_waypoint_with_velocity(
+        self.closest_wheelbase_rear_point, self.target_velocity, self.rear_index, self.target_curvature = self.waypoint_utils.get_closest_waypoint_with_velocity(
             self.current_pose
         )
 
@@ -455,18 +531,27 @@ class StanleyController:
             color="blue",
         )
 
-
-
-        self.goal_pos, goal_pos_world = self.waypoint_utils.get_waypoint(self.current_pose, self.target_velocity)
+        # print("front", self.front_index)
+        if self.turn_around:
+            self.goal_pos, goal_pos_world = self.waypoint_utils.get_waypoint(self.current_pose, self.target_velocity*self.VELOCITY_PERCENTAGE, self.front_index, bw=True)
+        else:
+            self.goal_pos, goal_pos_world = self.waypoint_utils.get_waypoint(self.current_pose, self.target_velocity*self.VELOCITY_PERCENTAGE, self.front_index)
         # self.goal_pos = [2.1, 0.2]
 
         self.utils.draw_marker(pose_msg.header.frame_id, pose_msg.header.stamp, goal_pos_world, self.waypoint_pub, color="red")
 
-
+            
         
 
         if self.started:
-            self.check_for_obstacles()
+            if self.reversing:
+                self.reverse()
+            else:
+                self.check_for_obstacles()
+                #self.drive_to_target_stanley()
+        else:
+            pass
+            # print("not started")
 
 
 class Utils:
@@ -605,20 +690,26 @@ class Utils:
     
 class WaypointUtils:
     def __init__(self, node, filepath, interpolation_distance):
+        self.interp_distance = interpolation_distance
         self.node = node
 
-        self.waypoints_world, self.velocities = self.load_and_interpolate_waypoints(
-            file_path=filepath, interpolation_distance=interpolation_distance
+        self.waypoints_world, self.velocities, self.curvatures = self.load_and_interpolate_waypoints(
+            file_path=filepath, interpolation_distance=interpolation_distance, reverse=False
         )
+
+        self.nb_points = len(self.waypoints_world)
 
         self.index = 0 
         self.velocity_index = 0
         self.heading_index = 0
 
-        self.min_lookahead = 1.0
+        self.curr_index = None
+        
+
+        self.min_lookahead = 0.25
         self.max_lookahead = 3.0
 
-        self.min_lookahead_speed = 3.0
+        self.min_lookahead_speed = 2.0
         self.max_lookahead_speed = 6.0
 
 
@@ -643,16 +734,18 @@ class WaypointUtils:
         position = (pose.position.x, pose.position.y, 0)
 
         waypoints_car = self.transform_waypoints(self.waypoints_world, position, pose)
-       
+    
         # get distance from car to all waypoints
         distances = np.linalg.norm(waypoints_car, axis=1)
 
         # get indices of waypoints sorted by ascending distance
         self.velocity_index = np.argmin(distances)
 
-        return self.waypoints_world[self.velocity_index], self.velocities[self.velocity_index]
+        self.curr_index = self.velocity_index
 
-    def get_waypoint(self, pose, target_velocity, fixed_lookahead=None):
+        return self.waypoints_world[self.velocity_index], self.velocities[self.velocity_index], self.velocity_index, self.curvatures[self.velocity_index]
+
+    def get_waypoint(self, pose, target_velocity, curr_index, fixed_lookahead=None, bw=False):
         # get current position of car
         if pose is None:
             return
@@ -663,11 +756,6 @@ class WaypointUtils:
         waypoints_car = self.transform_waypoints(self.waypoints_world, position, pose)
        
         # get distance from car to all waypoints
-        distances = np.linalg.norm(waypoints_car, axis=1)
-
-        # get indices of waypoints that are within L, sorted by descending distance
-        # Use dynamic lookahead for this part
-
         if fixed_lookahead:
             self.L = fixed_lookahead
         else:
@@ -680,18 +768,53 @@ class WaypointUtils:
                 ),
                 self.max_lookahead,
             )
+        
+        if self.curr_index is None:
+            #if we don't have a current idea of the index, just get the next one like we always did.
+            distances = np.linalg.norm(waypoints_car, axis=1)
 
-        indices_L = np.argsort(np.where(distances < self.L, distances, -1))[::-1]
+            if bw:
+                indices_L = np.argsort(np.where(distances < self.L, distances, -1))
 
-        # print(self.L)
+                # print(self.L)
 
-        # set goal point to be the farthest valid waypoint within distance L
-        for i in indices_L:
-            # check waypoint is in front of car
-            x = waypoints_car[i][0]
-            if x > 0:
-                self.index = i
-                return waypoints_car[self.index], self.waypoints_world[self.index]
+                # set goal point to be the farthest valid waypoint within distance L
+                for i in indices_L:
+                    # check waypoint is behind the car
+                    x = waypoints_car[i][0]
+                    if x < 0:
+                        self.index = i
+                        if self.index > 124:
+                            self.index -= 124
+                        return waypoints_car[self.index+5], self.waypoints_world[self.index+5]
+            else:   
+                indices_L = np.argsort(np.where(distances < self.L, distances, -1))[::-1]
+                # print(self.L)
+                # set goal point to be the farthest valid waypoint within distance L
+                for i in indices_L:
+                    # check waypoint is in front of car
+                    x = waypoints_car[i][0]
+                    if x > 0 and i < curr_index + 20:
+                        self.index = i
+                        if self.index > 124:
+                            self.index -= 124
+                        return waypoints_car[self.index+5], self.waypoints_world[self.index+5]
+        else:
+
+            index_step = int(self.L / self.interp_distance)
+            if bw:
+                next_waypoint = (self.curr_index - index_step) % len(self.waypoints_world)
+            else:
+                next_waypoint = (self.curr_index + index_step) % len(self.waypoints_world)
+
+            self.index = next_waypoint
+            if self.index > 124:
+                self.index -= 124
+            return waypoints_car[self.index+5], self.waypoints_world[self.index+5]
+
+
+
+
         return None, None
 
 
@@ -711,20 +834,30 @@ class WaypointUtils:
         # get indices of waypoints sorted by ascending distance
         index = np.argmin(distances)
 
-        return waypoints_car[index], self.waypoints_world[index]
+        if index > 124:
+            index = index - 124
+
+        return waypoints_car[index+5], self.waypoints_world[index+5], index+5
 
 
-    def load_and_interpolate_waypoints(self, file_path, interpolation_distance=0.2):
+    def load_and_interpolate_waypoints(self, file_path, interpolation_distance=0.2, reverse=False):
         # Read waypoints from csv, first two columns are x and y, third column is velocity
         # Exclude last row, because that closes the loop
         points = np.genfromtxt(file_path, delimiter=",")[:, :2]
         velocities = np.genfromtxt(file_path, delimiter=",")[:, 2]
-        # headings = np.genfromtxt(file_path, delimiter=",")[:, 3]
+        curvature = np.genfromtxt(file_path, delimiter=",")[:, 3]
 
+        if reverse:
+            points = points[::-1]
+            velocities = velocities[::-1]
+            curvature = curvature[::-1]
+
+
+        # yaw_rate = velocities * curvature
 
         # Add first point as last point to complete loop
         rospy.loginfo("Velocities: " + str(velocities))
-        # rospy.loginfo("Headings: " + str(headings))
+        rospy.loginfo("Curvature: " + str(curvature))
 
         # interpolate, not generally needed because interpolation can be done with the solver, where you feed in target distance between points
         if interpolation_distance != 0 and interpolation_distance is not None:
@@ -751,19 +884,19 @@ class WaypointUtils:
             velocity_interpolator = interp1d(distance, velocities, kind="slinear")
             interpolated_velocities = velocity_interpolator(alpha)
 
-            # heading_interpolator = interp1d(distance, headings, kind="slinear")
-            # interpolated_headings = heading_interpolator(alpha)
+            curvature_interpolator = interp1d(distance, curvature, kind="slinear")
+            interpolated_curvature = curvature_interpolator(alpha)
 
             # Add z-coordinate to be 0
             interpolated_points = np.hstack((interpolated_points, np.zeros((interpolated_points.shape[0], 1))))
             assert len(interpolated_points) == len(interpolated_velocities)
-            # assert len(interpolated_headings) == len(interpolated_velocities)
-            return interpolated_points, interpolated_velocities
+            assert len(interpolated_curvature) == len(interpolated_velocities)
+            return interpolated_points, interpolated_velocities, interpolated_curvature
 
         else:
             # Add z-coordinate to be 0
             points = np.hstack((points, np.zeros((points.shape[0], 1))))
-            return points, velocities
+            return points, velocities, curvature
 
 
 #%% MAIN

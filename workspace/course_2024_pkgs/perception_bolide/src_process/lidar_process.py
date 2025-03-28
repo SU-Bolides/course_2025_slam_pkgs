@@ -37,8 +37,7 @@ class LidarProcess:
         rospy.Subscriber("/param_change_alert", Bool, self.callback_parameters)
         # PUBLISHER =========================================
         self.pub = rospy.Publisher('lidar_data', LaserScan, queue_size=10)
-        self.occupancy_grid_pub = rospy.Publisher('occupancy_grid', OccupancyGrid, queue_size=10)
-
+        # self.occupancy_grid_pub = rospy.Publisher('occupancy_grid', OccupancyGrid, queue_size=1)
         rospy.spin() # wait for the callback to be called
 
 
@@ -126,7 +125,7 @@ class LidarProcess:
 
     def callback(self, data:LaserScan) :
         """ Callback function called when a message is received on the subscribed topic"""
-        print(len(data.ranges))
+
         # Check that the data array has a length of 360
         if not (len(data.ranges) == 1153):
             rospy.logdebug("the lidar array is not composed of 1153 values")
@@ -159,16 +158,16 @@ class LidarProcess:
         lidar_data.header.frame_id = self.frame_id
         lidar_data.angle_min = self.min_angle_rad # in radians
         lidar_data.angle_max = self.max_angle_rad # in radians
-        lidar_data.angle_increment = 0.00545 # in radians (should be 1 degree)
-        lidar_data.time_increment = 0.0002 #data.time_increment # in seconds
-        lidar_data.scan_time = 0.072 # in seconds
+        lidar_data.angle_increment = data.angle_increment # in radians (should be 1 degree)
+        lidar_data.time_increment = data.time_increment # in seconds
+        lidar_data.scan_time = data.scan_time # in seconds
         lidar_data.range_min = data.range_min # in meters
         lidar_data.range_max = data.range_max # in meters
 
         lidar_data.ranges = data_filtered
 
-        self.populate_occupancy_grid(data_filtered, data.angle_increment)
-        self.publish_occupancy_grid()
+        # self.populate_occupancy_grid(data_filtered, data.angle_increment)
+        # self.publish_occupancy_grid()
 
         self.pub.publish(lidar_data)
 

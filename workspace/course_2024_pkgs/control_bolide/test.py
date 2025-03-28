@@ -250,8 +250,8 @@ def traverse_grid_steven(start, end):
 t1 = perf_counter_ns()
 
 for _ in range(0,100):
-    # obs = traverse_grid_steven(start_point, end_point)
-    obs = traverse_grid_parallel(start_point, end_point)
+    obs = traverse_grid_steven(start_point, end_point)
+    # obs = traverse_grid_parallel(start_point, end_point)
 print("Time per iteration PARALLEL:", (perf_counter_ns() - t1)*1e-8, "ms")
 print(obs)
 

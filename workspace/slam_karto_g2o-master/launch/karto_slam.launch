@@ -1,0 +1,15 @@
+<!--
+Provides a reasonable set of parameters for running Karto on a robot
+Assumes an 'odom_combined' frame, that provides reasonably accurate odometry
+-->
+
+<launch>
+  <node pkg="slam_karto_g2o" type="slam_karto_g2o" name="slam_karto_g2o" output="screen">
+  <remap from="scan" to="lidar_data"/>
+    <param name="odom_frame" value="odom"/>
+    <param name="map_update_interval" value="2"/>
+    <param name="resolution" value="0.02"/>
+    <param name="loop_search_space_dimension" value="8"/>
+    <param name="loop_search_resolution" value="0.2"/>
+  </node>
+</launch>
