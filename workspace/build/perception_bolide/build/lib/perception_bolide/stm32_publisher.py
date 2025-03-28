@@ -4,7 +4,7 @@ import rclpy
 from rclpy.node import Node
 from rclpy.executors import ExternalShutdownException
 import spidev
-from std_msgs.msg import Float32MultiArray
+from std_msgs.msg import Float32MultiArray, Int16
 from sensor_msgs.msg import Range, Imu
 from bolide_interfaces.msg import ForkSpeed, MultipleRange
 import math
@@ -29,6 +29,8 @@ class STM32_Parser(Node):
         self.speed_pub = self.create_publisher(ForkSpeed, '/raw_fork_data', 10)
         self.ranges_pub = self.create_publisher(MultipleRange, '/raw_rear_range_data', 10)
         self.imu_pub = self.create_publisher(Imu, '/raw_imu_data', 10)
+
+        self.get_cmd = self.create_subscription(Int16, '/stm32_data', self.get_command,1)
 
         self.spi = spidev.SpiDev()
         self.spi.open(bus,device)
@@ -59,6 +61,25 @@ class STM32_Parser(Node):
         self.ir_max_range = 0.3
 
         self.sensors_init()
+    
+    def get_command(self, msg:Float32MultiArray):
+        command = []
+        cmded_bytes = msg.data
+        command.append((cmded_bytes >> 8) & 0xFF)
+        command.append(cmded_bytes & 0xFF)
+
+        # print("cmd", command)
+
+        crc = self.crc32mpeg2(command)
+
+        command.append((crc >> 24) & 0xFF)
+        command.append((crc >> 16) & 0xFF)
+        command.append((crc >> 8) & 0xFF)
+        command.append((crc) & 0xFF)
+
+        self.tx_buffer = command + [0] * 2
+        #This should be not too big.
+
     
     # Definitely not the most efficient way of doing this, but we're transmitting 16 bytes so it's OK.
     # Ideally we'd do all this in Cpp, but I don't think there is a spidev equivalent in Cpp, and it's 
@@ -157,11 +178,11 @@ class STM32_Parser(Node):
 
 
         #stamp = rospy.Time.now()
-        stamp = self.get_clock().now().to_msg()
-        self.fork_data.header.stamp = stamp
-        self.imu_data.header.stamp = stamp
+            stamp = self.get_clock().now().to_msg()
+            self.fork_data.header.stamp = stamp
+            self.imu_data.header.stamp = stamp
 
-
+        #f (rclpy.ok()):
         self.speed_pub.publish(self.fork_data)
         self.stm_pub.publish(self.sensor_data)
         self.ranges_pub.publish(self.multi_range_frame)

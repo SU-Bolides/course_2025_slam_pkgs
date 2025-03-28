@@ -30,7 +30,7 @@ class STM32_Parser(Node):
         self.ranges_pub = self.create_publisher(MultipleRange, '/raw_rear_range_data', 10)
         self.imu_pub = self.create_publisher(Imu, '/raw_imu_data', 10)
 
-        self.get_cmd = self.create_subscription(Int16, '/stm32_data', self.get_command)
+        self.get_cmd = self.create_subscription(Int16, '/stm32_data', self.get_command,1)
 
         self.spi = spidev.SpiDev()
         self.spi.open(bus,device)
@@ -182,11 +182,11 @@ class STM32_Parser(Node):
             self.fork_data.header.stamp = stamp
             self.imu_data.header.stamp = stamp
 
-        if (rclpy.is_ok()):
-            self.speed_pub.publish(self.fork_data)
-            self.stm_pub.publish(self.sensor_data)
-            self.ranges_pub.publish(self.multi_range_frame)
-            self.imu_pub.publish(self.imu_data)
+        #f (rclpy.ok()):
+        self.speed_pub.publish(self.fork_data)
+        self.stm_pub.publish(self.sensor_data)
+        self.ranges_pub.publish(self.multi_range_frame)
+        self.imu_pub.publish(self.imu_data)
 
 def main(args=None):
     rclpy.init(args=args)
