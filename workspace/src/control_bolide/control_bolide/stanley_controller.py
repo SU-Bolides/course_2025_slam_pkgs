@@ -1,14 +1,14 @@
-import rclpy
-from rclpy.node import Node
 import math
 import copy
+from time import perf_counter_ns
+import rclpy
+from rclpy.node import Node
 from std_msgs.msg import Float32MultiArray
 from geometry_msgs.msg import Pose, Point
 from sensor_msgs.msg import LaserScan, Imu
 from nav_msgs.msg import Odometry
 from bolide_interfaces.msg import SpeedDirection, Marker, MarkerArray, MultipleRange
 
-from time import perf_counter_ns
 import numpy as np
 from scipy.spatial.transform import Rotation as R
 from scipy.interpolate import interp1d
@@ -22,7 +22,7 @@ class StanleyController(Node):
     # Declare parameters
         self.declare_parameter('waypoints_path', '~/bolide_ws/course_2024_pkgs/control_bolide/racelines/esclangon_couloir_reverse.csv')
         self.declare_parameter('odom_topic', '/pf/pos/odom')
-        self.declare_parameter('cmd_topic', 'cmd_vel')
+        self.declare_parameter('cmd_topic', '/cmd_vel')
         self.declare_parameter('K_E', 2.0)
         self.declare_parameter('K_H', 1.5)
         self.declare_parameter('K_V', 0.5)
@@ -51,12 +51,12 @@ class StanleyController(Node):
 
         # Initialize publishers
         self.drive_pub = self.create_publisher(SpeedDirection, self.CMD_TOPIC, 10)
-        self.current_waypoint_pub = self.create_publisher(Marker, 'current_waypoint', 10)
-        self.waypoint_pub = self.create_publisher(Marker, 'next_waypoint', 10)
-        self.diag_pub = self.create_publisher(Float32MultiArray, 'stanley_diagnostics', 1)
+        self.current_waypoint_pub = self.create_publisher(Marker, '/current_waypoint', 10)
+        self.waypoint_pub = self.create_publisher(Marker, '/next_waypoint', 10)
+        self.diag_pub = self.create_publisher(Float32MultiArray, '/stanley_diagnostics', 1)
         
-        self.stanley_avoidance_path_pub = self.create_publisher(Marker, 'stanley_avoidance', 10)
-        self.stanley_avoidance_path_array_pub = self.create_publisher(MarkerArray, 'stanley_avoidance_path', 10)
+        self.stanley_avoidance_path_pub = self.create_publisher(Marker, '/stanley_avoidance', 10)
+        self.stanley_avoidance_path_array_pub = self.create_publisher(MarkerArray, '/stanley_avoidance_path', 10)
 
         self.t1_start = perf_counter_ns()
 
@@ -116,10 +116,10 @@ class StanleyController(Node):
 
         # Initialize subscribers
         self.odom_sub = self.create_subscription(Odometry, self.ODOM_TOPIC, self.odomCB, 10)
-        self.acker_sub = self.create_subscription(Odometry, 'ackermann_odom', self.ackerCB, 10)
-        self.laser_scan_sub = self.create_subscription(LaserScan, 'lidar_data', self.laser_scan_cb, 10)
-        self.car_state_sub = self.create_subscription(SpeedDirection, 'car_state', self.carstateCB, 10)
-        self.infrared_sub = self.create_subscription(MultipleRange, 'raw_rear_range_data', self.rear_range_cb, 10)
+        self.acker_sub = self.create_subscription(Odometry, '/ackermann_odom', self.ackerCB, 10)
+        self.laser_scan_sub = self.create_subscription(LaserScan, '/lidar_data', self.laser_scan_cb, 10)
+        self.car_state_sub = self.create_subscription(SpeedDirection, '/car_state', self.carstateCB, 10)
+        self.infrared_sub = self.create_subscription(MultipleRange, '/raw_rear_range_data', self.rear_range_cb, 10)
     
     def carstateCB(self, msg):
         self.old_steering_angle = self.curr_steering_angle
@@ -847,4 +847,4 @@ def main(args=None):
         rclpy.shutdown()
 
 if __name__ == '__main__':
-    main()    
+    main()
