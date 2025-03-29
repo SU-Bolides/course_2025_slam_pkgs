@@ -2,10 +2,10 @@
 
 
 
-from acados_template import AcadosModel
-import casadi as ca
 import os
 from pathlib import Path
+from acados_template import AcadosModel
+import casadi as ca
 import numpy as np
 
 
