@@ -61,3 +61,12 @@ All command usually working in the terminal still work here. If you want to inst
 [build_scripts]
 executable = /usr/bin/env python3
 ```
+##### At the end
+At the end our workspace (without build files) need to look like this:
+- workspace/
+  - bolides_interfaces/
+  - pkg1/
+  - pkg2/
+  - external_pkg1/
+  - external_pkg2/
+  - ...
