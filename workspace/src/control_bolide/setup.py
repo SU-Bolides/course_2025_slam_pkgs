@@ -6,7 +6,7 @@ package_name = 'control_bolide'
 
 setup(
     name=package_name,
-    version='0.0.0',
+    version='0.1.0',
     packages=find_packages(exclude=['test']),
     data_files=[
         ('share/ament_index/resource_index/packages',
@@ -17,8 +17,8 @@ setup(
     install_requires=['setuptools'],
     zip_safe=True,
     maintainer='turtle',
-    maintainer_email='turtle@todo.todo',
-    description='Controle bolide',
+    maintainer_email='baptiste.braun.delvoye@gmail.com',
+    description='Control Bolide package is where you will find all the nodes around motors and command',
     license='Apache-2.0',
     tests_require=['pytest'],
     entry_points={

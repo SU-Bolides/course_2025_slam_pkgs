@@ -2,9 +2,9 @@
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
   <name>control_bolide</name>
-  <version>0.0.0</version>
-  <description>Controle bolide</description>
-  <maintainer email="turtle@todo.todo">turtle</maintainer>
+  <version>0.1.0</version>
+  <description>Control Bolide package is where you will find all the nodes around motors and command</description>
+  <maintainer email="baptiste.braun.delvoye@gmail.com">turtle</maintainer>
   <license>Apache-2.0</license>
 
   <depend>rclpy</depend>
