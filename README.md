@@ -52,4 +52,12 @@ In your 'package.xml' you need to add all the dependencies of your package like 
 ```
 If a package is dependant of another package in your workspace you will need to build firstly the dependence.
 ##### Python package
-In your code you will surely use some external Python packages like 'spidev'
+In your code you will surely use some external Python packages like 'spidev', but recently Ubuntu rules about global environment changed and we can't just install with pip the package. To be able to use external package we use a virtual environment. The virtual environment is in the [/venv](./workspace/venv/) folder. To activate it use this command line in the workspace:
+```shell
+source /venv/bin/activate
+```
+All command usually working in the terminal still work here. If you want to install some packages use 'pip install package_name'. With this you can use any package in python for your ROS2 node. You will need to go in the 'setup.cfg' file of your package and add this :
+```pkg
+[build_scripts]
+executable = /usr/bin/env python3
+```
