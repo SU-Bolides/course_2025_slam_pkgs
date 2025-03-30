@@ -1,3 +1,9 @@
+import math
+import atexit
+from collections import deque
+import csv
+import time
+
 import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import Point, Pose, Twist, Vector3
@@ -6,42 +12,64 @@ from sensor_msgs.msg import Imu
 from nav_msgs.msg import Odometry
 from std_msgs.msg import Float32MultiArray, Int16
 import tf2_ros
-import math
 from dynamixel_sdk import *
 
-import atexit
-from collections import deque
-import csv
-import time
 
 ### Here, we try to establish a controller that takes an input in m/s and rad (or deg)
 ### We also want to have an estimation of the current state of the front wheels' angle, by means
-### of modelling their angle as a function where the angle changes linearly, as the servos have 
-### a max speed which makes instantaneous changes in steering angle impossible. 
+### of modelling their angle as a function where the angle changes linearly, as the servos have
+### a max speed which makes instantaneous changes in steering angle impossible.
 
-## We could also establish a steering angle controller that would take the yaw rate and set it to 
+## We could also establish a steering angle controller that would take the yaw rate and set it to
 ## a value which we woudl deduce from the desired steering angle. Those values can usually be measured
-## from the IMU. 
+## from the IMU.
 
 '''This controller is used to regulate the speed and direction of the car.
 It takes in a desired speed and direction, and outputs the necessary PWM signals to the motors.'''
 
 def get_sign(val):
+    """get the sign of a value
+
+    Args:
+        val (any): any int or float value
+
+    Returns:
+        int: 1 or -1 if positive or negative
+    """
     return (val > 0) - (val < 0)
 
 def pos2psi(pos):
-    # Psi is the steering angle (in radians) 
-    # Theta is the motor angle (in radians) 
-    # Pos is the motor angle (in DXL units)
+    """Transform the position information in the steering angle. Psi is the steering angle (rad),
+    Theta is the motor angle (rad), Pos is the motor angle (DXL Units)
+
+    Args:
+        pos (float): the motor angle in DXL Units
+    """
     theta_rad = (pos * (5.24/1023.)) + 0.524
     A = math.cos(theta_rad) * 15 - 4.35
     psi_rad = math.asin(A/25.)
-    return(psi_rad)
+    return psi_rad
 
 def degrees2pos(degrees):
+    """Transforming the degree (deg) into motor angle in DXL Units
+
+    Args:
+        degrees (float): a degree value
+
+    Returns:
+        int: motor angle in DXL Units
+    """
     return int((degrees - 30.) * (1023./300.))
 
-def set_dir_deg(angle_degre) :
+def set_dir_deg(angle_degre):
+    """Set the direction in degree
+
+    Args:
+        angle_degre (float): the angle in degree
+
+    Returns:
+        int: the position in DXL Units
+    """
     psi = math.radians(angle_degre)
     A = 25. * math.sin(psi) + 4.35
     theta = math.acos(A/15.)
@@ -49,6 +77,11 @@ def set_dir_deg(angle_degre) :
     return pos
 
 class ControllerListener(Node):
+    """The Controller Node, listening to sensors
+
+    Args:
+        Node (Node): Node class
+    """
     def __init__(self):
         super().__init__('ackermann_controller')
         # Servo PWM cyclic ratio values for the direction
@@ -85,15 +118,15 @@ class ControllerListener(Node):
         self.start_time = time.time()
 
         if self.portHandler.openPort():
-            self.get_logger().info("Succeeded to open the port")
+            self.get_logger().info("[INFO] -- Succeeded to open the port")
         else:
-            self.get_logger().error("Failed to open the port")
+            self.get_logger().error("[ERROR] -- Failed to open the port")
 
         # Setting the baudrate
         if self.portHandler.setBaudRate(self.BAUDRATE):
-            self.get_logger().info("Succeeded to change the baudrate")
+            self.get_logger().info("[INFO] -- Succeeded to change the baudrate")
         else:
-            self.get_logger().error("Failed to change the baudrate")
+            self.get_logger().error("[ERROR] -- Failed to change the baudrate")
 
         self.tx_data = Int16()
         self.odom_pub = self.create_publisher(Odometry, "/ackermann_odom", 10)   # Publish the car's current state (speed and steering angle) for odometry
@@ -116,7 +149,6 @@ class ControllerListener(Node):
                                            0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
                                            0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
                                            0.0, 0.0, 0.0, 0.0, 0.0, 5e-2]
-        
 
         self.curr_velocity_m_s = 0.0
         self.curr_steering_angle_deg = 0.0
@@ -133,11 +165,8 @@ class ControllerListener(Node):
         self.x_pos = 0
         self.y_pos = 0
 
-        #Subscribers and publishers
-
-
         # Initialize watchdog timer
-        self.watchdog_timer = self.create_timer(0.5, self.watchdog_callback)    # Check if the car is still receiving commands
+        self.watchdog_timer = self.create_timer(0.5, self.watchdog_callback)# Check if the car is still receiving commands
         self.update = self.create_timer(0.005, self.update_callback)        # Update the car's state every 5ms (200Hz)
         self.dynamixels_comms = self.create_timer(0.03, self.dxl_callback)  # Update the dynamixels every 30ms (33Hz)
 
@@ -146,30 +175,41 @@ class ControllerListener(Node):
 
         # Torque on
         self.packetHandler.write1ByteTxRx(self.portHandler, self.DXL_ID, 24, 1)
-        
+
         if self.MS:
-            self.get_logger().warn("Excpeting speed in m/s")
+            self.get_logger().warn("[WARNING] -- Excpeting speed in m/s")
         else:
-            self.get_logger().warn("Expecting speed in [-1, 1]")
+            self.get_logger().warn("[WARNING] -- Expecting speed in [-1, 1]")
+
+        #Subscribers
         self.create_subscription(SpeedDirection, "/cmd_vel", self.cmd_callback, 10)  # Subscribe to cmd_vel for speed and direction commands
         self.create_subscription(Float32MultiArray, "/stm32_sensors", self.stm32_callback, 10)   # Subscribe to the STM32 for the current speed and direction
-    
+
     def publish_stm32_data(self, cycle_ratio):
+        """Send to stm32 the cycle_ration of the motors
+
+        Args:
+            cycle_ratio (float): the cycle of the cars (netural, reverse, forward,...)
+        """
         if self.init:
             self.tx_data = Int16()
             self.tx_data.data = int(cycle_ratio*0.00938 * self.esc_period)
-        
+
         # The previous implementation used RPi PWM which was unreliable.
             # Experiments showed the RPi to overshoot duration by 1.066. 
 
-            # Cyclic ratio is the time of the period spent high. So 100 would be constantly high, 50 would be half high half low, etc.
-            # The esc period is 20000 ns, and we send the actual pulse duration to the stm32. We also convert from RPi to "true".
+        # Cyclic ratio is the time of the period spent high. So 100 would be constantly high, 50 would be half high half low, etc.
+        # The esc period is 20000 ns, and we send the actual pulse duration to the stm32. We also convert from RPi to "true".
 
-        if (rclpy.ok()):
+        if rclpy.ok():
             self.stm32_publish.publish(self.tx_data)
-    
+
     def cmd_callback(self, data):
-        # Update the target speed and direction by applying a cmd_vel message
+        """Update the target speed and direction by applying a cmd_vel message
+
+        Args:
+            data (SpeedDirection): the speed and direction of the motors
+        """
 
         self.cmd_velocity_m_s = data.speed
         if self.MS:
@@ -192,8 +232,9 @@ class ControllerListener(Node):
         self.last_command_time = self.get_clock().now()
 
     def dxl_callback(self):
-        # Update the dynamixels
-        # We check if the target steering angle is within the limits of the steering angle
+        """Update the dynamixels. 
+        We check if the target steering angle is within the limits of the steering angle
+        """
         self.target_steering_angle_deg = max(min(self.target_steering_angle_deg, self.MAX_STEERING_ANGLE_DEG), -self.MAX_STEERING_ANGLE_DEG)
         try:
             pos,_,_ = self.packetHandler.read2ByteTxRx(self.portHandler, self.DXL_ID, 36)   # Read the current position of the steering servo
@@ -201,21 +242,25 @@ class ControllerListener(Node):
             self.packetHandler.write2ByteTxRx(self.portHandler, self.DXL_ID, 30, set_dir_deg(self.target_steering_angle_deg))   # Set the target position of the steering servo
         except:
             self.get_logger().warn("[WARNING] -- DYNAMIXEL PROBLEM")
-            pass
-    
+
     def stm32_callback(self, data):
-        # Update the current speed and direction by applying the data from the STM32
+        """Update the current speed and direction by applying the data from the STM32
+
+        Args:
+            data (Float32MultiArray): data of the stm32 sensors
+        """
         self.curr_yaw = data.data[0]
         self.curr_velocity_m_s = self.cur_dir * data.data[1]
-    
+
     def update_callback(self):
-        # Update the car's state
+        """Update the car's state
+        """
 
         if self.cmd_velocity_m_s != 2.0:    # If the car is not in emergency brake mode
             self.target_velocity_m_s += self.SPEED_FILTER * (self.cmd_velocity_m_s - self.target_velocity_m_s)
         else:
             self.target_velocity_m_s = 0.0
-        
+
         # Odometry
         angular_rate = self.curr_velocity_m_s * (-1 * math.tan(self.curr_steering_angle_deg*(3.14159/180.))) / self.WHEELBASE
 
@@ -227,7 +272,7 @@ class ControllerListener(Node):
 
         # Publish the odometry transform
 
-        if (rclpy.ok()):
+        if rclpy.ok():
             if self.count>=3:
                 self.car_state_pub.publish(SpeedDirection(speed=self.curr_velocity_m_s, direction=self.curr_steering_angle_deg))
                 self.count = 0
@@ -238,21 +283,24 @@ class ControllerListener(Node):
             esc_cmd = 2.0
         else:
             esc_cmd = self.target_velocity_m_s
-        
+
         if self.MS:
             self.speed_controller.command_pid(esc_cmd)
         else:
             self.speed_controller.command(esc_cmd)
-    
+
 
     def watchdog_callback(self):
-        # If it's been more than 0.5s since the last command, stop the robot
-        # This is to prevent the robot from moving if the controller crashes
+        """If it's been more than 0.5s since the last command, stop the robot.
+        This is to prevent the robot from moving if the controller crashes
+        """
         if ((self.get_clock().now() - self.last_command_time).nanoseconds > 0.5*1e9) and rclpy.ok():
             self.cmd_velocity_m_s = 0.0
             self.speed_controller.neutral()
 
 class SpeedController:
+    """A class for the state of the car
+    """
 
     def __init__(self, controller : ControllerListener):
         self.controller = controller
@@ -260,19 +308,19 @@ class SpeedController:
         self.MAXSPEED = 9.5
         self.MINSPEED = 8.4
 
-        self.NEUTRAL         = 8.0  
+        self.NEUTRAL         = 8.0
         self.REVERSEMINSPEED = 7.6
         self.REVERSEMAXSPEED = 6.5
         self.BRAKE           = 5.0
 
         self.BRAKE_THRESHOLD = 0.5
 
-        self.VMAX_M_S        = 5    #m/s
+        self.VMAX_M_S        = 5 #m/s
 
         self.Kp              = 2e-2
         self.Kd              = 0
         self.Ki              = 0.0
-        
+
         self.prev_e_m_s      = 0.0
         self.integral        = 0.0
 
@@ -282,19 +330,25 @@ class SpeedController:
         self.cmd_speed_esc   = 0
 
         self.state           = 0 #0 is Neutral, 1 is Fw, -1 is Bw, 2 is brake
-        self.old_dir         = 0 
+        self.old_dir         = 0
 
-        self.block           = False    
+        self.block           = False
 
         self.controller.publish_stm32_data(self.throttle)
-    
+
     def neutral_transition(self):
+        """Set to neutral the car
+        """
         self.neutral()
         self.block = True
         self.controller.create_timer(0.15, self.backward)
-    
+
     def command(self, cmd_speed_m_s):
-        # No PID control, just set the speed
+        """Set the speed (No PID)
+
+        Args:
+            cmd_speed_m_s (float): the speed command in m/s
+        """
         self.cmd_speed_esc = cmd_speed_m_s  # used only with teleop
         if self.block:
             return
@@ -302,29 +356,29 @@ class SpeedController:
             self.cmd_speed_esc = min(1,max(-1,self.cmd_speed_esc))
 
         # Forward
-        if (1>=self.cmd_speed_esc>=1e-2):
+        if 1>=self.cmd_speed_esc>=1e-2:
             if self.state == -1:
                 self.block = True
                 self.neutral()
                 self.controller.create_timer(0.25, self.forward)
                 return 
             self.forward()
-        
+
         # Reverse
-        elif (0.3>self.cmd_speed_esc>=-1):
+        elif 0.3>self.cmd_speed_esc>=-1:
             if self.state == 1 or (not self.state and self.old_dir == 1):
                 self.controller.publish_stm32_data(self.REVERSEMINSPEED)
                 self.block = True
                 self.controller.create_timer(0.25, self.neutral_transition)
                 return
             self.backward()
-        
+
         # Neutral
-        elif (1e-2> self.cmd_speed_esc > -1e-2):
+        elif 1e-2> self.cmd_speed_esc > -1e-2:
             self.neutral()
 
         # Brake
-        elif (self.cmd_speed_esc == 2):
+        elif self.cmd_speed_esc == 2:
             # rospy.loginfo("brake")
             if self.state != -1:
                 self.brake()
@@ -332,12 +386,17 @@ class SpeedController:
                 self.neutral()
 
     def forward(self):
+        """Publish to stm32 to go forward
+        """
         if self.state != 1:
             self.block = False
             self.state = 1
             self.old_dir = 1
         self.controller.publish_stm32_data(self.MINSPEED + self.cmd_speed_esc*(self.MAXSPEED - self.MINSPEED))
-    def backward(self):  
+
+    def backward(self):
+        """Publish to stm32 to go backward
+        """
         if self.state != -1:
             self.block = False
             self.state = -1
@@ -345,18 +404,22 @@ class SpeedController:
         self.controller.publish_stm32_data(self.REVERSEMINSPEED + self.cmd_speed_esc * (self.REVERSEMINSPEED - self.REVERSEMAXSPEED))
 
     def neutral(self):
-        pass
-        # print("N")
+        """Publish to stm32 to be neutral
+        """
         self.controller.publish_stm32_data(self.NEUTRAL)
 
     def brake(self):
-        # print("BRK")
+        """Publish to stm32 to brake
+        """
         if self.state != 1 or (self.state and self.old_dir != 1):
             self.controller.publish_stm32_data(self.BRAKE)
-            pass
 
     def command_pid(self, cmd_speed_m_s):
-        # PID controller to respect a given speed
+        """PID controller to respect a given speed
+
+        Args:
+            cmd_speed_m_s (float): the speed to go in m/s
+        """
 
         if cmd_speed_m_s > 0 :
 
@@ -366,32 +429,33 @@ class SpeedController:
             pid_output = self.Kp * e_m_s + self.Ki * self.integral + self.Kd * derivative
             self.prev_e_m_s = e_m_s
 
-            rclpy.get_logger().info("PID output: {}".format(pid_output))
+            rclpy.get_logger().info(f"PID output: {pid_output}")
 
             pid_output = min(max(pid_output, -1), 1)
             self.throttle += pid_output
-            self.throttle = max(self.MIN_SPEED, self.throttle)
+            self.throttle = max(self.MINSPEED, self.throttle)
 
-            self.controller.get_logger().info("ERR / P %f", e_m_s)
-            self.controller.get_logger().info("D %f", derivative)
-            self.controller.get_logger().info("Throttle %f", self.throttle)
-            self.controller.get_logger().info("Current speed %f", self.controller.curr_velocity_m_s)
-            self.controller.get_logger().info("Target spesudo-1] Error in ackermann_controllered %f", cmd_speed_m_s)
+            self.controller.get_logger().info("[INFO] -- ERR / P %f", e_m_s)
+            self.controller.get_logger().info("[INFO] -- D %f", derivative)
+            self.controller.get_logger().info("[INFO] -- Throttle %f", self.throttle)
+            self.controller.get_logger().info("[INFO] -- Current speed %f", self.controller.curr_velocity_m_s)
+            self.controller.get_logger().info("[INFO] -- Target spesudo-1] Error in ackermann_controllered %f", cmd_speed_m_s)
 
             self.forward_speed()
-        elif (not cmd_speed_m_s):
+        elif not cmd_speed_m_s:
             self.neutral()
         elif cmd_speed_m_s < 0:
             self.reverse_speed()
-        pass
 
     def forward_speed(self):
-        self.controller.publish_stm32(min(self.throttle, self.MAX_SPEED))
-        pass
+        """Publish to stm32 to go forward between the max speed and the throttle calculed
+        """
+        self.controller.publish_stm32(min(self.throttle, self.MAXSPEED))
 
     def reverse_speed(self):
+        """Publish to stm32 to go backward between the max speed and the throttle calculed
+        """
         self.controller.publish_stm32(max(self.throttle, self.REVERSEMAXSPEED))
-        pass
 
 def main():
     try:
@@ -401,6 +465,4 @@ def main():
         print("Terminated ackermann_controller")
     except Exception as e:
         print(f"Error in ackermann_controller : {e}")
-        pass
-
             
