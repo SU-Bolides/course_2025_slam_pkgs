@@ -12,8 +12,44 @@ This folder contains the working workspace of ROS2. You find there :
 - A Python3 virtual environment (venv) for external library needed in python (since Ubuntu doesn't allow pip installation on global environment), you don't need to touch anything there normally?
 - Our source folder (src) where all packages are. It's your mainly source of hope and despair so you need to understand it clearly. Hopefully, ROS2 is more rigorous than ROS in the construction of packages so for every packages, the structure is the same and it is easier to understand nodes.
 
+### Launching the car (for now)
+When the car is on, connect with ssh (you have to know its ip address before), or branch it to a display, then on the terminal check the connection of all USB devices (Lidar and Dynamixel) with :
+```shell
+ls /dev/ttyUSB*
+```
+You will see /dev/ttyUSB0 and /dev/ttyUSB1. Disconnect the Lidar from the Rpi5 (the top one), then retry the command and see which one doesn't appear now. Check if the one that doesn't appear now is the one put in the [launchfile](./workspace/src/perception_bolide/launch/perception.launch.py) at the perception_bolide package. If it isn't correctly paired change it and go to the [ackermann_controller.py](/workspace/src/control_bolide/control_bolide/ackermann_controller.py) file to change also the device of the Dynamixel. After doing that type this command in the terminal:
+```shell
+sudo chmod 777 /dev/ttyUSB*
+```
+Now go to the workspace 
+```shell
+cd course_2025_slam_pkgs/workspace/
+```
+Source your workspace and you can press on the bottom button near the screen display on the car. Then source the virtual environment and launch the perception process:
+```shell
+ros2 launch perception_bolide perception.launch.py
+```
+On another terminal now, source again your workspace and the virtual environment and run ackermann_controller node:
+```shell
+ros2 run control_bolide ackermann_controller
+```
+And to teleoperate with the keyboard open a last terminal, source your workspace and run:
+```shell
+ros2 run planning_bolide teleop_node
+```
+Normally, you're good to move the car with the arrows keys of your keyboard. 
+
+### Bolide Interfaces
+Bolide Interfaces [package](./workspace/src/bolide_interfaces/) is where you will find every Messages and Services that we created for the car. For now, we mainly use messages between topics, the messages are :
+- **ForkSpeed** composed of a header and a float32 value corresponding to the speed measures by the fork
+- **MultipleRange** composed of 3 Ranges (from std_msgs). One for the Rear left Infrared sensors, one for the right and the last for the Sonar (not used for now)
+- **SpeedDirection** composed of two float64 values, one for the speed of the robot and the other for the direction. Both are between -1 and 1.
+To access in a python file, you need to import the package (e.g from bolide_interfaces/msg import SpeedDirection)
+
 ## General Information
 If you want to transform a package from ROS to ROS2 or to add your own package, please follow these instructions correctly to avoid losing time and to keep a clean and clear environment. All these informations are mainly inspired by the official [tutorials](https://docs.ros.org/en/jazzy/Tutorials.html) of ROS2 (here jazzy distribution), that you followed at the beginning of the class.
+
+
 ### Create a Package
 To create a package go to the [src](./workspace/src/) folder of your workspace on a terminal and use the command line :
 ```shell
@@ -36,7 +72,7 @@ data_file=[
     (os.path.join('share', package_name, 'launch'), glob(os.path.join('launch', 'launch.[pxy][yma]'))),
 ]
 ```
-##### Setup and Package file
+#### Setup and Package file
 In your 'setup.py' file you need to add all your nodes name and source like this :
 ```python
 entry_points={
@@ -51,7 +87,7 @@ In your 'package.xml' you need to add all the dependencies of your package like 
 <depend>another_pkg</depend>
 ```
 If a package is dependant of another package in your workspace you will need to build firstly the dependence.
-##### Python package
+#### Python package
 In your code you will surely use some external Python packages like 'spidev', but recently Ubuntu rules about global environment changed and we can't just install with pip the package. To be able to use external package we use a virtual environment. The virtual environment is in the [/venv](./workspace/venv/) folder. To activate it use this command line in the workspace:
 ```shell
 source /venv/bin/activate
@@ -61,7 +97,7 @@ All command usually working in the terminal still work here. If you want to inst
 [build_scripts]
 executable = /usr/bin/env python3
 ```
-##### At the end
+#### At the end
 At the end our workspace (without build files) need to look like this:
 - workspace/
   - bolides_interfaces/
