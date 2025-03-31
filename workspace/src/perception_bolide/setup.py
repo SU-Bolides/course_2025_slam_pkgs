@@ -6,7 +6,7 @@ package_name = 'perception_bolide'
 
 setup(
     name=package_name,
-    version='0.0.0',
+    version='0.1.0',
     packages=find_packages(exclude=['test']),
     data_files=[
         ('share/ament_index/resource_index/packages',
@@ -18,8 +18,8 @@ setup(
     install_requires=['setuptools'],
     zip_safe=True,
     maintainer='voiture',
-    maintainer_email='voiture@todo.todo',
-    description='TODO: Package description',
+    maintainer_email='baptiste.braun.delvoye@gmail.com',
+    description='Perception Bolide package contains every nodes working with sensors for publishing and processing their data.',
     license='Apache-2.0',
     tests_require=['pytest'],
     entry_points={
