@@ -44,9 +44,9 @@ class KeyboardController(Node):
         mykey = click.getchar()
         action = self.key_mapping[mykey]
         if action == 'UP':
-            self.current_speed = 1.0 * coeff
+            self.current_speed = 0.6 * coeff
         elif action == 'DOWN':
-            self.current_speed = -1.0 * coeff
+            self.current_speed = -0.6 * coeff
         elif action == 'LEFT':
             self.current_direction = -1.0 * coeff
         elif action == 'RIGHT':

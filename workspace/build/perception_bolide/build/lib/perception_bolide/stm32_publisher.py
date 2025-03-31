@@ -45,6 +45,8 @@ class STM32_Parser(Node):
         self.speed = 0.
         self.distance_US = 0.
 
+        self.tx_buffer = [0] *8
+
         self.acc_x = 0.
         self.yaw_rate = 0.
 
@@ -62,7 +64,7 @@ class STM32_Parser(Node):
 
         self.sensors_init()
     
-    def get_command(self, msg:Float32MultiArray):
+    def get_command(self, msg:Int16):
         command = []
         cmded_bytes = msg.data
         command.append((cmded_bytes >> 8) & 0xFF)
@@ -116,7 +118,9 @@ class STM32_Parser(Node):
         # self.multi_range_frame.Sonar_rear.max_range = self.sonar_max_range
 
     def receiveSensorData(self):
-        data = self.spi.xfer2([0x45]*20)  # SPI happens simultaneously, so we need to send to receive. 
+        self.spi.writebytes(self.tx_buffer)
+        data = self.spi.readbytes(20)
+        #data = self.spi.xfer2([0x45]*20)  # SPI happens simultaneously, so we need to send to receive. 
 
 
         if (not self.crc32mpeg2(data)):
@@ -181,10 +185,10 @@ class STM32_Parser(Node):
             stamp = self.get_clock().now().to_msg()
             self.fork_data.header.stamp = stamp
             self.imu_data.header.stamp = stamp
+            self.stm_pub.publish(self.sensor_data)
 
         #f (rclpy.ok()):
         self.speed_pub.publish(self.fork_data)
-        self.stm_pub.publish(self.sensor_data)
         self.ranges_pub.publish(self.multi_range_frame)
         self.imu_pub.publish(self.imu_data)
 

@@ -110,7 +110,7 @@ class ControllerListener(Node):
         # Default setting
         self.DXL_ID                      = 1                 
         self.BAUDRATE                    = 115200            
-        self.DEVICENAME                  = '/dev/ttyUSB0'    # Symlink it in the udev to ttyU2D2
+        self.DEVICENAME                  = '/dev/ttyUSB1'    # Symlink it in the udev to ttyU2D2
 
         self.portHandler = PortHandler(self.DEVICENAME)
         self.packetHandler = PacketHandler(self.PROTOCOL_VERSION)
@@ -184,6 +184,8 @@ class ControllerListener(Node):
         #Subscribers
         self.create_subscription(SpeedDirection, "/cmd_vel", self.cmd_callback, 10)  # Subscribe to cmd_vel for speed and direction commands
         self.create_subscription(Float32MultiArray, "/stm32_sensors", self.stm32_callback, 10)   # Subscribe to the STM32 for the current speed and direction
+        self.init = False
+
 
     def publish_stm32_data(self, cycle_ratio):
         """Send to stm32 the cycle_ration of the motors
@@ -268,7 +270,6 @@ class ControllerListener(Node):
         self.current_odom.twist.twist = Twist(linear = Vector3(x= self.curr_velocity_m_s, y = 0., z= 0.), angular = Vector3(x= 0., y=0.,z=angular_rate))
 
         self.car_state_pub.publish(SpeedDirection(speed=self.curr_velocity_m_s, direction=self.curr_steering_angle_deg))
-        self.odom_pub.publish(self.current_odom)
 
         # Publish the odometry transform
 
@@ -305,7 +306,7 @@ class SpeedController:
     def __init__(self, controller : ControllerListener):
         self.controller = controller
 
-        self.MAXSPEED = 9.5
+        self.MAXSPEED = 10
         self.MINSPEED = 8.4
 
         self.NEUTRAL         = 8.0
@@ -329,7 +330,7 @@ class SpeedController:
         self.throttle        = self.NEUTRAL
         self.cmd_speed_esc   = 0
 
-        self.state           = 0 #0 is Neutral, 1 is Fw, -1 is Bw, 2 is brake
+        self.state           = -1 #0 is Neutral, 1 is Fw, -1 is Bw, 2 is brake
         self.old_dir         = 0
 
         self.block           = False
@@ -364,6 +365,10 @@ class SpeedController:
                 return 
             self.forward()
 
+        # Neutral
+        elif 1e-2> self.cmd_speed_esc > -1e-2:
+            self.neutral()
+
         # Reverse
         elif 0.3>self.cmd_speed_esc>=-1:
             if self.state == 1 or (not self.state and self.old_dir == 1):
@@ -372,10 +377,6 @@ class SpeedController:
                 self.controller.create_timer(0.25, self.neutral_transition)
                 return
             self.backward()
-
-        # Neutral
-        elif 1e-2> self.cmd_speed_esc > -1e-2:
-            self.neutral()
 
         # Brake
         elif self.cmd_speed_esc == 2:
@@ -440,7 +441,7 @@ class SpeedController:
             self.controller.get_logger().info("[INFO] -- Throttle %f", self.throttle)
             self.controller.get_logger().info("[INFO] -- Current speed %f", self.controller.curr_velocity_m_s)
             self.controller.get_logger().info("[INFO] -- Target spesudo-1] Error in ackermann_controllered %f", cmd_speed_m_s)
-
+        if cmd_speed_m_s > 0:
             self.forward_speed()
         elif not cmd_speed_m_s:
             self.neutral()
