@@ -106,3 +106,7 @@ At the end our workspace (without build files) need to look like this:
   - external_pkg1/
   - external_pkg2/
   - ...
+
+## Generals Problems
+### Battery
+When we're using the propulsion motors, the voltage doesn't keep up and it provokes the shutdown of the RPi5. We think that it is caused by the oldness of the batteries. To fix it, we can buy new battery, maybe with a higher voltage capacity or we could branch two batteries in parallel to give more current. Another idea is to use a second battery only for the RPi5 and the main battery for the motors, to safely use them without crashing the computer.
