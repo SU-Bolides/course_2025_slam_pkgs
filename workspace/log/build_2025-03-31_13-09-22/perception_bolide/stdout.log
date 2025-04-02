@@ -1,0 +1,32 @@
+running develop
+running egg_info
+writing perception_bolide.egg-info/PKG-INFO
+writing dependency_links to perception_bolide.egg-info/dependency_links.txt
+writing entry points to perception_bolide.egg-info/entry_points.txt
+writing requirements to perception_bolide.egg-info/requires.txt
+writing top-level names to perception_bolide.egg-info/top_level.txt
+reading manifest file 'perception_bolide.egg-info/SOURCES.txt'
+writing manifest file 'perception_bolide.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception-bolide.egg-link (link to .)
+Installing camera_opencv script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide
+Installing camera_publisher script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide
+Installing dbscan_node script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide
+Installing fork_publisher script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide
+Installing imu_publisher script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide
+Installing launch_ekf_map script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide
+Installing lidar_process script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide
+Installing lidar_publisher script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide
+Installing lidar_vizu script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide
+Installing odom_fork_imu script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide
+Installing odom_fork_imu_sim script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide
+Installing rear_ranges_publisher script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide
+Installing stm32_publisher script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide
+
+Installed /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide
+running symlink_data
+symbolically linking /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/resource/perception_bolide -> /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/share/ament_index/resource_index/packages
+symbolically linking /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/package.xml -> /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/share/perception_bolide
+symbolically linking /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/launch/perception.launch.py -> /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/share/perception_bolide/launch
+symbolically linking /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/launch/process.launch.py -> /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/share/perception_bolide/launch
+symbolically linking /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/launch/main_publisher.launch.py -> /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/share/perception_bolide/launch

@@ -25,6 +25,8 @@ class KeyboardController(Node):
         self.publish_speed_direction()
     
     def publish_speed_direction(self):
+        print("publish curr_speed = ", self.current_speed)
+        print("publish curr_direction = ", self.current_direction)
         self.pub.publish(SpeedDirection(speed=self.current_speed, direction=self.current_direction))
         
     def on_key_press(self, in_key):
@@ -43,10 +45,11 @@ class KeyboardController(Node):
     def perform_action(self, coeff = 1.0):
         mykey = click.getchar()
         action = self.key_mapping[mykey]
+        print("commande : ", action)
         if action == 'UP':
-            self.current_speed = 0.6 * coeff
+            self.current_speed = 0.5 * coeff
         elif action == 'DOWN':
-            self.current_speed = -0.6 * coeff
+            self.current_speed = -0.25 * coeff
         elif action == 'LEFT':
             self.current_direction = -1.0 * coeff
         elif action == 'RIGHT':

@@ -1,0 +1,28 @@
+[3.108s] Invoking command in '/home/voiture/course_2025_slam_pkgs/workspace/build/control_bolide': AMENT_PREFIX_PATH=/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/voiture/course_2025_slam_pkgs/workspace/build/control_bolide/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/python3.12/site-packages:/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/voiture/course_2025_slam_pkgs/workspace/build/control_bolide/build --no-deps symlink_data --force
+[3.694s] running develop
+[3.997s] running egg_info
+[4.023s] writing control_bolide.egg-info/PKG-INFO
+[4.024s] writing dependency_links to control_bolide.egg-info/dependency_links.txt
+[4.025s] writing entry points to control_bolide.egg-info/entry_points.txt
+[4.026s] writing requirements to control_bolide.egg-info/requires.txt
+[4.027s] writing top-level names to control_bolide.egg-info/top_level.txt
+[4.089s] reading manifest file 'control_bolide.egg-info/SOURCES.txt'
+[4.093s] writing manifest file 'control_bolide.egg-info/SOURCES.txt'
+[4.144s] running build_ext
+[4.146s] Creating /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/python3.12/site-packages/control-bolide.egg-link (link to .)
+[4.152s] Installing ackermann_controller script to /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/control_bolide
+[4.152s] Installing calibration_direction script to /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/control_bolide
+[4.152s] Installing calibration_direction_copy script to /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/control_bolide
+[4.152s] Installing cmd_vel_vizu script to /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/control_bolide
+[4.153s] Installing obstacle_detection script to /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/control_bolide
+[4.153s] Installing speed_direction_controller script to /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/control_bolide
+[4.154s] Installing stanley_controller script to /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/control_bolide
+[4.156s] 
+[4.156s] Installed /home/voiture/course_2025_slam_pkgs/workspace/build/control_bolide
+[4.156s] running symlink_data
+[4.158s] symbolically linking /home/voiture/course_2025_slam_pkgs/workspace/build/control_bolide/resource/control_bolide -> /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/share/ament_index/resource_index/packages
+[4.158s] symbolically linking /home/voiture/course_2025_slam_pkgs/workspace/build/control_bolide/package.xml -> /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/share/control_bolide
+[4.160s] symbolically linking /home/voiture/course_2025_slam_pkgs/workspace/build/control_bolide/launch/esctest.launch.py -> /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/share/control_bolide/launch
+[4.160s] symbolically linking /home/voiture/course_2025_slam_pkgs/workspace/build/control_bolide/launch/launch_speed_direction.launch.py -> /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/share/control_bolide/launch
+[4.162s] symbolically linking /home/voiture/course_2025_slam_pkgs/workspace/build/control_bolide/launch/stanley_launch.launch.py -> /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/share/control_bolide/launch
+[4.359s] Invoked command in '/home/voiture/course_2025_slam_pkgs/workspace/build/control_bolide' returned '0': AMENT_PREFIX_PATH=/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/voiture/course_2025_slam_pkgs/workspace/build/control_bolide/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/python3.12/site-packages:/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/voiture/course_2025_slam_pkgs/workspace/build/control_bolide/build --no-deps symlink_data --force

@@ -1,0 +1,34 @@
+[3.072s] Invoking command in '/home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide': AMENT_PREFIX_PATH=/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages:/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/build --no-deps symlink_data --force
+[3.646s] running develop
+[3.945s] running egg_info
+[3.971s] writing perception_bolide.egg-info/PKG-INFO
+[3.972s] writing dependency_links to perception_bolide.egg-info/dependency_links.txt
+[3.973s] writing entry points to perception_bolide.egg-info/entry_points.txt
+[3.974s] writing requirements to perception_bolide.egg-info/requires.txt
+[3.976s] writing top-level names to perception_bolide.egg-info/top_level.txt
+[4.038s] reading manifest file 'perception_bolide.egg-info/SOURCES.txt'
+[4.040s] writing manifest file 'perception_bolide.egg-info/SOURCES.txt'
+[4.072s] running build_ext
+[4.073s] Creating /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages/perception-bolide.egg-link (link to .)
+[4.074s] Installing camera_opencv script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide
+[4.075s] Installing camera_publisher script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide
+[4.076s] Installing dbscan_node script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide
+[4.076s] Installing fork_publisher script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide
+[4.077s] Installing imu_publisher script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide
+[4.077s] Installing launch_ekf_map script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide
+[4.078s] Installing lidar_process script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide
+[4.078s] Installing lidar_publisher script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide
+[4.081s] Installing lidar_vizu script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide
+[4.082s] Installing odom_fork_imu script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide
+[4.082s] Installing odom_fork_imu_sim script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide
+[4.082s] Installing rear_ranges_publisher script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide
+[4.082s] Installing stm32_publisher script to /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/perception_bolide
+[4.082s] 
+[4.082s] Installed /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide
+[4.082s] running symlink_data
+[4.083s] symbolically linking /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/resource/perception_bolide -> /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/share/ament_index/resource_index/packages
+[4.083s] symbolically linking /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/package.xml -> /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/share/perception_bolide
+[4.083s] symbolically linking /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/launch/perception.launch.py -> /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/share/perception_bolide/launch
+[4.085s] symbolically linking /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/launch/process.launch.py -> /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/share/perception_bolide/launch
+[4.085s] symbolically linking /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/launch/main_publisher.launch.py -> /home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/share/perception_bolide/launch
+[4.355s] Invoked command in '/home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide' returned '0': AMENT_PREFIX_PATH=/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages:/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide/build --no-deps symlink_data --force

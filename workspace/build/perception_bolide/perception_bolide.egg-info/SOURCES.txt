@@ -1,4 +1,3 @@
-LICENSE
 package.xml
 setup.cfg
 setup.py
@@ -27,7 +26,11 @@ perception_bolide/odom_fork_imu_sim.py
 perception_bolide/processing_dbscan.py
 perception_bolide/rear_ranges_publisher.py
 perception_bolide/stm32_publisher.py
+perception_bolide.egg-info/PKG-INFO
+perception_bolide.egg-info/SOURCES.txt
+perception_bolide.egg-info/dependency_links.txt
+perception_bolide.egg-info/entry_points.txt
+perception_bolide.egg-info/requires.txt
+perception_bolide.egg-info/top_level.txt
+perception_bolide.egg-info/zip-safe
 resource/perception_bolide
-test/test_copyright.py
-test/test_flake8.py
-test/test_pep257.py

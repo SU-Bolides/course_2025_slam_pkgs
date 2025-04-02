@@ -30,7 +30,7 @@ class STM32_Parser(Node):
         self.ranges_pub = self.create_publisher(MultipleRange, '/raw_rear_range_data', 10)
         self.imu_pub = self.create_publisher(Imu, '/raw_imu_data', 10)
 
-        self.get_cmd = self.create_subscription(Int16, '/stm32_data', self.get_command,1)
+        self.get_cmd = self.create_subscription(Int16, '/stm32_data', self.get_command,10)
 
         self.spi = spidev.SpiDev()
         self.spi.open(bus,device)

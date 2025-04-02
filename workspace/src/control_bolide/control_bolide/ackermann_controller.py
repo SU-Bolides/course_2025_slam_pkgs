@@ -110,7 +110,7 @@ class ControllerListener(Node):
         # Default setting
         self.DXL_ID                      = 1                 
         self.BAUDRATE                    = 115200            
-        self.DEVICENAME                  = '/dev/ttyUSB1'    # Symlink it in the udev to ttyU2D2
+        self.DEVICENAME                  = '/dev/ttyUSB0'    # Symlink it in the udev to ttyU2D2
 
         self.portHandler = PortHandler(self.DEVICENAME)
         self.packetHandler = PacketHandler(self.PROTOCOL_VERSION)
@@ -132,7 +132,7 @@ class ControllerListener(Node):
         self.odom_pub = self.create_publisher(Odometry, "/ackermann_odom", 10)   # Publish the car's current state (speed and steering angle) for odometry
         self.odom_tf = tf2_ros.TransformBroadcaster(self)
         self.car_state_pub = self.create_publisher(SpeedDirection, "/car_state", 10)# Publish the car's current state (speed and steering angle) for odometry
-        self.stm32_publish = self.create_publisher(Int16, "/stm32_data", 1) #  Publish the car's current state (velocity and steering angle) for odometry. 
+        self.stm32_publish = self.create_publisher(Int16, "/stm32_data", 10) #  Publish the car's current state (velocity and steering angle) for odometry. 
 
         self.emergency_brake = False
         self.last_command_time = self.get_clock().now()
@@ -184,7 +184,7 @@ class ControllerListener(Node):
         #Subscribers
         self.create_subscription(SpeedDirection, "/cmd_vel", self.cmd_callback, 10)  # Subscribe to cmd_vel for speed and direction commands
         self.create_subscription(Float32MultiArray, "/stm32_sensors", self.stm32_callback, 10)   # Subscribe to the STM32 for the current speed and direction
-        self.init = False
+        self.init = True
 
 
     def publish_stm32_data(self, cycle_ratio):
@@ -204,6 +204,7 @@ class ControllerListener(Node):
         # The esc period is 20000 ns, and we send the actual pulse duration to the stm32. We also convert from RPi to "true".
 
         if rclpy.ok():
+            print("Tx_data = ", self.tx_data)
             self.stm32_publish.publish(self.tx_data)
 
     def cmd_callback(self, data):
@@ -296,6 +297,7 @@ class ControllerListener(Node):
         This is to prevent the robot from moving if the controller crashes
         """
         if ((self.get_clock().now() - self.last_command_time).nanoseconds > 0.5*1e9) and rclpy.ok():
+            print("Watchdog")
             self.cmd_velocity_m_s = 0.0
             self.speed_controller.neutral()
 
@@ -334,6 +336,8 @@ class SpeedController:
         self.old_dir         = 0
 
         self.block           = False
+        self.timer_forward = self.controller.create_timer(0.25, self.forward, autostart=False)
+        self.timer_backward = self.controller.create_timer(0.25, self.neutral_transition, autostart=False)
 
         self.controller.publish_stm32_data(self.throttle)
 
@@ -350,6 +354,7 @@ class SpeedController:
         Args:
             cmd_speed_m_s (float): the speed command in m/s
         """
+        print("entered command")
         self.cmd_speed_esc = cmd_speed_m_s  # used only with teleop
         if self.block:
             return
@@ -361,7 +366,7 @@ class SpeedController:
             if self.state == -1:
                 self.block = True
                 self.neutral()
-                self.controller.create_timer(0.25, self.forward)
+                self.timer_forward.reset()
                 return 
             self.forward()
 
@@ -374,7 +379,7 @@ class SpeedController:
             if self.state == 1 or (not self.state and self.old_dir == 1):
                 self.controller.publish_stm32_data(self.REVERSEMINSPEED)
                 self.block = True
-                self.controller.create_timer(0.25, self.neutral_transition)
+                self.timer_backward.reset()
                 return
             self.backward()
 
@@ -394,6 +399,7 @@ class SpeedController:
             self.state = 1
             self.old_dir = 1
         self.controller.publish_stm32_data(self.MINSPEED + self.cmd_speed_esc*(self.MAXSPEED - self.MINSPEED))
+        print("Published forward: ", self.MINSPEED + self.cmd_speed_esc*(self.MAXSPEED - self.MINSPEED))
 
     def backward(self):
         """Publish to stm32 to go backward
@@ -403,6 +409,7 @@ class SpeedController:
             self.state = -1
             self.old_dir = -1
         self.controller.publish_stm32_data(self.REVERSEMINSPEED + self.cmd_speed_esc * (self.REVERSEMINSPEED - self.REVERSEMAXSPEED))
+        print("Published backward : ", self.REVERSEMINSPEED + self.cmd_speed_esc * (self.REVERSEMINSPEED - self.REVERSEMAXSPEED))
 
     def neutral(self):
         """Publish to stm32 to be neutral
@@ -458,9 +465,9 @@ class SpeedController:
         """
         self.controller.publish_stm32(max(self.throttle, self.REVERSEMAXSPEED))
 
-def main():
+def main(args=None):
     try:
-        rclpy.init()
+        rclpy.init(args=args)
         listener = ControllerListener()
         rclpy.spin(listener)
         print("Terminated ackermann_controller")
