@@ -5,7 +5,6 @@ from rclpy.node import Node
 from rclpy.executors import ExternalShutdownException
 from std_msgs.msg import Float32
 from bolide_interfaces.msg import SpeedDirection
-from pynput.keyboard import Key, Listener
 
 
 class KeyboardController(Node):
@@ -14,8 +13,6 @@ class KeyboardController(Node):
         self.get_logger().info("Teleop node started, Keyboard interrupt (ctrl+c will stop the node)")
         
         self.pub = self.create_publisher(SpeedDirection, '/cmd_vel', 10)
-
-        self.listener = Listener(on_press=self.on_key_press, on_release=self.on_key_release)
         
         self.timer = self.create_timer(0.4, self.timer_callback)
         # init speed and direction
@@ -91,7 +88,6 @@ def main(args=None):
     rclpy.init(args=args)
     import time
     controller = KeyboardController()
-    # controller.listener.start()
     thread = threading.Thread(target=rclpy.spin, args=(controller, ), daemon=True)
     thread.start()
 
@@ -99,15 +95,3 @@ def main(args=None):
         controller.perform_action()
     controller.destroy_node()
     clpy.shutdown()
-    # try:
-    #     while True:
-    #         # rclpy.spin(controller)
-    #         controller.perform_action()
-    # except KeyboardInterrupt:
-    #     controller.get_logger().info("KeyboardInterrupt received. Shutting down...")
-    # finally:
-    #     # controller.timer.shutdown()
-    #     controller.listener.stop()
-    #     controller.listener.join()
-    #     controller.destroy_node()
-    #     # rclpy.shutdown()
