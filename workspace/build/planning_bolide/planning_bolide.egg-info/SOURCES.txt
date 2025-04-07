@@ -1,4 +1,3 @@
-LICENSE
 package.xml
 setup.cfg
 setup.py
@@ -13,8 +12,13 @@ planning_bolide/__init__.py
 planning_bolide/keyboard_emergency_brake.py
 planning_bolide/nav_3states.py
 planning_bolide/nav_forward.py
+planning_bolide/teleop_PS4controller.py
 planning_bolide/teleop_keyboard.py
+planning_bolide.egg-info/PKG-INFO
+planning_bolide.egg-info/SOURCES.txt
+planning_bolide.egg-info/dependency_links.txt
+planning_bolide.egg-info/entry_points.txt
+planning_bolide.egg-info/requires.txt
+planning_bolide.egg-info/top_level.txt
+planning_bolide.egg-info/zip-safe
 resource/planning_bolide
-test/test_copyright.py
-test/test_flake8.py
-test/test_pep257.py

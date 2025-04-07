@@ -1,2 +1,3 @@
 [console_scripts]
+speed_direction_controller = planning_bolide.speed_direction_controller:main
 teleop_node = planning_bolide.teleop_keyboard:main
