@@ -1,9 +1,0 @@
-<launch>
-
-     <node pkg="perception_bolide" type="lidar_process.py" name="lidar_process"/>
-
-     <node pkg="perception_bolide" type="odom_fork_imu_sim.py" name="odom_fork_imu"/>
-     <node pkg="tf" type="static_transform_publisher" name="gmapping_broadcaster" args="0.165 0 0 0 0 0 base_link lidar_frame 100"/>
-    
-
-</launch>
