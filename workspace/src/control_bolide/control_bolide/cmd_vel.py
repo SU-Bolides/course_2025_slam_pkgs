@@ -25,6 +25,12 @@ class CommandSpeed(Node):
     def __init__(self):
         super().__init__('cmd_vel')
 
+        self.MAXSPEED = 10
+        self.MINSPEED = 8.4
+        self.NEUTRAL         = 8.0
+        self.REVERSEMINSPEED = 7.6
+        self.REVERSEMAXSPEED = 6.5
+
         self.esc_period = 20000 #ns
 
         self.curr_dir = 1
@@ -37,6 +43,7 @@ class CommandSpeed(Node):
         self.stm32_publish = self.create_publisher(Int16, "/stm32_data", 10)
 
     def cmd_callback(self, data):
+        self.cmd_velocity = data.speed
         if (not (get_sign(data.speed) == self.cur_dir)):
             if (not self.cur_dir) or (abs(self.curr_velocity_m_s) < self.DIR_VEL_THRESHOLD_M_S): 
 
@@ -48,7 +55,28 @@ class CommandSpeed(Node):
 
         # Update the last command time
         self.last_command_time = self.get_clock().now()
+        self.command(self.cmd_velocity)
 
+    def command(self, cmd_speed):
+        if  1.01 > cmd_speed > 0.99:
+            self.forward()
+        
+        elif -0.01 < cmd_speed < 0.01:
+            self.neutral()
+        
+        elif -1.01 < cmd_speed < -0.99:
+            self.reverse()
+
+    def forward(self):
+        self.publish_stm32_data(self.MINSPEED + self.cmd_velocity * (self.MAXSPEED - self.MINSPEED))
+
+    def reverse(self):
+        self.publish_stm32_data(self.REVERSEMINSPEED + self.cmd_velocity * (self.REVERSEMINSPEED - self.REVERSEMAXSPEED))
+
+    def neutral(self):
+        self.publish_stm32_data(self.NEUTRAL)
+
+        
     def publish_stm32_data(self, cycle_ratio):
         """Send to stm32 the cycle_ration of the motors
 
