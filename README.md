@@ -110,3 +110,60 @@ At the end our workspace (without build files) need to look like this:
 ## Generals Problems
 ### Battery
 When we're using the propulsion motors, the voltage doesn't keep up and it provokes the shutdown of the RPi5. We think that it is caused by the oldness of the batteries. To fix it, we can buy new battery, maybe with a higher voltage capacity or we could branch two batteries in parallel to give more current. Another idea is to use a second battery only for the RPi5 and the main battery for the motors, to safely use them without crashing the computer.
+
+
+---
+
+### Tutorial
+
+Follow these steps to control the car from your PC:
+
+1. **Connect to the Same Network (Or any other VMs just make sure that the 4th step is made)**  
+   - Connect both your Raspberry Pi 5 (Rpi5) and your PC (VMware) to the same hotspot (e.g., your 4G/5G or Wi-Fi).  
+   - For now, the default 4G connection on the Rpi5 is: `iPhone de Babou (2)`. A more generic Wi-Fi will be added later.
+
+2. **Test the Connection**  
+   - On your Rpi5, run the following command to get its IP address:  
+     ```shell
+     hostname -I
+     ```
+     Note the first IP address (`<IP_ROBOT>`).  
+   - On your PC, test the connection by pinging the Rpi5:  
+     ```shell
+     ping <IP_ROBOT>
+     ```
+     You should see output similar to this:  
+     ```
+     PING 172.20.10.9 (172.20.10.9) 56(84) bytes of data.
+     64 bytes from 172.20.10.9: icmp_seq=1 ttl=64 time=1025 ms
+     64 bytes from 172.20.10.9: icmp_seq=2 ttl=64 time=7.18 ms
+     64 bytes from 172.20.10.9: icmp_seq=3 ttl=64 time=146 ms
+     64 bytes from 172.20.10.9: icmp_seq=4 ttl=64 time=10.8 ms
+     64 bytes from 172.20.10.9: icmp_seq=5 ttl=64 time=10.8 ms
+     ```
+   - Repeat the same steps in reverse:  
+     On your PC, run `hostname -I` and ping the PC's IP address from the Rpi5.
+
+3. **Set the ROS Domain ID**  
+   - On your Rpi5, check the ROS Domain ID:  
+     ```shell
+     echo $ROS_DOMAIN_ID
+     ```
+     By default, it should be `10`.  
+   - On your PC (VMware), set the same ROS Domain ID:  
+     ```shell
+     export ROS_DOMAIN_ID=10
+     ```
+
+4. **Launch the Teleoperation Node**  
+   - On your PC, launch the teleoperation node from the `planning_bolide` package:  
+     ```shell
+     ros2 run planning_bolide teleop_node
+     ```
+
+---
+
+### Troubleshooting
+
+If you encounter any issues, please double-check the steps above or ask for assistance. Some key steps might have been overlooked. 
+
