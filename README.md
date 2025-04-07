@@ -13,7 +13,16 @@ This folder contains the working workspace of ROS2. You find there :
 - Our source folder (src) where all packages are. It's your mainly source of hope and despair so you need to understand it clearly. Hopefully, ROS2 is more rigorous than ROS in the construction of packages so for every packages, the structure is the same and it is easier to understand nodes.
 
 ### Launching the car (for now)
-When the car is on, connect with ssh (you have to know its ip address before), or branch it to a display, then on the terminal check the connection of all USB devices (Lidar and Dynamixel) with :
+When the car is on, connect with ssh (you have to know its ip address before), or branch it to a display. Normally we add some lines in the .bashrc file so when you open a terminal it will be automatically on the workspace folder and all sourced up. If you need to source after a colcon build just type :
+```shell
+srcw
+```
+And to open the virtual environment just type :
+```shell
+vir
+```
+
+On the terminal check the connection of all USB devices (Lidar and Dynamixel) with :
 ```shell
 ls /dev/ttyUSB*
 ```
@@ -21,19 +30,16 @@ You will see /dev/ttyUSB0 and /dev/ttyUSB1. Disconnect the Lidar from the Rpi5 (
 ```shell
 sudo chmod 777 /dev/ttyUSB*
 ```
-Now go to the workspace 
-```shell
-cd course_2025_slam_pkgs/workspace/
-```
-Source your workspace and you can press on the bottom button near the screen display on the car. Then source the virtual environment and launch the perception process:
+
+Source your workspace, if needed, and don't forget to press on the bottom button near the screen display on the car. Then source the virtual environment and launch the perception process:
 ```shell
 ros2 launch perception_bolide perception.launch.py
 ```
-On another terminal now, source again your workspace and the virtual environment and run ackermann_controller node:
+On another terminal now, source again the virtual environment and run ackermann_controller node:
 ```shell
 ros2 run control_bolide ackermann_controller
 ```
-And to teleoperate with the keyboard open a last terminal, source your workspace and run:
+And to teleoperate with the keyboard open a last terminal and run:
 ```shell
 ros2 run planning_bolide teleop_node
 ```
@@ -45,6 +51,9 @@ Bolide Interfaces [package](./workspace/src/bolide_interfaces/) is where you wil
 - **MultipleRange** composed of 3 Ranges (from std_msgs). One for the Rear left Infrared sensors, one for the right and the last for the Sonar (not used for now)
 - **SpeedDirection** composed of two float64 values, one for the speed of the robot and the other for the direction. Both are between -1 and 1.
 To access in a python file, you need to import the package (e.g from bolide_interfaces/msg import SpeedDirection)
+
+### Perception Bolide
+This package contains all the nodes of the sensors values and the STM32 communication node. The main file is [stm32_publisher](./workspace/src/perception_bolide/perception_bolide/stm32_publisher.py), it communicates with the STM32 to receive the data of the infrared sensors, the IMU and to send the PWM to the propulsion motor.
 
 ## General Information
 If you want to transform a package from ROS to ROS2 or to add your own package, please follow these instructions correctly to avoid losing time and to keep a clean and clear environment. All these informations are mainly inspired by the official [tutorials](https://docs.ros.org/en/jazzy/Tutorials.html) of ROS2 (here jazzy distribution), that you followed at the beginning of the class.
@@ -97,6 +106,7 @@ All command usually working in the terminal still work here. If you want to inst
 [build_scripts]
 executable = /usr/bin/env python3
 ```
+I don't know why, but if you use some external Python packages with the virtual environment, --symlink-install can not working well so you'll need to colcon build without it.
 #### At the end
 At the end our workspace (without build files) need to look like this:
 - workspace/
