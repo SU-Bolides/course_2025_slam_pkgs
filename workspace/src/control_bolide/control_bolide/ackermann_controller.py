@@ -186,7 +186,6 @@ class ControllerListener(Node):
         self.create_subscription(Float32MultiArray, "/stm32_sensors", self.stm32_callback, 10)   # Subscribe to the STM32 for the current speed and direction
         self.init = True
 
-
     def publish_stm32_data(self, cycle_ratio):
         """Send to stm32 the cycle_ration of the motors
 
@@ -291,7 +290,6 @@ class ControllerListener(Node):
         else:
             self.speed_controller.command(esc_cmd)
 
-
     def watchdog_callback(self):
         """If it's been more than 0.5s since the last command, stop the robot.
         This is to prevent the robot from moving if the controller crashes
@@ -300,6 +298,7 @@ class ControllerListener(Node):
             print("Watchdog")
             self.cmd_velocity_m_s = 0.0
             self.speed_controller.neutral()
+
 
 class SpeedController:
     """A class for the state of the car
@@ -465,6 +464,7 @@ class SpeedController:
         """Publish to stm32 to go backward between the max speed and the throttle calculed
         """
         self.controller.publish_stm32(max(self.throttle, self.REVERSEMAXSPEED))
+
 
 def main(args=None):
     try:

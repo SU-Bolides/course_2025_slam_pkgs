@@ -1,0 +1,7 @@
+image: ENS_TEST2.pgm
+resolution: 0.020000
+origin: [-6.599535, -8.356367, 0.000000]
+negate: 0
+occupied_thresh: 0.65
+free_thresh: 0.196
+

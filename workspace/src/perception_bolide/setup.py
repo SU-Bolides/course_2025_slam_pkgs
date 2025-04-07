@@ -37,6 +37,9 @@ setup(
             'launch_ekf_map = perception_bolide.launch_ekf_map:main',
             'dbscan_node = perception_bolide.dbscan_node:main',
             'camera_opencv = perception_bolide.camera_opencv:main',
+            'camera_info = perception_bolide.camera_info:main',
+            'calibrate_color = perception_bolide.calibrate_color:main',
+            
         ],
     },
 )
