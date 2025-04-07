@@ -307,9 +307,8 @@ class SpeedController:
     def __init__(self, controller : ControllerListener):
         self.controller = controller
 
-        self.MAXSPEED = 9.5
+        self.MAXSPEED = 10
         self.MINSPEED = 8.4
-
         self.NEUTRAL         = 8.0
         self.REVERSEMINSPEED = 7.6
         self.REVERSEMAXSPEED = 6.5
@@ -337,6 +336,7 @@ class SpeedController:
         self.block           = False
         self.timer_forward = self.controller.create_timer(0.25, self.forward, autostart=False)
         self.timer_backward = self.controller.create_timer(0.25, self.neutral_transition, autostart=False)
+        self.timer_shortbackward = self.controller.create_timer(0.15, self.backward, autostart=False)
 
         self.controller.publish_stm32_data(self.throttle)
 
@@ -345,7 +345,10 @@ class SpeedController:
         """
         self.neutral()
         self.block = True
-        self.controller.create_timer(0.15, self.backward)
+        # self.controller.create_timer(0.15, self.backward)
+        self.timer_forward.cancel()
+        self.timer_backward.cancel()
+        self.timer_shortbackward.reset()
 
     def command(self, cmd_speed_m_s):
         """Set the speed (No PID)
@@ -363,9 +366,11 @@ class SpeedController:
         # Forward
         if 1>=self.cmd_speed_esc>=1e-2:
             if self.state == -1:
-                self.controller.publish_stm32_data(self.MINSPEED)
+                # self.controller.publish_stm32_data(self.MINSPEED)
                 self.block = True
                 self.neutral()
+                self.timer_shortbackward.cancel()
+                self.timer_backward.cancel()
                 self.timer_forward.reset()
                 return 
             self.forward()
@@ -379,6 +384,8 @@ class SpeedController:
             if self.state == 1 or (not self.state and self.old_dir == 1):
                 self.controller.publish_stm32_data(self.REVERSEMINSPEED)
                 self.block = True
+                self.timer_shortbackward.cancel()
+                self.timer_forward.cancel()
                 self.timer_backward.reset()
                 return
             self.backward()
@@ -423,7 +430,7 @@ class SpeedController:
             self.controller.publish_stm32_data(self.BRAKE)
 
     def command_pid(self, cmd_speed_m_s):
-        """PID controller to respect a given speed
+        """PID controller to respect a given speed - Work in Progress
 
         Args:
             cmd_speed_m_s (float): the speed to go in m/s
@@ -459,11 +466,13 @@ class SpeedController:
         """Publish to stm32 to go forward between the max speed and the throttle calculed
         """
         self.controller.publish_stm32(min(self.throttle, self.MAXSPEED))
+        pass
 
     def reverse_speed(self):
         """Publish to stm32 to go backward between the max speed and the throttle calculed
         """
-        self.controller.publish_stm32(max(self.throttle, self.REVERSEMAXSPEED))
+        pass
+        # self.controller.publish_stm32(max(self.throttle, self.REVERSEMAXSPEED))
 
 
 def main(args=None):

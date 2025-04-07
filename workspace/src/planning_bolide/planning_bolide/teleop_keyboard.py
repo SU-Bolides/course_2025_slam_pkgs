@@ -82,9 +82,9 @@ class KeyboardController(Node):
         elif action == 'DOWN':
             self.current_speed = -0.05* coeff
         elif action == 'LEFT':
-            self.current_direction = -1.0 * coeff
+            self.current_direction = -1.0
         elif action == 'RIGHT':
-            self.current_direction = 1.0 * coeff
+            self.current_direction = 1.0
         elif action == 'BRAKE':
             self.current_speed = 2.0 * coeff
         elif action == 'QUIT':
