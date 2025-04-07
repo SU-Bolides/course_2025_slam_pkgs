@@ -1,1 +1,0 @@
-/home/voiture/course_2025_slam_pkgs/workspace/src/planning_bolide/setup.py

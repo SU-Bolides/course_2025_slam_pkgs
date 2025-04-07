@@ -30,6 +30,7 @@ setup(
             'obstacle_detection = control_bolide.obstacle_detection:main',
             'speed_direction_controller = control_bolide.speed_direction_controller:main',
             'stanley_controller = control_bolide.stanley_controller:main',
+            'cmd_dir = control_bolide.cmd_dir:main',
         ],
     },
 )

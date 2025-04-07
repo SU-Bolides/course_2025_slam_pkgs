@@ -1,0 +1,72 @@
+[0.000000] (-) TimerEvent: {}
+[0.001511] (-) JobUnselected: {'identifier': 'bolide_interfaces'}
+[0.001618] (-) JobUnselected: {'identifier': 'control_bolide'}
+[0.001658] (-) JobUnselected: {'identifier': 'open_karto'}
+[0.001691] (-) JobUnselected: {'identifier': 'perception_bolide'}
+[0.001722] (-) JobUnselected: {'identifier': 'rplidar_ros'}
+[0.001752] (-) JobUnselected: {'identifier': 'sllidar_ros2'}
+[0.001780] (-) JobUnselected: {'identifier': 'sparse_bundle_adjustment'}
+[0.001816] (planning_bolide) JobQueued: {'identifier': 'planning_bolide', 'dependencies': OrderedDict({'bolide_interfaces': '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces'})}
+[0.001864] (planning_bolide) JobStarted: {'identifier': 'planning_bolide'}
+[0.099398] (-) TimerEvent: {}
+[0.203366] (-) TimerEvent: {}
+[0.304784] (-) TimerEvent: {}
+[0.405345] (-) TimerEvent: {}
+[0.506211] (-) TimerEvent: {}
+[0.606875] (-) TimerEvent: {}
+[0.707288] (-) TimerEvent: {}
+[0.807726] (-) TimerEvent: {}
+[0.908424] (-) TimerEvent: {}
+[1.010127] (-) TimerEvent: {}
+[1.110538] (-) TimerEvent: {}
+[1.210945] (-) TimerEvent: {}
+[1.311374] (-) TimerEvent: {}
+[1.412000] (-) TimerEvent: {}
+[1.512381] (-) TimerEvent: {}
+[1.612770] (-) TimerEvent: {}
+[1.713160] (-) TimerEvent: {}
+[1.813550] (-) TimerEvent: {}
+[1.913992] (-) TimerEvent: {}
+[2.014364] (-) TimerEvent: {}
+[2.115671] (-) TimerEvent: {}
+[2.165156] (planning_bolide) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/planning_bolide', 'build', '--build-base', '/home/voiture/course_2025_slam_pkgs/workspace/build/planning_bolide/build', 'install', '--record', '/home/voiture/course_2025_slam_pkgs/workspace/build/planning_bolide/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/voiture/course_2025_slam_pkgs/workspace/src/planning_bolide', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'voiture', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/voiture', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'PS1': '(venv) \\[\\e]0;\\u@\\h: \\w\\a\\]${debian_chroot:+($debian_chroot)}\\[\\033[01;32m\\]\\u@\\h\\[\\033[00m\\]:\\[\\033[01;34m\\]\\w\\[\\033[00m\\]\\$', 'SYSTEMD_EXEC_PID': '1627', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1002/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/voiture/course_2025_slam_pkgs/workspace/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'voiture', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1002.slice/user@1002.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'voiture', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/home/voiture/course_2025_slam_pkgs/workspace/venv/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/voiture1:@/tmp/.ICE-unix/1582,unix/voiture1:/tmp/.ICE-unix/1582', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/d6b45eb5_67ae_4cfd_8baf_e85b8f084f66', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1002', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'VIRTUAL_ENV_PROMPT': '(venv)', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1002/.mutter-Xwaylandauth.Q0GV42', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.99', 'SSH_AUTH_SOCK': '/run/user/1002/keyring/ssh', 'ROS_DOMAIN_ID': '10', 'AMENT_PREFIX_PATH': '/home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2:/home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide:/home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide:/home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide:/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'VIRTUAL_ENV': '/home/voiture/course_2025_slam_pkgs/workspace/venv', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/voiture/course_2025_slam_pkgs/workspace/build/planning_bolide', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/voiture/course_2025_slam_pkgs/workspace/build/planning_bolide/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide/lib/python3.12/site-packages:/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages:/home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide/lib/python3.12/site-packages:/home/voiture/course_2025_slam_pkgs/workspace/build/perception_bolide:/home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide/lib/python3.12/site-packages:/home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces:/home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[2.218346] (-) TimerEvent: {}
+[2.318794] (-) TimerEvent: {}
+[2.420065] (-) TimerEvent: {}
+[2.520959] (-) TimerEvent: {}
+[2.621331] (-) TimerEvent: {}
+[2.721744] (-) TimerEvent: {}
+[2.778926] (planning_bolide) StdoutLine: {'line': b'running egg_info\n'}
+[2.821037] (planning_bolide) StdoutLine: {'line': b'writing ../../build/planning_bolide/planning_bolide.egg-info/PKG-INFO\n'}
+[2.821826] (-) TimerEvent: {}
+[2.823487] (planning_bolide) StdoutLine: {'line': b'writing dependency_links to ../../build/planning_bolide/planning_bolide.egg-info/dependency_links.txt\n'}
+[2.823789] (planning_bolide) StdoutLine: {'line': b'writing entry points to ../../build/planning_bolide/planning_bolide.egg-info/entry_points.txt\n'}
+[2.823942] (planning_bolide) StdoutLine: {'line': b'writing requirements to ../../build/planning_bolide/planning_bolide.egg-info/requires.txt\n'}
+[2.824079] (planning_bolide) StdoutLine: {'line': b'writing top-level names to ../../build/planning_bolide/planning_bolide.egg-info/top_level.txt\n'}
+[2.911773] (planning_bolide) StdoutLine: {'line': b"reading manifest file '../../build/planning_bolide/planning_bolide.egg-info/SOURCES.txt'\n"}
+[2.912702] (planning_bolide) StdoutLine: {'line': b"adding license file 'LICENSE'\n"}
+[2.913983] (planning_bolide) StdoutLine: {'line': b"writing manifest file '../../build/planning_bolide/planning_bolide.egg-info/SOURCES.txt'\n"}
+[2.914866] (planning_bolide) StdoutLine: {'line': b'running build\n'}
+[2.915034] (planning_bolide) StdoutLine: {'line': b'running build_py\n'}
+[2.915171] (planning_bolide) StdoutLine: {'line': b'copying planning_bolide/teleop_keyboard.py -> /home/voiture/course_2025_slam_pkgs/workspace/build/planning_bolide/build/lib/planning_bolide\n'}
+[2.916746] (planning_bolide) StdoutLine: {'line': b'running install\n'}
+[2.921934] (-) TimerEvent: {}
+[2.931455] (planning_bolide) StdoutLine: {'line': b'running install_lib\n'}
+[2.978885] (planning_bolide) StdoutLine: {'line': b'copying /home/voiture/course_2025_slam_pkgs/workspace/build/planning_bolide/build/lib/planning_bolide/teleop_keyboard.py -> /home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide/lib/python3.12/site-packages/planning_bolide\n'}
+[2.980107] (planning_bolide) StdoutLine: {'line': b'byte-compiling /home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide/lib/python3.12/site-packages/planning_bolide/teleop_keyboard.py to teleop_keyboard.cpython-312.pyc\n'}
+[2.983337] (planning_bolide) StdoutLine: {'line': b'running install_data\n'}
+[2.984334] (planning_bolide) StdoutLine: {'line': b'running install_egg_info\n'}
+[3.022049] (-) TimerEvent: {}
+[3.030663] (planning_bolide) StdoutLine: {'line': b"removing '/home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide/lib/python3.12/site-packages/planning_bolide-0.1.0-py3.12.egg-info' (and everything under it)\n"}
+[3.032601] (planning_bolide) StdoutLine: {'line': b'Copying ../../build/planning_bolide/planning_bolide.egg-info to /home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide/lib/python3.12/site-packages/planning_bolide-0.1.0-py3.12.egg-info\n'}
+[3.034181] (planning_bolide) StdoutLine: {'line': b'running install_scripts\n'}
+[3.122147] (-) TimerEvent: {}
+[3.222495] (-) TimerEvent: {}
+[3.303117] (planning_bolide) StdoutLine: {'line': b'Installing speed_direction_controller script to /home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide/lib/planning_bolide\n'}
+[3.304792] (planning_bolide) StdoutLine: {'line': b'Installing teleop_node script to /home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide/lib/planning_bolide\n'}
+[3.305306] (planning_bolide) StdoutLine: {'line': b"writing list of installed files to '/home/voiture/course_2025_slam_pkgs/workspace/build/planning_bolide/install.log'\n"}
+[3.323089] (-) TimerEvent: {}
+[3.417109] (planning_bolide) CommandEnded: {'returncode': 0}
+[3.423761] (-) TimerEvent: {}
+[3.446151] (planning_bolide) JobEnded: {'identifier': 'planning_bolide', 'rc': 0}
+[3.446956] (-) EventReactorShutdown: {}

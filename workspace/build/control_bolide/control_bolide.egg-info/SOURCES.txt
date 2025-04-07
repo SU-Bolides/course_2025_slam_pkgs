@@ -13,6 +13,8 @@ control_bolide/__init__.py
 control_bolide/ackermann_controller.py
 control_bolide/calibration_direction.py
 control_bolide/calibration_direction_copy.py
+control_bolide/cmd_dir.py
+control_bolide/cmd_vel.py
 control_bolide/cmd_vel_vizu.py
 control_bolide/obstacle_detection.py
 control_bolide/speed_direction_controller.py
