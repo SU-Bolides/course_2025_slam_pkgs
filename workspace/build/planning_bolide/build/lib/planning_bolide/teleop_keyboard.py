@@ -94,4 +94,4 @@ def main(args=None):
     while True:
         controller.perform_action()
     controller.destroy_node()
-    clpy.shutdown()
+    rclpy.shutdown()

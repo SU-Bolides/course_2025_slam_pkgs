@@ -5,43 +5,34 @@ from dynamixel_sdk import PortHandler, PacketHandler
 
 import rclpy
 from rclpy.node import Node
+from std_msgs.msg import Int16
 from bolide_interfaces.msg import SpeedDirection
+
+
+def get_sign(val):
+    """get the sign of a value
+
+    Args:
+        val (any): any int or float value
+
+    Returns:
+        int: 1 or -1 if positive or negative
+    """
+    return (val > 0) - (val < 0)
+
 
 class CommandSpeed(Node):
     def __init__(self):
-        super().__init__('cmd_dir')
+        super().__init__('cmd_vel')
 
-        # Dynamixel stuff:
-        # Protocol version
-        self.PROTOCOL_VERSION            = 1.0               # See which protocol version is used in the Dynamixel
+        self.esc_period = 20000 #ns
 
-        # Default setting
-        self.DXL_ID                      = 1                 
-        self.BAUDRATE                    = 115200            
-        self.DEVICENAME                  = '/dev/ttyUSB0'    # Symlink it in the udev to ttyU2D2
+        self.curr_dir = 1
+        self.tx_data = Int16()
 
-        self.MAX_STEERING_ANGLE_DEG = 15.5 # deg
-
-        self.target_steering_angle_deg = 0.0
-        self.curr_steering_angle_deg = 0.0
-
-        self.MS              = False
+        self.last_command_time = self.get_clock().now()
 
 
-        self.portHandler = PortHandler(self.DEVICENAME)
-        self.packetHandler = PacketHandler(self.PROTOCOL_VERSION)
-
-        if self.portHandler.openPort():
-            self.get_logger().info("[INFO] -- Succeeded to open the port")
-        else:
-            self.get_logger().error("[ERROR] -- Failed to open the port")
-
-        # Setting the baudrate
-        if self.portHandler.setBaudRate(self.BAUDRATE):
-            self.get_logger().info("[INFO] -- Succeeded to change the baudrate")
-        else:
-            self.get_logger().error("[ERROR] -- Failed to change the baudrate")
-        
         self.sub = self.create_subscription(SpeedDirection, "/cmd_vel", self.cmd_callback, 10 )
         self.stm32_publish = self.create_publisher(Int16, "/stm32_data", 10)
 

@@ -3,6 +3,7 @@ ackermann_controller = control_bolide.ackermann_controller:main
 calibration_direction = control_bolide.calibration_direction:main
 calibration_direction_copy = control_bolide.calibration_direction_copy:main
 cmd_dir = control_bolide.cmd_dir:main
+cmd_vel = control_bolide.cmd_vel:main
 cmd_vel_vizu = control_bolide.cmd_vel_vizu:main
 obstacle_detection = control_bolide.obstacle_detection:main
 speed_direction_controller = control_bolide.speed_direction_controller:main

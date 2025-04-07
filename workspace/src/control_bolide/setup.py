@@ -31,6 +31,7 @@ setup(
             'speed_direction_controller = control_bolide.speed_direction_controller:main',
             'stanley_controller = control_bolide.stanley_controller:main',
             'cmd_dir = control_bolide.cmd_dir:main',
+            'cmd_vel = control_bolide.cmd_vel:main',
         ],
     },
 )

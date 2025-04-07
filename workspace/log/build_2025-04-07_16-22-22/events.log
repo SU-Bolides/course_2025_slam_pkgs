@@ -1,0 +1,9 @@
+[0.000000] (-) TimerEvent: {}
+[0.000446] (-) JobUnselected: {'identifier': 'bolide_interfaces'}
+[0.000656] (-) JobUnselected: {'identifier': 'control_bolide'}
+[0.000696] (-) JobUnselected: {'identifier': 'particle_filter'}
+[0.000729] (-) JobUnselected: {'identifier': 'perception_bolide'}
+[0.000752] (-) JobUnselected: {'identifier': 'planning_bolide'}
+[0.000777] (-) JobUnselected: {'identifier': 'slam_karto'}
+[0.000802] (-) JobUnselected: {'identifier': 'sllidar_ros2'}
+[0.001697] (-) EventReactorShutdown: {}

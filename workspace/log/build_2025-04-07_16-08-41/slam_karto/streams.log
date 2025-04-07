@@ -1,0 +1,44 @@
+[0.689s] Invoking command in '/home/voiture/course_2025_slam_pkgs/workspace/build/slam_karto': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide:/home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide:/home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/voiture/course_2025_slam_pkgs/workspace/src/slam_karto_ros2 -DCMAKE_INSTALL_PREFIX=/home/voiture/course_2025_slam_pkgs/workspace/install/slam_karto
+[2.139s] -- The C compiler identification is GNU 13.3.0
+[3.395s] -- The CXX compiler identification is GNU 13.3.0
+[3.503s] -- Detecting C compiler ABI info
+[3.945s] -- Detecting C compiler ABI info - done
+[3.966s] -- Check for working C compiler: /usr/bin/cc - skipped
+[3.970s] -- Detecting C compile features
+[3.973s] -- Detecting C compile features - done
+[4.015s] -- Detecting CXX compiler ABI info
+[4.798s] -- Detecting CXX compiler ABI info - done
+[4.875s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[4.876s] -- Detecting CXX compile features
+[4.880s] -- Detecting CXX compile features - done
+[4.967s] -- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[5.653s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[6.539s] -- Found rclcpp: 28.1.6 (/opt/ros/jazzy/share/rclcpp/cmake)
+[6.974s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[7.108s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[7.277s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[7.445s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[8.072s] -- Found rmw_implementation_cmake: 7.3.1 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[8.109s] -- Found rmw_fastrtps_cpp: 8.4.1 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[8.875s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[9.011s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[9.154s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[10.688s] -- Configuring incomplete, errors occurred!
+[10.689s] [31mCMake Error at CMakeLists.txt:15 (find_package):
+[10.689s]   By not providing "Findsparse_bundle_adjustment.cmake" in CMAKE_MODULE_PATH
+[10.689s]   this project has asked CMake to find a package configuration file provided
+[10.689s]   by "sparse_bundle_adjustment", but CMake did not find one.
+[10.689s] 
+[10.690s]   Could not find a package configuration file provided by
+[10.690s]   "sparse_bundle_adjustment" with any of the following names:
+[10.690s] 
+[10.690s]     sparse_bundle_adjustmentConfig.cmake
+[10.690s]     sparse_bundle_adjustment-config.cmake
+[10.696s] 
+[10.698s]   Add the installation prefix of "sparse_bundle_adjustment" to
+[10.698s]   CMAKE_PREFIX_PATH or set "sparse_bundle_adjustment_DIR" to a directory
+[10.699s]   containing one of the above files.  If "sparse_bundle_adjustment" provides
+[10.703s]   a separate development package or SDK, be sure it has been installed.
+[10.703s] 
+[10.703s] [0m
+[10.736s] Invoked command in '/home/voiture/course_2025_slam_pkgs/workspace/build/slam_karto' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide:/home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide:/home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/voiture/course_2025_slam_pkgs/workspace/src/slam_karto_ros2 -DCMAKE_INSTALL_PREFIX=/home/voiture/course_2025_slam_pkgs/workspace/install/slam_karto

@@ -36,6 +36,7 @@
 /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/control_bolide/calibration_direction
 /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/control_bolide/calibration_direction_copy
 /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/control_bolide/cmd_dir
+/home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/control_bolide/cmd_vel
 /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/control_bolide/cmd_vel_vizu
 /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/control_bolide/obstacle_detection
 /home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/control_bolide/speed_direction_controller
