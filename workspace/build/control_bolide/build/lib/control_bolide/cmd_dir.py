@@ -60,7 +60,7 @@ class CommandDirection(Node):
         # Default setting
         self.DXL_ID                      = 1                 
         self.BAUDRATE                    = 115200            
-        self.DEVICENAME                  = '/dev/ttyUSB1'    # Symlink it in the udev to ttyU2D2
+        self.DEVICENAME                  = '/dev/ttyUSB0'    # Symlink it in the udev to ttyU2D2
 
         self.MAX_STEERING_ANGLE_DEG = 15.5 # deg
 
