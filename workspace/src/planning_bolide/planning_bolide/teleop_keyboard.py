@@ -21,20 +21,6 @@ class KeyboardController(Node):
         # init speed and direction
         self.current_speed = 0.0
         self.current_direction = 0.0
-        # Define the keycodes
-        # self.key_mapping = {
-        #     Key.up: 'UP',
-        #     Key.down: 'DOWN',
-        #     Key.left: 'LEFT',
-        #     Key.right: 'RIGHT',
-        #     Key.space: 'NEUTRAL',
-        #     Key.enter: 'QUIT',
-        #     'z': 'UP',
-        #     'q': 'LEFT',
-        #     's': 'DOWN',
-        #     'b': 'BRAKE',
-        #     'd': 'RIGHT',
-        # }
         self.key_mapping = {'\x1b[A': 'UP', '\x1b[B': 'DOWN',
                         '\x1b[C': 'RIGHT', '\x1b[D': 'LEFT', 's': 'BRAKE', 'q': 'QUIT', 'n': 'NEUTRAL'}
 
