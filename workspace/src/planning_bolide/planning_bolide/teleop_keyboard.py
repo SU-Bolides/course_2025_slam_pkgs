@@ -19,7 +19,7 @@ class KeyboardController(Node):
         self.current_direction = 0.0
         # Define the keycodes
         self.key_mapping = {'\x1b[A': 'UP', '\x1b[B': 'DOWN',
-                        '\x1b[C': 'RIGHT', '\x1b[D': 'LEFT', 's': 'BRAKE', 'q': 'QUIT'}
+                        '\x1b[C': 'RIGHT', '\x1b[D': 'LEFT', 's': 'BRAKE', 'q': 'QUIT', 'n': 'NEUTRAL'}
         
     def timer_callback(self):
         self.publish_speed_direction()
@@ -42,14 +42,14 @@ class KeyboardController(Node):
         else:
             return key
     
-    def perform_action(self, coeff = 1.0):
+    def perform_action(self, coeff = 0.05):
         mykey = click.getchar()
         action = self.key_mapping[mykey]
         print("commande : ", action)
         if action == 'UP':
-            self.current_speed = 0.5 * coeff
+            self.current_speed = 1.0 * coeff
         elif action == 'DOWN':
-            self.current_speed = -0.25 * coeff
+            self.current_speed = -1.0 * coeff
         elif action == 'LEFT':
             self.current_direction = -1.0 * coeff
         elif action == 'RIGHT':
@@ -58,6 +58,8 @@ class KeyboardController(Node):
             self.current_speed = 2.0 * coeff
         elif action == 'QUIT':
             exit()
+        elif action == 'NEUTRAL':
+            self.current_speed = 0.0
         else:
             self.get_logger().warn(f"Unknown action: {action}")
         self.publish_speed_direction()

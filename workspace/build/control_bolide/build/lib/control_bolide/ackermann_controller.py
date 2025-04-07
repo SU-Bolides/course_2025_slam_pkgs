@@ -87,7 +87,7 @@ class ControllerListener(Node):
         # Servo PWM cyclic ratio values for the direction
         # This corresponds to about 15 deg either direction. 
 
-        self.esc_period = 20000 #us
+        self.esc_period = 20000 #ns
 
         self.init = False
 
@@ -308,7 +308,7 @@ class SpeedController:
     def __init__(self, controller : ControllerListener):
         self.controller = controller
 
-        self.MAXSPEED = 10
+        self.MAXSPEED = 9.5
         self.MINSPEED = 8.4
 
         self.NEUTRAL         = 8.0
@@ -364,6 +364,7 @@ class SpeedController:
         # Forward
         if 1>=self.cmd_speed_esc>=1e-2:
             if self.state == -1:
+                self.controller.publish_stm32_data(self.MINSPEED)
                 self.block = True
                 self.neutral()
                 self.timer_forward.reset()

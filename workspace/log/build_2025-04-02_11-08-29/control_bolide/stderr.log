@@ -1,0 +1,2 @@
+/home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide/lib/python3.12/site-packages/control_bolide/ackermann_controller.py:366: SyntaxWarning: 'int' object is not callable; perhaps you missed a comma?
+  if self.state == -1 (not self.state and self.old_dir == -1):
