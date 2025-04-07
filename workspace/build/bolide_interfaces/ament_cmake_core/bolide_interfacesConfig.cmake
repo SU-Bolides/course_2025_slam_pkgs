@@ -16,7 +16,7 @@ set(_bolide_interfaces_CONFIG_INCLUDED TRUE)
 
 # output package information
 if(NOT bolide_interfaces_FIND_QUIETLY)
-  message(STATUS "Found bolide_interfaces: 0.0.0 (${bolide_interfaces_DIR})")
+  message(STATUS "Found bolide_interfaces: 0.1.0 (${bolide_interfaces_DIR})")
 endif()
 
 # warn when using a deprecated package

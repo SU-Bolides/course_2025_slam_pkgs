@@ -268,7 +268,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3.12/site-packages/bolide_interfaces-0.0.0-py3.12.egg-info" TYPE DIRECTORY FILES "/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/ament_cmake_python/bolide_interfaces/bolide_interfaces.egg-info/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3.12/site-packages/bolide_interfaces-0.1.0-py3.12.egg-info" TYPE DIRECTORY FILES "/home/voiture/course_2025_slam_pkgs/workspace/build/bolide_interfaces/ament_cmake_python/bolide_interfaces/bolide_interfaces.egg-info/")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)

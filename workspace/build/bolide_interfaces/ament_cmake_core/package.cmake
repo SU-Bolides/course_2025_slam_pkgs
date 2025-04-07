@@ -1,5 +1,5 @@
 set(_AMENT_PACKAGE_NAME "bolide_interfaces")
-set(bolide_interfaces_VERSION "0.0.0")
+set(bolide_interfaces_VERSION "0.1.0")
 set(bolide_interfaces_MAINTAINER "voiture <baptiste.braun.delvoye@gmail.com>")
 set(bolide_interfaces_BUILD_DEPENDS "std_msgs" "sensor_msgs")
 set(bolide_interfaces_BUILDTOOL_DEPENDS "ament_cmake" "rosidl_default_generators")

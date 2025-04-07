@@ -110,10 +110,10 @@
 /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/libbolide_interfaces__rosidl_typesupport_cpp.so
 /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/environment/pythonpath.sh
 /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/share/bolide_interfaces/environment/pythonpath.dsv
-/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages/bolide_interfaces-0.0.0-py3.12.egg-info/dependency_links.txt
-/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages/bolide_interfaces-0.0.0-py3.12.egg-info/PKG-INFO
-/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages/bolide_interfaces-0.0.0-py3.12.egg-info/top_level.txt
-/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages/bolide_interfaces-0.0.0-py3.12.egg-info/SOURCES.txt
+/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages/bolide_interfaces-0.1.0-py3.12.egg-info/dependency_links.txt
+/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages/bolide_interfaces-0.1.0-py3.12.egg-info/PKG-INFO
+/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages/bolide_interfaces-0.1.0-py3.12.egg-info/top_level.txt
+/home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages/bolide_interfaces-0.1.0-py3.12.egg-info/SOURCES.txt
 /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages/bolide_interfaces/_bolide_interfaces_s.ep.rosidl_typesupport_introspection_c.c
 /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages/bolide_interfaces/srv/_launch_ekf.py
 /home/voiture/course_2025_slam_pkgs/workspace/install/bolide_interfaces/lib/python3.12/site-packages/bolide_interfaces/srv/_launch_ekf_s.c

@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name='bolide_interfaces',
-    version='0.0.0',
+    version='0.1.0',
     packages=find_packages(
         include=('bolide_interfaces', 'bolide_interfaces.*')),
 )

@@ -1010,7 +1010,7 @@
 		{
 			"backtrace" : 54,
 			"component" : "Unspecified",
-			"destination" : "lib/python3.12/site-packages/bolide_interfaces-0.0.0-py3.12.egg-info",
+			"destination" : "lib/python3.12/site-packages/bolide_interfaces-0.1.0-py3.12.egg-info",
 			"paths" : 
 			[
 				{
