@@ -1,7 +1,7 @@
 # Repository of the ROS Course Project 2025
 Work in progress...
 ## Changes and Changes
-The main goal of this year is to pass the project from ROS to ROS2 (jazzy). By doing this, we also want to help clarify packages and how nodes work together. If we have time after the course (because clearly, we *don't* have the time before it), we will try to add a camera on the car.
+The main goal of this year is to pass the project from ROS1 to ROS2 (jazzy). By doing this, we also want to help clarify packages and how nodes work together. If we have time after the course (because clearly, we *don't* have the time before it), we will try to add a camera on the car.
 
 The Repository is divided in three parts
 
