@@ -59,7 +59,7 @@ If you want to transform a package from ROS to ROS2 or to add your own package, 
 ### Create a Package
 To create a package go to the [src](./workspace/src/) folder of your workspace on a terminal and use the command line :
 ```shell
-create pkg —build-type ament_python —license Apache-2.0 package_name
+ros2 pkg create —build-type ament_python —license Apache-2.0 package_name
 ```
 After the creation done you will see your folder and all the basic files needed.
 #### Package from external source
