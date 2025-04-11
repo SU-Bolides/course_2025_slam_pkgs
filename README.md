@@ -26,10 +26,7 @@ On the terminal check the connection of all USB devices (Lidar and Dynamixel) wi
 ```shell
 ls /dev/ttyUSB*
 ```
-You will see /dev/ttyUSB0 and /dev/ttyUSB1. Disconnect the Lidar from the Rpi5 (the top one), then retry the command and see which one doesn't appear now. Check if the one that doesn't appear now is the one put in the [launchfile](./workspace/src/perception_bolide/launch/perception.launch.py) at the perception_bolide package. If it isn't correctly paired change it and go to the [ackermann_controller.py](/workspace/src/control_bolide/control_bolide/ackermann_controller.py) file to change also the device of the Dynamixel. After doing that type this command in the terminal:
-```shell
-sudo chmod 777 /dev/ttyUSB*
-```
+You will see /dev/ttyUSB0 and /dev/ttyUSB1.
 
 Source your workspace, if needed, and don't forget to press on the bottom button near the screen display on the car. Then source the virtual environment and launch the perception process:
 ```shell
