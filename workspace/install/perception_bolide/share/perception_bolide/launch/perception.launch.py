@@ -32,7 +32,7 @@ def generate_launch_description():
             name='sllidar_node',
             output='screen',
             parameters=[
-                {'serial_port': '/dev/ttyUSB1'},
+                {'serial_port': '/dev/ttyLIDAR'},
                 {'serial_baudrate': 256000},
                 {'frame_id': 'laser_frame'},
                 {'inverted': False},
@@ -41,6 +41,8 @@ def generate_launch_description():
             ],
             respawn=True
         ),
+        # udev rule in /etc/udev/rules.d/99-usb-lidar.rules:  
+        # SUBSYSTEM=="tty", ATTRS{idVendor}=="10c4", ATTRS{idProduct}=="ea60", SYMLINK+="ttyLIDAR", MODE="0777"
 
         # Node for stm32_publisher.py
         Node(

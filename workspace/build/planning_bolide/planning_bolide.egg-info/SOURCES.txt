@@ -9,6 +9,13 @@ setup.py
 ../../build/planning_bolide/planning_bolide.egg-info/requires.txt
 ../../build/planning_bolide/planning_bolide.egg-info/top_level.txt
 ../../build/planning_bolide/planning_bolide.egg-info/zip-safe
+launch/ekf_localization.launch.py
+launch/ekf_map.launch.py
+launch/raceline_follow.launch.py
+launch/ready_for_nav.launch.py
+launch/ready_for_slam.launch.py
+launch/teleop_keyboard.launch.py
+launch/tf_lidar.launch.py
 planning_bolide/__init__.py
 planning_bolide/keyboard_emergency_brake.py
 planning_bolide/nav_3states.py

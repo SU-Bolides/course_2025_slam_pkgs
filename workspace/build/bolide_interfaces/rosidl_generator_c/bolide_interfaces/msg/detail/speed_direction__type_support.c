@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "bolide_interfaces/msg/detail/speed_direction__functions.h"
-#include "rosidl_typesupport_interface/macros.h"
 #include "bolide_interfaces/msg/detail/speed_direction__type_support.h"
+#include "bolide_interfaces/msg/detail/speed_direction__functions.h"
 #include "bolide_interfaces/msg/detail/speed_direction__struct.h"
+#include "rosidl_typesupport_interface/macros.h"
 
 #ifdef __cplusplus
 extern "C"

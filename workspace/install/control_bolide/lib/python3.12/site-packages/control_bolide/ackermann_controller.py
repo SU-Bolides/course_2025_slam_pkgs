@@ -110,7 +110,10 @@ class ControllerListener(Node):
         # Default setting
         self.DXL_ID                      = 1                 
         self.BAUDRATE                    = 115200            
-        self.DEVICENAME                  = '/dev/ttyUSB0'    # Symlink it in the udev to ttyU2D2
+        self.DEVICENAME                  = '/dev/ttyU2D2'    # Symlink it in the udev to ttyU2D2
+        #udev rule in /etc/udev/rules.d/99-usb-dynamixel.rules:  
+        # SUBSYSTEM=="tty", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6014", SYMLINK+="ttyU2D2", MODE="0777"
+
 
         self.portHandler = PortHandler(self.DEVICENAME)
         self.packetHandler = PacketHandler(self.PROTOCOL_VERSION)

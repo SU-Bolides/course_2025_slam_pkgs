@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "bolide_interfaces/srv/detail/launch_ekf__type_support.h"
 #include "bolide_interfaces/srv/detail/launch_ekf__struct.h"
-#include "rosidl_typesupport_interface/macros.h"
 #include "bolide_interfaces/srv/detail/launch_ekf__functions.h"
+#include "bolide_interfaces/srv/detail/launch_ekf__type_support.h"
+#include "rosidl_typesupport_interface/macros.h"
 
 #ifdef __cplusplus
 extern "C"

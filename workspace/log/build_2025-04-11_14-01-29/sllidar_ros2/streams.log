@@ -1,0 +1,83 @@
+[0.026s] Invoking command in '/home/voiture/course_2025_slam_pkgs/workspace/build/sllidar_ros2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide:/home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide:/home/voiture/course_2025_slam_pkgs/workspace/install/particle_filter:/home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ /usr/bin/cmake --build /home/voiture/course_2025_slam_pkgs/workspace/build/sllidar_ros2 -- -j4 -l4
+[0.120s] -- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.627s] -- Found rclcpp: 28.1.8 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.711s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.737s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.774s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.814s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.979s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.986s] -- Found rmw_fastrtps_cpp: 8.4.2 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[1.147s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.310s] -- Found sensor_msgs: 5.3.6 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+[1.448s] -- Found std_srvs: 5.3.6 (/opt/ros/jazzy/share/std_srvs/cmake)
+[1.717s] -- Configuring done (1.6s)
+[1.809s] -- Generating done (0.1s)
+[1.830s] -- Build files have been written to: /home/voiture/course_2025_slam_pkgs/workspace/build/sllidar_ros2
+[1.927s] [  5%] [32mBuilding CXX object CMakeFiles/sllidar_client.dir/src/sllidar_client.cpp.o[0m
+[2.066s] [ 10%] [32mBuilding CXX object CMakeFiles/sllidar_node.dir/src/sllidar_node.cpp.o[0m
+[7.881s] In file included from [01m[K/home/voiture/course_2025_slam_pkgs/workspace/src/sllidar_ros2/./sdk/include/sl_lidar_cmd.h:41[m[K,
+[7.882s]                  from [01m[K/home/voiture/course_2025_slam_pkgs/workspace/src/sllidar_ros2/./sdk/include/sl_lidar_driver.h:54[m[K,
+[7.882s]                  from [01m[K/home/voiture/course_2025_slam_pkgs/workspace/src/sllidar_ros2/./sdk/include/sl_lidar.h:36[m[K,
+[7.882s]                  from [01m[K/home/voiture/course_2025_slam_pkgs/workspace/src/sllidar_ros2/src/sllidar_node.cpp:38[m[K:
+[7.882s] [01m[K/home/voiture/course_2025_slam_pkgs/workspace/src/sllidar_ros2/./sdk/include/sl_lidar_protocol.h:66:16:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[7.883s]    66 |     sl_u8 data[[01;35m[K0[m[K];
+[7.883s]       |                [01;35m[K^[m[K
+[7.883s] [01m[K/home/voiture/course_2025_slam_pkgs/workspace/src/sllidar_ros2/./sdk/include/sl_lidar_cmd.h:324:20:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[7.883s]   324 |     sl_u8  payload[[01;35m[K0[m[K];
+[7.889s]       |                    [01;35m[K^[m[K
+[17.057s] [ 15%] [32m[1mLinking CXX executable sllidar_node[0m
+[18.370s] [ 95%] Built target sllidar_node
+[23.068s] [100%] [32m[1mLinking CXX executable sllidar_client[0m
+[24.022s] [100%] Built target sllidar_client
+[24.052s] Invoked command in '/home/voiture/course_2025_slam_pkgs/workspace/build/sllidar_ros2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide:/home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide:/home/voiture/course_2025_slam_pkgs/workspace/install/particle_filter:/home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ /usr/bin/cmake --build /home/voiture/course_2025_slam_pkgs/workspace/build/sllidar_ros2 -- -j4 -l4
+[24.077s] Invoking command in '/home/voiture/course_2025_slam_pkgs/workspace/build/sllidar_ros2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide:/home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide:/home/voiture/course_2025_slam_pkgs/workspace/install/particle_filter:/home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ /usr/bin/cmake --install /home/voiture/course_2025_slam_pkgs/workspace/build/sllidar_ros2
+[24.094s] -- Install configuration: ""
+[24.094s] -- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/launch
+[24.094s] -- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_s3_launch.py
+[24.094s] -- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_t1_launch.py
+[24.095s] -- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_s2e_launch.py
+[24.095s] -- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_a2m8_launch.py
+[24.095s] -- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_c1_launch.py
+[24.095s] -- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_a2m12_launch.py
+[24.095s] -- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_a2m7_launch.py
+[24.095s] -- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_a2m7_launch.py
+[24.095s] -- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_s1_launch.py
+[24.095s] -- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_a3_launch.py
+[24.096s] -- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_c1_launch.py
+[24.096s] -- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_t1_launch.py
+[24.096s] -- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_a1_launch.py
+[24.096s] -- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_a3_launch.py
+[24.096s] -- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_a2m8_launch.py
+[24.096s] -- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_a2m12_launch .py
+[24.096s] -- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_s1_tcp_launch.py
+[24.096s] -- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_s2e_launch.py
+[24.096s] -- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_a1_launch.py
+[24.097s] -- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_s3_launch.py
+[24.097s] -- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_s1_launch.py
+[24.097s] -- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_s2_launch.py
+[24.097s] -- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_s1_tcp_launch.py
+[24.097s] -- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_s2_launch.py
+[24.097s] -- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/rviz
+[24.097s] -- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/rviz/sllidar_ros2.rviz
+[24.097s] -- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/lib/sllidar_ros2/sllidar_node
+[24.102s] -- Set non-toolchain portion of runtime path of "/home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/lib/sllidar_ros2/sllidar_node" to ""
+[24.105s] -- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/lib/sllidar_ros2/sllidar_client
+[24.118s] -- Set non-toolchain portion of runtime path of "/home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/lib/sllidar_ros2/sllidar_client" to ""
+[24.118s] -- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/ament_index/resource_index/package_run_dependencies/sllidar_ros2
+[24.118s] -- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/ament_index/resource_index/parent_prefix_path/sllidar_ros2
+[24.118s] -- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/environment/ament_prefix_path.sh
+[24.118s] -- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/environment/ament_prefix_path.dsv
+[24.118s] -- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/environment/path.sh
+[24.118s] -- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/environment/path.dsv
+[24.119s] -- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/local_setup.bash
+[24.119s] -- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/local_setup.sh
+[24.119s] -- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/local_setup.zsh
+[24.119s] -- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/local_setup.dsv
+[24.119s] -- Installing: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/package.dsv
+[24.120s] -- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/ament_index/resource_index/packages/sllidar_ros2
+[24.120s] -- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/cmake/ament_cmake_export_dependencies-extras.cmake
+[24.120s] -- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/cmake/ament_cmake_export_include_directories-extras.cmake
+[24.120s] -- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/cmake/sllidar_ros2Config.cmake
+[24.120s] -- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/cmake/sllidar_ros2Config-version.cmake
+[24.120s] -- Up-to-date: /home/voiture/course_2025_slam_pkgs/workspace/install/sllidar_ros2/share/sllidar_ros2/package.xml
+[24.123s] Invoked command in '/home/voiture/course_2025_slam_pkgs/workspace/build/sllidar_ros2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/voiture/course_2025_slam_pkgs/workspace/install/planning_bolide:/home/voiture/course_2025_slam_pkgs/workspace/install/perception_bolide:/home/voiture/course_2025_slam_pkgs/workspace/install/particle_filter:/home/voiture/course_2025_slam_pkgs/workspace/install/control_bolide:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ /usr/bin/cmake --install /home/voiture/course_2025_slam_pkgs/workspace/build/sllidar_ros2

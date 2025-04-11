@@ -25,22 +25,64 @@ class CommandSpeed(Node):
     def __init__(self):
         super().__init__('cmd_vel')
 
+        self.init = 0
+
+        self.MAXSPEED = 10
+        self.MINSPEED = 8.4
+        self.NEUTRAL         = 8.0
+        self.REVERSEMINSPEED = 7.6
+        self.REVERSEMAXSPEED = 6.5
+        self.DIR_VEL_THRESHOLD_M_S  = 0.05
+        self.curr_velocity_m_s = 0.0
+
+        self.esc_period = 20000 #ns
+
+        self.curr_dir = 1
+        self.tx_data = Int16()
+
+        self.last_command_time = self.get_clock().now()
+
+
         self.sub = self.create_subscription(SpeedDirection, "/cmd_vel", self.cmd_callback, 10 )
         self.stm32_publish = self.create_publisher(Int16, "/stm32_data", 10)
 
+        self.init = 1
+
     def cmd_callback(self, data):
-        if (not (get_sign(data.speed) == self.cur_dir)):
-            if (not self.cur_dir) or (abs(self.curr_velocity_m_s) < self.DIR_VEL_THRESHOLD_M_S): 
+        self.cmd_velocity = data.speed
+        if (not (get_sign(data.speed) == self.curr_dir)):
+            if (not self.curr_dir) or (abs(self.curr_velocity_m_s) < self.DIR_VEL_THRESHOLD_M_S): 
 
                 #We can command reverse while the car is going forwards
                 #However, the car needs to stop and then start reversing before it actually goes in reverse.
                 #So we only switch the sign if the car is going slow enough to be considered "stationnary".
-                self.cur_dir = get_sign(data.speed)
-                # rospy.loginfo("Switched direction (speed sign): %s", str(self.cur_dir))
+                self.curr_dir = get_sign(data.speed)
+                # rospy.loginfo("Switched direction (speed sign): %s", str(self.curr_dir))
 
         # Update the last command time
         self.last_command_time = self.get_clock().now()
+        self.command(self.cmd_velocity)
 
+    def command(self, cmd_speed):
+        if  1 > cmd_speed > 0.02:
+            self.forward()
+        
+        elif -0.01 < cmd_speed < 0.01:
+            self.neutral()
+        
+        elif -1 < cmd_speed < -0.02:
+            self.reverse()
+
+    def forward(self):
+        self.publish_stm32_data(self.MINSPEED + self.cmd_velocity * (self.MAXSPEED - self.MINSPEED))
+
+    def reverse(self):
+        self.publish_stm32_data(self.REVERSEMINSPEED + self.cmd_velocity * (self.REVERSEMINSPEED - self.REVERSEMAXSPEED))
+
+    def neutral(self):
+        self.publish_stm32_data(self.NEUTRAL)
+
+        
     def publish_stm32_data(self, cycle_ratio):
         """Send to stm32 the cycle_ration of the motors
 
